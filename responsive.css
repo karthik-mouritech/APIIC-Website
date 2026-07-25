@@ -5,6 +5,7 @@ html { -webkit-text-size-adjust: 100%; }
 *, *::before, *::after { box-sizing: border-box; }
 
 img, svg, iframe { max-width: 100%; }
+table th[style*="position:sticky"] { position: static !important; left: auto !important; }
 
 @media (min-width: 1500px) {
   .apiic-mainbar { padding-left: 28px !important; padding-right: 28px !important; gap: 16px !important; }
