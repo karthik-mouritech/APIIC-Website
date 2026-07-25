@@ -39,8 +39,8 @@ summary::-webkit-details-marker{display:none}
     </div>
   </div>
 
-  <div style="max-width:1320px;margin:0 auto;padding:32px 40px 120px;display:grid;grid-template-columns:280px 1fr;gap:32px;align-items:start">
-    <aside aria-label="Filters" style="background:var(--surface);border:1px solid var(--line);border-radius:var(--r-sm)">
+  <div class="directory-layout" style="max-width:1320px;margin:0 auto;padding:32px 40px 120px;display:grid;grid-template-columns:280px 1fr;gap:32px;align-items:start">
+    <aside class="directory-filters" aria-label="Filters" style="background:var(--surface);border:1px solid var(--line);border-radius:var(--r-sm)">
       <div style="padding:16px 18px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between">
         <div><div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.06em;color:var(--muted)">FILTERS</div><div style="font-family:'IBM Plex Mono',monospace;font-size:15px;margin-top:2px">{{ resultLine }}</div></div>
         <button onClick="{{ clearAll }}" style="background:none;border:none;color:var(--indigo);font-family:'Instrument Sans',sans-serif;font-size:14px;cursor:pointer;text-decoration:underline">Clear all</button>

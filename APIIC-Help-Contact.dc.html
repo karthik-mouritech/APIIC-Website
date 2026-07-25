@@ -95,10 +95,10 @@ a:hover{color:var(--gold)}
     </div>
   </section>
 
-  <section id="feedback" style="max-width:1320px;margin:0 auto;padding:80px 40px 112px">
+  <section id="feedback" class="feedback-section" style="max-width:1320px;margin:0 auto;padding:80px 40px 112px">
     <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.1em;color:var(--muted);border-bottom:1px solid var(--line);padding-bottom:14px">WEBSITE FEEDBACK</div>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:32px;margin-top:28px;align-items:start">
-      <div style="background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:28px;box-shadow:0 6px 18px -14px rgba(8,33,79,0.3);min-width:0">
+    <div class="feedback-layout" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:32px;margin-top:28px;align-items:start">
+      <div class="feedback-form" style="background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:28px;box-shadow:0 6px 18px -14px rgba(8,33,79,0.3);min-width:0">
         <h2 style="font-family:Sora,sans-serif;font-weight:600;font-size:26px;letter-spacing:-0.02em;margin:0">Tell us what's wrong</h2>
         <p style="font-size:16px;color:var(--muted);margin:8px 0 0">We check it against the source system and log the correction with a date. You'll get a reply within 2 working days.</p>
         <div style="display:flex;flex-direction:column;gap:18px;margin-top:22px">
@@ -106,7 +106,7 @@ a:hover{color:var(--gold)}
           <label style="display:flex;flex-direction:column;gap:6px;min-width:0"><span style="font-size:15px;font-weight:500">Which page?</span><input defaultValue="/parks/mallavalli" style="width:100%;min-width:0;border:1px solid var(--line);border-radius:var(--r-sm);padding:12px 14px;font-family:'IBM Plex Mono',monospace;font-size:16px"></label>
           <label style="display:flex;flex-direction:column;gap:6px;min-width:0"><span style="font-size:15px;font-weight:500">What did you expect to see?</span><textarea rows="4" style="width:100%;min-width:0;border:1px solid var(--line);border-radius:var(--r-sm);padding:12px 14px;font-family:'Instrument Sans',sans-serif;font-size:16px;resize:vertical"></textarea></label>
           <label style="display:flex;flex-direction:column;gap:6px;min-width:0"><span style="font-size:15px;font-weight:500">Email, if you'd like a reply</span><input style="width:100%;min-width:0;border:1px solid var(--line);border-radius:var(--r-sm);padding:12px 14px;font-family:'Instrument Sans',sans-serif;font-size:16px"></label>
-          <div style="display:flex;align-items:center;gap:18px;flex-wrap:wrap"><a href="APIIC-Talk-To-Expert.dc.html" style="background:linear-gradient(120deg,#0A2A6B,#14458F);color:#FFFFFF;padding:14px 22px;border-radius:999px;font-weight:600;box-shadow:var(--shadow)">Send feedback</a><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted)">OWNER: DIGITAL TEAM · SLA 2 WORKING DAYS</span></div>
+          <div class="feedback-actions" style="display:flex;align-items:center;gap:18px;flex-wrap:wrap"><a href="APIIC-Talk-To-Expert.dc.html" style="background:linear-gradient(120deg,#0A2B6B,#14458F);color:#FFFFFF;padding:14px 22px;border-radius:999px;font-weight:600;box-shadow:var(--shadow)">Send feedback</a><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted)">OWNER: DIGITAL TEAM · SLA 2 WORKING DAYS</span></div>
         </div>
       </div>
       <div style="display:flex;flex-direction:column;gap:20px;min-width:0">

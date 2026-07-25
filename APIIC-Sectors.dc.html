@@ -32,7 +32,7 @@ a:hover{color:var(--gold)}
   </div>
 
   <div style="max-width:1320px;margin:0 auto;padding:36px 40px 0">
-    <div style="display:flex;gap:10px;overflow-x:auto;padding-bottom:20px;border-bottom:1px solid var(--line)">
+    <div class="mobile-tabs sectors-tabs" style="display:flex;gap:10px;overflow-x:auto;padding-bottom:20px;border-bottom:1px solid var(--line)">
       <sc-if value="{{ onElectronics }}" hint-placeholder-val="{{ true }}"><button onClick="{{ pickElectronics }}" style="background:var(--indigo);color:#FFFFFF;border:1px solid var(--indigo);padding:10px 16px;border-radius:999px;font-family:'Instrument Sans',sans-serif;font-size:15px;white-space:nowrap;cursor:pointer">Electronics &amp; Semiconductors</button></sc-if>
       <sc-if value="{{ offElectronics }}" hint-placeholder-val="{{ false }}"><button onClick="{{ pickElectronics }}" style="background:var(--surface);color:var(--indigo);border:1px solid var(--line);padding:10px 16px;border-radius:999px;font-family:'Instrument Sans',sans-serif;font-size:15px;white-space:nowrap;cursor:pointer">Electronics &amp; Semiconductors</button></sc-if>
       <sc-if value="{{ onFood }}" hint-placeholder-val="{{ false }}"><button onClick="{{ pickFood }}" style="background:var(--indigo);color:#FFFFFF;border:1px solid var(--indigo);padding:10px 16px;border-radius:999px;font-family:'Instrument Sans',sans-serif;font-size:15px;white-space:nowrap;cursor:pointer">Food Processing</button></sc-if>
