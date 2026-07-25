@@ -162,7 +162,8 @@ class Component extends DCLogic {
   set(k) { return () => this.setState({ open: k }); }
   renderVals() {
     const o = this.state.open;
-    const wide = this.state.w >= 1500;
+    const coarsePointer = typeof window !== 'undefined' && window.matchMedia('(pointer: coarse)').matches;
+    const wide = this.state.w >= 1500 && !coarsePointer;
     const labels = { invest: 'Invest in AP', land: 'Land & Parks', setup: 'Investor Services', policy: 'Policies & Documents', insights: 'Knowledge Centre', about: 'About APIIC' };
     return {
       wide, narrow: !wide,
