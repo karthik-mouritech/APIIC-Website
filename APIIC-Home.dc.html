@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="./support.js"></script>
+<link rel="stylesheet" href="./responsive.css">
 </head>
 <body>
 <x-dc>
@@ -52,18 +53,18 @@ a:hover{color:var(--gold)}
       <g fill="none" stroke="#F3C86A" stroke-width="1" stroke-dasharray="7 6" opacity="0.75"><path class="pl2" d="M320 250 L470 300 L640 360 L810 440 L950 530"></path><path class="pl2" d="M330 470 L480 450 L650 470 L820 520 L940 600"></path></g>
       <g class="nd" fill="#2FC7DE"><circle cx="520" cy="230" r="5"></circle><circle cx="690" cy="410" r="5"></circle><circle cx="880" cy="590" r="5"></circle><circle cx="470" cy="300" r="3.5"></circle><circle cx="810" cy="440" r="3.5"></circle><circle cx="650" cy="470" r="3.5"></circle></g>
     </svg>
-    <div style="position:relative;max-width:1320px;margin:0 auto;padding:76px 40px 88px;display:grid;grid-template-columns:repeat(auto-fit,minmax(420px,1fr));gap:56px;align-items:center">
+    <div class="home-hero" style="position:relative;max-width:1320px;margin:0 auto;padding:76px 40px 88px;display:grid;grid-template-columns:repeat(auto-fit,minmax(420px,1fr));gap:56px;align-items:center">
       <div>
         <span style="display:inline-flex;align-items:center;gap:9px;background:rgba(47,199,222,0.14);border:1px solid rgba(47,199,222,0.4);color:#9FEBF8;padding:8px 15px;border-radius:999px;font-size:13px;font-weight:500"><span style="width:7px;height:7px;border-radius:50%;background:var(--cyan)"></span>104 parks · 6,380 acres available now</span>
         <h1 style="font-family:Sora,sans-serif;font-weight:700;font-size:56px;line-height:1.08;letter-spacing:-0.03em;margin:22px 0 0;max-width:24ch;text-wrap:pretty">Build in Andhra Pradesh. <span style="background:linear-gradient(100deg,#2FC7DE,#7FE9F7);-webkit-background-clip:text;background-clip:text;color:transparent">We own the land, and we'll show you the plan.</span></h1>
         <p style="font-size:20px;line-height:1.6;color:#C3D6EF;max-width:54ch;margin:20px 0 0">World-class industrial infrastructure, seamless approvals and — unusually — every plot, rate and utility carrying the date it was last verified.</p>
         <div style="margin-top:34px;max-width:660px">
-          <div style="display:flex;align-items:center;gap:10px;background:var(--surface);border-radius:999px;padding:7px 8px 7px 10px;box-shadow:var(--shadow-lg)">
+          <div class="home-search" style="display:flex;align-items:center;gap:10px;background:var(--surface);border-radius:999px;padding:7px 8px 7px 10px;box-shadow:var(--shadow-lg)">
             <span style="display:flex;align-items:center;gap:7px;background:var(--tint-sky);color:var(--royal);border-radius:999px;padding:11px 15px;font-size:14.5px;font-weight:500;white-space:nowrap">I am looking for <i class="ph ph-caret-down" style="font-size:11px"></i></span>
             <input aria-label="Search parks, sectors, policies or documents" placeholder="e.g. industrial land in Visakhapatnam" style="flex:1;min-width:0;border:none;outline:none;font-family:'Instrument Sans',sans-serif;font-size:16.5px;padding:12px 4px;color:var(--ink)">
             <a href="APIIC-Search.dc.html" aria-label="Search" style="width:46px;height:46px;border-radius:50%;background:linear-gradient(120deg,#0A2A6B,#14458F);color:#FFFFFF;display:grid;place-items:center;font-size:19px;flex:none"><i class="ph ph-magnifying-glass"></i></a>
           </div>
-          <div style="display:flex;flex-wrap:wrap;align-items:center;gap:9px;margin-top:16px">
+          <div class="home-popular" style="display:flex;flex-wrap:wrap;align-items:center;gap:9px;margin-top:16px">
             <span style="font-size:13.5px;color:#8FAAD0">Popular:</span>
             <a href="APIIC-Park-Finder.dc.html" style="border:1px solid rgba(255,255,255,0.22);color:#DCE8F6;padding:8px 14px;border-radius:999px;font-size:13.5px" style-hover="background:rgba(47,199,222,0.16);color:#FFFFFF">Food processing near a port</a>
             <a href="APIIC-Parks-Directory.dc.html" style="border:1px solid rgba(255,255,255,0.22);color:#DCE8F6;padding:8px 14px;border-radius:999px;font-size:13.5px" style-hover="background:rgba(47,199,222,0.16);color:#FFFFFF">20–50 acres</a>
@@ -78,7 +79,7 @@ a:hover{color:var(--gold)}
         <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.1em;color:rgba(255,255,255,0.34);margin-top:26px;line-height:1.9">⌁ HERO IMAGE SLOT · 21:9 FULL BLEED · AERIAL PARK, PORT OR CORRIDOR GATEWAY<br>ALT · CAPTION · LOCATION · DATE · RIGHTS REQUIRED BEFORE PUBLISH (WEB-148)</div>
       </div>
 
-      <div style="background:rgba(8,33,79,0.88);backdrop-filter:blur(12px);border:1px solid rgba(127,178,255,0.28);border-radius:var(--r);padding:26px 28px;box-shadow:var(--shadow-lg)">
+      <div class="home-explorer" style="background:rgba(8,33,79,0.88);backdrop-filter:blur(12px);border:1px solid rgba(127,178,255,0.28);border-radius:var(--r);padding:26px 28px;box-shadow:var(--shadow-lg)">
         <div style="font-family:Sora,sans-serif;font-weight:600;font-size:24px;letter-spacing:-0.02em">Explore Andhra Pradesh</div>
         <div style="font-size:14.5px;color:#9FB8D8;margin-top:4px">The industrial powerhouse of India's east coast</div>
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:22px;margin-top:20px;align-items:center">

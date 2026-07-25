@@ -1,5 +1,5 @@
 /* Shared mobile rules for the supplied APIIC prototype. */
-html, body { max-width: 100%; overflow-x: clip; }
+html, body { max-width: 100%; overflow-x: hidden; }
 html { -webkit-text-size-adjust: 100%; }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -28,6 +28,23 @@ img, svg, iframe { max-width: 100%; }
   h2 { font-size: clamp(1.8rem, 7vw, 2.5rem) !important; line-height: 1.15 !important; }
   h3 { font-size: clamp(1.2rem, 5vw, 1.5rem) !important; }
   iframe { height: min(58vw, 360px) !important; min-height: 260px; }
+
+  header [style*="padding:9px 20px"] > span:last-child { display: none !important; }
+  header [style*="height:84px"] { height: 68px !important; padding: 0 20px !important; gap: 12px !important; flex-wrap: nowrap !important; }
+  header a[href="APIIC-Home.dc.html"] { min-width: 0 !important; overflow: hidden; }
+  header a[href="APIIC-Home.dc.html"] span span:last-child { display: none !important; }
+  header a[href="APIIC-Home.dc.html"] span span:first-child { font-size: 24px !important; }
+
+  .home-hero { grid-template-columns: minmax(0, 1fr) !important; padding: 48px 20px 56px !important; gap: 32px !important; }
+  .home-hero h1 { max-width: 12ch !important; font-size: clamp(2.35rem, 10vw, 3rem) !important; }
+  .home-hero p { max-width: 34ch !important; font-size: 18px !important; }
+  .home-search { display: grid !important; grid-template-columns: minmax(0, 1fr) 46px !important; gap: 8px !important; border-radius: 18px !important; padding: 8px !important; }
+  .home-search > span { grid-column: 1 / -1; justify-self: start; }
+  .home-search input { width: 100% !important; min-width: 0 !important; padding: 10px 6px !important; }
+  .home-search a { justify-self: end; }
+  .home-popular { gap: 8px !important; }
+  .home-popular > span { width: 100%; }
+  .home-explorer { padding: 20px !important; }
 }
 
 @media (max-width: 560px) {
