@@ -53,6 +53,8 @@ img, svg, iframe { max-width: 100%; }
   .home-popular { gap: 8px !important; }
   .home-popular > span { width: 100%; }
   .home-explorer { padding: 20px !important; }
+  .home-explorer-layout { gap: 20px !important; }
+  .home-explorer-stats { grid-template-columns: 1fr !important; }
 }
 
 @media (max-width: 560px), (pointer: coarse) {
