@@ -20,8 +20,15 @@ table th[style*="position:sticky"] { position: static !important; left: auto !im
 @media (max-width: 760px), (pointer: coarse) {
   body { font-size: 16px !important; }
   main, section, header, footer, [style] { max-width: 100%; }
+  main > *, section, article, aside, form { min-width: 0; }
+  [style*="display:grid"], [style*="display:flex"] { min-width: 0; }
+  [style*="display:flex"] > * { min-width: 0; }
   [style*="display:flex"] { flex-wrap: wrap; }
-  input, select, textarea, button { max-width: 100%; }
+  [style*="white-space:nowrap"] { white-space: normal !important; }
+  input:not([type="checkbox"]):not([type="radio"]), select, textarea { width: 100% !important; max-width: 100% !important; }
+  button { max-width: 100%; }
+  a, button, label, p, span { overflow-wrap: anywhere; }
+  [style*="overflow-x:auto"] { max-width: 100% !important; }
 
   [style*="max-width:1320px"][style*="padding:"],
   [style*="max-width:1440px"][style*="padding:"],
@@ -39,6 +46,8 @@ table th[style*="position:sticky"] { position: static !important; left: auto !im
   h2 { font-size: clamp(1.8rem, 7vw, 2.5rem) !important; line-height: 1.15 !important; }
   h3 { font-size: clamp(1.2rem, 5vw, 1.5rem) !important; }
   iframe { height: min(58vw, 360px) !important; min-height: 260px; }
+  [style*="padding:30px 32px"], [style*="padding: 30px 32px"] { padding: 24px 20px !important; }
+  [style*="padding:28px"], [style*="padding: 28px"] { padding: 24px 20px !important; }
 
   header [style*="padding:9px 20px"] > span:last-child { display: none !important; }
   header [style*="height:84px"] { height: 68px !important; padding: 0 20px !important; gap: 12px !important; flex-wrap: nowrap !important; }
