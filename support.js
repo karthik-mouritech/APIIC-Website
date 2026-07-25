@@ -1903,6 +1903,15 @@
     if (document.readyState !== "loading") api.__dcBoot();
     else document.addEventListener("DOMContentLoaded", () => api.__dcBoot());
   }
+  function loadResponsiveCss() {
+    if (document.getElementById("apiic-responsive-css")) return;
+    const link = document.createElement("link");
+    link.id = "apiic-responsive-css";
+    link.rel = "stylesheet";
+    link.href = new URL("./responsive.css", document.currentScript?.src || location.href).href;
+    document.head.appendChild(link);
+  }
+  loadResponsiveCss();
   hideRawTemplate();
   loadReactUmd().then(init).catch((err) => {
     console.error("[dc] failed to load React or boot:", err);

@@ -1,0 +1,37 @@
+/* Shared mobile rules for the supplied APIIC prototype. */
+html { -webkit-text-size-adjust: 100%; }
+
+img, svg, iframe { max-width: 100%; }
+
+@media (max-width: 760px) {
+  body { font-size: 16px !important; }
+
+  [style*="max-width:1320px"][style*="padding:"],
+  [style*="max-width:1440px"][style*="padding:"],
+  [style*="max-width:1120px"][style*="padding:"],
+  [style*="max-width:1060px"][style*="padding:"],
+  [style*="max-width:1000px"][style*="padding:"],
+  [style*="max-width:960px"][style*="padding:"],
+  [style*="max-width:880px"][style*="padding:"],
+  [style*="max-width:820px"][style*="padding:"] {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  h1 { font-size: clamp(2.2rem, 10vw, 3.5rem) !important; line-height: 1.1 !important; }
+  h2 { font-size: clamp(1.8rem, 7vw, 2.5rem) !important; line-height: 1.15 !important; }
+  h3 { font-size: clamp(1.2rem, 5vw, 1.5rem) !important; }
+  iframe { height: min(58vw, 360px) !important; min-height: 260px; }
+}
+
+@media (max-width: 560px) {
+  [style*="grid-template-columns:"] { grid-template-columns: 1fr !important; }
+  [style*="min-width:"] { min-width: 0 !important; }
+  [style*="padding:40px"], [style*="padding: 40px"] { padding: 28px 20px !important; }
+  [style*="padding:32px"], [style*="padding: 32px"] { padding: 24px 20px !important; }
+  [style*="gap:56px"], [style*="gap: 56px"] { gap: 28px !important; }
+  [style*="gap:48px"], [style*="gap: 48px"] { gap: 24px !important; }
+  [style*="font-size:20px"], [style*="font-size: 20px"] { font-size: 18px !important; }
+  [style*="font-size:17px"], [style*="font-size: 17px"] { font-size: 16px !important; }
+  table { display: block; max-width: 100%; overflow-x: auto; white-space: nowrap; }
+}
