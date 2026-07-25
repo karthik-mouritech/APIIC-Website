@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/duotone/style.css">
+<style>
+:root{--ink:#08214F;--indigo:#123B86;--royal:#0A2A6B;--royal2:#14458F;--cyan:#2FC7DE;--cyan-deep:#0E9CB8;--cyan-soft:#E6F8FB;--tint-lav:#EEF0FF;--tint-mint:#E8F7F0;--tint-peach:#FDF1E7;--tint-sky:#E9F1FE;--tint-violet:#F2ECFE;--tint-rose:#FDECF2;--r:14px;--r-sm:10px;--shadow:0 14px 34px -20px rgba(8,33,79,0.30);--gold:#C9962C;--tide:#0F8A80;--paper:#F6F8FB;--surface:#FFFFFF;--line:#DCE3EC;--muted:#5A6B7A}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:'Instrument Sans',system-ui,sans-serif;font-size:18px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:var(--indigo);text-decoration:none}
+a:hover{color:var(--cyan-deep)}
+:focus-visible{outline:2px solid var(--cyan);outline-offset:2px}
+</style>
+</helmet>
+<main style="min-height:100vh">
+  <dc-import name="APIICNav" hint-size="100%,126px"></dc-import>
+
+  <div style="background:linear-gradient(105deg,#08214F 0%,#0A2A6B 55%,#123B86 100%);color:#FFFFFF;position:relative;overflow:hidden">
+    <div style="position:relative;max-width:1320px;margin:0 auto;padding:22px 40px 0;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.08em;color:#9FB8D8"><a href="APIIC-Home.dc.html" style="color:#9FB8D8">HOME</a> / KNOWLEDGE CENTRE</div>
+    <div style="position:relative;max-width:1320px;margin:0 auto;padding:26px 40px 44px">
+      <h1 style="font-family:Sora,sans-serif;font-weight:700;font-size:46px;letter-spacing:-0.03em;margin:0">Knowledge centre</h1>
+      <p style="font-size:19px;color:#C3D6EF;margin:12px 0 0;max-width:70ch">News, research, events and consented investor case records — each item dated, owned and published only when it is approved.</p>
+      <div style="display:flex;gap:10px;margin-top:26px;flex-wrap:wrap">
+        <sc-if value="{{ onNews }}" hint-placeholder-val="{{ true }}"><button onClick="{{ toNews }}" style="background:var(--cyan);color:#06203F;border:none;padding:11px 20px;border-radius:999px;font-family:'Instrument Sans',sans-serif;font-size:15px;font-weight:600;cursor:pointer">News &amp; announcements</button></sc-if>
+        <sc-if value="{{ offNews }}" hint-placeholder-val="{{ false }}"><button onClick="{{ toNews }}" style="background:rgba(255,255,255,0.1);color:#FFFFFF;border:1px solid rgba(255,255,255,0.3);padding:11px 20px;border-radius:999px;font-family:'Instrument Sans',sans-serif;font-size:15px;cursor:pointer">News &amp; announcements</button></sc-if>
+        <sc-if value="{{ onStories }}" hint-placeholder-val="{{ false }}"><button onClick="{{ toStories }}" style="background:var(--cyan);color:#06203F;border:none;padding:11px 20px;border-radius:999px;font-family:'Instrument Sans',sans-serif;font-size:15px;font-weight:600;cursor:pointer">Success stories</button></sc-if>
+        <sc-if value="{{ offStories }}" hint-placeholder-val="{{ true }}"><button onClick="{{ toStories }}" style="background:rgba(255,255,255,0.1);color:#FFFFFF;border:1px solid rgba(255,255,255,0.3);padding:11px 20px;border-radius:999px;font-family:'Instrument Sans',sans-serif;font-size:15px;cursor:pointer">Success stories</button></sc-if>
+        <sc-if value="{{ onInsights }}" hint-placeholder-val="{{ false }}"><button onClick="{{ toInsights }}" style="background:var(--cyan);color:#06203F;border:none;padding:11px 20px;border-radius:999px;font-family:'Instrument Sans',sans-serif;font-size:15px;font-weight:600;cursor:pointer">Insights &amp; reports</button></sc-if>
+        <sc-if value="{{ offInsights }}" hint-placeholder-val="{{ true }}"><button onClick="{{ toInsights }}" style="background:rgba(255,255,255,0.1);color:#FFFFFF;border:1px solid rgba(255,255,255,0.3);padding:11px 20px;border-radius:999px;font-family:'Instrument Sans',sans-serif;font-size:15px;cursor:pointer">Insights &amp; reports</button></sc-if>
+        <sc-if value="{{ onEvents }}" hint-placeholder-val="{{ false }}"><button onClick="{{ toEvents }}" style="background:var(--cyan);color:#06203F;border:none;padding:11px 20px;border-radius:999px;font-family:'Instrument Sans',sans-serif;font-size:15px;font-weight:600;cursor:pointer">Events</button></sc-if>
+        <sc-if value="{{ offEvents }}" hint-placeholder-val="{{ true }}"><button onClick="{{ toEvents }}" style="background:rgba(255,255,255,0.1);color:#FFFFFF;border:1px solid rgba(255,255,255,0.3);padding:11px 20px;border-radius:999px;font-family:'Instrument Sans',sans-serif;font-size:15px;cursor:pointer">Events</button></sc-if>
+      </div>
+    </div>
+  </div>
+
+  <sc-if value="{{ onNews }}" hint-placeholder-val="{{ true }}">
+    <div style="max-width:1320px;margin:0 auto;padding:44px 40px 120px">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px">
+        <article style="background:var(--surface);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;box-shadow:0 6px 18px -14px rgba(8,33,79,0.3);grid-column:span 1">
+          <div role="img" aria-label="Ministers and officials at the launch of the AP Industrial Development Policy 4.0" style="aspect-ratio:16/10;background:repeating-linear-gradient(120deg,#E9F1FE 0 14px,#F6F8FB 14px 28px);display:grid;place-items:center;font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:var(--muted);text-align:center;padding:16px;line-height:1.9">PHOTOGRAPH SLOT 16:10<br>ALT · CAPTION · LOCATION · DATE · RIGHTS</div>
+          <div style="padding:22px">
+            <div style="display:flex;align-items:center;gap:9px;flex-wrap:wrap"><span style="background:var(--cyan);color:#06203F;font-family:'IBM Plex Mono',monospace;font-size:10px;padding:4px 9px;border-radius:999px;font-weight:600">NEW</span><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted)">POLICY · 20 JUL 2026</span></div>
+            <h3 style="font-family:Sora,sans-serif;font-weight:600;font-size:22px;letter-spacing:-0.02em;margin:10px 0 0">Industrial Policy 4.0 amendment extends power reimbursement window</h3>
+            <p style="font-size:16px;color:var(--muted);margin:8px 0 0">Claims for eligible units may now be filed up to 24 months after commercial production, replacing the earlier 12-month window.</p>
+            <a href="APIIC-Policies.dc.html" style="display:inline-block;margin-top:12px;font-weight:500">Read the policy summary →</a>
+          </div>
+        </article>
+        <article style="background:var(--surface);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;box-shadow:0 6px 18px -14px rgba(8,33,79,0.3)">
+          <div role="img" aria-label="Aerial view of the Kopparthy industrial node under development" style="aspect-ratio:16/10;background:repeating-linear-gradient(120deg,#E8F7F0 0 14px,#F6F8FB 14px 28px);display:grid;place-items:center;font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:var(--muted);text-align:center;padding:16px;line-height:1.9">PHOTOGRAPH SLOT 16:10<br>ALT · CAPTION · LOCATION · DATE · RIGHTS</div>
+          <div style="padding:22px">
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted)">LAND RELEASE · 16 JUL 2026</div>
+            <h3 style="font-family:Sora,sans-serif;font-weight:600;font-size:22px;letter-spacing:-0.02em;margin:10px 0 0">Kopparthy node: 1,200 acres to be released in phases from Q1 2027</h3>
+            <p style="font-size:16px;color:var(--muted);margin:8px 0 0">Trunk roads and the 220 kV substation are under construction. Rates will be published with the release notification.</p>
+            <a href="APIIC-Park-Profile.dc.html" style="display:inline-block;margin-top:12px;font-weight:500">See the node →</a>
+          </div>
+        </article>
+        <article style="background:var(--surface);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;box-shadow:0 6px 18px -14px rgba(8,33,79,0.3)">
+          <div role="img" aria-label="Signing ceremony for a memorandum of understanding with a global manufacturer" style="aspect-ratio:16/10;background:repeating-linear-gradient(120deg,#F2ECFE 0 14px,#F6F8FB 14px 28px);display:grid;place-items:center;font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:var(--muted);text-align:center;padding:16px;line-height:1.9">PHOTOGRAPH SLOT 16:10<br>ALT · CAPTION · LOCATION · DATE · RIGHTS</div>
+          <div style="padding:22px">
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted)">INVESTMENT · 12 JUL 2026</div>
+            <h3 style="font-family:Sora,sans-serif;font-weight:600;font-size:22px;letter-spacing:-0.02em;margin:10px 0 0">Electronics cluster adds two component units at Chittoor</h3>
+            <p style="font-size:16px;color:var(--muted);margin:8px 0 0">Both units take plug-and-play sheds inside the EMC, with production expected within nine months of handover.</p>
+            <a href="APIIC-Sectors.dc.html" style="display:inline-block;margin-top:12px;font-weight:500">Electronics sector →</a>
+          </div>
+        </article>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;margin-top:32px">
+        <div style="background:var(--surface);padding:18px 22px;display:flex;align-items:center;gap:18px;flex-wrap:wrap"><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);min-width:96px">08 JUL 2026</span><span style="background:var(--tint-sky);color:var(--royal);font-size:12px;padding:4px 10px;border-radius:999px">TENDER</span><span style="flex:1;min-width:220px;font-size:17px">Corrigendum 2 issued for the Mallavalli internal roads package</span><a href="APIIC-Documents.dc.html" style="font-weight:500;white-space:nowrap">View →</a></div>
+        <div style="background:var(--surface);padding:18px 22px;display:flex;align-items:center;gap:18px;flex-wrap:wrap"><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);min-width:96px">02 JUL 2026</span><span style="background:var(--tint-mint);color:#0A7F76;font-size:12px;padding:4px 10px;border-radius:999px">ENVIRONMENT</span><span style="flex:1;min-width:220px;font-size:17px">Post-EC compliance report for H1 FY27 published for nine estates</span><a href="APIIC-Park-Profile.dc.html" style="font-weight:500;white-space:nowrap">View →</a></div>
+        <div style="background:var(--surface);padding:18px 22px;display:flex;align-items:center;gap:18px;flex-wrap:wrap"><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);min-width:96px">24 JUN 2026</span><span style="background:var(--tint-peach);color:#8A6410;font-size:12px;padding:4px 10px;border-radius:999px">RATES</span><span style="flex:1;min-width:220px;font-size:17px">Approved land rate order 214/2026 supersedes the January table</span><a href="APIIC-Policies.dc.html" style="font-weight:500;white-space:nowrap">View →</a></div>
+      </div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);margin-top:20px"><span style="color:var(--tide)">⌁</span> NEWS DATASET VERIFIED 24 JUL 2026 · OWNER: CORPORATE AFFAIRS · PUBLISHED ON APPROVAL</div>
+    </div>
+  </sc-if>
+
+  <sc-if value="{{ onStories }}" hint-placeholder-val="{{ false }}">
+    <div style="max-width:1320px;margin:0 auto;padding:44px 40px 120px">
+      <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap;border-bottom:1px solid var(--line);padding-bottom:18px">
+        <div><h2 style="font-family:Sora,sans-serif;font-weight:700;font-size:38px;letter-spacing:-0.03em;margin:0">Success stories</h2><p style="font-size:17px;color:var(--muted);margin:8px 0 0;max-width:64ch">Case records, not a logo wall: what the investor needed, what APIIC did, and one measurable outcome. Published only with written consent.</p></div>
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted)">14 CONSENTED RECORDS · 3 SHOWN</span>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px;margin-top:28px">
+        <article style="background:var(--surface);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;box-shadow:0 6px 18px -14px rgba(8,33,79,0.3);display:flex;flex-direction:column">
+          <div role="img" aria-label="Cold storage plant interior at Mallavalli, Krishna District" style="aspect-ratio:4/3;background:repeating-linear-gradient(125deg,#E8F7F0 0 14px,#F6F8FB 14px 28px);display:grid;place-items:center;font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:var(--muted);text-align:center;padding:16px;line-height:1.9">PHOTOGRAPH SLOT 4:3<br>WORKING PLANT · CONSENT ON FILE</div>
+          <div style="padding:24px;display:flex;flex-direction:column;gap:12px;flex:1">
+            <div style="display:flex;gap:8px;flex-wrap:wrap"><span style="background:var(--tint-mint);color:#0A7F76;font-size:12px;padding:4px 10px;border-radius:999px">FOOD PROCESSING</span><span style="background:var(--tint-sky);color:var(--royal);font-size:12px;padding:4px 10px;border-radius:999px">KRISHNA</span></div>
+            <h3 style="font-family:Sora,sans-serif;font-weight:600;font-size:22px;letter-spacing:-0.02em;margin:0">A cold-chain plant that needed water certainty</h3>
+            <div style="font-size:15.5px;color:var(--muted)"><strong style="color:var(--ink);font-weight:500">Needed:</strong> 24 acres, assured process water, port within 60 km.</div>
+            <div style="font-size:15.5px;color:var(--muted)"><strong style="color:var(--ink);font-weight:500">APIIC did:</strong> allotted in Mallavalli, confirmed the water agreement, coordinated the 33 kV feeder.</div>
+            <div style="border-top:1px solid var(--line);padding-top:14px;margin-top:auto"><span style="font-family:Sora,sans-serif;font-weight:700;font-size:24px;color:var(--cyan-deep)">14 months</span><div style="font-size:14px;color:var(--muted)">allotment to commissioning</div></div>
+          </div>
+        </article>
+        <article style="background:var(--surface);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;box-shadow:0 6px 18px -14px rgba(8,33,79,0.3);display:flex;flex-direction:column">
+          <div role="img" aria-label="Electronics assembly line inside a plug-and-play shed at Chittoor" style="aspect-ratio:4/3;background:repeating-linear-gradient(125deg,#EEF0FF 0 14px,#F6F8FB 14px 28px);display:grid;place-items:center;font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:var(--muted);text-align:center;padding:16px;line-height:1.9">PHOTOGRAPH SLOT 4:3<br>WORKING PLANT · CONSENT ON FILE</div>
+          <div style="padding:24px;display:flex;flex-direction:column;gap:12px;flex:1">
+            <div style="display:flex;gap:8px;flex-wrap:wrap"><span style="background:var(--tint-lav);color:var(--royal);font-size:12px;padding:4px 10px;border-radius:999px">ELECTRONICS</span><span style="background:var(--tint-sky);color:var(--royal);font-size:12px;padding:4px 10px;border-radius:999px">CHITTOOR</span></div>
+            <h3 style="font-family:Sora,sans-serif;font-weight:600;font-size:22px;letter-spacing:-0.02em;margin:0">An assembly line that needed sheds, not soil</h3>
+            <div style="font-size:15.5px;color:var(--muted)"><strong style="color:var(--ink);font-weight:500">Needed:</strong> 8,000 sq m of built space within 90 days.</div>
+            <div style="font-size:15.5px;color:var(--muted)"><strong style="color:var(--ink);font-weight:500">APIIC did:</strong> leased plug-and-play sheds in the EMC and sequenced the power sanction in parallel.</div>
+            <div style="border-top:1px solid var(--line);padding-top:14px;margin-top:auto"><span style="font-family:Sora,sans-serif;font-weight:700;font-size:24px;color:var(--cyan-deep)">71 days</span><div style="font-size:14px;color:var(--muted)">enquiry to first production</div></div>
+          </div>
+        </article>
+        <article style="background:var(--surface);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;box-shadow:0 6px 18px -14px rgba(8,33,79,0.3);display:flex;flex-direction:column">
+          <div role="img" aria-label="Battery manufacturing unit with rooftop solar at Anakapalli" style="aspect-ratio:4/3;background:repeating-linear-gradient(125deg,#FDF1E7 0 14px,#F6F8FB 14px 28px);display:grid;place-items:center;font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:var(--muted);text-align:center;padding:16px;line-height:1.9">PHOTOGRAPH SLOT 4:3<br>WORKING PLANT · CONSENT ON FILE</div>
+          <div style="padding:24px;display:flex;flex-direction:column;gap:12px;flex:1">
+            <div style="display:flex;gap:8px;flex-wrap:wrap"><span style="background:var(--tint-peach);color:#8A6410;font-size:12px;padding:4px 10px;border-radius:999px">GREEN ENERGY</span><span style="background:var(--tint-sky);color:var(--royal);font-size:12px;padding:4px 10px;border-radius:999px">ANAKAPALLI</span></div>
+            <h3 style="font-family:Sora,sans-serif;font-weight:600;font-size:22px;letter-spacing:-0.02em;margin:0">A battery unit that needed open-access power</h3>
+            <div style="font-size:15.5px;color:var(--muted)"><strong style="color:var(--ink);font-weight:500">Needed:</strong> 40 acres with 60% renewable supply and effluent capacity.</div>
+            <div style="font-size:15.5px;color:var(--muted)"><strong style="color:var(--ink);font-weight:500">APIIC did:</strong> matched an estate with CETP headroom and arranged wheeling.</div>
+            <div style="border-top:1px solid var(--line);padding-top:14px;margin-top:auto"><span style="font-family:Sora,sans-serif;font-weight:700;font-size:24px;color:var(--cyan-deep)">62% renewable</span><div style="font-size:14px;color:var(--muted)">of site draw in year one</div></div>
+          </div>
+        </article>
+      </div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);margin-top:24px"><span style="color:var(--tide)">⌁</span> STORY SET VERIFIED 16 JUL 2026 · CONSENT RECORDED PER UNIT · NO UNCONSENTED NAMES PUBLISHED</div>
+    </div>
+  </sc-if>
+
+  <sc-if value="{{ onInsights }}" hint-placeholder-val="{{ false }}">
+    <div style="max-width:1320px;margin:0 auto;padding:44px 40px 120px">
+      <h2 style="font-family:Sora,sans-serif;font-weight:700;font-size:38px;letter-spacing:-0.03em;margin:0">Insights &amp; reports</h2>
+      <p style="font-size:18px;color:var(--muted);margin:8px 0 0;max-width:66ch">Sector research, cost benchmarks and estate performance reporting. Every publication carries its period, its owner and the date it was last reviewed.</p>
+      <div style="display:flex;flex-direction:column;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;margin-top:28px">
+        <div style="background:var(--surface);padding:22px 24px;display:flex;align-items:center;gap:20px;flex-wrap:wrap"><span style="width:46px;height:46px;border-radius:var(--r-sm);background:var(--tint-lav);display:grid;place-items:center;flex:none"><i class="ph-duotone ph-chart-line-up" style="font-size:22px;color:var(--royal)"></i></span><span style="flex:1;min-width:240px"><span style="display:block;font-family:Sora,sans-serif;font-weight:600;font-size:20px;letter-spacing:-0.02em">Electronics manufacturing in Andhra Pradesh — cluster readiness review</span><span style="display:block;font-size:15px;color:var(--muted);margin-top:3px">Period FY 2025–26 · Owner: Investor Services · Reviewed 21 JUL 2026</span></span><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted);white-space:nowrap">PDF · 3.2 MB</span><a href="APIIC-Prototype-Scope.dc.html#external" style="border:1px solid var(--royal);color:var(--royal);padding:11px 18px;border-radius:999px;font-weight:500;white-space:nowrap">Download ↗</a></div>
+        <div style="background:var(--surface);padding:22px 24px;display:flex;align-items:center;gap:20px;flex-wrap:wrap"><span style="width:46px;height:46px;border-radius:var(--r-sm);background:var(--tint-mint);display:grid;place-items:center;flex:none"><i class="ph-duotone ph-currency-inr" style="font-size:22px;color:#0F8A80"></i></span><span style="flex:1;min-width:240px"><span style="display:block;font-family:Sora,sans-serif;font-weight:600;font-size:20px;letter-spacing:-0.02em">Cost of operating benchmark — land, power, water, labour, freight</span><span style="display:block;font-size:15px;color:var(--muted);margin-top:3px">Period JUN 2026 · Owner: Investor Services · Reviewed 21 JUL 2026</span></span><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted);white-space:nowrap">PDF · 1.4 MB</span><a href="APIIC-Why-Invest.dc.html" style="border:1px solid var(--royal);color:var(--royal);padding:11px 18px;border-radius:999px;font-weight:500;white-space:nowrap">Read online</a></div>
+        <div style="background:var(--surface);padding:22px 24px;display:flex;align-items:center;gap:20px;flex-wrap:wrap"><span style="width:46px;height:46px;border-radius:var(--r-sm);background:var(--tint-peach);display:grid;place-items:center;flex:none"><i class="ph-duotone ph-leaf" style="font-size:22px;color:#B4831F"></i></span><span style="flex:1;min-width:240px"><span style="display:block;font-family:Sora,sans-serif;font-weight:600;font-size:20px;letter-spacing:-0.02em">Green estate performance — renewable share and water reuse by estate</span><span style="display:block;font-size:15px;color:var(--muted);margin-top:3px">Period Q1 FY27 · Owner: Environment Cell · Reviewed 30 JUN 2026</span></span><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#8A6410;white-space:nowrap">DUE SOON</span><a href="APIIC-Data-Freshness.dc.html" style="border:1px solid var(--royal);color:var(--royal);padding:11px 18px;border-radius:999px;font-weight:500;white-space:nowrap">See status</a></div>
+        <div style="background:var(--surface);padding:22px 24px;display:flex;align-items:center;gap:20px;flex-wrap:wrap"><span style="width:46px;height:46px;border-radius:var(--r-sm);background:var(--tint-violet);display:grid;place-items:center;flex:none"><i class="ph-duotone ph-users-three" style="font-size:22px;color:#6B46C1"></i></span><span style="flex:1;min-width:240px"><span style="display:block;font-family:Sora,sans-serif;font-weight:600;font-size:20px;letter-spacing:-0.02em">Talent and wage band survey — 214 employers, six sectors</span><span style="display:block;font-size:15px;color:var(--muted);margin-top:3px">Period JUN 2026 · Owner: Investor Services · Reviewed 21 JUL 2026</span></span><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted);white-space:nowrap">PDF · 2.1 MB</span><a href="APIIC-Why-Invest.dc.html" style="border:1px solid var(--royal);color:var(--royal);padding:11px 18px;border-radius:999px;font-weight:500;white-space:nowrap">Read online</a></div>
+      </div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);margin-top:20px"><span style="color:var(--tide)">⌁</span> PUBLICATION REGISTER VERIFIED 21 JUL 2026 · METHODOLOGY NOTES TRAVEL WITH EACH REPORT</div>
+    </div>
+  </sc-if>
+
+  <sc-if value="{{ onEvents }}" hint-placeholder-val="{{ false }}">
+    <div style="max-width:1320px;margin:0 auto;padding:44px 40px 120px">
+      <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap;border-bottom:1px solid var(--line);padding-bottom:18px">
+        <div><h2 style="font-family:Sora,sans-serif;font-weight:700;font-size:38px;letter-spacing:-0.03em;margin:0">Events</h2><p style="font-size:17px;color:var(--muted);margin:8px 0 0">Investor meets, sector roundtables and park site visits you can register for.</p></div>
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--gold)">⌁ EVENTS DATASET LAST VERIFIED 06 JUN 2026 · REVIEW OVERDUE</span>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px;margin-top:28px">
+        <article style="background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:24px;box-shadow:0 6px 18px -14px rgba(8,33,79,0.3);display:flex;gap:18px">
+          <div style="width:74px;flex:none;text-align:center;background:linear-gradient(140deg,#0A2A6B,#123B86);color:#FFFFFF;border-radius:var(--r-sm);padding:12px 8px"><div style="font-family:Sora,sans-serif;font-weight:700;font-size:26px;line-height:1">12</div><div style="font-family:'IBM Plex Mono',monospace;font-size:11px;margin-top:4px">AUG</div></div>
+          <div style="min-width:0"><div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted)">VIJAYAWADA · 10:30–16:00 IST</div><h3 style="font-family:Sora,sans-serif;font-weight:600;font-size:21px;letter-spacing:-0.02em;margin:8px 0 0">Food processing investor roundtable</h3><p style="font-size:15.5px;color:var(--muted);margin:6px 0 0">Cold chain, marine products and CETP capacity, with the Krishna and Bapatla zonal teams.</p><a href="APIIC-Talk-To-Expert.dc.html" style="display:inline-block;margin-top:10px;font-weight:500">Register interest →</a></div>
+        </article>
+        <article style="background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:24px;box-shadow:0 6px 18px -14px rgba(8,33,79,0.3);display:flex;gap:18px">
+          <div style="width:74px;flex:none;text-align:center;background:linear-gradient(140deg,#0A2A6B,#123B86);color:#FFFFFF;border-radius:var(--r-sm);padding:12px 8px"><div style="font-family:Sora,sans-serif;font-weight:700;font-size:26px;line-height:1">27</div><div style="font-family:'IBM Plex Mono',monospace;font-size:11px;margin-top:4px">AUG</div></div>
+          <div style="min-width:0"><div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted)">CHITTOOR EMC · SITE VISIT</div><h3 style="font-family:Sora,sans-serif;font-weight:600;font-size:21px;letter-spacing:-0.02em;margin:8px 0 0">Electronics cluster walkthrough</h3><p style="font-size:15.5px;color:var(--muted);margin:6px 0 0">Plug-and-play sheds, the 220 kV substation and the supplier ecosystem on site.</p><a href="APIIC-Sectors.dc.html" style="display:inline-block;margin-top:10px;font-weight:500">Sector page →</a></div>
+        </article>
+        <article style="background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:24px;box-shadow:0 6px 18px -14px rgba(8,33,79,0.3);display:flex;gap:18px">
+          <div style="width:74px;flex:none;text-align:center;background:var(--tint-sky);color:var(--royal);border-radius:var(--r-sm);padding:12px 8px"><div style="font-family:Sora,sans-serif;font-weight:700;font-size:26px;line-height:1">09</div><div style="font-family:'IBM Plex Mono',monospace;font-size:11px;margin-top:4px">SEP</div></div>
+          <div style="min-width:0"><div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted)">ONLINE · 15:00 IST</div><h3 style="font-family:Sora,sans-serif;font-weight:600;font-size:21px;letter-spacing:-0.02em;margin:8px 0 0">Webinar: reading the incentive framework</h3><p style="font-size:15.5px;color:var(--muted);margin:6px 0 0">How Policy 4.0, sector policies and district classification interact — with the policy desk.</p><a href="APIIC-Incentive-Screener.dc.html" style="display:inline-block;margin-top:10px;font-weight:500">Try the screener first →</a></div>
+        </article>
+      </div>
+      <p style="font-size:14px;color:var(--muted);margin-top:24px">Event dates in this prototype are illustrative. This dataset is deliberately shown in its overdue state to demonstrate the freshness behaviour.</p>
+    </div>
+  </sc-if>
+  <dc-import name="APIICFooter" hint-size="100%,520px"></dc-import>
+</main>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { view: 'news' };
+  go(v) { return () => { this.setState({ view: v }); window.scrollTo(0, 0); }; }
+  renderVals() {
+    const v = this.state.view;
+    return {
+      onNews: v === 'news', offNews: v !== 'news',
+      onStories: v === 'stories', offStories: v !== 'stories',
+      onInsights: v === 'insights', offInsights: v !== 'insights',
+      onEvents: v === 'events', offEvents: v !== 'events',
+      toNews: this.go('news'), toStories: this.go('stories'), toInsights: this.go('insights'), toEvents: this.go('events')
+    };
+  }
+}
+</script>
+</body>
+</html>

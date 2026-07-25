@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+<style>
+:root{--ink:#08214F;--indigo:#123B86;--royal:#0A2A6B;--royal2:#14458F;--cyan:#2FC7DE;--cyan-deep:#0E9CB8;--cyan-soft:#E6F8FB;--tint-lav:#EEF0FF;--tint-mint:#E8F7F0;--tint-peach:#FDF1E7;--tint-sky:#E9F1FE;--tint-violet:#F2ECFE;--tint-rose:#FDECF2;--r:14px;--r-sm:10px;--shadow:0 14px 34px -20px rgba(8,33,79,0.30);--shadow-lg:0 26px 60px -28px rgba(8,33,79,0.42);--gold:#C9962C;--gold-soft:#F3E4C0;--tide:#0F8A80;--paper:#F6F7F5;--surface:#FFFFFF;--line:#D8DEE3;--muted:#5A6B7A;--err:#B3261E}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:'Instrument Sans',system-ui,sans-serif;font-size:18px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:var(--indigo);text-decoration:none}
+a:hover{color:var(--gold)}
+:focus-visible{outline:2px solid var(--tide);outline-offset:2px}
+</style>
+</helmet>
+<main style="min-height:100vh">
+  <dc-import name="APIICNav" hint-size="100%,112px"></dc-import>
+
+  <div style="background:linear-gradient(105deg,#08214F 0%,#0A2A6B 55%,#123B86 100%);color:#FFFFFF;position:relative;overflow:hidden">
+    <div style="max-width:1320px;margin:0 auto;padding:22px 40px 0;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.08em;color:#7C93A6"><a href="APIIC-Home.dc.html" style="color:#7C93A6">HOME</a> / OFFICIAL PORTALS</div>
+    <div style="max-width:1320px;margin:0 auto;padding:28px 40px 44px">
+      <h1 style="font-family:Sora,sans-serif;font-weight:700;font-size:44px;letter-spacing:-0.03em;margin:0">Official portals</h1>
+      <p style="font-size:19px;color:#C6D2DC;margin:12px 0 0;max-width:66ch">Transactions stay on their authorised portals. Before you leave this website you will know what the service is, who owns it, who to call if it fails, and when we last checked that it was up.</p>
+    </div>
+  </div>
+
+  <div style="background:#FBF3F2;border-bottom:1px solid #E7C9C5">
+    <div style="max-width:1320px;margin:0 auto;padding:14px 40px;display:flex;flex-wrap:wrap;align-items:center;gap:14px">
+      <i class="ph ph-warning-circle" style="color:var(--err);font-size:20px"></i>
+      <span style="font-size:16px"><strong style="font-weight:600">1 of 9 portals is currently unavailable.</strong> AP Single Desk is not responding — use the zonal desk on 0866 241 0000 meanwhile.</span>
+      <div style="flex:1"></div>
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted)">STATUS CHECKED 25 JUL 2026 09:10 · EVERY 15 MIN</span>
+    </div>
+  </div>
+
+  <section style="max-width:1320px;margin:0 auto;padding:44px 40px 0">
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.1em;color:var(--muted);border-bottom:1px solid var(--line);padding-bottom:14px">FOR INVESTORS</div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:24px;margin-top:28px">
+      <div style="background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--indigo);border-radius:var(--r-sm);padding:24px">
+        <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:12px"><div style="display:flex;align-items:center;gap:10px;font-family:Sora,sans-serif;font-weight:600;font-size:20px;letter-spacing:-0.02em"><span style="color:var(--indigo)">⧉</span>APIIC Online Land Application</div><span style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.08em;color:var(--indigo);border:1px solid var(--line);padding:4px 7px;white-space:nowrap">EXTERNAL</span></div>
+        <p style="margin:8px 0 0;font-size:16px">Submit and track an application for a plot in an APIIC park.</p>
+        <div style="font-size:14px;color:var(--muted);margin-top:10px">Owner: Investor Services · Support: 0863 234 0000</div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);margin-top:8px"><span style="color:var(--tide)">⌁</span> LINK CHECKED 25 JUL 2026 09:10 · STATUS: AVAILABLE</div>
+        <a href="APIIC-Prototype-Scope.dc.html#external" style="display:inline-block;margin-top:14px;border:1px solid var(--royal);color:var(--royal);padding:10px 18px;border-radius:999px;font-weight:500">Open official portal ↗</a>
+      </div>
+      <div style="background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--err);border-radius:var(--r-sm);padding:24px">
+        <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:12px"><div style="display:flex;align-items:center;gap:10px;font-family:Sora,sans-serif;font-weight:600;font-size:20px;letter-spacing:-0.02em"><span style="color:var(--indigo)">⧉</span>AP Single Desk Portal</div><span style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.08em;color:var(--indigo);border:1px solid var(--line);padding:4px 7px;white-space:nowrap">EXTERNAL</span></div>
+        <p style="margin:8px 0 0;font-size:16px">Apply for statutory approvals through the state single window.</p>
+        <div style="font-size:14px;color:var(--muted);margin-top:10px">Owner: Industries &amp; Commerce Dept · Support: 0866 241 0000</div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--err);margin-top:8px">⌁ LINK CHECKED 25 JUL 2026 09:10 · STATUS: UNAVAILABLE</div>
+        <div style="font-size:15px;background:var(--paper);border:1px solid var(--line);padding:12px 14px;margin-top:12px">Not responding for 42 minutes. Use the zonal desk on 0866 241 0000, or send an enquiry and we will route it.</div>
+        <a href="APIIC-Talk-To-Expert.dc.html" style="display:inline-block;margin-top:12px;border:1px solid var(--royal);color:var(--royal);padding:10px 18px;border-radius:999px;font-weight:500">Use the alternative route</a>
+      </div>
+      <div style="background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--indigo);border-radius:var(--r-sm);padding:24px">
+        <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:12px"><div style="display:flex;align-items:center;gap:10px;font-family:Sora,sans-serif;font-weight:600;font-size:20px;letter-spacing:-0.02em"><span style="color:var(--indigo)">⧉</span>APIIC Payments &amp; Dues</div><span style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.08em;color:var(--indigo);border:1px solid var(--line);padding:4px 7px;white-space:nowrap">EXTERNAL</span></div>
+        <p style="margin:8px 0 0;font-size:16px">Pay allotment instalments, maintenance and service charges.</p>
+        <div style="font-size:14px;color:var(--muted);margin-top:10px">Owner: Finance · Support: 0863 234 0011</div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);margin-top:8px"><span style="color:var(--tide)">⌁</span> LINK CHECKED 25 JUL 2026 09:10 · STATUS: AVAILABLE</div>
+        <a href="APIIC-Prototype-Scope.dc.html#external" style="display:inline-block;margin-top:14px;border:1px solid var(--royal);color:var(--royal);padding:10px 18px;border-radius:999px;font-weight:500">Open official portal ↗</a>
+      </div>
+      <div style="background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--indigo);border-radius:var(--r-sm);padding:24px">
+        <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:12px"><div style="display:flex;align-items:center;gap:10px;font-family:Sora,sans-serif;font-weight:600;font-size:20px;letter-spacing:-0.02em"><span style="color:var(--indigo)">⧉</span>AGILE 2.0 — Industrial GIS</div><span style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.08em;color:var(--indigo);border:1px solid var(--line);padding:4px 7px;white-space:nowrap">EXTERNAL</span></div>
+        <p style="margin:8px 0 0;font-size:16px">Plot-level spatial detail, survey boundaries and layers.</p>
+        <div style="font-size:14px;color:var(--muted);margin-top:10px">Owner: APIIC GIS Cell · Support: gis@apiic.in</div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);margin-top:8px"><span style="color:var(--tide)">⌁</span> LINK CHECKED 25 JUL 2026 09:10 · STATUS: AVAILABLE</div>
+        <a href="APIIC-Prototype-Scope.dc.html#external" style="display:inline-block;margin-top:14px;border:1px solid var(--royal);color:var(--royal);padding:10px 18px;border-radius:999px;font-weight:500">Open official portal ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <section style="max-width:1320px;margin:0 auto;padding:64px 40px 0">
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.1em;color:var(--muted);border-bottom:1px solid var(--line);padding-bottom:14px">FOR EXISTING ALLOTTEES &amp; IALA</div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:24px;margin-top:28px">
+      <div style="background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--indigo);border-radius:var(--r-sm);padding:24px">
+        <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:12px"><div style="display:flex;align-items:center;gap:10px;font-family:Sora,sans-serif;font-weight:600;font-size:20px;letter-spacing:-0.02em"><span style="color:var(--indigo)">⧉</span>IALA Property Tax &amp; Services</div><span style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.08em;color:var(--indigo);border:1px solid var(--line);padding:4px 7px;white-space:nowrap">EXTERNAL</span></div>
+        <p style="margin:8px 0 0;font-size:16px">Property tax, estate services and occupancy certificates for units inside notified IALA areas.</p>
+        <div style="font-size:14px;color:var(--muted);margin-top:10px">Owner: IALA Secretariat · Support: iala@apiic.in</div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);margin-top:8px"><span style="color:var(--tide)">⌁</span> LINK CHECKED 25 JUL 2026 09:10 · STATUS: AVAILABLE</div>
+        <a href="APIIC-Prototype-Scope.dc.html#external" style="display:inline-block;margin-top:14px;border:1px solid var(--royal);color:var(--royal);padding:10px 18px;border-radius:999px;font-weight:500">Open official portal ↗</a>
+      </div>
+      <div style="background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--indigo);border-radius:var(--r-sm);padding:24px">
+        <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:12px"><div style="display:flex;align-items:center;gap:10px;font-family:Sora,sans-serif;font-weight:600;font-size:20px;letter-spacing:-0.02em"><span style="color:var(--indigo)">⧉</span>Allottee Service Requests</div><span style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.08em;color:var(--indigo);border:1px solid var(--line);padding:4px 7px;white-space:nowrap">EXTERNAL</span></div>
+        <p style="margin:8px 0 0;font-size:16px">Raise and track estate service requests — roads, drainage, water, street lighting.</p>
+        <div style="font-size:14px;color:var(--muted);margin-top:10px">Owner: Estate Services · Support: aftercare@apiic.in</div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);margin-top:8px"><span style="color:var(--tide)">⌁</span> LINK CHECKED 25 JUL 2026 09:10 · STATUS: AVAILABLE</div>
+        <a href="APIIC-Prototype-Scope.dc.html#external" style="display:inline-block;margin-top:14px;border:1px solid var(--royal);color:var(--royal);padding:10px 18px;border-radius:999px;font-weight:500">Open official portal ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <section style="max-width:1320px;margin:0 auto;padding:64px 40px 0">
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.1em;color:var(--muted);border-bottom:1px solid var(--line);padding-bottom:14px">FOR VENDORS &amp; CONTRACTORS</div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:24px;margin-top:28px">
+      <div style="background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--indigo);border-radius:var(--r-sm);padding:24px">
+        <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:12px"><div style="display:flex;align-items:center;gap:10px;font-family:Sora,sans-serif;font-weight:600;font-size:20px;letter-spacing:-0.02em"><span style="color:var(--indigo)">⧉</span>AP e-Procurement</div><span style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.08em;color:var(--indigo);border:1px solid var(--line);padding:4px 7px;white-space:nowrap">EXTERNAL</span></div>
+        <p style="margin:8px 0 0;font-size:16px">Bid on APIIC tenders and download corrigenda.</p>
+        <div style="font-size:14px;color:var(--muted);margin-top:10px">Owner: Procurement · Support: tenders@apiic.in</div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);margin-top:8px"><span style="color:var(--tide)">⌁</span> LINK CHECKED 25 JUL 2026 09:10 · STATUS: AVAILABLE</div>
+        <a href="APIIC-Prototype-Scope.dc.html#external" style="display:inline-block;margin-top:14px;border:1px solid var(--royal);color:var(--royal);padding:10px 18px;border-radius:999px;font-weight:500">Open official portal ↗</a>
+      </div>
+      <div style="background:var(--paper);border:1px solid var(--line);border-radius:var(--r-sm);padding:24px;display:flex;flex-direction:column;gap:10px">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.06em;color:var(--muted)">SEPARATED ON PURPOSE</div>
+        <div style="font-family:Sora,sans-serif;font-weight:600;font-size:20px;letter-spacing:-0.02em">Employee systems</div>
+        <p style="font-size:16px;color:var(--muted);margin:0">Payroll, HRMS, internal file tracking and circulars are staff systems. They are kept off the investor path entirely and reachable from the staff area, not from here.</p>
+        <a href="APIIC-Prototype-Scope.dc.html#external" style="font-size:15px;margin-top:auto">Staff area ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <section style="max-width:1320px;margin:0 auto;padding:64px 40px 112px">
+    <div style="background:var(--surface);border:1px solid var(--line);padding:26px 30px">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.06em;color:var(--muted)">HOW WE MONITOR THESE</div>
+      <p style="font-size:17px;margin:10px 0 0;max-width:80ch">Every destination is checked automatically every 15 minutes. Where APIIC owns the destination it is served on standard HTTPS — no non-standard ports, which corporate firewalls block. Where APIIC does not own it, we label it, monitor it, publish the last check time and offer an alternative when it is down.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:20px;margin-top:16px;font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted)"><span><span style="color:var(--tide)">⌁</span> PORTAL LINK DATASET · OWNER: DIGITAL TEAM · CHECKED DAILY</span><a href="APIIC-Data-Freshness.dc.html">SEE IT ON THE FRESHNESS DASHBOARD →</a></div>
+    </div>
+    <p style="font-size:14px;color:var(--muted);margin-top:24px">Portal names and support numbers in this prototype are illustrative. Bind them to the live portal register before external release.</p>
+  </section>
+  <dc-import name="APIICFooter" hint-size="100%,420px"></dc-import>
+</main>
+
+</x-dc>
+</body>
+</html>

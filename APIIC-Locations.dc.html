@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/duotone/style.css">
+<style>
+:root{--ink:#08214F;--indigo:#123B86;--royal:#0A2A6B;--royal2:#14458F;--cyan:#2FC7DE;--cyan-deep:#0E9CB8;--cyan-soft:#E6F8FB;--tint-lav:#EEF0FF;--tint-mint:#E8F7F0;--tint-peach:#FDF1E7;--tint-sky:#E9F1FE;--tint-violet:#F2ECFE;--tint-rose:#FDECF2;--r:14px;--r-sm:10px;--shadow:0 14px 34px -20px rgba(8,33,79,0.30);--shadow-lg:0 26px 60px -28px rgba(8,33,79,0.42);--gold:#C9962C;--gold-soft:#F3E4C0;--tide:#0F8A80;--paper:#F6F8FB;--surface:#FFFFFF;--line:#DCE3EC;--muted:#5A6B7A}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:'Instrument Sans',system-ui,sans-serif;font-size:18px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:var(--indigo);text-decoration:none}
+a:hover{color:var(--cyan-deep)}
+:focus-visible{outline:2px solid var(--cyan);outline-offset:2px}
+</style>
+</helmet>
+<main style="min-height:100vh">
+  <dc-import name="APIICNav" hint-size="100%,126px"></dc-import>
+
+  <div style="background:linear-gradient(105deg,#08214F 0%,#0A2A6B 55%,#123B86 100%);color:#FFFFFF;position:relative;overflow:hidden">
+    <svg viewBox="0 0 1440 320" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;opacity:0.4"><g fill="none" stroke="#2FC7DE" stroke-width="1"><path d="M-20 240 C 260 150, 460 300, 740 210 S 1180 90, 1500 190"></path></g><g fill="#2FC7DE" opacity="0.5"><circle cx="260" cy="188" r="3"></circle><circle cx="740" cy="210" r="3"></circle><circle cx="1180" cy="136" r="3"></circle></g></svg>
+    <div style="position:relative;max-width:1320px;margin:0 auto;padding:22px 40px 0;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.08em;color:#9FB8D8"><a href="APIIC-Home.dc.html" style="color:#9FB8D8">HOME</a> / INVEST IN AP / LOCATIONS</div>
+    <div style="position:relative;max-width:1320px;margin:0 auto;padding:26px 40px 44px">
+      <h1 style="font-family:Sora,sans-serif;font-weight:700;font-size:46px;letter-spacing:-0.03em;margin:0">Locations</h1>
+      <p style="font-size:19px;color:#C3D6EF;margin:12px 0 0;max-width:66ch">26 districts, three national industrial corridors and 974 km of coast. Start with the district that serves your market, or with the corridor that carries your freight.</p>
+      <div style="display:flex;gap:10px;margin-top:26px;flex-wrap:wrap">
+        <sc-if value="{{ onHub }}" hint-placeholder-val="{{ true }}"><button onClick="{{ toHub }}" style="background:var(--cyan);color:#06203F;border:none;padding:11px 20px;border-radius:999px;font-family:'Instrument Sans',sans-serif;font-size:15px;font-weight:600;cursor:pointer">All districts</button></sc-if>
+        <sc-if value="{{ offHub }}" hint-placeholder-val="{{ false }}"><button onClick="{{ toHub }}" style="background:rgba(255,255,255,0.1);color:#FFFFFF;border:1px solid rgba(255,255,255,0.3);padding:11px 20px;border-radius:999px;font-family:'Instrument Sans',sans-serif;font-size:15px;cursor:pointer">All districts</button></sc-if>
+        <sc-if value="{{ onDistrict }}" hint-placeholder-val="{{ false }}"><button onClick="{{ toDistrict }}" style="background:var(--cyan);color:#06203F;border:none;padding:11px 20px;border-radius:999px;font-family:'Instrument Sans',sans-serif;font-size:15px;font-weight:600;cursor:pointer">District profile — Krishna</button></sc-if>
+        <sc-if value="{{ offDistrict }}" hint-placeholder-val="{{ true }}"><button onClick="{{ toDistrict }}" style="background:rgba(255,255,255,0.1);color:#FFFFFF;border:1px solid rgba(255,255,255,0.3);padding:11px 20px;border-radius:999px;font-family:'Instrument Sans',sans-serif;font-size:15px;cursor:pointer">District profile — Krishna</button></sc-if>
+        <sc-if value="{{ onCorridor }}" hint-placeholder-val="{{ false }}"><button onClick="{{ toCorridor }}" style="background:var(--cyan);color:#06203F;border:none;padding:11px 20px;border-radius:999px;font-family:'Instrument Sans',sans-serif;font-size:15px;font-weight:600;cursor:pointer">Growth corridors</button></sc-if>
+        <sc-if value="{{ offCorridor }}" hint-placeholder-val="{{ true }}"><button onClick="{{ toCorridor }}" style="background:rgba(255,255,255,0.1);color:#FFFFFF;border:1px solid rgba(255,255,255,0.3);padding:11px 20px;border-radius:999px;font-family:'Instrument Sans',sans-serif;font-size:15px;cursor:pointer">Growth corridors</button></sc-if>
+      </div>
+    </div>
+  </div>
+
+  <sc-if value="{{ onHub }}" hint-placeholder-val="{{ true }}">
+    <div style="max-width:1320px;margin:0 auto;padding:48px 40px 120px">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:36px;align-items:start">
+        <div style="background:linear-gradient(140deg,#0A2A6B,#123B86);border-radius:var(--r);padding:14px;box-shadow:var(--shadow)">
+          <iframe src="APIIC-Map.html?view=districts" title="Map of Andhra Pradesh showing districts with APIIC parks, ports and the three industrial corridors" loading="lazy" style="width:100%;height:460px;border:0;border-radius:var(--r);display:block"></iframe>
+          
+        </div>
+        <div>
+          <div style="display:flex;align-items:baseline;gap:14px;flex-wrap:wrap"><h2 style="font-family:Sora,sans-serif;font-weight:600;font-size:32px;letter-spacing:-0.03em;margin:0">Districts with APIIC parks</h2><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted)">SORTED BY AVAILABLE LAND</span></div>
+          <div style="display:flex;flex-direction:column;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;margin-top:20px">
+            <button onClick="{{ toDistrict }}" style="background:var(--surface);border:none;text-align:left;padding:18px 20px;display:flex;align-items:center;gap:16px;cursor:pointer;font-family:'Instrument Sans',sans-serif" style-hover="background:var(--tint-sky)">
+              <span style="width:44px;height:44px;border-radius:var(--r-sm);background:var(--tint-sky);display:grid;place-items:center;flex:none"><i class="ph-duotone ph-map-pin" style="font-size:21px;color:var(--royal2)"></i></span>
+              <span style="flex:1;min-width:0"><span style="display:block;font-family:Sora,sans-serif;font-weight:600;font-size:19px;letter-spacing:-0.02em;color:var(--ink)">Krishna</span><span style="display:block;font-size:14.5px;color:var(--muted)">9 parks · 96.0 acres available · VCIC</span></span>
+              <i class="ph ph-arrow-right" style="color:var(--royal);font-size:18px"></i>
+            </button>
+            <a href="APIIC-Parks-Directory.dc.html" style="background:var(--surface);padding:18px 20px;display:flex;align-items:center;gap:16px;color:var(--ink)" style-hover="background:var(--tint-sky);color:var(--ink)"><span style="width:44px;height:44px;border-radius:var(--r-sm);background:var(--tint-mint);display:grid;place-items:center;flex:none"><i class="ph-duotone ph-map-pin" style="font-size:21px;color:#0F8A80"></i></span><span style="flex:1;min-width:0"><span style="display:block;font-family:Sora,sans-serif;font-weight:600;font-size:19px;letter-spacing:-0.02em">Anakapalli</span><span style="display:block;font-size:14.5px;color:var(--muted)">11 parks · 74.2 acres available · VCIC</span></span><i class="ph ph-arrow-right" style="color:var(--royal);font-size:18px"></i></a>
+            <a href="APIIC-Parks-Directory.dc.html" style="background:var(--surface);padding:18px 20px;display:flex;align-items:center;gap:16px;color:var(--ink)" style-hover="background:var(--tint-sky);color:var(--ink)"><span style="width:44px;height:44px;border-radius:var(--r-sm);background:var(--tint-peach);display:grid;place-items:center;flex:none"><i class="ph-duotone ph-map-pin" style="font-size:21px;color:#B4831F"></i></span><span style="flex:1;min-width:0"><span style="display:block;font-family:Sora,sans-serif;font-weight:600;font-size:19px;letter-spacing:-0.02em">Chittoor</span><span style="display:block;font-size:14.5px;color:var(--muted)">6 parks · 68.4 acres available · CBIC</span></span><i class="ph ph-arrow-right" style="color:var(--royal);font-size:18px"></i></a>
+            <a href="APIIC-Parks-Directory.dc.html" style="background:var(--surface);padding:18px 20px;display:flex;align-items:center;gap:16px;color:var(--ink)" style-hover="background:var(--tint-sky);color:var(--ink)"><span style="width:44px;height:44px;border-radius:var(--r-sm);background:var(--tint-violet);display:grid;place-items:center;flex:none"><i class="ph-duotone ph-map-pin" style="font-size:21px;color:#6B46C1"></i></span><span style="flex:1;min-width:0"><span style="display:block;font-family:Sora,sans-serif;font-weight:600;font-size:19px;letter-spacing:-0.02em">Guntur</span><span style="display:block;font-size:14.5px;color:var(--muted)">7 parks · 52.1 acres available · VCIC</span></span><i class="ph ph-arrow-right" style="color:var(--royal);font-size:18px"></i></a>
+            <a href="APIIC-Parks-Directory.dc.html" style="background:var(--surface);padding:18px 20px;display:flex;align-items:center;gap:16px;color:var(--ink)" style-hover="background:var(--tint-sky);color:var(--ink)"><span style="width:44px;height:44px;border-radius:var(--r-sm);background:var(--tint-rose);display:grid;place-items:center;flex:none"><i class="ph-duotone ph-map-pin" style="font-size:21px;color:#B3266B"></i></span><span style="flex:1;min-width:0"><span style="display:block;font-family:Sora,sans-serif;font-weight:600;font-size:19px;letter-spacing:-0.02em">YSR Kadapa</span><span style="display:block;font-size:14.5px;color:var(--muted)">5 parks · Kopparthy node coming Q1 2027 · HBIC</span></span><i class="ph ph-arrow-right" style="color:var(--royal);font-size:18px"></i></a>
+            <a href="APIIC-Parks-Directory.dc.html" style="background:var(--surface);padding:18px 20px;display:flex;align-items:center;gap:16px;color:var(--ink)" style-hover="background:var(--tint-sky);color:var(--ink)"><span style="width:44px;height:44px;border-radius:var(--r-sm);background:var(--tint-lav);display:grid;place-items:center;flex:none"><i class="ph-duotone ph-map-pin" style="font-size:21px;color:var(--royal)"></i></span><span style="flex:1;min-width:0"><span style="display:block;font-family:Sora,sans-serif;font-weight:600;font-size:19px;letter-spacing:-0.02em">Tirupati</span><span style="display:block;font-size:14.5px;color:var(--muted)">7 parks · 9.4 acres available · CBIC</span></span><i class="ph ph-arrow-right" style="color:var(--royal);font-size:18px"></i></a>
+          </div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);margin-top:16px"><span style="color:var(--tide)">⌁</span> DISTRICT FACTS VERIFIED 14 JUL 2026 · 20 FURTHER DISTRICTS FOLLOW THIS TEMPLATE</div>
+        </div>
+      </div>
+    </div>
+  </sc-if>
+
+  <sc-if value="{{ onDistrict }}" hint-placeholder-val="{{ false }}">
+    <div style="max-width:1320px;margin:0 auto;padding:48px 40px 120px">
+      <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:28px;flex-wrap:wrap;border-bottom:1px solid var(--line);padding-bottom:20px">
+        <div>
+          <span style="display:inline-flex;align-items:center;gap:8px;background:var(--cyan-soft);color:var(--cyan-deep);padding:7px 14px;border-radius:999px;font-size:12.5px;font-weight:600">DISTRICT PROFILE · VCIC CORRIDOR</span>
+          <h2 style="font-family:Sora,sans-serif;font-weight:700;font-size:40px;letter-spacing:-0.03em;margin:14px 0 0">Krishna District</h2>
+          <p style="font-size:18px;color:var(--muted);margin:8px 0 0;max-width:60ch">The delta district: nine APIIC parks, a port at Machilipatnam, canal-fed process water and a food-processing base already operating.</p>
+        </div>
+        <a href="APIIC-Talk-To-Expert.dc.html" style="background:linear-gradient(120deg,#0A2A6B,#14458F);color:#FFFFFF;padding:14px 24px;border-radius:999px;font-weight:600;box-shadow:var(--shadow);white-space:nowrap">Contact the Vijayawada zone</a>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px;margin-top:28px">
+        <div style="background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:22px;box-shadow:0 6px 18px -14px rgba(8,33,79,0.3)"><span style="width:44px;height:44px;border-radius:var(--r-sm);background:var(--tint-sky);display:grid;place-items:center"><i class="ph-duotone ph-factory" style="font-size:21px;color:var(--royal2)"></i></span><div style="font-size:12.5px;letter-spacing:0.06em;text-transform:uppercase;color:var(--muted);margin-top:14px">APIIC parks</div><div style="font-family:Sora,sans-serif;font-weight:700;font-size:30px;letter-spacing:-0.03em;color:var(--royal)">9</div><div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);margin-top:8px"><span style="color:var(--tide)">⌁</span> 21 JUL 2026</div></div>
+        <div style="background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:22px;box-shadow:0 6px 18px -14px rgba(8,33,79,0.3)"><span style="width:44px;height:44px;border-radius:var(--r-sm);background:var(--tint-mint);display:grid;place-items:center"><i class="ph-duotone ph-stack" style="font-size:21px;color:#0F8A80"></i></span><div style="font-size:12.5px;letter-spacing:0.06em;text-transform:uppercase;color:var(--muted);margin-top:14px">Available land</div><div style="font-family:Sora,sans-serif;font-weight:700;font-size:30px;letter-spacing:-0.03em;color:var(--royal)">96.0 ac</div><div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);margin-top:8px"><span style="color:var(--tide)">⌁</span> 24 JUL 2026</div></div>
+        <div style="background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:22px;box-shadow:0 6px 18px -14px rgba(8,33,79,0.3)"><span style="width:44px;height:44px;border-radius:var(--r-sm);background:var(--tint-peach);display:grid;place-items:center"><i class="ph-duotone ph-users-three" style="font-size:21px;color:#B4831F"></i></span><div style="font-size:12.5px;letter-spacing:0.06em;text-transform:uppercase;color:var(--muted);margin-top:14px">Operating units</div><div style="font-family:Sora,sans-serif;font-weight:700;font-size:30px;letter-spacing:-0.03em;color:var(--royal)">612</div><div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);margin-top:8px"><span style="color:var(--tide)">⌁</span> 21 JUL 2026</div></div>
+        <div style="background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:22px;box-shadow:0 6px 18px -14px rgba(8,33,79,0.3)"><span style="width:44px;height:44px;border-radius:var(--r-sm);background:var(--tint-violet);display:grid;place-items:center"><i class="ph-duotone ph-anchor" style="font-size:21px;color:#6B46C1"></i></span><div style="font-size:12.5px;letter-spacing:0.06em;text-transform:uppercase;color:var(--muted);margin-top:14px">Nearest port</div><div style="font-family:Sora,sans-serif;font-weight:700;font-size:30px;letter-spacing:-0.03em;color:var(--royal)">4 km</div><div style="font-size:14px;color:var(--muted)">Machilipatnam</div></div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;margin-top:32px">
+        <div style="background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:26px;box-shadow:0 6px 18px -14px rgba(8,33,79,0.3)">
+          <h3 style="font-family:Sora,sans-serif;font-weight:600;font-size:22px;letter-spacing:-0.02em;margin:0">Strong sectors here</h3>
+          <div style="display:flex;flex-wrap:wrap;gap:9px;margin-top:14px">
+            <a href="APIIC-Sectors.dc.html" style="background:var(--tint-mint);color:#0A7F76;padding:8px 14px;border-radius:999px;font-size:14.5px;font-weight:500">Food processing</a>
+            <a href="APIIC-Sectors.dc.html" style="background:var(--tint-sky);color:var(--royal);padding:8px 14px;border-radius:999px;font-size:14.5px;font-weight:500">Marine products</a>
+            <a href="APIIC-Sectors.dc.html" style="background:var(--tint-peach);color:#8A6410;padding:8px 14px;border-radius:999px;font-size:14.5px;font-weight:500">Packaging</a>
+            <a href="APIIC-Sectors.dc.html" style="background:var(--tint-lav);color:var(--royal);padding:8px 14px;border-radius:999px;font-size:14.5px;font-weight:500">Cold chain</a>
+          </div>
+          <h3 style="font-family:Sora,sans-serif;font-weight:600;font-size:22px;letter-spacing:-0.02em;margin:24px 0 0">Connectivity</h3>
+          <div style="display:flex;flex-direction:column;margin-top:12px;font-size:16px">
+            <div style="display:flex;justify-content:space-between;gap:16px;padding:9px 0;border-bottom:1px solid var(--line)"><span style="color:var(--muted)">Machilipatnam port</span><span style="font-family:'IBM Plex Mono',monospace">4–42 km</span></div>
+            <div style="display:flex;justify-content:space-between;gap:16px;padding:9px 0;border-bottom:1px solid var(--line)"><span style="color:var(--muted)">Vijayawada airport</span><span style="font-family:'IBM Plex Mono',monospace">18–64 km</span></div>
+            <div style="display:flex;justify-content:space-between;gap:16px;padding:9px 0;border-bottom:1px solid var(--line)"><span style="color:var(--muted)">NH-16</span><span style="font-family:'IBM Plex Mono',monospace">4–12 km</span></div>
+            <div style="display:flex;justify-content:space-between;gap:16px;padding:9px 0"><span style="color:var(--muted)">Rail (Pedana siding)</span><span style="font-family:'IBM Plex Mono',monospace">6–21 km</span></div>
+          </div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);margin-top:12px">METHOD: NHAI NETWORK V2026.1 · 12 JUL 2026</div>
+        </div>
+        <div style="background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:26px;box-shadow:0 6px 18px -14px rgba(8,33,79,0.3)">
+          <h3 style="font-family:Sora,sans-serif;font-weight:600;font-size:22px;letter-spacing:-0.02em;margin:0">Talent &amp; institutions</h3>
+          <div style="display:flex;flex-direction:column;margin-top:12px;font-size:16px">
+            <div style="display:flex;justify-content:space-between;gap:16px;padding:9px 0;border-bottom:1px solid var(--line)"><span style="color:var(--muted)">Engineering colleges within 50 km</span><span style="font-family:'IBM Plex Mono',monospace">28</span></div>
+            <div style="display:flex;justify-content:space-between;gap:16px;padding:9px 0;border-bottom:1px solid var(--line)"><span style="color:var(--muted)">ITIs</span><span style="font-family:'IBM Plex Mono',monospace">41</span></div>
+            <div style="display:flex;justify-content:space-between;gap:16px;padding:9px 0;border-bottom:1px solid var(--line)"><span style="color:var(--muted)">Annual graduate output</span><span style="font-family:'IBM Plex Mono',monospace">34,000</span></div>
+            <div style="display:flex;justify-content:space-between;gap:16px;padding:9px 0"><span style="color:var(--muted)">District attrition rate</span><span style="font-family:'IBM Plex Mono',monospace;font-style:italic;color:var(--muted)">Not published</span></div>
+          </div>
+          <h3 style="font-family:Sora,sans-serif;font-weight:600;font-size:22px;letter-spacing:-0.02em;margin:24px 0 0">Utilities position</h3>
+          <div style="display:flex;flex-direction:column;gap:9px;margin-top:12px;font-size:16px">
+            <div style="display:flex;gap:11px"><span style="color:var(--tide)">✓</span><span>Canal-fed process water, 6.5 MLD sanctioned across estates</span></div>
+            <div style="display:flex;gap:11px"><span style="color:var(--tide)">✓</span><span>Two CETPs operational, 6.2 MLD combined design capacity</span></div>
+            <div style="display:flex;gap:11px"><span style="color:var(--tide)">✓</span><span>33/11 kV substations inside six of the nine parks</span></div>
+            <div style="display:flex;gap:11px"><span style="color:var(--muted)">—</span><span style="color:var(--muted)">Piped gas coverage not published</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-top:44px;border-bottom:1px solid var(--line);padding-bottom:16px">
+        <h3 style="font-family:Sora,sans-serif;font-weight:600;font-size:28px;letter-spacing:-0.03em;margin:0">APIIC parks in Krishna</h3>
+        <a href="APIIC-Parks-Directory.dc.html" style="font-weight:500">See all nine in the directory →</a>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px;margin-top:24px">
+        <a href="APIIC-Park-Profile.dc.html" style="background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:22px;color:var(--ink);box-shadow:0 6px 18px -14px rgba(8,33,79,0.3)" style-hover="transform:translateY(-3px);box-shadow:var(--shadow);color:var(--ink)"><div style="display:flex;justify-content:space-between;gap:10px"><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted)">⌁ KRI-019</span><span style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#0A7F76;border:1px solid rgba(15,138,128,0.45);background:rgba(15,138,128,0.10);padding:4px 8px;border-radius:999px">AVAILABLE</span></div><div style="font-family:Sora,sans-serif;font-weight:600;font-size:20px;letter-spacing:-0.02em;margin-top:10px">Model Industrial Park, Mallavalli</div><div style="font-size:14.5px;color:var(--muted);margin-top:4px">42.6 ac · ₹68.5 L/ac · port 42 km</div></a>
+        <a href="APIIC-Park-Profile.dc.html" style="background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:22px;color:var(--ink);box-shadow:0 6px 18px -14px rgba(8,33,79,0.3)" style-hover="transform:translateY(-3px);box-shadow:var(--shadow);color:var(--ink)"><div style="display:flex;justify-content:space-between;gap:10px"><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted)">⌁ KRI-041</span><span style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#0A7F76;border:1px solid rgba(15,138,128,0.45);background:rgba(15,138,128,0.10);padding:4px 8px;border-radius:999px">AVAILABLE</span></div><div style="font-family:Sora,sans-serif;font-weight:600;font-size:20px;letter-spacing:-0.02em;margin-top:10px">Gannavaram Agro Park</div><div style="font-size:14.5px;color:var(--muted);margin-top:4px">22.0 ac · ₹58.0 L/ac · port 74 km</div></a>
+        <a href="APIIC-Park-Profile.dc.html" style="background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:22px;color:var(--ink);box-shadow:0 6px 18px -14px rgba(8,33,79,0.3)" style-hover="transform:translateY(-3px);box-shadow:var(--shadow);color:var(--ink)"><div style="display:flex;justify-content:space-between;gap:10px"><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted)">⌁ KRI-052</span><span style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#8A6410;border:1px solid var(--gold);background:rgba(201,150,44,0.12);padding:4px 8px;border-radius:999px">LIMITED</span></div><div style="font-family:Sora,sans-serif;font-weight:600;font-size:20px;letter-spacing:-0.02em;margin-top:10px">Machilipatnam Port Industrial Area</div><div style="font-size:14.5px;color:var(--muted);margin-top:4px">11.2 ac · rate not published · port 4 km</div></a>
+      </div>
+      <div style="background:linear-gradient(120deg,#08214F,#123B86);color:#C3D6EF;border-radius:var(--r);padding:28px 32px;margin-top:36px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:28px;align-items:center">
+        <div><div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.08em;color:var(--cyan)">THE ZONAL OFFICE THAT SERVES YOU</div><div style="font-family:Sora,sans-serif;font-weight:600;font-size:23px;color:#FFFFFF;margin-top:8px">Vijayawada Zone</div><div style="font-size:15px;margin-top:4px">Krishna · NTR · Guntur · Bapatla · Palnadu · Godavari districts</div></div>
+        <div style="min-width:0;overflow-wrap:anywhere;font-family:'IBM Plex Mono',monospace;font-size:15px;color:#FFFFFF;line-height:1.9">zm.krishna@apiic.in<br>0866 247 xxxx</div>
+        <div style="display:flex;flex-direction:column;gap:10px;align-items:flex-start"><a href="APIIC-Help-Contact.dc.html" style="background:linear-gradient(120deg,#2FC7DE,#0E9CB8);color:#06203F;padding:13px 20px;border-radius:999px;font-weight:600">All zonal offices</a><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#9FB8D8"><span style="color:var(--cyan)">⌁</span> CONTACT VERIFIED 18 JUL 2026</span></div>
+      </div>
+      <p style="font-size:14px;color:var(--muted);margin-top:24px">District figures in this prototype are illustrative placeholders shown with verification dates. 25 further district profiles follow this template.</p>
+    </div>
+  </sc-if>
+
+  <sc-if value="{{ onCorridor }}" hint-placeholder-val="{{ false }}">
+    <div style="max-width:1320px;margin:0 auto;padding:48px 40px 120px">
+      <h2 style="font-family:Sora,sans-serif;font-weight:700;font-size:40px;letter-spacing:-0.03em;margin:0">Three national industrial corridors</h2>
+      <p style="font-size:19px;color:var(--muted);margin:10px 0 0;max-width:66ch">Each corridor carries notified nodes, trunk infrastructure and a defined set of APIIC parks. The map below plots every node at its published coordinates, and the same information is stated in full as text underneath it.</p>
+      <div style="margin-top:28px;box-shadow:var(--shadow);border-radius:var(--r)"><iframe src="APIIC-Map.html?view=corridors" title="Map of the three national industrial corridors through Andhra Pradesh, with nodes plotted at their published coordinates" loading="lazy" style="width:100%;height:460px;border:0;border-radius:var(--r);display:block"></iframe></div>
+      <div style="display:flex;flex-direction:column;gap:24px;margin-top:32px">
+        <article style="background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--cyan);border-radius:var(--r);padding:28px 30px;box-shadow:0 6px 18px -14px rgba(8,33,79,0.3)">
+          <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:20px;flex-wrap:wrap">
+            <div><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--cyan-deep);letter-spacing:0.08em">VCIC</span><h3 style="font-family:Sora,sans-serif;font-weight:600;font-size:28px;letter-spacing:-0.03em;margin:6px 0 0">Visakhapatnam–Chennai Industrial Corridor</h3></div>
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#0A7F76;border:1px solid rgba(15,138,128,0.45);background:rgba(15,138,128,0.10);padding:5px 12px;border-radius:999px">TRUNK WORKS OPERATIONAL</span>
+          </div>
+          <p style="font-size:17px;color:var(--muted);margin:12px 0 0;max-width:80ch">The coastal spine: 800 km through Andhra Pradesh, anchored on Visakhapatnam and Krishnapatnam ports and the NH-16 freight route. The most mature of the three for immediate occupation.</p>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;margin-top:20px;border-top:1px solid var(--line);padding-top:18px">
+            <div><div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:0.06em">NOTIFIED NODES</div><div style="font-size:16px;margin-top:5px">Visakhapatnam · Srikalahasti–Chittoor · Kakinada · Machilipatnam</div></div>
+            <div><div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:0.06em">APIIC PARKS ALONG IT</div><div style="font-family:Sora,sans-serif;font-weight:700;font-size:26px;color:var(--royal)">22</div></div>
+            <div><div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:0.06em">ANCHOR INFRASTRUCTURE</div><div style="font-size:16px;margin-top:5px">2 major ports · NH-16 · dedicated freight rail access</div></div>
+            <div><div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:0.06em">STATUS &amp; TIMELINE</div><div style="font-size:16px;margin-top:5px">Node infrastructure phase 1 complete; phase 2 to 2028</div></div>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:20px"><a href="APIIC-Parks-Directory.dc.html" style="border:1px solid var(--royal);color:var(--royal);padding:11px 20px;border-radius:999px;font-weight:500">See the 22 parks</a><a href="APIIC-Prototype-Scope.dc.html#external" style="border:1px solid var(--line);padding:11px 18px;border-radius:999px">Corridor documents ↗</a></div>
+        </article>
+        <article style="background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--royal2);border-radius:var(--r);padding:28px 30px;box-shadow:0 6px 18px -14px rgba(8,33,79,0.3)">
+          <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:20px;flex-wrap:wrap">
+            <div><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--royal2);letter-spacing:0.08em">CBIC</span><h3 style="font-family:Sora,sans-serif;font-weight:600;font-size:28px;letter-spacing:-0.03em;margin:6px 0 0">Chennai–Bengaluru Industrial Corridor</h3></div>
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#0A7F76;border:1px solid rgba(15,138,128,0.45);background:rgba(15,138,128,0.10);padding:5px 12px;border-radius:999px">NODES UNDER DEVELOPMENT</span>
+          </div>
+          <p style="font-size:17px;color:var(--muted);margin:12px 0 0;max-width:80ch">The electronics corridor: Krishnapatnam and Chittoor nodes, feeding the Chennai and Bengaluru manufacturing clusters with 220 kV supply and assembly-ready built space.</p>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;margin-top:20px;border-top:1px solid var(--line);padding-top:18px">
+            <div><div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:0.06em">NOTIFIED NODES</div><div style="font-size:16px;margin-top:5px">Krishnapatnam · Chittoor</div></div>
+            <div><div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:0.06em">APIIC PARKS ALONG IT</div><div style="font-family:Sora,sans-serif;font-weight:700;font-size:26px;color:var(--royal)">14</div></div>
+            <div><div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:0.06em">ANCHOR INFRASTRUCTURE</div><div style="font-size:16px;margin-top:5px">Krishnapatnam port · NH-71 · Tirupati air freight</div></div>
+            <div><div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:0.06em">STATUS &amp; TIMELINE</div><div style="font-size:16px;margin-top:5px">Trunk works underway; node completion 2027</div></div>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:20px"><a href="APIIC-Sectors.dc.html" style="border:1px solid var(--royal);color:var(--royal);padding:11px 20px;border-radius:999px;font-weight:500">Electronics sector page</a><a href="APIIC-Parks-Directory.dc.html" style="border:1px solid var(--line);padding:11px 18px;border-radius:999px">See the 14 parks</a></div>
+        </article>
+        <article style="background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:var(--r);padding:28px 30px;box-shadow:0 6px 18px -14px rgba(8,33,79,0.3)">
+          <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:20px;flex-wrap:wrap">
+            <div><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#8A6410;letter-spacing:0.08em">HBIC</span><h3 style="font-family:Sora,sans-serif;font-weight:600;font-size:28px;letter-spacing:-0.03em;margin:6px 0 0">Hyderabad–Bengaluru Industrial Corridor</h3></div>
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#8A6410;border:1px solid var(--gold);background:rgba(201,150,44,0.12);padding:5px 12px;border-radius:999px">EARLY STAGE</span>
+          </div>
+          <p style="font-size:17px;color:var(--muted);margin:12px 0 0;max-width:80ch">The inland corridor: Kopparthy and Orvakal nodes in the Rayalaseema districts, banked beside renewable generation and aimed at EV, battery and heavy engineering.</p>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;margin-top:20px;border-top:1px solid var(--line);padding-top:18px">
+            <div><div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:0.06em">NOTIFIED NODES</div><div style="font-size:16px;margin-top:5px">Kopparthy · Orvakal</div></div>
+            <div><div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:0.06em">APIIC PARKS ALONG IT</div><div style="font-family:Sora,sans-serif;font-weight:700;font-size:26px;color:var(--royal)">9</div></div>
+            <div><div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:0.06em">ANCHOR INFRASTRUCTURE</div><div style="font-size:16px;margin-top:5px">Renewable generation adjacency · NH-44 · Orvakal airport</div></div>
+            <div><div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:0.06em">STATUS &amp; TIMELINE</div><div style="font-size:16px;margin-top:5px">Kopparthy land release Q1 2027; rate not yet published</div></div>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:20px"><a href="APIIC-Park-Profile.dc.html" style="border:1px solid var(--royal);color:var(--royal);padding:11px 20px;border-radius:999px;font-weight:500">Kopparthy node</a><a href="APIIC-Talk-To-Expert.dc.html" style="border:1px solid var(--line);padding:11px 18px;border-radius:999px">Register interest</a></div>
+        </article>
+      </div>
+      <div style="background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:24px 26px;margin-top:32px">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.06em;color:var(--muted)">ACCESSIBLE ALTERNATIVE</div>
+        <p style="font-size:16px;margin:8px 0 0;max-width:80ch">Everything the map plots is also stated in text on this page: three corridors, eight notified nodes, 45 linked APIIC parks and the anchor infrastructure for each. Nothing here is available only inside the map, and the map itself is rendered from published geometry rather than drawn by hand.</p>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);margin-top:12px"><span style="color:var(--tide)">⌁</span> CORRIDOR FACTS VERIFIED 14 JUL 2026 · OWNER: INFRASTRUCTURE CELL</div>
+      </div>
+      <p style="font-size:14px;color:var(--muted);margin-top:24px">Corridor status and timelines in this prototype are illustrative. Bind them to the corridor dataset before external release.</p>
+    </div>
+  </sc-if>
+  <dc-import name="APIICFooter" hint-size="100%,520px"></dc-import>
+</main>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { view: 'hub' };
+  go(v) { return () => { this.setState({ view: v }); window.scrollTo(0, 0); }; }
+  renderVals() {
+    const v = this.state.view;
+    return {
+      onHub: v === 'hub', offHub: v !== 'hub',
+      onDistrict: v === 'district', offDistrict: v !== 'district',
+      onCorridor: v === 'corridor', offCorridor: v !== 'corridor',
+      toHub: this.go('hub'), toDistrict: this.go('district'), toCorridor: this.go('corridor')
+    };
+  }
+}
+</script>
+</body>
+</html>

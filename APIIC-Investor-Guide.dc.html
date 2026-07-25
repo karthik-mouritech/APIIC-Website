@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+<style>
+:root{--ink:#08214F;--indigo:#123B86;--royal:#0A2A6B;--royal2:#14458F;--cyan:#2FC7DE;--cyan-deep:#0E9CB8;--cyan-soft:#E6F8FB;--tint-lav:#EEF0FF;--tint-mint:#E8F7F0;--tint-peach:#FDF1E7;--tint-sky:#E9F1FE;--tint-violet:#F2ECFE;--tint-rose:#FDECF2;--r:14px;--r-sm:10px;--shadow:0 14px 34px -20px rgba(8,33,79,0.30);--shadow-lg:0 26px 60px -28px rgba(8,33,79,0.42);--gold:#C9962C;--gold-soft:#F3E4C0;--tide:#0F8A80;--paper:#F6F7F5;--surface:#FFFFFF;--line:#D8DEE3;--muted:#5A6B7A}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:'Instrument Sans',system-ui,sans-serif;font-size:18px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:var(--indigo);text-decoration:none}
+a:hover{color:var(--gold)}
+:focus-visible{outline:2px solid var(--tide);outline-offset:2px}
+</style>
+</helmet>
+<main style="min-height:100vh">
+  <dc-import name="APIICNav" hint-size="100%,112px"></dc-import>
+
+  <div style="background:linear-gradient(105deg,#08214F 0%,#0A2A6B 55%,#123B86 100%);color:#FFFFFF;position:relative;overflow:hidden">
+    <div style="max-width:1320px;margin:0 auto;padding:22px 40px 0;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.08em;color:#7C93A6"><a href="APIIC-Home.dc.html" style="color:#7C93A6">HOME</a> / SET UP &amp; GROW / INVESTOR GUIDE</div>
+    <div style="max-width:1320px;margin:0 auto;padding:28px 40px 48px">
+      <h1 style="font-family:Sora,sans-serif;font-weight:700;font-size:44px;letter-spacing:-0.03em;margin:0">From first enquiry to operating</h1>
+      <p style="font-size:19px;color:#C6D2DC;margin:12px 0 0;max-width:64ch">Six stages, on one page. For each one: what happens, who is responsible — APIIC or another authority — what you should prepare, and roughly how long it takes.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:24px;margin-top:28px;font-family:'IBM Plex Mono',monospace;font-size:11px;color:#7C93A6">
+        <span><span style="color:var(--tide)">⌁</span> TIMELINES INDICATIVE · REVIEWED 21 JUL 2026</span><span>OWNER: INVESTOR SERVICES</span><span>AFTERCARE STAGE INCLUDED — IT MATTERS AFTER ALLOTMENT</span>
+      </div>
+    </div>
+  </div>
+
+  <section style="max-width:1320px;margin:0 auto;padding:44px 40px 0">
+    <div style="display:flex;gap:0;overflow-x:auto;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-sm)">
+      <div style="flex:1;min-width:180px;padding:20px;border-right:1px solid var(--line);border-top:3px solid var(--indigo)"><div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted)">STAGE 01</div><div style="font-family:Sora,sans-serif;font-weight:600;font-size:20px;letter-spacing:-0.02em;margin-top:4px">Explore</div><div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--tide);margin-top:6px">1–2 WEEKS</div></div>
+      <div style="flex:1;min-width:180px;padding:20px;border-right:1px solid var(--line);border-top:3px solid var(--indigo)"><div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted)">STAGE 02</div><div style="font-family:Sora,sans-serif;font-weight:600;font-size:20px;letter-spacing:-0.02em;margin-top:4px">Choose location</div><div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--tide);margin-top:6px">2–6 WEEKS</div></div>
+      <div style="flex:1;min-width:180px;padding:20px;border-right:1px solid var(--line);border-top:3px solid var(--indigo)"><div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted)">STAGE 03</div><div style="font-family:Sora,sans-serif;font-weight:600;font-size:20px;letter-spacing:-0.02em;margin-top:4px">Apply for land</div><div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--tide);margin-top:6px">4–10 WEEKS</div></div>
+      <div style="flex:1;min-width:180px;padding:20px;border-right:1px solid var(--line);border-top:3px solid var(--indigo)"><div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted)">STAGE 04</div><div style="font-family:Sora,sans-serif;font-weight:600;font-size:20px;letter-spacing:-0.02em;margin-top:4px">Get approvals</div><div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--tide);margin-top:6px">PARALLEL · 6–16 WEEKS</div></div>
+      <div style="flex:1;min-width:180px;padding:20px;border-right:1px solid var(--line);border-top:3px solid var(--indigo)"><div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted)">STAGE 05</div><div style="font-family:Sora,sans-serif;font-weight:600;font-size:20px;letter-spacing:-0.02em;margin-top:4px">Build &amp; commission</div><div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--tide);margin-top:6px">PROJECT-DEPENDENT</div></div>
+      <div style="flex:1;min-width:180px;padding:20px;border-top:3px solid var(--tide)"><div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted)">STAGE 06</div><div style="font-family:Sora,sans-serif;font-weight:600;font-size:20px;letter-spacing:-0.02em;margin-top:4px">Operate &amp; grow</div><div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--tide);margin-top:6px">ONGOING</div></div>
+    </div>
+  </section>
+
+  <section style="max-width:1320px;margin:0 auto;padding:48px 40px 0;display:flex;flex-direction:column;gap:24px">
+    <article style="background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--indigo);border-radius:var(--r-sm);padding:30px 32px">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:32px">
+        <div style="min-width:0">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:0.06em">STAGE 01 · EXPLORE</div>
+          <h2 style="font-family:Sora,sans-serif;font-weight:600;font-size:28px;letter-spacing:-0.02em;margin:8px 0 0">Understand the state, then narrow the field</h2>
+          <p style="font-size:17px;color:var(--muted);margin:10px 0 0">Read the sourced position on market access, power, water and talent. Use the guided finder to reduce 104 parks to a shortlist of three, then compare them side by side.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:16px"><a href="APIIC-Why-Invest.dc.html" style="border:1px solid var(--royal);color:var(--royal);padding:10px 18px;border-radius:999px;font-size:16px;font-weight:500">Why Andhra Pradesh</a><a href="APIIC-Park-Finder.dc.html" style="border:1px solid var(--line);padding:10px 16px;border-radius:var(--r-sm);font-size:16px">Guided park finder</a></div>
+        </div>
+        <div style="min-width:0">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:0.06em">WHO DOES IT</div>
+          <div style="font-size:16px;margin-top:8px"><strong style="font-weight:500">APIIC</strong> — Investor Facilitation Desk</div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:0.06em;margin-top:18px">PREPARE</div>
+          <ul style="margin:8px 0 0;padding-left:20px;font-size:16px;color:var(--muted);line-height:1.7"><li>Land area and power load estimate</li><li>Process and effluent profile</li><li>Market and logistics requirement</li></ul>
+        </div>
+      </div>
+    </article>
+
+    <article style="background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--indigo);border-radius:var(--r-sm);padding:30px 32px">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:32px">
+        <div style="min-width:0">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:0.06em">STAGE 02 · CHOOSE LOCATION</div>
+          <h2 style="font-family:Sora,sans-serif;font-weight:600;font-size:28px;letter-spacing:-0.02em;margin:8px 0 0">Visit, verify, and get it in writing</h2>
+          <p style="font-size:17px;color:var(--muted);margin:10px 0 0">Site visits with the zonal officer, confirmation of utility headroom against your load, and a dated written summary of rate, inclusions and charges you can put to your board.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:16px"><a href="APIIC-Compare-Parks.dc.html" style="border:1px solid var(--royal);color:var(--royal);padding:10px 18px;border-radius:999px;font-size:16px;font-weight:500">Compare parks</a><a href="APIIC-Park-Profile.dc.html" style="border:1px solid var(--line);padding:10px 16px;border-radius:var(--r-sm);font-size:16px">See a park profile</a></div>
+        </div>
+        <div style="min-width:0">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:0.06em">WHO DOES IT</div>
+          <div style="font-size:16px;margin-top:8px"><strong style="font-weight:500">APIIC</strong> — Zonal Manager + Engineering Wing</div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:0.06em;margin-top:18px">PREPARE</div>
+          <ul style="margin:8px 0 0;padding-left:20px;font-size:16px;color:var(--muted);line-height:1.7"><li>Shortlist of up to four parks</li><li>Firm power and water demand</li><li>Board timeline for decision</li></ul>
+        </div>
+      </div>
+    </article>
+
+    <article style="background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--indigo);border-radius:var(--r-sm);padding:30px 32px">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:32px">
+        <div style="min-width:0">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:0.06em">STAGE 03 · APPLY FOR LAND</div>
+          <h2 style="font-family:Sora,sans-serif;font-weight:600;font-size:28px;letter-spacing:-0.02em;margin:8px 0 0">Application, appraisal, allotment</h2>
+          <p style="font-size:17px;color:var(--muted);margin:10px 0 0">Applications are submitted on the APIIC land application portal, appraised against the Allotment Regulations, and placed before the competent allotment authority. Price is set by the rate order in force on the allotment date.</p>
+          <div style="border:1px solid var(--line);border-left:3px solid var(--indigo);padding:18px 20px;margin-top:16px">
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:12px"><div style="display:flex;align-items:center;gap:10px;font-family:Sora,sans-serif;font-weight:600;font-size:18px"><span style="color:var(--indigo)">⧉</span>APIIC Online Land Application</div><span style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--indigo);border:1px solid var(--line);padding:4px 7px">EXTERNAL</span></div>
+            <div style="font-size:15px;color:var(--muted);margin-top:6px">Owner: Investor Services · Support: 0863 234 0000</div>
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);margin-top:6px"><span style="color:var(--tide)">⌁</span> LINK CHECKED 24 JUL 2026 · STATUS: AVAILABLE</div>
+            <a href="APIIC-Prototype-Scope.dc.html#external" style="display:inline-block;margin-top:12px;border:1px solid var(--royal);color:var(--royal);padding:10px 18px;border-radius:999px;font-weight:500;font-size:16px">Open official portal ↗</a>
+          </div>
+        </div>
+        <div style="min-width:0">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:0.06em">WHO DOES IT</div>
+          <div style="font-size:16px;margin-top:8px"><strong style="font-weight:500">APIIC</strong> — Zonal Office, then the allotment authority</div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:0.06em;margin-top:18px">PREPARE</div>
+          <ul style="margin:8px 0 0;padding-left:20px;font-size:16px;color:var(--muted);line-height:1.7"><li>Constitution and incorporation documents</li><li>Detailed project report</li><li>Means of finance</li><li>Application fee and deposit</li></ul>
+        </div>
+      </div>
+    </article>
+
+    <article style="background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--indigo);border-radius:var(--r-sm);padding:30px 32px">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:32px">
+        <div style="min-width:0">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:0.06em">STAGE 04 · GET APPROVALS</div>
+          <h2 style="font-family:Sora,sans-serif;font-weight:600;font-size:28px;letter-spacing:-0.02em;margin:8px 0 0">Statutory clearances, run in parallel</h2>
+          <p style="font-size:17px;color:var(--muted);margin:10px 0 0">Most approvals are not APIIC's to grant — they belong to the pollution control board, the single-window authority, the fire service and the utilities. APIIC's job is sequencing and escalation so they run alongside each other, not one after another.</p>
+          <table style="width:100%;border-collapse:collapse;font-size:16px;border:1px solid var(--line);margin-top:16px">
+            <tbody>
+              <tr style="border-bottom:1px solid var(--line)"><td style="padding:11px 14px;color:var(--muted)">Building &amp; layout approval</td><td style="padding:11px 14px;text-align:right">APIIC</td></tr>
+              <tr style="border-bottom:1px solid var(--line)"><td style="padding:11px 14px;color:var(--muted)">Consent to establish / operate</td><td style="padding:11px 14px;text-align:right">APPCB</td></tr>
+              <tr style="border-bottom:1px solid var(--line)"><td style="padding:11px 14px;color:var(--muted)">Power sanction &amp; connection</td><td style="padding:11px 14px;text-align:right">APSPDCL / APTRANSCO</td></tr>
+              <tr style="border-bottom:1px solid var(--line)"><td style="padding:11px 14px;color:var(--muted)">Fire NOC</td><td style="padding:11px 14px;text-align:right">AP Fire Services</td></tr>
+              <tr><td style="padding:11px 14px;color:var(--muted)">Factory licence &amp; labour registrations</td><td style="padding:11px 14px;text-align:right">Factories &amp; Labour Dept</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div style="min-width:0">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:0.06em">WHO DOES IT</div>
+          <div style="font-size:16px;margin-top:8px"><strong style="font-weight:500">Other authorities</strong>, coordinated through the AP Single Desk. APIIC escalates where an estate-level dependency blocks you.</div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:0.06em;margin-top:18px">PREPARE</div>
+          <ul style="margin:8px 0 0;padding-left:20px;font-size:16px;color:var(--muted);line-height:1.7"><li>Approved building plans</li><li>Effluent and emission profile</li><li>Contract demand calculation</li></ul>
+        </div>
+      </div>
+    </article>
+
+    <article style="background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--indigo);border-radius:var(--r-sm);padding:30px 32px">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:32px">
+        <div style="min-width:0">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:0.06em">STAGE 05 · BUILD &amp; COMMISSION</div>
+          <h2 style="font-family:Sora,sans-serif;font-weight:600;font-size:28px;letter-spacing:-0.02em;margin:8px 0 0">Construction, connections, trial runs</h2>
+          <p style="font-size:17px;color:var(--muted);margin:10px 0 0">Site handover and boundary demarcation, water and power connections energised, CETP connection commissioned, and access roads confirmed before your first trial run. Construction time is yours; the estate dependencies are ours to keep on schedule.</p>
+        </div>
+        <div style="min-width:0">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:0.06em">WHO DOES IT</div>
+          <div style="font-size:16px;margin-top:8px"><strong style="font-weight:500">You, with APIIC</strong> — Estate Officer and Engineering Wing</div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:0.06em;margin-top:18px">PREPARE</div>
+          <ul style="margin:8px 0 0;padding-left:20px;font-size:16px;color:var(--muted);line-height:1.7"><li>Contractor appointment</li><li>Connection applications and deposits</li><li>Commissioning schedule</li></ul>
+        </div>
+      </div>
+    </article>
+
+    <article style="background:rgba(15,138,128,0.06);border:1px solid rgba(15,138,128,0.35);border-left:3px solid var(--tide);border-radius:var(--r-sm);padding:30px 32px">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:32px">
+        <div style="min-width:0">
+          <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap"><div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--tide);letter-spacing:0.06em">STAGE 06 · OPERATE &amp; GROW</div><span style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.06em;color:var(--tide);border:1px solid var(--tide);padding:4px 8px">AFTERCARE — MISSING FROM THE SITE TODAY</span></div>
+          <h2 style="font-family:Sora,sans-serif;font-weight:600;font-size:28px;letter-spacing:-0.02em;margin:10px 0 0">We stay after the allotment</h2>
+          <p style="font-size:17px;color:var(--muted);margin:10px 0 0">Estate services and maintenance, expansion land when you outgrow the plot, infrastructure escalation with a named route, and an annual review with your unit on what is and isn't working on the estate.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:16px"><a href="APIIC-Talk-To-Expert.dc.html" style="background:linear-gradient(120deg,#0A2A6B,#14458F);color:#FFFFFF;padding:11px 18px;border-radius:999px;font-weight:600;font-size:16px;box-shadow:var(--shadow)">Reach the aftercare cell</a><a href="APIIC-Parks-Directory.dc.html" style="border:1px solid var(--royal);color:var(--royal);padding:10px 18px;border-radius:999px;font-size:16px">Look for expansion land</a></div>
+        </div>
+        <div style="min-width:0">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:0.06em">WHO DOES IT</div>
+          <div style="font-size:16px;margin-top:8px"><strong style="font-weight:500">APIIC</strong> — Estate Officer + Aftercare Cell</div>
+          <div style="min-width:0;overflow-wrap:anywhere;font-family:'IBM Plex Mono',monospace;font-size:15px;margin-top:8px">aftercare@apiic.in</div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);margin-top:14px"><span style="color:var(--tide)">⌁</span> SERVICE LEVELS PUBLISHED IN THE CITIZEN CHARTER</div>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <section style="max-width:1320px;margin:0 auto;padding:64px 40px 112px">
+    <div style="background:var(--gold-soft);border:1px solid var(--gold);padding:26px 30px">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.06em;color:#6B4E10">HOW TO READ THESE TIMELINES</div>
+      <p style="font-size:17px;color:#3A2C08;margin:10px 0 0;max-width:80ch">Every duration above is indicative and measured from complete documentation. Stages 3 and 4 overlap in most projects. Nothing on this page creates an entitlement to a timeline; the Citizen Charter carries the committed service levels and the escalation route.</p>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#6B4E10;margin-top:14px">REVIEWED 21 JUL 2026 · OWNER: INVESTOR SERVICES</div>
+    </div>
+    <p style="font-size:14px;color:var(--muted);margin:24px 0 0">Timelines and authority names in this prototype are illustrative and drawn from published process descriptions. Confirm each against the Citizen Charter before external release.</p>
+  </section>
+  <dc-import name="APIICFooter" hint-size="100%,420px"></dc-import>
+</main>
+
+</x-dc>
+</body>
+</html>

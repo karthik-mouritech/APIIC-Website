@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+Telugu:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/duotone/style.css">
+<style>
+:root{--ink:#08214F;--indigo:#123B86;--royal:#0A2A6B;--royal2:#14458F;--cyan:#2FC7DE;--cyan-deep:#0E9CB8;--cyan-soft:#E6F8FB;--tint-lav:#EEF0FF;--tint-mint:#E8F7F0;--tint-peach:#FDF1E7;--tint-sky:#E9F1FE;--tint-violet:#F2ECFE;--tint-rose:#FDECF2;--r:14px;--r-sm:10px;--shadow:0 14px 34px -20px rgba(8,33,79,0.30);--shadow-lg:0 26px 60px -28px rgba(8,33,79,0.42);--gold:#C9962C;--gold-soft:#F3E4C0;--tide:#0F8A80;--paper:#F6F7F5;--surface:#FFFFFF;--line:#D8DEE3;--muted:#5A6B7A}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:'Instrument Sans',system-ui,sans-serif;font-size:18px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:var(--indigo);text-decoration:none}
+a:hover{color:var(--gold)}
+:focus-visible{outline:2px solid var(--tide);outline-offset:2px}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</helmet>
+<main style="min-height:100vh">
+  <div style="background:linear-gradient(105deg,#08214F 0%,#0A2A6B 55%,#123B86 100%);color:#FFFFFF;padding:64px 0 72px">
+    <div style="max-width:1320px;margin:0 auto;padding:0 40px">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.1em;color:var(--gold)">APIIC WEBSITE 5.0 · PROMPT 0 · DESIGN SYSTEM</div>
+      <h1 style="font-family:Sora,sans-serif;font-weight:700;font-size:64px;line-height:1.05;letter-spacing:-0.02em;margin:20px 0 0;max-width:20ch">Cadastre, warmed up</h1>
+      <p style="font-size:20px;line-height:1.6;max-width:64ch;color:#C6D2DC;margin:20px 0 0">The register logic stays — every park, plot and dataset is a record with an identity, an owner and a verification stamp. What sits on top of it is now a warmer, deeper skin: a royal-blue gradient for hero and headers, cyan carrying the accent and the highlight, six pastel tints reserved strictly for icon chips, and soft 14px cards with a lifted shadow in place of flat hairline boxes. Radius 10–14px, pill buttons, and one glass panel per hero.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:32px;font-family:'IBM Plex Mono',monospace;font-size:12px">
+        <a href="APIIC-Home.dc.html" style="color:#FFFFFF;border:1px solid #3A5470;padding:7px 12px;border-radius:var(--r-sm)">01 HOME</a>
+        <a href="APIIC-Why-Invest.dc.html" style="color:#FFFFFF;border:1px solid #3A5470;padding:7px 12px;border-radius:var(--r-sm)">02 WHY INVEST</a>
+        <a href="APIIC-Park-Finder.dc.html" style="color:#FFFFFF;border:1px solid #3A5470;padding:7px 12px;border-radius:var(--r-sm)">03–04 PARK FINDER</a>
+        <a href="APIIC-Parks-Directory.dc.html" style="color:#FFFFFF;border:1px solid #3A5470;padding:7px 12px;border-radius:var(--r-sm)">05 DIRECTORY</a>
+        <a href="APIIC-Park-Profile.dc.html" style="color:#FFFFFF;border:1px solid #3A5470;padding:7px 12px;border-radius:var(--r-sm)">06 PARK PROFILE + 11 COPILOT</a>
+        <a href="APIIC-Compare-Parks.dc.html" style="color:#FFFFFF;border:1px solid #3A5470;padding:7px 12px;border-radius:var(--r-sm)">07 COMPARE</a>
+        <a href="APIIC-Incentive-Screener.dc.html" style="color:#FFFFFF;border:1px solid #3A5470;padding:7px 12px;border-radius:var(--r-sm)">08 SCREENER</a>
+        <a href="APIIC-Talk-To-Expert.dc.html" style="color:#FFFFFF;border:1px solid #3A5470;padding:7px 12px;border-radius:var(--r-sm)">09 ENQUIRY</a>
+        <a href="APIIC-Data-Freshness.dc.html" style="color:#FFFFFF;border:1px solid #3A5470;padding:7px 12px;border-radius:var(--r-sm)">10 DATA &amp; FRESHNESS</a>
+        <a href="APIIC-Mobile-Views.dc.html" style="color:#FFFFFF;border:1px solid #3A5470;padding:7px 12px;border-radius:var(--r-sm)">12 MOBILE</a>
+      </div>
+    </div>
+  </div>
+
+  <div style="max-width:1320px;margin:0 auto;padding:96px 40px 0">
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.1em;color:var(--muted);padding-bottom:14px;border-bottom:1px solid var(--line)">01 · COLOUR TOKENS</div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);margin-top:32px">
+      <div style="background:var(--surface)"><div style="height:104px;background:linear-gradient(135deg,#08214F,#123B86)"></div><div style="padding:14px 16px"><div style="font-family:'IBM Plex Mono',monospace;font-size:12px">--royal grad</div><div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted)">#08214F → #123B86</div><div style="font-size:13px;color:var(--muted);margin-top:6px">Hero, page headers, footer</div></div></div>
+      <div style="background:var(--surface)"><div style="height:104px;background:linear-gradient(120deg,#2FC7DE,#0E9CB8)"></div><div style="padding:14px 16px"><div style="font-family:'IBM Plex Mono',monospace;font-size:12px">--cyan</div><div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted)">#2FC7DE</div><div style="font-size:13px;color:var(--muted);margin-top:6px">Accent, headline highlight, primary action</div></div></div>
+      <div style="background:var(--surface)"><div style="height:104px;display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(2,1fr)"><span style="background:#EEF0FF"></span><span style="background:#E8F7F0"></span><span style="background:#FDF1E7"></span><span style="background:#E9F1FE"></span><span style="background:#F2ECFE"></span><span style="background:#FDECF2"></span></div><div style="padding:14px 16px"><div style="font-family:'IBM Plex Mono',monospace;font-size:12px">--tint-*</div><div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted)">lav · mint · peach · sky · violet · rose</div><div style="font-size:13px;color:var(--muted);margin-top:6px">Icon chips only — never as page or card fills</div></div></div>
+      <div style="background:var(--surface);padding:0"><div style="height:104px;background:#0B1F33"></div><div style="padding:14px 16px"><div style="font-family:'IBM Plex Mono',monospace;font-size:12px">--ink</div><div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted)">#0B1F33</div><div style="font-size:13px;color:var(--muted);margin-top:6px">Hero, footer, headings</div></div></div>
+      <div style="background:var(--surface)"><div style="height:104px;background:#163A5F"></div><div style="padding:14px 16px"><div style="font-family:'IBM Plex Mono',monospace;font-size:12px">--indigo</div><div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted)">#163A5F</div><div style="font-size:13px;color:var(--muted);margin-top:6px">Panels, nav, map base</div></div></div>
+      <div style="background:var(--surface)"><div style="height:104px;background:#C9962C"></div><div style="padding:14px 16px"><div style="font-family:'IBM Plex Mono',monospace;font-size:12px">--gold</div><div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted)">#C9962C</div><div style="font-size:13px;color:var(--muted);margin-top:6px">Accent + primary CTA only</div></div></div>
+      <div style="background:var(--surface)"><div style="height:104px;background:#F3E4C0"></div><div style="padding:14px 16px"><div style="font-family:'IBM Plex Mono',monospace;font-size:12px">--gold-soft</div><div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted)">#F3E4C0</div><div style="font-size:13px;color:var(--muted);margin-top:6px">Hover wash, highlight bands</div></div></div>
+      <div style="background:var(--surface)"><div style="height:104px;background:#0F8A80"></div><div style="padding:14px 16px"><div style="font-family:'IBM Plex Mono',monospace;font-size:12px">--tide</div><div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted)">#0F8A80</div><div style="font-size:13px;color:var(--muted);margin-top:6px">Live data, verified states</div></div></div>
+      <div style="background:var(--surface)"><div style="height:104px;background:#F6F7F5"></div><div style="padding:14px 16px"><div style="font-family:'IBM Plex Mono',monospace;font-size:12px">--paper</div><div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted)">#F6F7F5</div><div style="font-size:13px;color:var(--muted);margin-top:6px">Page background</div></div></div>
+      <div style="background:var(--surface)"><div style="height:104px;background:#FFFFFF;border-bottom:1px solid var(--line)"></div><div style="padding:14px 16px"><div style="font-family:'IBM Plex Mono',monospace;font-size:12px">--surface</div><div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted)">#FFFFFF</div><div style="font-size:13px;color:var(--muted);margin-top:6px">Cards</div></div></div>
+      <div style="background:var(--surface)"><div style="height:104px;background:#D8DEE3"></div><div style="padding:14px 16px"><div style="font-family:'IBM Plex Mono',monospace;font-size:12px">--line</div><div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted)">#D8DEE3</div><div style="font-size:13px;color:var(--muted);margin-top:6px">Hairlines, table rules</div></div></div>
+      <div style="background:var(--surface)"><div style="height:104px;background:#5A6B7A"></div><div style="padding:14px 16px"><div style="font-family:'IBM Plex Mono',monospace;font-size:12px">--muted</div><div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted)">#5A6B7A</div><div style="font-size:13px;color:var(--muted);margin-top:6px">Secondary text, metadata</div></div></div>
+      <div style="background:var(--surface);padding:14px 16px;display:flex;flex-direction:column;justify-content:center;gap:8px">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.06em;color:var(--muted)">STATUS RULE</div>
+        <div style="font-size:14px;line-height:1.5">Availability never uses red. An allotted plot is proof of demand. Red is reserved for form errors and service alerts only.</div>
+      </div>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:20px">
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.06em;color:#0A7F76;border:1px solid rgba(15,138,128,0.45);background:rgba(15,138,128,0.10);padding:5px 10px;border-radius:3px">AVAILABLE</span>
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.06em;color:#8A6410;border:1px solid #C9962C;background:rgba(201,150,44,0.12);padding:5px 10px;border-radius:3px">LIMITED</span>
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.06em;color:#5A6B7A;border:1px solid #D8DEE3;background:#F6F7F5;padding:5px 10px;border-radius:3px">FULLY ALLOTTED</span>
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.06em;color:#163A5F;border:1px solid #163A5F;padding:5px 10px;border-radius:3px">COMING SOON</span>
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.06em;color:#B3261E;border:1px solid #B3261E;background:rgba(179,38,30,0.06);padding:5px 10px;border-radius:3px">FORM ERROR / SERVICE ALERT ONLY</span>
+    </div>
+  </div>
+
+  <div style="max-width:1320px;margin:0 auto;padding:96px 40px 0">
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.1em;color:var(--muted);padding-bottom:14px;border-bottom:1px solid var(--line)">02 · TYPOGRAPHY</div>
+    <div style="display:grid;grid-template-columns:1fr 380px;gap:64px;margin-top:36px">
+      <div style="display:flex;flex-direction:column;gap:26px">
+        <div style="border-bottom:1px solid var(--line);padding-bottom:22px">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:0.06em">DISPLAY · SORA 700 · 64 / 44 / 32 · TRACKING −0.02EM</div>
+          <div style="font-family:Sora,sans-serif;font-weight:700;font-size:64px;line-height:1.05;letter-spacing:-0.02em;margin-top:10px">Build in Andhra Pradesh</div>
+          <div style="font-family:Sora,sans-serif;font-weight:600;font-size:44px;line-height:1.1;letter-spacing:-0.02em;margin-top:8px">Land available now</div>
+          <div style="font-family:Sora,sans-serif;font-weight:600;font-size:32px;line-height:1.2;letter-spacing:-0.02em;margin-top:8px">42.6 acres · 104 parks</div>
+        </div>
+        <div style="border-bottom:1px solid var(--line);padding-bottom:22px">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:0.06em">BODY / UI · INSTRUMENT SANS 400/500 · 18PX · LINE-HEIGHT 1.6 · MEASURE 68CH</div>
+          <p style="font-size:18px;line-height:1.6;max-width:68ch;margin:10px 0 0">Every plot, rate and utility on this site carries the date it was last verified. Where a figure is not published, we say so rather than hiding the row — an honest gap is worth more to a board paper than a confident guess.</p>
+        </div>
+        <div style="border-bottom:1px solid var(--line);padding-bottom:22px">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:0.06em">DATA / REGISTER · IBM PLEX MONO 400/500</div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:16px;margin-top:10px;line-height:1.9">⌁ KRI-019 · 42.6 ac · ₹ 68.5 L/ac · PORT 42 KM<br>⌁ VERIFIED 21 JUL 2026 · ASSET MANAGEMENT</div>
+        </div>
+        <div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:0.06em">INDIC PARITY · NOTO SANS TELUGU / DEVANAGARI</div>
+          <div style="font-family:'Noto Sans Telugu',sans-serif;font-size:28px;margin-top:10px">ఆంధ్రప్రదేశ్‌లో పరిశ్రమ స్థాపించండి</div>
+          <div style="font-size:24px;margin-top:6px">आंध्र प्रदेश में निर्माण करें</div>
+        </div>
+      </div>
+      <div style="border:1px solid var(--line);background:var(--surface);padding:24px">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.06em;color:var(--muted)">TYPE SCALE · DESKTOP</div>
+        <div style="display:flex;flex-direction:column;margin-top:14px;font-family:'IBM Plex Mono',monospace;font-size:13px">
+          <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--line)"><span>64</span><span style="color:var(--muted)">H1 display</span></div>
+          <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--line)"><span>44</span><span style="color:var(--muted)">H2 section</span></div>
+          <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--line)"><span>32</span><span style="color:var(--muted)">KPI numeral</span></div>
+          <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--line)"><span>24</span><span style="color:var(--muted)">Card title</span></div>
+          <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--line)"><span>20 / 18</span><span style="color:var(--muted)">Lede / body</span></div>
+          <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--line)"><span>16 / 14</span><span style="color:var(--muted)">UI / table</span></div>
+          <div style="display:flex;justify-content:space-between;padding:8px 0"><span>12</span><span style="color:var(--muted)">Mono metadata</span></div>
+        </div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.06em;color:var(--muted);margin-top:24px">GRID</div>
+        <div style="display:flex;gap:2px;margin-top:10px;height:56px">
+          <div style="flex:1;background:rgba(22,58,95,0.08);border-top:1px solid var(--indigo)"></div><div style="flex:1;background:rgba(22,58,95,0.08);border-top:1px solid var(--indigo)"></div><div style="flex:1;background:rgba(22,58,95,0.08);border-top:1px solid var(--indigo)"></div><div style="flex:1;background:rgba(22,58,95,0.08);border-top:1px solid var(--indigo)"></div><div style="flex:1;background:rgba(22,58,95,0.08);border-top:1px solid var(--indigo)"></div><div style="flex:1;background:rgba(22,58,95,0.08);border-top:1px solid var(--indigo)"></div><div style="flex:1;background:rgba(22,58,95,0.08);border-top:1px solid var(--indigo)"></div><div style="flex:1;background:rgba(22,58,95,0.08);border-top:1px solid var(--indigo)"></div><div style="flex:1;background:rgba(22,58,95,0.08);border-top:1px solid var(--indigo)"></div><div style="flex:1;background:rgba(22,58,95,0.08);border-top:1px solid var(--indigo)"></div><div style="flex:1;background:rgba(22,58,95,0.08);border-top:1px solid var(--indigo)"></div><div style="flex:1;background:rgba(22,58,95,0.08);border-top:1px solid var(--indigo)"></div>
+        </div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted);margin-top:10px;line-height:1.7">12 columns · 1280px max · 80px gutters<br>8px base · 96–128px section rhythm<br>Cards: 1px --line, 4px radius</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="max-width:1320px;margin:0 auto;padding:96px 40px 0">
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.1em;color:var(--muted);padding-bottom:14px;border-bottom:1px solid var(--line)">03 · FRESHNESS STAMP — THE SIGNATURE COMPONENT</div>
+    <div style="display:grid;grid-template-columns:repeat(2,minmax(0,380px));gap:32px;margin-top:36px">
+      <div style="background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:24px;box-shadow:0 6px 18px -14px rgba(8,33,79,0.3)">
+        <div style="font-size:12px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted)">Available area</div>
+        <div style="font-family:Sora,sans-serif;font-weight:700;font-size:32px;letter-spacing:-0.02em;margin-top:6px">42.6 acres</div>
+        <div style="height:1px;background:var(--line);margin:14px 0 10px"></div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted);display:flex;align-items:center;gap:6px"><span style="color:var(--tide)">⌁</span>VERIFIED 21 JUL 2026 · ASSET MANAGEMENT<span style="color:var(--indigo);cursor:pointer" title="Definition, inclusion rules, source system, owner, next review date">ⓘ</span></div>
+      </div>
+      <div style="background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:24px;box-shadow:0 6px 18px -14px rgba(8,33,79,0.3)">
+        <div style="font-size:12px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted)">Indicative rate</div>
+        <div style="font-family:Sora,sans-serif;font-weight:700;font-size:32px;letter-spacing:-0.02em;margin-top:6px">₹ 68.5 L / acre</div>
+        <div style="height:1px;background:var(--line);margin:14px 0 10px"></div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--gold);display:flex;align-items:center;gap:6px"><span>⌁</span>LAST VERIFIED 04 JUN 2026 · REVIEW OVERDUE<span style="cursor:pointer">ⓘ</span></div>
+      </div>
+    </div>
+    <p style="font-size:15px;color:var(--muted);max-width:68ch;margin:20px 0 0">The stamp carries every live value on the site. Past its stale-after threshold it turns amber and says so — a stale number is never silently presented as current.</p>
+  </div>
+
+  <div style="max-width:1320px;margin:0 auto;padding:96px 40px 0">
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.1em;color:var(--muted);padding-bottom:14px;border-bottom:1px solid var(--line)">04 · PARCEL CARD — FOUR AVAILABILITY STATES</div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;margin-top:36px">
+      <div style="background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:22px;box-shadow:0 6px 18px -14px rgba(8,33,79,0.3);display:flex;flex-direction:column;gap:14px;transition:box-shadow 150ms" style-hover="box-shadow:0 12px 24px -18px rgba(11,31,51,0.4)">
+        <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:10px">
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted)">⌁ KRI-019</span>
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.06em;color:#0A7F76;border:1px solid rgba(15,138,128,0.45);background:rgba(15,138,128,0.10);padding:4px 7px;border-radius:3px">AVAILABLE</span>
+        </div>
+        <div>
+          <div style="font-family:Sora,sans-serif;font-weight:600;font-size:24px;line-height:1.2;letter-spacing:-0.02em">Model Industrial Park, Mallavalli</div>
+          <div style="font-size:14px;color:var(--muted);margin-top:6px">Krishna District · Industrial Park</div>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+          <div style="padding:12px 10px 12px 0;border-right:1px solid var(--line)"><div style="font-size:10px;letter-spacing:0.08em;color:var(--muted);text-transform:uppercase">Available</div><div style="font-family:'IBM Plex Mono',monospace;font-size:15px;margin-top:3px">42.6 ac</div></div>
+          <div style="padding:12px 10px;border-right:1px solid var(--line)"><div style="font-size:10px;letter-spacing:0.08em;color:var(--muted);text-transform:uppercase">Rate</div><div style="font-family:'IBM Plex Mono',monospace;font-size:15px;margin-top:3px">₹68.5L</div></div>
+          <div style="padding:12px 0 12px 10px"><div style="font-size:10px;letter-spacing:0.08em;color:var(--muted);text-transform:uppercase">Port</div><div style="font-family:'IBM Plex Mono',monospace;font-size:15px;margin-top:3px">42 km</div></div>
+        </div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted)"><span style="color:var(--tide)">⌁</span> VERIFIED 21 JUL 2026</div>
+        <label style="display:flex;align-items:center;gap:9px;font-size:14px;cursor:pointer;color:var(--indigo)"><input type="checkbox" style="width:16px;height:16px;accent-color:#163A5F">Add to shortlist</label>
+      </div>
+      <div style="background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:22px;box-shadow:0 6px 18px -14px rgba(8,33,79,0.3);display:flex;flex-direction:column;gap:14px">
+        <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:10px">
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted)">⌁ VSP-004</span>
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.06em;color:#8A6410;border:1px solid #C9962C;background:rgba(201,150,44,0.12);padding:4px 7px;border-radius:3px">LIMITED</span>
+        </div>
+        <div>
+          <div style="font-family:Sora,sans-serif;font-weight:600;font-size:24px;line-height:1.2;letter-spacing:-0.02em">Achutapuram Industrial Park</div>
+          <div style="font-size:14px;color:var(--muted);margin-top:6px">Anakapalli District · SEZ</div>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+          <div style="padding:12px 10px 12px 0;border-right:1px solid var(--line)"><div style="font-size:10px;letter-spacing:0.08em;color:var(--muted);text-transform:uppercase">Available</div><div style="font-family:'IBM Plex Mono',monospace;font-size:15px;margin-top:3px">7.2 ac</div></div>
+          <div style="padding:12px 10px;border-right:1px solid var(--line)"><div style="font-size:10px;letter-spacing:0.08em;color:var(--muted);text-transform:uppercase">Rate</div><div style="font-family:'IBM Plex Mono',monospace;font-size:15px;margin-top:3px">₹94.0L</div></div>
+          <div style="padding:12px 0 12px 10px"><div style="font-size:10px;letter-spacing:0.08em;color:var(--muted);text-transform:uppercase">Port</div><div style="font-family:'IBM Plex Mono',monospace;font-size:15px;margin-top:3px">18 km</div></div>
+        </div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted)"><span style="color:var(--tide)">⌁</span> VERIFIED 19 JUL 2026</div>
+        <label style="display:flex;align-items:center;gap:9px;font-size:14px;cursor:pointer;color:var(--indigo)"><input type="checkbox" style="width:16px;height:16px;accent-color:#163A5F">Add to shortlist</label>
+      </div>
+      <div style="background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:22px;box-shadow:0 6px 18px -14px rgba(8,33,79,0.3);display:flex;flex-direction:column;gap:14px">
+        <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:10px">
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted)">⌁ SRK-011</span>
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.06em;color:#5A6B7A;border:1px solid #D8DEE3;background:#F6F7F5;padding:4px 7px;border-radius:3px">FULLY ALLOTTED</span>
+        </div>
+        <div>
+          <div style="font-family:Sora,sans-serif;font-weight:600;font-size:24px;line-height:1.2;letter-spacing:-0.02em">Naidupeta Industrial Park</div>
+          <div style="font-size:14px;color:var(--muted);margin-top:6px">Tirupati District · Industrial Park</div>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+          <div style="padding:12px 10px 12px 0;border-right:1px solid var(--line)"><div style="font-size:10px;letter-spacing:0.08em;color:var(--muted);text-transform:uppercase">Available</div><div style="font-family:'IBM Plex Mono',monospace;font-size:15px;margin-top:3px">0.0 ac</div></div>
+          <div style="padding:12px 10px;border-right:1px solid var(--line)"><div style="font-size:10px;letter-spacing:0.08em;color:var(--muted);text-transform:uppercase">Rate</div><div style="font-family:'IBM Plex Mono',monospace;font-size:15px;margin-top:3px">₹52.0L</div></div>
+          <div style="padding:12px 0 12px 10px"><div style="font-size:10px;letter-spacing:0.08em;color:var(--muted);text-transform:uppercase">Port</div><div style="font-family:'IBM Plex Mono',monospace;font-size:15px;margin-top:3px">76 km</div></div>
+        </div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted)"><span style="color:var(--tide)">⌁</span> VERIFIED 20 JUL 2026</div>
+        <label style="display:flex;align-items:center;gap:9px;font-size:14px;cursor:pointer;color:var(--muted)"><input type="checkbox" disabled style="width:16px;height:16px">Add to shortlist</label>
+      </div>
+      <div style="background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:22px;box-shadow:0 6px 18px -14px rgba(8,33,79,0.3);display:flex;flex-direction:column;gap:14px">
+        <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:10px">
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted)">⌁ KDP-007</span>
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.06em;color:#163A5F;border:1px solid #163A5F;padding:4px 7px;border-radius:3px">COMING SOON</span>
+        </div>
+        <div>
+          <div style="font-family:Sora,sans-serif;font-weight:600;font-size:24px;line-height:1.2;letter-spacing:-0.02em">Kopparthy Node, YSR Kadapa</div>
+          <div style="font-size:14px;color:var(--muted);margin-top:6px">YSR Kadapa District · Theme Park</div>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+          <div style="padding:12px 10px 12px 0;border-right:1px solid var(--line)"><div style="font-size:10px;letter-spacing:0.08em;color:var(--muted);text-transform:uppercase">Available</div><div style="font-family:'IBM Plex Mono',monospace;font-size:15px;margin-top:3px">Q1 2027</div></div>
+          <div style="padding:12px 10px;border-right:1px solid var(--line)"><div style="font-size:10px;letter-spacing:0.08em;color:var(--muted);text-transform:uppercase">Rate</div><div style="font-family:'IBM Plex Mono',monospace;font-size:13px;margin-top:5px;color:var(--muted);font-style:italic">Not published</div></div>
+          <div style="padding:12px 0 12px 10px"><div style="font-size:10px;letter-spacing:0.08em;color:var(--muted);text-transform:uppercase">Port</div><div style="font-family:'IBM Plex Mono',monospace;font-size:15px;margin-top:3px">180 km</div></div>
+        </div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted)"><span style="color:var(--tide)">⌁</span> VERIFIED 15 JUL 2026</div>
+        <label style="display:flex;align-items:center;gap:9px;font-size:14px;cursor:pointer;color:var(--indigo)"><input type="checkbox" style="width:16px;height:16px;accent-color:#163A5F">Notify me</label>
+      </div>
+    </div>
+  </div>
+
+  <div style="max-width:1320px;margin:0 auto;padding:96px 40px 0">
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.1em;color:var(--muted);padding-bottom:14px;border-bottom:1px solid var(--line)">05 · OFFICIAL PORTAL CARD · 06 · BUTTONS</div>
+    <div style="display:grid;grid-template-columns:1.1fr 1fr;gap:48px;margin-top:36px">
+      <div style="display:flex;flex-direction:column;gap:20px">
+        <div style="background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--indigo);border-radius:var(--r-sm);padding:22px 24px">
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:12px">
+            <div style="display:flex;align-items:center;gap:10px;font-family:Sora,sans-serif;font-weight:600;font-size:20px;letter-spacing:-0.02em"><span style="color:var(--indigo)">⧉</span>APIIC Online Land Application</div>
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.08em;color:var(--indigo);border:1px solid var(--line);padding:4px 7px;border-radius:3px">EXTERNAL</span>
+          </div>
+          <p style="margin:8px 0 0;font-size:16px;color:var(--ink)">Submit and track a land application.</p>
+          <div style="font-size:14px;color:var(--muted);margin-top:10px">Owner: Investor Services · Support: 0863-234 0000</div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);margin-top:8px"><span style="color:var(--tide)">⌁</span> LINK CHECKED 24 JUL 2026 · STATUS: AVAILABLE</div>
+          <a href="APIIC-Prototype-Scope.dc.html#external" style="display:inline-flex;align-items:center;gap:8px;margin-top:16px;border:1px solid var(--royal);color:var(--royal);padding:10px 18px;border-radius:999px;font-weight:500;font-size:16px" style-hover="background:var(--paper)">Open official portal ↗</a>
+        </div>
+        <div style="background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:var(--r-sm);padding:22px 24px">
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:12px">
+            <div style="display:flex;align-items:center;gap:10px;font-family:Sora,sans-serif;font-weight:600;font-size:20px;letter-spacing:-0.02em"><span style="color:var(--indigo)">⧉</span>AP Single Desk Portal</div>
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.08em;color:var(--indigo);border:1px solid var(--line);padding:4px 7px;border-radius:3px">EXTERNAL</span>
+          </div>
+          <p style="margin:8px 0 0;font-size:16px">Apply for statutory approvals through the single window.</p>
+          <div style="font-size:14px;color:var(--muted);margin-top:10px">Owner: Industries &amp; Commerce Dept · Support: 0866-241 0000</div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--gold);margin-top:8px">⌁ LINK CHECKED 25 JUL 2026 09:10 · STATUS: UNAVAILABLE</div>
+          <div style="font-size:14px;background:var(--paper);border:1px solid var(--line);padding:10px 12px;margin-top:10px">This portal is not responding. Use the zonal desk on 0866-241 0000 meanwhile — we last checked 12 minutes ago.</div>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:26px">
+        <div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:0.06em">BUTTONS</div>
+          <div style="display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-top:14px">
+            <button style="background:linear-gradient(120deg,#0A2A6B,#14458F);color:#FFFFFF;border:none;padding:13px 20px;border-radius:999px;font-family:'Instrument Sans',sans-serif;font-size:16px;font-weight:600;cursor:pointer;transition:background 150ms;box-shadow:var(--shadow)" style-hover="background:linear-gradient(120deg,#123B86,#1E5AB5);color:#FFFFFF">Enquire about this park</button>
+            <button style="background:transparent;color:var(--indigo);border:1px solid var(--indigo);padding:12px 20px;border-radius:var(--r-sm);font-family:'Instrument Sans',sans-serif;font-size:16px;font-weight:500;cursor:pointer;transition:background 150ms" style-hover="background:var(--paper)">Compare parks</button>
+            <a href="APIIC-Parks-Directory.dc.html" style="display:inline-flex;align-items:center;gap:6px;font-weight:500;font-size:16px;color:var(--indigo)">See all parks <span>→</span></a>
+            <a href="APIIC-Prototype-Scope.dc.html#external" style="display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);padding:12px 16px;border-radius:var(--r-sm);font-size:16px;color:var(--indigo)">Open detailed GIS <span>↗</span></a>
+            <button disabled style="background:#EDF0F2;color:#9AA8B4;border:1px solid var(--line);padding:12px 20px;border-radius:var(--r-sm);font-family:'Instrument Sans',sans-serif;font-size:16px;cursor:not-allowed">Add to shortlist</button>
+          </div>
+        </div>
+        <div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:0.06em">FILTER CHIPS</div>
+          <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:14px">
+            <span style="border:1px solid var(--line);background:var(--surface);padding:8px 14px;border-radius:999px;font-size:14px;cursor:pointer">Food processing</span>
+            <span style="border:1px solid var(--indigo);background:var(--indigo);color:#FFFFFF;padding:8px 14px;border-radius:999px;font-size:14px;cursor:pointer">20–50 acres</span>
+            <span style="border:1px solid var(--indigo);background:rgba(22,58,95,0.06);color:var(--indigo);padding:8px 10px 8px 14px;border-radius:999px;font-size:14px;display:inline-flex;align-items:center;gap:8px;cursor:pointer">CETP required <span style="font-size:15px;color:var(--muted)">×</span></span>
+          </div>
+        </div>
+        <div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:0.06em">FORM FIELD · DEFAULT / ERROR</div>
+          <div style="display:flex;flex-direction:column;gap:18px;margin-top:14px;max-width:420px">
+            <label style="display:flex;flex-direction:column;gap:6px">
+              <span style="font-size:15px;font-weight:500">Land requirement</span>
+              <input placeholder="e.g. 25" style="border:1px solid var(--line);border-radius:var(--r-sm);padding:12px 14px;font-family:'Instrument Sans',sans-serif;font-size:16px;background:var(--surface)">
+              <span style="font-size:13px;color:var(--muted)">In acres. An approximate figure is fine.</span>
+            </label>
+            <label style="display:flex;flex-direction:column;gap:6px">
+              <span style="font-size:15px;font-weight:500">Work email <span style="color:#B3261E">*</span></span>
+              <input value="anita@" aria-invalid="true" style="border:1px solid #B3261E;border-radius:var(--r-sm);padding:12px 14px;font-family:'Instrument Sans',sans-serif;font-size:16px;background:#FDF7F6">
+              <span style="font-size:13px;color:#B3261E;display:flex;align-items:center;gap:6px"><i class="ph ph-warning-circle"></i>Enter a complete email address, e.g. name@company.com</span>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="max-width:1320px;margin:0 auto;padding:96px 40px 0">
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.1em;color:var(--muted);padding-bottom:14px;border-bottom:1px solid var(--line)">07 · TABBED PANEL · SKELETON LOADER</div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(400px,1fr));gap:32px;margin-top:36px">
+      <div style="background:var(--surface);border:1px solid var(--line);border-radius:var(--r-sm)">
+        <div role="tablist" aria-label="Park utilities" style="display:flex;border-bottom:1px solid var(--line)">
+          <button role="tab" aria-selected="true" style="background:var(--surface);border:none;border-bottom:2px solid var(--gold);padding:14px 18px;font-family:'Instrument Sans',sans-serif;font-size:15px;font-weight:600;color:var(--ink);cursor:pointer">Power</button>
+          <button role="tab" aria-selected="false" style="background:none;border:none;border-bottom:2px solid transparent;padding:14px 18px;font-family:'Instrument Sans',sans-serif;font-size:15px;color:var(--muted);cursor:pointer">Water</button>
+          <button role="tab" aria-selected="false" style="background:none;border:none;border-bottom:2px solid transparent;padding:14px 18px;font-family:'Instrument Sans',sans-serif;font-size:15px;color:var(--muted);cursor:pointer">Effluent</button>
+          <button role="tab" aria-selected="false" style="background:none;border:none;border-bottom:2px solid transparent;padding:14px 18px;font-family:'Instrument Sans',sans-serif;font-size:15px;color:var(--muted);cursor:pointer">Internal</button>
+        </div>
+        <div role="tabpanel" style="padding:20px 22px">
+          <div style="display:flex;justify-content:space-between;gap:16px;padding:9px 0;border-bottom:1px solid var(--line);font-size:16px"><span style="color:var(--muted)">Supply voltage</span><span style="font-family:'IBM Plex Mono',monospace">11 kV · 33 kV</span></div>
+          <div style="display:flex;justify-content:space-between;gap:16px;padding:9px 0;font-size:16px"><span style="color:var(--muted)">Substation</span><span>33/11 kV in park, 2 × 8 MVA</span></div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);margin-top:12px"><span style="color:var(--tide)">⌁</span> VERIFIED 18 JUL 2026 · ENGINEERING WING</div>
+        </div>
+      </div>
+      <div style="background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:22px;box-shadow:0 6px 18px -14px rgba(8,33,79,0.3)">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.06em;color:var(--muted)">SKELETON LOADER · PARCEL CARD, LOADING</div>
+        <div style="display:flex;flex-direction:column;gap:14px;margin-top:16px">
+          <div style="display:flex;justify-content:space-between;gap:10px"><span style="width:72px;height:12px;background:#EDF0F2"></span><span style="width:88px;height:20px;background:#EDF0F2"></span></div>
+          <span style="width:82%;height:24px;background:#EDF0F2"></span>
+          <span style="width:54%;height:14px;background:#EDF0F2"></span>
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+            <div style="padding:12px 10px 12px 0;border-right:1px solid var(--line);display:flex;flex-direction:column;gap:6px"><span style="width:70%;height:9px;background:#EDF0F2"></span><span style="width:86%;height:15px;background:#EDF0F2"></span></div>
+            <div style="padding:12px 10px;border-right:1px solid var(--line);display:flex;flex-direction:column;gap:6px"><span style="width:60%;height:9px;background:#EDF0F2"></span><span style="width:80%;height:15px;background:#EDF0F2"></span></div>
+            <div style="padding:12px 0 12px 10px;display:flex;flex-direction:column;gap:6px"><span style="width:56%;height:9px;background:#EDF0F2"></span><span style="width:74%;height:15px;background:#EDF0F2"></span></div>
+          </div>
+          <span style="width:46%;height:11px;background:#EDF0F2"></span>
+        </div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);margin-top:16px">NO SPINNERS · LAYOUT RESERVED SO NOTHING SHIFTS · CLS ≤ 0.1</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="max-width:1320px;margin:0 auto;padding:96px 40px 0">
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.1em;color:var(--muted);padding-bottom:14px;border-bottom:1px solid var(--line)">08 · NAVIGATION · LIVE COMPONENT</div>
+  </div>
+  <div style="margin-top:24px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+    <dc-import name="APIICNav" hint-size="100%,112px"></dc-import>
+  </div>
+
+  <div style="max-width:1320px;margin:0 auto;padding:96px 40px 96px">
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.1em;color:var(--muted);padding-bottom:14px;border-bottom:1px solid var(--line)">09 · ICONS &amp; SECTOR MARKS · PHOSPHOR REGULAR, ONE FAMILY ONLY</div>
+    <div style="display:flex;flex-wrap:wrap;gap:28px;margin-top:32px;font-size:28px;color:var(--indigo)">
+      <i class="ph ph-map-trifold"></i><i class="ph ph-buildings"></i><i class="ph ph-anchor"></i><i class="ph ph-train"></i><i class="ph ph-lightning"></i><i class="ph ph-drop"></i><i class="ph ph-recycle"></i><i class="ph ph-leaf"></i><i class="ph ph-shield-check"></i><i class="ph ph-file-text"></i><i class="ph ph-scales"></i><i class="ph ph-users-three"></i><i class="ph ph-chat-circle-text"></i><i class="ph ph-airplane-takeoff"></i><i class="ph ph-road-horizon"></i><i class="ph ph-clipboard-text"></i>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);margin-top:32px">
+      <div style="background:var(--surface);padding:20px"><i class="ph-duotone ph-cpu" style="font-size:32px;color:var(--indigo)"></i><div style="font-weight:500;margin-top:10px;font-size:16px">Electronics &amp; Semiconductors</div></div>
+      <div style="background:var(--surface);padding:20px"><i class="ph-duotone ph-grains" style="font-size:32px;color:var(--indigo)"></i><div style="font-weight:500;margin-top:10px;font-size:16px">Food Processing</div></div>
+      <div style="background:var(--surface);padding:20px"><i class="ph-duotone ph-flask" style="font-size:32px;color:var(--indigo)"></i><div style="font-weight:500;margin-top:10px;font-size:16px">Pharmaceuticals &amp; Life Sciences</div></div>
+      <div style="background:var(--surface);padding:20px"><i class="ph-duotone ph-scissors" style="font-size:32px;color:var(--indigo)"></i><div style="font-weight:500;margin-top:10px;font-size:16px">Textiles &amp; Apparel</div></div>
+      <div style="background:var(--surface);padding:20px"><i class="ph-duotone ph-airplane-tilt" style="font-size:32px;color:var(--indigo)"></i><div style="font-weight:500;margin-top:10px;font-size:16px">Aerospace &amp; Defence</div></div>
+      <div style="background:var(--surface);padding:20px"><i class="ph-duotone ph-battery-charging" style="font-size:32px;color:var(--indigo)"></i><div style="font-weight:500;margin-top:10px;font-size:16px">Green Energy &amp; EV</div></div>
+    </div>
+    <p style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted);margin-top:24px">MOTION · 150MS HOVER · 60MS SCROLL-REVEAL STAGGER · ONE ORCHESTRATED HERO MOMENT · NO CAROUSELS · NO TICKERS · PREFERS-REDUCED-MOTION RESPECTED</p>
+    <p style="font-size:14px;color:var(--muted);margin-top:8px">Figures in this prototype are illustrative placeholders with visible verification dates. They are not published APIIC data.</p>
+  </div>
+  <dc-import name="APIICFooter" hint-size="100%,420px"></dc-import>
+</main>
+
+</x-dc>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>APIIC — Andhra Pradesh industrial map</title>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha384-sHL9NAb7lN7rfvG5lfHpm643Xkcjzp4jFvuavGOndn6pjVqS6ny56CAt3nsEVT4H" crossorigin="anonymous">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha384-cxOPjt7s7Iz04uaHJceBmS+qpjv2JkIHNVcuOrM+YHwZOmJGBXI00mdUXEq65HTH" crossorigin="anonymous"></script>
+<style>
+:root{--cyan:#2FC7DE;--blue:#7FB2FF;--gold:#C9962C;--royal:#0A2A6B;--ink:#08214F;--muted:#5A6B7A}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;font-family:'Instrument Sans',system-ui,sans-serif;background:#EAF0F7}
+#map{position:absolute;inset:0;border-radius:14px}
+.leaflet-container{background:#DCE7F2;font-family:'Instrument Sans',system-ui,sans-serif;border-radius:14px}
+.leaflet-control-attribution{font-size:9.5px;background:rgba(255,255,255,0.86)}
+#bar{position:absolute;left:10px;right:10px;bottom:10px;z-index:500;display:flex;flex-wrap:wrap;align-items:center;gap:8px 16px;background:rgba(8,33,79,0.90);color:#DCE8F6;border-radius:10px;padding:8px 12px;font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:0.04em;backdrop-filter:blur(4px)}
+#bar .src{margin-left:auto;color:#9FB8D8;text-align:right}
+.pill{display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
+.dot{width:8px;height:8px;border-radius:50%;display:inline-block}
+.lbl{background:rgba(8,33,79,0.92)!important;border:0!important;box-shadow:none!important;color:#FFFFFF!important;font-family:'IBM Plex Mono',monospace!important;font-size:10px!important;letter-spacing:0.04em;padding:3px 7px!important;border-radius:5px!important}
+.lbl::before{display:none!important}
+.lbl-park{background:rgba(18,59,134,0.92)!important;font-size:9px!important}
+</style>
+</head>
+<body>
+<div id="map" role="application" aria-label="Interactive map of Andhra Pradesh showing operational ports, APIIC industrial parks, cities and the three national industrial corridors"></div>
+<div id="bar"><span id="legend" style="display:flex;flex-wrap:wrap;gap:8px 14px"></span><span class="src">OPENSTREETMAP BOUNDARIES · MARKERS AT PUBLISHED LAT/LON</span></div>
+<script>
+(function () {
+  var view = new URLSearchParams(location.search).get('view') || 'districts';
+
+  var PORTS = [
+    { n: 'Visakhapatnam Port', c: [17.686, 83.218], major: true },
+    { n: 'Kakinada Port', c: [16.989, 82.247], major: true },
+    { n: 'Machilipatnam Port', c: [16.187, 81.139], major: false },
+    { n: 'Krishnapatnam Port', c: [14.280, 80.120], major: true },
+    { n: 'Gangavaram Port', c: [17.630, 83.230], major: false }
+  ];
+  var PARKS = [
+    { n: 'KRI-019 Mallavalli', c: [16.128, 81.048] },
+    { n: 'GNT-032 Thullur', c: [16.462, 80.508] },
+    { n: 'KRI-041 Gannavaram', c: [16.540, 80.803] },
+    { n: 'VSP-004 Achutapuram', c: [17.522, 83.032] },
+    { n: 'CTR-021 Chittoor EMC', c: [13.217, 79.100] },
+    { n: 'SRK-011 Naidupeta', c: [13.905, 79.891] },
+    { n: 'KDP-007 Kopparthy', c: [14.618, 78.618] },
+    { n: 'Orvakal node', c: [15.700, 78.222] },
+    { n: 'GNT-018 Bapatla', c: [15.904, 80.467] },
+    { n: 'Autonagar Vijayawada', c: [16.494, 80.685] }
+  ];
+  var CITIES = [
+    { n: 'Vijayawada', c: [16.506, 80.648] }, { n: 'Visakhapatnam', c: [17.686, 83.218] },
+    { n: 'Guntur', c: [16.306, 80.437] }, { n: 'Tirupati', c: [13.629, 79.419] },
+    { n: 'Kurnool', c: [15.828, 78.006] }, { n: 'Anantapur', c: [14.681, 77.600] },
+    { n: 'Rajamahendravaram', c: [17.005, 81.804] }, { n: 'Nellore', c: [14.443, 79.987] }
+  ];
+  var ZONES = [
+    { n: 'Visakhapatnam zone', c: [17.686, 83.218] }, { n: 'Vijayawada zone', c: [16.506, 80.648] },
+    { n: 'Kurnool zone', c: [15.828, 78.006] }, { n: 'Tirupati zone', c: [13.629, 79.419] }
+  ];
+  var CORRIDORS = [
+    { n: 'VCIC', pts: [[17.686, 83.218], [16.989, 82.247], [16.187, 81.139], [16.506, 80.648], [15.904, 80.467], [14.443, 79.987], [14.280, 80.120]] },
+    { n: 'CBIC', pts: [[14.280, 80.120], [13.905, 79.891], [13.629, 79.419], [13.217, 79.100]] },
+    { n: 'HBIC', pts: [[15.828, 78.006], [15.700, 78.222], [14.618, 78.618], [14.681, 77.600]] }
+  ];
+
+  var AP = L.latLngBounds([12.35, 76.60], [19.95, 85.15]);
+
+  var map = L.map('map', {
+    zoomControl: true, scrollWheelZoom: false, attributionControl: true,
+    maxBounds: AP.pad(0.12), minZoom: 6, maxZoom: 12
+  });
+  map.fitBounds(AP, { padding: [4, 4] });
+  map.setMinZoom(map.getZoom());
+
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '© OpenStreetMap contributors', maxZoom: 19
+  }).addTo(map);
+
+  function dot(item, opts) {
+    var m = L.circleMarker(item.c, {
+      radius: opts.r, color: opts.stroke, weight: opts.weight || 2,
+      fillColor: opts.fill, fillOpacity: 0.95, pane: 'markerPane'
+    }).addTo(map);
+    m.bindTooltip(item.n + (opts.suffix || ''), { className: 'lbl ' + (opts.cls || ''), direction: 'right', permanent: !!opts.permanent, offset: [8, 0] });
+    return m;
+  }
+
+  var legend = [];
+  function addLegend(color, text) { legend.push('<span class="pill"><span class="dot" style="background:' + color + '"></span>' + text + '</span>'); }
+
+  if (view !== 'zonal') {
+    PORTS.forEach(function (p) { dot(p, { r: p.major ? 8 : 6, fill: '#2FC7DE', stroke: '#08214F', permanent: p.major, suffix: ' · port' }); });
+    addLegend('#2FC7DE', 'OPERATIONAL PORT');
+  }
+  if (view === 'districts' || view === 'corridors') {
+    PARKS.forEach(function (p) { dot(p, { r: 5, fill: '#7FB2FF', stroke: '#0A2A6B', cls: 'lbl-park' }); });
+    addLegend('#7FB2FF', 'APIIC PARK');
+  }
+  if (view === 'districts' || view === 'travel') {
+    CITIES.forEach(function (c) { dot(c, { r: 4, fill: '#FFFFFF', stroke: '#0A2A6B', weight: 2 }); });
+    addLegend('#FFFFFF', 'CITY');
+  }
+  if (view === 'zonal') {
+    ZONES.forEach(function (z) {
+      L.circle(z.c, { radius: 62000, color: '#C9962C', weight: 1, fillColor: '#C9962C', fillOpacity: 0.10 }).addTo(map);
+      dot(z, { r: 8, fill: '#C9962C', stroke: '#08214F', permanent: true, suffix: '' });
+    });
+    addLegend('#C9962C', 'APIIC ZONAL OFFICE · SERVICE AREA');
+  }
+  if (view !== 'zonal') {
+    CORRIDORS.forEach(function (co) {
+      L.polyline(co.pts, { color: '#C9962C', weight: 3, opacity: 0.95, dashArray: '9 7' }).addTo(map)
+        .bindTooltip(co.n + ' corridor', { className: 'lbl', sticky: true });
+    });
+    legend.push('<span class="pill"><span style="width:16px;height:0;border-top:2px dashed #C9962C;display:inline-block"></span>CORRIDOR</span>');
+  }
+
+  document.getElementById('legend').innerHTML = legend.join('');
+  map.on('click', function () { map.scrollWheelZoom.enable(); });
+  map.on('mouseout', function () { map.scrollWheelZoom.disable(); });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+<style>
+:root{--ink:#08214F;--indigo:#123B86;--royal:#0A2A6B;--royal2:#14458F;--cyan:#2FC7DE;--cyan-deep:#0E9CB8;--cyan-soft:#E6F8FB;--tint-lav:#EEF0FF;--tint-mint:#E8F7F0;--tint-peach:#FDF1E7;--tint-sky:#E9F1FE;--tint-violet:#F2ECFE;--tint-rose:#FDECF2;--r:14px;--r-sm:10px;--shadow:0 14px 34px -20px rgba(8,33,79,0.30);--shadow-lg:0 26px 60px -28px rgba(8,33,79,0.42);--gold:#C9962C;--gold-soft:#F3E4C0;--tide:#0F8A80;--paper:#F6F7F5;--surface:#FFFFFF;--line:#D8DEE3;--muted:#5A6B7A}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:'Instrument Sans',system-ui,sans-serif;font-size:18px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:var(--indigo);text-decoration:none}
+a:hover{color:var(--gold)}
+:focus-visible{outline:2px solid var(--tide);outline-offset:2px}
+input[type=checkbox],input[type=radio]{accent-color:#163A5F;width:17px;height:17px}
+</style>
+</helmet>
+<main style="min-height:100vh">
+  <dc-import name="APIICNav" hint-size="100%,112px"></dc-import>
+
+  <div style="background:linear-gradient(105deg,#08214F 0%,#0A2A6B 55%,#123B86 100%);color:#FFFFFF;position:relative;overflow:hidden">
+    <div style="max-width:1320px;margin:0 auto;padding:22px 40px 0;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.08em;color:#7C93A6"><a href="APIIC-Home.dc.html" style="color:#7C93A6">HOME</a> / SET UP &amp; GROW / INCENTIVE ELIGIBILITY SCREENER</div>
+    <div style="max-width:1320px;margin:0 auto;padding:26px 40px 44px;display:flex;align-items:flex-end;justify-content:space-between;gap:40px">
+      <div>
+        <h1 style="font-family:Sora,sans-serif;font-weight:700;font-size:44px;letter-spacing:-0.03em;margin:0">Incentive eligibility screener</h1>
+        <p style="font-size:18px;color:#C6D2DC;margin:10px 0 0;max-width:62ch">Seven questions. We show which published policies may apply to a project like yours, and exactly which of your answers made each one appear.</p>
+      </div>
+      <div style="display:flex;gap:12px">
+        <sc-if value="{{ isForm }}" hint-placeholder-val="{{ true }}"><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#7C93A6;padding-bottom:10px">SCREEN A · QUESTIONNAIRE</span></sc-if>
+        <sc-if value="{{ isResult }}" hint-placeholder-val="{{ false }}"><button onClick="{{ toForm }}" style="border:1px solid #7F94A6;background:transparent;color:#FFFFFF;padding:12px 18px;border-radius:var(--r-sm);font-family:'Instrument Sans',sans-serif;font-size:16px;cursor:pointer">← Change my answers</button></sc-if>
+      </div>
+    </div>
+  </div>
+
+  <sc-if value="{{ isForm }}" hint-placeholder-val="{{ true }}">
+    <div style="max-width:1320px;margin:0 auto;padding:48px 40px 120px;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:48px;align-items:start">
+      <aside style="position:sticky;top:132px;border-left:1px solid var(--line);padding-left:20px">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.06em;color:var(--muted)">PROGRESS</div>
+        <div style="display:flex;flex-direction:column;gap:14px;margin-top:16px;font-size:15px">
+          <a href="#q1" style="display:flex;gap:10px;color:var(--ink)"><span style="font-family:'IBM Plex Mono',monospace;color:var(--tide)">01</span>Sector</a>
+          <a href="#q2" style="display:flex;gap:10px;color:var(--ink)"><span style="font-family:'IBM Plex Mono',monospace;color:var(--tide)">02</span>Investment</a>
+          <a href="#q3" style="display:flex;gap:10px;color:var(--ink)"><span style="font-family:'IBM Plex Mono',monospace;color:var(--tide)">03</span>Employment</a>
+          <a href="#q4" style="display:flex;gap:10px;color:var(--ink)"><span style="font-family:'IBM Plex Mono',monospace;color:var(--tide)">04</span>Enterprise category</a>
+          <a href="#q5" style="display:flex;gap:10px;color:var(--muted)"><span style="font-family:'IBM Plex Mono',monospace;color:var(--muted)">05</span>District</a>
+          <a href="#q6" style="display:flex;gap:10px;color:var(--muted)"><span style="font-family:'IBM Plex Mono',monospace;color:var(--muted)">06</span>Entrepreneur category</a>
+          <a href="#q7" style="display:flex;gap:10px;color:var(--muted)"><span style="font-family:'IBM Plex Mono',monospace;color:var(--muted)">07</span>Sustainability</a>
+        </div>
+        <div style="border-top:1px solid var(--line);margin-top:20px;padding-top:16px;font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);line-height:1.8">4 OF 7 ANSWERED<br>NO LOGIN · NO PII STORED</div>
+      </aside>
+      <div style="display:flex;flex-direction:column;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r-sm)">
+        <div id="q1" style="background:var(--surface);padding:30px 32px">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:0.06em">QUESTION 01</div>
+          <h2 style="font-family:Sora,sans-serif;font-weight:600;font-size:24px;letter-spacing:-0.02em;margin:8px 0 0">Which sector is the project in?</h2>
+          <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:18px;font-size:16px">
+            <label style="display:flex;align-items:center;gap:9px;border:1px solid var(--line);padding:10px 14px;border-radius:var(--r-sm)"><input type="radio" name="sec">Food Processing</label>
+            <label style="display:flex;align-items:center;gap:9px;border:2px solid var(--indigo);background:rgba(22,58,95,0.05);padding:9px 13px;border-radius:var(--r-sm)"><input type="radio" name="sec" defaultChecked>Electronics &amp; Semiconductors</label>
+            <label style="display:flex;align-items:center;gap:9px;border:1px solid var(--line);padding:10px 14px;border-radius:var(--r-sm)"><input type="radio" name="sec">Pharmaceuticals</label>
+            <label style="display:flex;align-items:center;gap:9px;border:1px solid var(--line);padding:10px 14px;border-radius:var(--r-sm)"><input type="radio" name="sec">Textiles &amp; Apparel</label>
+            <label style="display:flex;align-items:center;gap:9px;border:1px solid var(--line);padding:10px 14px;border-radius:var(--r-sm)"><input type="radio" name="sec">Aerospace &amp; Defence</label>
+            <label style="display:flex;align-items:center;gap:9px;border:1px solid var(--line);padding:10px 14px;border-radius:var(--r-sm)"><input type="radio" name="sec">Green Energy &amp; EV</label>
+            <label style="display:flex;align-items:center;gap:9px;border:1px solid var(--line);padding:10px 14px;border-radius:var(--r-sm)"><input type="radio" name="sec">Other manufacturing</label>
+          </div>
+        </div>
+        <div id="q2" style="background:var(--surface);padding:30px 32px">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:0.06em">QUESTION 02</div>
+          <h2 style="font-family:Sora,sans-serif;font-weight:600;font-size:24px;letter-spacing:-0.02em;margin:8px 0 0">What is the planned investment?</h2>
+          <p style="font-size:15px;color:var(--muted);margin:6px 0 0">Fixed capital investment in plant, machinery and buildings.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:18px;font-size:16px">
+            <label style="display:flex;align-items:center;gap:9px;border:1px solid var(--line);padding:10px 14px;border-radius:var(--r-sm)"><input type="radio" name="inv">Under ₹5 Cr</label>
+            <label style="display:flex;align-items:center;gap:9px;border:1px solid var(--line);padding:10px 14px;border-radius:var(--r-sm)"><input type="radio" name="inv">₹5–50 Cr</label>
+            <label style="display:flex;align-items:center;gap:9px;border:1px solid var(--line);padding:10px 14px;border-radius:var(--r-sm)"><input type="radio" name="inv">₹50–200 Cr</label>
+            <label style="display:flex;align-items:center;gap:9px;border:2px solid var(--indigo);background:rgba(22,58,95,0.05);padding:9px 13px;border-radius:var(--r-sm)"><input type="radio" name="inv" defaultChecked>₹200–1,000 Cr</label>
+            <label style="display:flex;align-items:center;gap:9px;border:1px solid var(--line);padding:10px 14px;border-radius:var(--r-sm)"><input type="radio" name="inv">Above ₹1,000 Cr</label>
+          </div>
+        </div>
+        <div id="q3" style="background:var(--surface);padding:30px 32px">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:0.06em">QUESTION 03</div>
+          <h2 style="font-family:Sora,sans-serif;font-weight:600;font-size:24px;letter-spacing:-0.02em;margin:8px 0 0">How many direct jobs do you expect?</h2>
+          <div style="display:flex;align-items:flex-end;gap:24px;margin-top:18px">
+            <label style="display:flex;flex-direction:column;gap:6px"><span style="font-size:15px;font-weight:500">At full capacity</span><input defaultValue="640" style="border:1px solid var(--line);border-radius:var(--r-sm);padding:12px 14px;width:170px;font-family:'IBM Plex Mono',monospace;font-size:16px"></label>
+            <label style="display:flex;flex-direction:column;gap:6px"><span style="font-size:15px;font-weight:500">Of which local hires (%)</span><input defaultValue="75" style="border:1px solid var(--line);border-radius:var(--r-sm);padding:12px 14px;width:170px;font-family:'IBM Plex Mono',monospace;font-size:16px"></label>
+          </div>
+        </div>
+        <div id="q4" style="background:var(--surface);padding:30px 32px">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:0.06em">QUESTION 04</div>
+          <h2 style="font-family:Sora,sans-serif;font-weight:600;font-size:24px;letter-spacing:-0.02em;margin:8px 0 0">Enterprise category</h2>
+          <p style="font-size:15px;color:var(--muted);margin:6px 0 0">As classified in the AP Industrial Development Policy 4.0.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:18px;font-size:16px">
+            <label style="display:flex;align-items:center;gap:9px;border:1px solid var(--line);padding:10px 14px;border-radius:var(--r-sm)"><input type="radio" name="ent">Micro</label>
+            <label style="display:flex;align-items:center;gap:9px;border:1px solid var(--line);padding:10px 14px;border-radius:var(--r-sm)"><input type="radio" name="ent">Small</label>
+            <label style="display:flex;align-items:center;gap:9px;border:1px solid var(--line);padding:10px 14px;border-radius:var(--r-sm)"><input type="radio" name="ent">Medium</label>
+            <label style="display:flex;align-items:center;gap:9px;border:1px solid var(--line);padding:10px 14px;border-radius:var(--r-sm)"><input type="radio" name="ent">Large</label>
+            <label style="display:flex;align-items:center;gap:9px;border:2px solid var(--indigo);background:rgba(22,58,95,0.05);padding:9px 13px;border-radius:var(--r-sm)"><input type="radio" name="ent" defaultChecked>Mega</label>
+            <label style="display:flex;align-items:center;gap:9px;border:1px solid var(--line);padding:10px 14px;border-radius:var(--r-sm)"><input type="radio" name="ent">Ultra-Mega</label>
+          </div>
+        </div>
+        <div id="q5" style="background:var(--surface);padding:30px 32px">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:0.06em">QUESTION 05</div>
+          <h2 style="font-family:Sora,sans-serif;font-weight:600;font-size:24px;letter-spacing:-0.02em;margin:8px 0 0">Which district?</h2>
+          <p style="font-size:15px;color:var(--muted);margin:6px 0 0">Some support varies by district classification.</p>
+          <select style="margin-top:18px;border:1px solid var(--line);border-radius:var(--r-sm);padding:13px 15px;font-family:'Instrument Sans',sans-serif;font-size:16px;background:var(--surface);min-width:320px"><option>Select a district</option><option>Krishna</option><option>Guntur</option><option>Chittoor</option><option>Tirupati</option><option>Anakapalli</option><option>YSR Kadapa</option><option>Not decided yet</option></select>
+        </div>
+        <div id="q6" style="background:var(--surface);padding:30px 32px">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:0.06em">QUESTION 06</div>
+          <h2 style="font-family:Sora,sans-serif;font-weight:600;font-size:24px;letter-spacing:-0.02em;margin:8px 0 0">Entrepreneur category, as recognised in policy</h2>
+          <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:18px;font-size:16px">
+            <label style="display:flex;align-items:center;gap:9px;border:1px solid var(--line);padding:10px 14px;border-radius:var(--r-sm)"><input type="radio" name="cat">General</label>
+            <label style="display:flex;align-items:center;gap:9px;border:1px solid var(--line);padding:10px 14px;border-radius:var(--r-sm)"><input type="radio" name="cat">Women entrepreneur</label>
+            <label style="display:flex;align-items:center;gap:9px;border:1px solid var(--line);padding:10px 14px;border-radius:var(--r-sm)"><input type="radio" name="cat">SC / ST entrepreneur</label>
+            <label style="display:flex;align-items:center;gap:9px;border:1px solid var(--line);padding:10px 14px;border-radius:var(--r-sm)"><input type="radio" name="cat">BC / minority entrepreneur</label>
+            <label style="display:flex;align-items:center;gap:9px;border:1px solid var(--line);padding:10px 14px;border-radius:var(--r-sm)"><input type="radio" name="cat">Differently abled entrepreneur</label>
+          </div>
+        </div>
+        <div id="q7" style="background:var(--surface);padding:30px 32px">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:0.06em">QUESTION 07</div>
+          <h2 style="font-family:Sora,sans-serif;font-weight:600;font-size:24px;letter-spacing:-0.02em;margin:8px 0 0">Sustainability measures planned</h2>
+          <div style="display:flex;flex-direction:column;gap:12px;margin-top:18px;font-size:16px">
+            <label style="display:flex;align-items:center;gap:10px"><input type="checkbox" defaultChecked>Rooftop or open-access renewable power</label>
+            <label style="display:flex;align-items:center;gap:10px"><input type="checkbox" defaultChecked>Zero liquid discharge or water reuse</label>
+            <label style="display:flex;align-items:center;gap:10px"><input type="checkbox">Green building certification</label>
+            <label style="display:flex;align-items:center;gap:10px"><input type="checkbox">Waste-to-resource arrangement</label>
+            <label style="display:flex;align-items:center;gap:10px"><input type="checkbox">None planned yet</label>
+          </div>
+        </div>
+      </div>
+      <div></div>
+      <div>
+        <div style="border:1px solid var(--indigo);background:rgba(22,58,95,0.05);padding:22px 24px;display:flex;gap:16px">
+          <i class="ph ph-info" style="font-size:24px;color:var(--indigo)"></i>
+          <p style="margin:0;font-size:16px;line-height:1.55">This is indicative only. It is not an application, an approval or an entitlement. Eligibility is determined by the competent authority under the official policy document.</p>
+        </div>
+        <div style="display:flex;align-items:center;gap:18px;margin-top:24px">
+          <button onClick="{{ toResult }}" style="background:linear-gradient(120deg,#0A2A6B,#14458F);color:#FFFFFF;border:none;padding:16px 28px;border-radius:999px;box-shadow:var(--shadow);font-family:'Instrument Sans',sans-serif;font-size:17px;font-weight:600;cursor:pointer">See which policies may apply</button>
+          <a href="APIIC-Talk-To-Expert.dc.html" style="font-size:16px">Or talk to the policy desk →</a>
+        </div>
+      </div>
+    </div>
+  </sc-if>
+
+  <sc-if value="{{ isResult }}" hint-placeholder-val="{{ false }}">
+    <div style="max-width:1000px;margin:0 auto;padding:56px 40px 120px">
+      <h2 style="font-family:Sora,sans-serif;font-weight:600;font-size:36px;letter-spacing:-0.02em;margin:0;max-width:34ch">Based on what you've told us, these policies may apply to your project.</h2>
+      <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:20px">
+        <span style="border:1px solid var(--line);background:var(--surface);padding:7px 13px;border-radius:999px;font-size:14px">Electronics &amp; Semiconductors</span>
+        <span style="border:1px solid var(--line);background:var(--surface);padding:7px 13px;border-radius:999px;font-size:14px">₹200–1,000 Cr</span>
+        <span style="border:1px solid var(--line);background:var(--surface);padding:7px 13px;border-radius:999px;font-size:14px">640 direct jobs</span>
+        <span style="border:1px solid var(--line);background:var(--surface);padding:7px 13px;border-radius:999px;font-size:14px">Mega enterprise</span>
+        <span style="border:1px solid var(--line);background:var(--surface);padding:7px 13px;border-radius:999px;font-size:14px">Chittoor</span>
+        <span style="border:1px solid var(--line);background:var(--surface);padding:7px 13px;border-radius:999px;font-size:14px">Renewable + water reuse planned</span>
+      </div>
+      <div style="border:1px solid var(--indigo);background:rgba(22,58,95,0.05);padding:22px 24px;display:flex;gap:16px;margin-top:28px">
+        <i class="ph ph-info" style="font-size:24px;color:var(--indigo)"></i>
+        <p style="margin:0;font-size:16px;line-height:1.55"><strong style="font-weight:600">This is indicative only.</strong> It is not an application, an approval or an entitlement. Eligibility is determined by the competent authority under the official policy document. Nothing here creates a right to support.</p>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:24px;margin-top:32px">
+        <article style="background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:28px;box-shadow:0 6px 18px -14px rgba(8,33,79,0.3) 30px">
+          <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:20px">
+            <div>
+              <h3 style="font-family:Sora,sans-serif;font-weight:600;font-size:26px;letter-spacing:-0.02em;margin:0">AP Electronics &amp; Semiconductor Policy 2024–29</h3>
+              <div style="font-size:15px;color:var(--muted);margin-top:4px">Industries &amp; Commerce Department · GO MS 31 / 2024</div>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:8px;align-items:flex-end">
+              <span style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--tide);border:1px solid var(--tide);padding:4px 8px">IN FORCE</span>
+              <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted)">VALID TO 31 MAR 2029</span>
+            </div>
+          </div>
+          <div style="border-top:1px solid var(--line);margin-top:20px;padding-top:18px">
+            <div style="font-family:Sora,sans-serif;font-weight:600;font-size:18px;letter-spacing:-0.02em">Why this may apply to you</div>
+            <div style="display:flex;flex-direction:column;gap:9px;margin-top:10px;font-size:16px">
+              <div style="display:flex;gap:12px"><span style="color:var(--tide)">✓</span><span>You selected Electronics &amp; Semiconductors, a notified sector under this policy.</span></div>
+              <div style="display:flex;gap:12px"><span style="color:var(--tide)">✓</span><span>₹200–1,000 Cr falls inside the Mega category thresholds this policy addresses.</span></div>
+              <div style="display:flex;gap:12px"><span style="color:var(--tide)">✓</span><span>Chittoor sits inside a notified electronics cluster, where additional built-space support exists.</span></div>
+            </div>
+          </div>
+          <div style="border-top:1px solid var(--line);margin-top:18px;padding-top:18px">
+            <div style="font-family:Sora,sans-serif;font-weight:600;font-size:18px;letter-spacing:-0.02em">What it broadly offers</div>
+            <p style="font-size:16px;color:var(--muted);margin:8px 0 0">Capital support on fixed investment, power cost reimbursement for a defined period, SGST reimbursement on eligible sales, built-space rental support inside notified clusters, and reimbursement of skilling costs for local hires. Amounts, caps and claim windows are set out in the policy.</p>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin-top:22px;border-top:1px solid var(--line);padding-top:18px">
+            <a href="APIIC-Policies.dc.html" style="border:1px solid var(--royal);color:var(--royal);padding:11px 20px;border-radius:999px;font-weight:500">Read the plain-language summary</a>
+            <a href="APIIC-Prototype-Scope.dc.html#external" style="border:1px solid var(--line);padding:11px 16px;border-radius:var(--r-sm)">Download official policy ↗</a>
+            <div style="flex:1"></div>
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted)">DESK: ELECTRONICS &amp; IT · policy.electronics@apiic.in</span>
+          </div>
+        </article>
+
+        <article style="background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:28px;box-shadow:0 6px 18px -14px rgba(8,33,79,0.3) 30px">
+          <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:20px">
+            <div>
+              <h3 style="font-family:Sora,sans-serif;font-weight:600;font-size:26px;letter-spacing:-0.02em;margin:0">AP Industrial Development Policy 4.0 (2024–29)</h3>
+              <div style="font-size:15px;color:var(--muted);margin-top:4px">Industries &amp; Commerce Department · GO MS 12 / 2024</div>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:8px;align-items:flex-end">
+              <span style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--tide);border:1px solid var(--tide);padding:4px 8px">IN FORCE</span>
+              <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted)">VALID TO 31 MAR 2029</span>
+            </div>
+          </div>
+          <div style="border-top:1px solid var(--line);margin-top:20px;padding-top:18px">
+            <div style="font-family:Sora,sans-serif;font-weight:600;font-size:18px;letter-spacing:-0.02em">Why this may apply to you</div>
+            <div style="display:flex;flex-direction:column;gap:9px;margin-top:10px;font-size:16px">
+              <div style="display:flex;gap:12px"><span style="color:var(--tide)">✓</span><span>You identified as a Mega enterprise — the umbrella policy sets tailored packages at this scale.</span></div>
+              <div style="display:flex;gap:12px"><span style="color:var(--tide)">✓</span><span>640 direct jobs with 75% local hiring engages the employment-linked provisions.</span></div>
+              <div style="display:flex;gap:12px"><span style="color:var(--gold)">⚠</span><span>Mega packages are negotiated case by case and require State Investment Promotion Board consideration.</span></div>
+            </div>
+          </div>
+          <div style="border-top:1px solid var(--line);margin-top:18px;padding-top:18px">
+            <div style="font-family:Sora,sans-serif;font-weight:600;font-size:18px;letter-spacing:-0.02em">What it broadly offers</div>
+            <p style="font-size:16px;color:var(--muted);margin:8px 0 0">Land at APIIC rates with category rebates, stamp duty and registration reimbursement, power cost support, SGST reimbursement, and infrastructure assistance where trunk works are needed to reach the site.</p>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin-top:22px;border-top:1px solid var(--line);padding-top:18px">
+            <a href="APIIC-Policies.dc.html" style="border:1px solid var(--royal);color:var(--royal);padding:11px 20px;border-radius:999px;font-weight:500">Read the plain-language summary</a>
+            <a href="APIIC-Prototype-Scope.dc.html#external" style="border:1px solid var(--line);padding:11px 16px;border-radius:var(--r-sm)">Download official policy ↗</a>
+            <div style="flex:1"></div>
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted)">DESK: POLICY &amp; INCENTIVES · policy@apiic.in</span>
+          </div>
+        </article>
+
+        <article style="background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:28px;box-shadow:0 6px 18px -14px rgba(8,33,79,0.3) 30px">
+          <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:20px">
+            <div>
+              <h3 style="font-family:Sora,sans-serif;font-weight:600;font-size:26px;letter-spacing:-0.02em;margin:0">AP Clean Energy &amp; Green Manufacturing Incentives</h3>
+              <div style="font-size:15px;color:var(--muted);margin-top:4px">Energy Department · GO MS 44 / 2025</div>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:8px;align-items:flex-end">
+              <span style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--tide);border:1px solid var(--tide);padding:4px 8px">IN FORCE</span>
+              <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted)">VALID TO 31 MAR 2030</span>
+            </div>
+          </div>
+          <div style="border-top:1px solid var(--line);margin-top:20px;padding-top:18px">
+            <div style="font-family:Sora,sans-serif;font-weight:600;font-size:18px;letter-spacing:-0.02em">Why this may apply to you</div>
+            <div style="display:flex;flex-direction:column;gap:9px;margin-top:10px;font-size:16px">
+              <div style="display:flex;gap:12px"><span style="color:var(--tide)">✓</span><span>You plan rooftop or open-access renewable power, which this scheme supports directly.</span></div>
+              <div style="display:flex;gap:12px"><span style="color:var(--tide)">✓</span><span>Water reuse / ZLD is a qualifying measure for the green manufacturing component.</span></div>
+              <div style="display:flex;gap:12px"><span style="color:var(--muted)">—</span><span style="color:var(--muted)">Green building certification wasn't selected — an additional component may become available if you pursue it.</span></div>
+            </div>
+          </div>
+          <div style="border-top:1px solid var(--line);margin-top:18px;padding-top:18px">
+            <div style="font-family:Sora,sans-serif;font-weight:600;font-size:18px;letter-spacing:-0.02em">What it broadly offers</div>
+            <p style="font-size:16px;color:var(--muted);margin:8px 0 0">Wheeling and banking concessions for captive renewable generation, support for ZLD and water-reuse capital cost, and a certification-linked top-up for green-rated industrial buildings.</p>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin-top:22px;border-top:1px solid var(--line);padding-top:18px">
+            <a href="APIIC-Policies.dc.html" style="border:1px solid var(--royal);color:var(--royal);padding:11px 20px;border-radius:999px;font-weight:500">Read the plain-language summary</a>
+            <a href="APIIC-Prototype-Scope.dc.html#external" style="border:1px solid var(--line);padding:11px 16px;border-radius:var(--r-sm)">Download official policy ↗</a>
+            <div style="flex:1"></div>
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted)">DESK: ENERGY LIAISON · energy.desk@apiic.in</span>
+          </div>
+        </article>
+
+        <div style="border:1px dashed var(--line);background:var(--surface);padding:22px 26px">
+          <div style="font-family:Sora,sans-serif;font-weight:600;font-size:20px;letter-spacing:-0.02em">Two policies we ruled out, and why</div>
+          <div style="display:flex flex-direction:column;gap:8px;margin-top:12px;font-size:16px;color:var(--muted)">
+            <div style="display:flex;gap:12px;padding:6px 0"><span style="color:var(--muted)">—</span><span>MSME Support Scheme — your Mega enterprise category is outside its thresholds.</span></div>
+            <div style="display:flex;gap:12px;padding:6px 0"><span style="color:var(--muted)">—</span><span>Aspirational District Uplift Component — Chittoor is not in the notified aspirational list.</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div style="display:flex;flex-wrap:wrap;align-items:center;gap:16px;margin-top:32px">
+        <a href="APIIC-Talk-To-Expert.dc.html" style="background:linear-gradient(120deg,#0A2A6B,#14458F);color:#FFFFFF;padding:15px 26px;border-radius:999px;font-weight:600;font-size:17px;box-shadow:var(--shadow)" style-hover="background:linear-gradient(120deg,#123B86,#1E5AB5);color:#FFFFFF">Talk to the policy desk</a>
+        <button onClick="{{ toForm }}" style="border:1px solid var(--indigo);background:var(--surface);color:var(--indigo);padding:13px 20px;border-radius:var(--r-sm);font-family:'Instrument Sans',sans-serif;font-size:16px;cursor:pointer">Change my answers</button>
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted)">⌁ POLICY SET VERIFIED 21 JUL 2026 · POLICY &amp; INCENTIVES DESK</span>
+      </div>
+      <p style="font-size:14px;color:var(--muted);margin-top:24px">Policy references in this prototype are illustrative. Confirm every provision against the official document before relying on it.</p>
+    </div>
+  </sc-if>
+  <dc-import name="APIICFooter" hint-size="100%,420px"></dc-import>
+</main>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { view: 'form' };
+  renderVals() {
+    return {
+      isForm: this.state.view === 'form', isResult: this.state.view === 'result',
+      toResult: () => { this.setState({ view: 'result' }); window.scrollTo(0, 0); },
+      toForm: () => { this.setState({ view: 'form' }); window.scrollTo(0, 0); }
+    };
+  }
+}
+</script>
+</body>
+</html>

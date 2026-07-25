@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+<style>
+:root{--ink:#08214F;--indigo:#123B86;--royal:#0A2A6B;--royal2:#14458F;--cyan:#2FC7DE;--cyan-deep:#0E9CB8;--cyan-soft:#E6F8FB;--tint-lav:#EEF0FF;--tint-mint:#E8F7F0;--tint-peach:#FDF1E7;--tint-sky:#E9F1FE;--tint-violet:#F2ECFE;--tint-rose:#FDECF2;--r:14px;--r-sm:10px;--shadow:0 14px 34px -20px rgba(8,33,79,0.30);--shadow-lg:0 26px 60px -28px rgba(8,33,79,0.42);--gold:#C9962C;--gold-soft:#F3E4C0;--tide:#0F8A80;--paper:#F6F7F5;--surface:#FFFFFF;--line:#D8DEE3;--muted:#5A6B7A}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:'Instrument Sans',system-ui,sans-serif;font-size:18px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:var(--indigo);text-decoration:none}
+a:hover{color:var(--gold)}
+:focus-visible{outline:2px solid var(--tide);outline-offset:2px}
+input[type=checkbox]{accent-color:#163A5F;width:16px;height:16px}
+</style>
+</helmet>
+<main style="min-height:100vh">
+  <dc-import name="APIICNav" hint-size="100%,112px"></dc-import>
+
+  <div style="background:linear-gradient(105deg,#08214F 0%,#0A2A6B 55%,#123B86 100%);color:#FFFFFF;position:relative;overflow:hidden">
+    <div style="max-width:1320px;margin:0 auto;padding:22px 40px 0;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.08em;color:#7C93A6"><a href="APIIC-Home.dc.html" style="color:#7C93A6">HOME</a> / POLICIES &amp; DOCUMENTS / POLICIES LIBRARY</div>
+    <div style="max-width:1320px;margin:0 auto;padding:28px 40px 48px;display:flex;align-items:flex-end;justify-content:space-between;gap:40px">
+      <div>
+        <h1 style="font-family:Sora,sans-serif;font-weight:700;font-size:44px;letter-spacing:-0.03em;margin:0">Policies library</h1>
+        <p style="font-size:19px;color:#C6D2DC;margin:12px 0 0;max-width:62ch">Every policy in force, plus the ones it replaced. A plain-language summary sits beside each official document — the document is always the authority.</p>
+      </div>
+      <sc-if value="{{ isSummary }}" hint-placeholder-val="{{ false }}"><button onClick="{{ toList }}" style="border:1px solid #7F94A6;background:transparent;color:#FFFFFF;padding:12px 18px;border-radius:var(--r-sm);font-family:'Instrument Sans',sans-serif;font-size:16px;cursor:pointer;white-space:nowrap">← Back to the library</button></sc-if>
+    </div>
+  </div>
+
+  <sc-if value="{{ isList }}" hint-placeholder-val="{{ true }}">
+    <div style="max-width:1320px;margin:0 auto;padding:32px 40px 120px;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:32px;align-items:start">
+      <aside style="background:var(--surface);border:1px solid var(--line);border-radius:var(--r-sm);max-width:280px">
+        <div style="padding:16px 18px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between"><div><div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:0.06em">FILTERS</div><div style="font-family:'IBM Plex Mono',monospace;font-size:15px">9 policies</div></div><button style="background:none;border:none;color:var(--indigo);font-size:14px;cursor:pointer;text-decoration:underline;font-family:'Instrument Sans',sans-serif">Clear</button></div>
+        <div style="padding:16px 18px;border-bottom:1px solid var(--line)"><div style="font-weight:500;font-size:16px">Sector</div><div style="display:flex;flex-direction:column;gap:9px;margin-top:10px;font-size:15px"><label style="display:flex;align-items:center;gap:9px"><input type="checkbox">Electronics</label><label style="display:flex;align-items:center;gap:9px"><input type="checkbox">Food processing</label><label style="display:flex;align-items:center;gap:9px"><input type="checkbox">Textiles</label><label style="display:flex;align-items:center;gap:9px"><input type="checkbox">All sectors</label></div></div>
+        <div style="padding:16px 18px;border-bottom:1px solid var(--line)"><div style="font-weight:500;font-size:16px">Status</div><div style="display:flex;flex-direction:column;gap:9px;margin-top:10px;font-size:15px"><label style="display:flex;align-items:center;gap:9px"><input type="checkbox" defaultChecked>In force</label><label style="display:flex;align-items:center;gap:9px"><input type="checkbox">Amended</label><label style="display:flex;align-items:center;gap:9px"><input type="checkbox">Superseded</label></div></div>
+        <div style="padding:16px 18px;border-bottom:1px solid var(--line)"><div style="font-weight:500;font-size:16px">Policy type</div><div style="display:flex;flex-direction:column;gap:9px;margin-top:10px;font-size:15px"><label style="display:flex;align-items:center;gap:9px"><input type="checkbox">Industrial policy</label><label style="display:flex;align-items:center;gap:9px"><input type="checkbox">Sector policy</label><label style="display:flex;align-items:center;gap:9px"><input type="checkbox">Regulations</label><label style="display:flex;align-items:center;gap:9px"><input type="checkbox">Rate order</label></div></div>
+        <div style="padding:16px 18px"><div style="font-weight:500;font-size:16px">Issuing department</div><div style="display:flex;flex-direction:column;gap:9px;margin-top:10px;font-size:15px"><label style="display:flex;align-items:center;gap:9px"><input type="checkbox">Industries &amp; Commerce</label><label style="display:flex;align-items:center;gap:9px"><input type="checkbox">Energy</label><label style="display:flex;align-items:center;gap:9px"><input type="checkbox">APIIC</label></div></div>
+      </aside>
+      <div style="min-width:0">
+        <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;padding-bottom:16px;border-bottom:1px solid var(--line)">
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:13px">9 POLICIES · 7 IN FORCE · 1 AMENDED · 1 SUPERSEDED</span>
+          <div style="flex:1"></div>
+          <a href="APIIC-Incentive-Screener.dc.html" style="border:1px solid var(--royal);color:var(--royal);padding:10px 18px;border-radius:999px;font-weight:500;font-size:15px;white-space:nowrap">Check my eligibility</a>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:1px;background:var(--line);border:1px solid var(--line);border-top:none;margin-top:24px">
+          <div style="background:var(--surface);padding:22px 24px;display:flex;gap:24px;align-items:flex-start;flex-wrap:wrap">
+            <div style="flex:1;min-width:260px">
+              <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap"><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted)">GO MS 12 / 2024</span><span style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--tide);border:1px solid var(--tide);padding:3px 7px">IN FORCE</span></div>
+              <div style="font-family:Sora,sans-serif;font-weight:600;font-size:22px;letter-spacing:-0.02em;margin-top:6px">AP Industrial Development Policy 4.0 (2024–29)</div>
+              <div style="font-size:16px;color:var(--muted);margin-top:4px">The umbrella policy: what support exists, for whom, and in which districts.</div>
+              <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);margin-top:8px">EFFECTIVE 01 APR 2024 · LAST AMENDED 12 FEB 2026 · PDF 2.8 MB</div>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:10px"><button onClick="{{ toSummary }}" style="background:linear-gradient(120deg,#0A2A6B,#14458F);color:#FFFFFF;border:none;padding:11px 18px;border-radius:999px;font-family:'Instrument Sans',sans-serif;font-size:16px;font-weight:600;cursor:pointer;white-space:nowrap;box-shadow:var(--shadow)">Read summary</button><a href="APIIC-Prototype-Scope.dc.html#external" style="border:1px solid var(--line);padding:10px 16px;border-radius:var(--r-sm);font-size:16px;text-align:center;white-space:nowrap">Official PDF ↗</a></div>
+          </div>
+          <div style="background:var(--surface);padding:22px 24px;display:flex;gap:24px;align-items:flex-start;flex-wrap:wrap">
+            <div style="flex:1;min-width:260px">
+              <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap"><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted)">GO MS 31 / 2024</span><span style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--tide);border:1px solid var(--tide);padding:3px 7px">IN FORCE</span></div>
+              <div style="font-family:Sora,sans-serif;font-weight:600;font-size:22px;letter-spacing:-0.02em;margin-top:6px">AP Electronics &amp; Semiconductor Policy (2024–29)</div>
+              <div style="font-size:16px;color:var(--muted);margin-top:4px">Sector support for fabs, ATMP, PCB and component units in notified clusters.</div>
+              <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);margin-top:8px">EFFECTIVE 01 JUL 2024 · NOT AMENDED · PDF 1.6 MB</div>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:10px"><button onClick="{{ toSummary }}" style="border:1px solid var(--indigo);background:var(--surface);color:var(--indigo);padding:11px 18px;border-radius:var(--r-sm);font-family:'Instrument Sans',sans-serif;font-size:16px;font-weight:500;cursor:pointer;white-space:nowrap">Read summary</button><a href="APIIC-Prototype-Scope.dc.html#external" style="border:1px solid var(--line);padding:10px 16px;border-radius:var(--r-sm);font-size:16px;text-align:center;white-space:nowrap">Official PDF ↗</a></div>
+          </div>
+          <div style="background:var(--surface);padding:22px 24px;display:flex;gap:24px;align-items:flex-start;flex-wrap:wrap">
+            <div style="flex:1;min-width:260px">
+              <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap"><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted)">GO MS 08 / 2025</span><span style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--tide);border:1px solid var(--tide);padding:3px 7px">IN FORCE</span></div>
+              <div style="font-family:Sora,sans-serif;font-weight:600;font-size:22px;letter-spacing:-0.02em;margin-top:6px">AP Food Processing Policy (2025–30)</div>
+              <div style="font-size:16px;color:var(--muted);margin-top:4px">Cold chain, primary processing and aggregation support, with coastal-district weighting.</div>
+              <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);margin-top:8px">EFFECTIVE 01 APR 2025 · NOT AMENDED · PDF 1.9 MB</div>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:10px"><button onClick="{{ toSummary }}" style="border:1px solid var(--indigo);background:var(--surface);color:var(--indigo);padding:11px 18px;border-radius:var(--r-sm);font-family:'Instrument Sans',sans-serif;font-size:16px;font-weight:500;cursor:pointer;white-space:nowrap">Read summary</button><a href="APIIC-Prototype-Scope.dc.html#external" style="border:1px solid var(--line);padding:10px 16px;border-radius:var(--r-sm);font-size:16px;text-align:center;white-space:nowrap">Official PDF ↗</a></div>
+          </div>
+          <div style="background:var(--surface);padding:22px 24px;display:flex;gap:24px;align-items:flex-start;flex-wrap:wrap">
+            <div style="flex:1;min-width:260px">
+              <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap"><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted)">GO MS 44 / 2025</span><span style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--tide);border:1px solid var(--tide);padding:3px 7px">IN FORCE</span></div>
+              <div style="font-family:Sora,sans-serif;font-weight:600;font-size:22px;letter-spacing:-0.02em;margin-top:6px">Clean Energy &amp; Green Manufacturing Incentives</div>
+              <div style="font-size:16px;color:var(--muted);margin-top:4px">Wheeling and banking concessions, ZLD capital support, green-building top-up.</div>
+              <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);margin-top:8px">EFFECTIVE 01 OCT 2025 · NOT AMENDED · PDF 1.1 MB</div>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:10px"><button onClick="{{ toSummary }}" style="border:1px solid var(--indigo);background:var(--surface);color:var(--indigo);padding:11px 18px;border-radius:var(--r-sm);font-family:'Instrument Sans',sans-serif;font-size:16px;font-weight:500;cursor:pointer;white-space:nowrap">Read summary</button><a href="APIIC-Prototype-Scope.dc.html#external" style="border:1px solid var(--line);padding:10px 16px;border-radius:var(--r-sm);font-size:16px;text-align:center;white-space:nowrap">Official PDF ↗</a></div>
+          </div>
+          <div style="background:var(--surface);padding:22px 24px;display:flex;gap:24px;align-items:flex-start;flex-wrap:wrap">
+            <div style="flex:1;min-width:260px">
+              <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap"><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted)">APIIC / REG / 2023</span><span style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--indigo);border:1px solid var(--indigo);padding:3px 7px">AMENDED</span></div>
+              <div style="font-family:Sora,sans-serif;font-weight:600;font-size:22px;letter-spacing:-0.02em;margin-top:6px">APIIC Industrial Parks Allotment Regulations</div>
+              <div style="font-size:16px;color:var(--muted);margin-top:4px">How land is allotted, priced, transferred and resumed. The authority behind every rate on this site.</div>
+              <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);margin-top:8px">EFFECTIVE 14 AUG 2023 · LAST AMENDED 09 MAR 2026 · PDF 3.4 MB</div>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:10px"><button onClick="{{ toSummary }}" style="border:1px solid var(--indigo);background:var(--surface);color:var(--indigo);padding:11px 18px;border-radius:var(--r-sm);font-family:'Instrument Sans',sans-serif;font-size:16px;font-weight:500;cursor:pointer;white-space:nowrap">Read summary</button><a href="APIIC-Prototype-Scope.dc.html#external" style="border:1px solid var(--line);padding:10px 16px;border-radius:var(--r-sm);font-size:16px;text-align:center;white-space:nowrap">Official PDF ↗</a></div>
+          </div>
+          <div style="background:var(--surface);padding:22px 24px;display:flex;gap:24px;align-items:flex-start;flex-wrap:wrap">
+            <div style="flex:1;min-width:260px">
+              <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap"><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted)">APIIC / RATE / 214 / 2026</span><span style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--tide);border:1px solid var(--tide);padding:3px 7px">IN FORCE</span></div>
+              <div style="font-family:Sora,sans-serif;font-weight:600;font-size:22px;letter-spacing:-0.02em;margin-top:6px">Approved land rate order, 104 estates</div>
+              <div style="font-size:16px;color:var(--muted);margin-top:4px">The rate table behind every indicative price shown on a park profile.</div>
+              <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);margin-top:8px">EFFECTIVE 04 JUL 2026 · XLSX 340 KB</div>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:10px"><a href="APIIC-Parks-Directory.dc.html" style="border:1px solid var(--royal);color:var(--royal);padding:10px 18px;border-radius:999px;font-size:16px;text-align:center;font-weight:500;white-space:nowrap">See rates by park</a><a href="APIIC-Prototype-Scope.dc.html#external" style="border:1px solid var(--line);padding:10px 16px;border-radius:var(--r-sm);font-size:16px;text-align:center;white-space:nowrap">Download order ↗</a></div>
+          </div>
+          <div style="background:var(--paper);padding:22px 24px;display:flex;gap:24px;align-items:flex-start;flex-wrap:wrap">
+            <div style="flex:1;min-width:260px">
+              <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap"><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted)">GO MS 07 / 2020</span><span style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--muted);border:1px solid var(--line);padding:3px 7px">SUPERSEDED</span></div>
+              <div style="font-family:Sora,sans-serif;font-weight:600;font-size:22px;letter-spacing:-0.02em;margin-top:6px;color:var(--muted)">AP Industrial Development Policy 3.0 (2020–23)</div>
+              <div style="font-size:16px;color:var(--muted);margin-top:4px">Superseded by Policy 4.0. Kept visible because claims from that period are still being settled.</div>
+              <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);margin-top:8px">SUPERSEDED 01 APR 2024 · PDF 2.2 MB</div>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:10px"><a href="APIIC-Prototype-Scope.dc.html#external" style="border:1px solid var(--line);padding:10px 16px;border-radius:var(--r-sm);font-size:16px;text-align:center;white-space:nowrap;color:var(--muted)">Official PDF ↗</a></div>
+          </div>
+        </div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);margin-top:20px"><span style="color:var(--tide)">⌁</span> POLICY REGISTER VERIFIED 21 JUL 2026 · POLICY &amp; INCENTIVES DESK · 2 FURTHER SECTOR POLICIES IN THIS LIBRARY</div>
+        <p style="font-size:14px;color:var(--muted);margin-top:16px">Policy titles and GO references in this prototype are illustrative. Bind them to the live policy register before external release.</p>
+      </div>
+    </div>
+  </sc-if>
+
+  <sc-if value="{{ isSummary }}" hint-placeholder-val="{{ false }}">
+    <div style="max-width:900px;margin:0 auto;padding:48px 40px 120px">
+      <div style="border:1px solid var(--indigo);background:rgba(22,58,95,0.05);padding:18px 22px;display:flex;gap:14px;align-items:flex-start">
+        <i class="ph ph-info" style="font-size:22px;color:var(--indigo)"></i>
+        <p style="margin:0;font-size:16px">This is a plain-language summary. The official policy document is the authority. Where the two differ, the document prevails.</p>
+      </div>
+      <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:32px"><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted)">GO MS 12 / 2024</span><span style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--tide);border:1px solid var(--tide);padding:4px 8px">IN FORCE</span><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted)">VALID 01 APR 2024 – 31 MAR 2029</span></div>
+      <h2 style="font-family:Sora,sans-serif;font-weight:700;font-size:40px;letter-spacing:-0.02em;margin:16px 0 0">AP Industrial Development Policy 4.0</h2>
+      <p style="font-size:20px;color:var(--muted);margin:12px 0 0">The state's umbrella industrial policy. It sets who counts as which enterprise category, what support each category can seek, and how district classification changes the amount.</p>
+
+      <div style="margin-top:40px">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.1em;color:var(--muted);border-bottom:1px solid var(--line);padding-bottom:12px">WHAT IT COVERS</div>
+        <p style="font-size:17px;margin:16px 0 0;max-width:68ch">Manufacturing and specified service enterprises setting up or expanding in Andhra Pradesh, across all sectors, from micro units to ultra-mega projects. Sector policies sit on top of it and can add support; they do not replace it.</p>
+      </div>
+      <div style="margin-top:36px">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.1em;color:var(--muted);border-bottom:1px solid var(--line);padding-bottom:12px">WHO'S ELIGIBLE</div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);margin-top:16px">
+          <div style="background:var(--surface);padding:18px"><div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted)">CATEGORY</div><div style="font-size:17px;font-weight:500;margin-top:4px">Micro, Small, Medium</div><div style="font-size:15px;color:var(--muted)">Standard package, higher rebate bands, priority in MSME parks.</div></div>
+          <div style="background:var(--surface);padding:18px"><div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted)">CATEGORY</div><div style="font-size:17px;font-weight:500;margin-top:4px">Large</div><div style="font-size:15px;color:var(--muted)">Standard package with employment-linked components.</div></div>
+          <div style="background:var(--surface);padding:18px"><div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted)">CATEGORY</div><div style="font-size:17px;font-weight:500;margin-top:4px">Mega &amp; Ultra-Mega</div><div style="font-size:15px;color:var(--muted)">Tailored package, considered by the State Investment Promotion Board.</div></div>
+          <div style="background:var(--surface);padding:18px"><div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted)">ADDITIONAL</div><div style="font-size:17px;font-weight:500;margin-top:4px">Recognised entrepreneur categories</div><div style="font-size:15px;color:var(--muted)">Women, SC/ST, BC/minority and differently abled entrepreneurs, as defined in the policy.</div></div>
+        </div>
+      </div>
+      <div style="margin-top:36px">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.1em;color:var(--muted);border-bottom:1px solid var(--line);padding-bottom:12px">WHAT YOU GET</div>
+        <table style="width:100%;border-collapse:collapse;font-size:16px;background:var(--surface);border:1px solid var(--line);margin-top:16px">
+          <tbody>
+            <tr style="border-bottom:1px solid var(--line)"><td style="padding:13px 16px;color:var(--muted)">Land</td><td style="padding:13px 16px">APIIC rate with category and sector rebate bands</td></tr>
+            <tr style="border-bottom:1px solid var(--line)"><td style="padding:13px 16px;color:var(--muted)">Stamp duty &amp; registration</td><td style="padding:13px 16px">Reimbursement on the allotment instrument</td></tr>
+            <tr style="border-bottom:1px solid var(--line)"><td style="padding:13px 16px;color:var(--muted)">Power</td><td style="padding:13px 16px">Cost reimbursement per unit for a defined period</td></tr>
+            <tr style="border-bottom:1px solid var(--line)"><td style="padding:13px 16px;color:var(--muted)">SGST</td><td style="padding:13px 16px">Reimbursement on eligible sales, capped by category</td></tr>
+            <tr style="border-bottom:1px solid var(--line)"><td style="padding:13px 16px;color:var(--muted)">Skilling</td><td style="padding:13px 16px">Reimbursement of training cost for local hires</td></tr>
+            <tr><td style="padding:13px 16px;color:var(--muted)">Infrastructure</td><td style="padding:13px 16px">Assistance where trunk works are needed to reach the site</td></tr>
+          </tbody>
+        </table>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);margin-top:12px">AMOUNTS, CAPS AND CLAIM WINDOWS ARE IN THE OFFICIAL DOCUMENT — THEY ARE NOT SUMMARISED HERE ON PURPOSE</div>
+      </div>
+      <div style="margin-top:36px">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.1em;color:var(--muted);border-bottom:1px solid var(--line);padding-bottom:12px">KEY DATES &amp; AMENDMENTS, IN ORDER</div>
+        <div style="display:flex;flex-direction:column;margin-top:16px;background:var(--surface);border:1px solid var(--line)">
+          <div style="display:flex;gap:20px;padding:14px 16px;border-bottom:1px solid var(--line);font-size:16px"><span style="font-family:'IBM Plex Mono',monospace;font-size:14px;color:var(--muted);min-width:110px">01 APR 2024</span><span>Policy 4.0 comes into force, superseding Policy 3.0.</span></div>
+          <div style="display:flex;gap:20px;padding:14px 16px;border-bottom:1px solid var(--line);font-size:16px"><span style="font-family:'IBM Plex Mono',monospace;font-size:14px;color:var(--muted);min-width:110px">18 SEP 2025</span><span>Amendment 1 — district classification revised for three districts.</span></div>
+          <div style="display:flex;gap:20px;padding:14px 16px;border-bottom:1px solid var(--line);font-size:16px"><span style="font-family:'IBM Plex Mono',monospace;font-size:14px;color:var(--muted);min-width:110px">12 FEB 2026</span><span>Amendment 2 — claim window for power reimbursement extended.</span></div>
+          <div style="display:flex;gap:20px;padding:14px 16px;font-size:16px"><span style="font-family:'IBM Plex Mono',monospace;font-size:14px;color:var(--muted);min-width:110px">31 MAR 2029</span><span>Policy validity ends unless extended by a further order.</span></div>
+        </div>
+      </div>
+      <div style="margin-top:36px">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.1em;color:var(--muted);border-bottom:1px solid var(--line);padding-bottom:12px">RELATED SECTORS &amp; PARKS</div>
+        <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:16px">
+          <a href="APIIC-Sectors.dc.html" style="border:1px solid var(--line);background:var(--surface);padding:8px 14px;border-radius:999px;font-size:15px">All six priority sectors</a>
+          <a href="APIIC-Parks-Directory.dc.html" style="border:1px solid var(--line);background:var(--surface);padding:8px 14px;border-radius:999px;font-size:15px">104 parks</a>
+          <a href="APIIC-Investor-Guide.dc.html" style="border:1px solid var(--line);background:var(--surface);padding:8px 14px;border-radius:999px;font-size:15px">Where it applies in the journey</a>
+        </div>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;align-items:center;gap:16px;margin-top:40px;border-top:1px solid var(--line);padding-top:28px">
+        <a href="APIIC-Prototype-Scope.dc.html#external" style="background:linear-gradient(120deg,#0A2A6B,#14458F);color:#FFFFFF;padding:14px 22px;border-radius:999px;font-weight:600;font-size:17px;box-shadow:var(--shadow)" style-hover="background:linear-gradient(120deg,#123B86,#1E5AB5);color:#FFFFFF">Download the official policy ↗</a>
+        <a href="APIIC-Incentive-Screener.dc.html" style="border:1px solid var(--royal);color:var(--royal);padding:13px 22px;border-radius:999px;font-weight:500">Check my eligibility</a>
+        <a href="APIIC-Talk-To-Expert.dc.html" style="font-size:16px">Contact the policy desk →</a>
+      </div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);margin-top:20px"><span style="color:var(--tide)">⌁</span> SUMMARY VERIFIED 21 JUL 2026 · OWNER: POLICY &amp; INCENTIVES DESK · NEXT REVIEW 21 OCT 2026</div>
+      <p style="font-size:14px;color:var(--muted);margin-top:16px">Amendment dates in this prototype are illustrative.</p>
+    </div>
+  </sc-if>
+  <dc-import name="APIICFooter" hint-size="100%,420px"></dc-import>
+</main>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { view: 'list' };
+  renderVals() {
+    return {
+      isList: this.state.view === 'list', isSummary: this.state.view === 'summary',
+      toSummary: () => { this.setState({ view: 'summary' }); window.scrollTo(0, 0); },
+      toList: () => { this.setState({ view: 'list' }); window.scrollTo(0, 0); }
+    };
+  }
+}
+</script>
+</body>
+</html>
