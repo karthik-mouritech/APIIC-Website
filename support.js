@@ -1911,7 +1911,18 @@
     link.href = new URL("./responsive.css", document.currentScript?.src || location.href).href;
     document.head.appendChild(link);
   }
+  function installAlertDismissal() {
+    document.addEventListener("click", (event) => {
+      const target = event.target;
+      if (!(target instanceof Element)) return;
+      const button = target.closest("[data-dismiss-alert]");
+      if (!button) return;
+      const alert = button.closest('[role="region"]');
+      if (alert) alert.hidden = true;
+    });
+  }
   loadResponsiveCss();
+  installAlertDismissal();
   hideRawTemplate();
   loadReactUmd().then(init).catch((err) => {
     console.error("[dc] failed to load React or boot:", err);
