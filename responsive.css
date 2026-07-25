@@ -7,6 +7,7 @@ html { -webkit-text-size-adjust: 100%; }
 img, svg, iframe { max-width: 100%; }
 table th[style*="position:sticky"] { position: static !important; left: auto !important; }
 .incentive-actions { grid-column: 2; }
+.search-layout { grid-template-columns: 280px minmax(0, 1fr) !important; }
 
 @media (min-width: 1500px) {
   .apiic-mainbar { padding-left: 28px !important; padding-right: 28px !important; gap: 16px !important; }
@@ -59,6 +60,7 @@ table th[style*="position:sticky"] { position: static !important; left: auto !im
   .home-explorer-stats { grid-template-columns: 1fr !important; }
   .incentive-layout { grid-template-columns: 1fr !important; gap: 24px !important; }
   .incentive-actions { grid-column: auto; }
+  .search-layout { grid-template-columns: 1fr !important; gap: 24px !important; }
 }
 
 @media (max-width: 560px), (pointer: coarse) {

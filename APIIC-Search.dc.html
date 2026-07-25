@@ -41,8 +41,8 @@ input[type=checkbox]{accent-color:#163A5F;width:16px;height:16px}
     </div>
   </div>
 
-  <div style="max-width:1320px;margin:0 auto;padding:32px 40px 120px;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:32px;align-items:start">
-    <aside style="background:var(--surface);border:1px solid var(--line);border-radius:var(--r-sm);max-width:280px">
+  <div class="search-layout" style="max-width:1320px;margin:0 auto;padding:32px 40px 120px;display:grid;grid-template-columns:280px minmax(0,1fr);gap:32px;align-items:start">
+    <aside class="search-filters" style="background:var(--surface);border:1px solid var(--line);border-radius:var(--r-sm)">
       <div style="padding:16px 18px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between"><div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:0.06em">REFINE</div><button style="background:none;border:none;color:var(--indigo);font-family:'Instrument Sans',sans-serif;font-size:14px;cursor:pointer;text-decoration:underline">Clear filters</button></div>
       <div style="padding:16px 18px;border-bottom:1px solid var(--line)"><div style="font-weight:500;font-size:16px">Content type</div><div style="display:flex;flex-direction:column;gap:9px;margin-top:10px;font-size:15px"><label style="display:flex;align-items:center;gap:9px"><input type="checkbox" defaultChecked>Parks <span style="color:var(--muted);font-family:'IBM Plex Mono',monospace;font-size:12px">9</span></label><label style="display:flex;align-items:center;gap:9px"><input type="checkbox" defaultChecked>Policies <span style="color:var(--muted);font-family:'IBM Plex Mono',monospace;font-size:12px">3</span></label><label style="display:flex;align-items:center;gap:9px"><input type="checkbox">Documents <span style="color:var(--muted);font-family:'IBM Plex Mono',monospace;font-size:12px">6</span></label><label style="display:flex;align-items:center;gap:9px"><input type="checkbox">Services <span style="color:var(--muted);font-family:'IBM Plex Mono',monospace;font-size:12px">2</span></label><label style="display:flex;align-items:center;gap:9px"><input type="checkbox">Pages <span style="color:var(--muted);font-family:'IBM Plex Mono',monospace;font-size:12px">4</span></label></div></div>
       <div style="padding:16px 18px;border-bottom:1px solid var(--line)"><div style="font-weight:500;font-size:16px">Sector</div><div style="display:flex;flex-direction:column;gap:9px;margin-top:10px;font-size:15px"><label style="display:flex;align-items:center;gap:9px"><input type="checkbox" defaultChecked>Food processing</label><label style="display:flex;align-items:center;gap:9px"><input type="checkbox">Electronics</label><label style="display:flex;align-items:center;gap:9px"><input type="checkbox">Pharmaceuticals</label></div></div>
@@ -51,7 +51,7 @@ input[type=checkbox]{accent-color:#163A5F;width:16px;height:16px}
       <div style="padding:16px 18px"><div style="font-weight:500;font-size:16px">Status</div><div style="display:flex;flex-direction:column;gap:9px;margin-top:10px;font-size:15px"><label style="display:flex;align-items:center;gap:9px"><input type="checkbox" defaultChecked>Current</label><label style="display:flex;align-items:center;gap:9px"><input type="checkbox">Amended</label><label style="display:flex;align-items:center;gap:9px"><input type="checkbox">Superseded</label></div></div>
     </aside>
 
-    <div style="min-width:0">
+    <div class="search-results" style="min-width:0">
       <sc-if value="{{ isResults }}" hint-placeholder-val="{{ true }}">
         <div>
           <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;padding-bottom:16px;border-bottom:1px solid var(--line)">
