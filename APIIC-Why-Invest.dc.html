@@ -3,7 +3,42 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./apiic-data.js"></script>
+<script src="./apiic-core.js"></script>
+<script src="./apiic-search.js"></script>
+<script src="./apiic-assist.js"></script>
+<script src="./apiic-carousel.js"></script>
 <script src="./support.js"></script>
+<!-- APIIC-SEO -->
+<title>Why Andhra Pradesh — APIIC</title>
+<meta name="description" content="The investment case: ports, corridors, power, talent and cost of doing business.">
+<meta name="keywords" content="why invest advantage ports power talent logistics cost comparison">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="author" content="Andhra Pradesh Industrial Infrastructure Corporation">
+<meta name="theme-color" content="#0A2A6B">
+<link rel="canonical" href="https://apiic.in/APIIC-Why-Invest.dc.html">
+<link rel="icon" type="image/png" href="assets/APIIC-logo.png">
+<link rel="apple-touch-icon" href="assets/APIIC-logo-2x.png">
+<meta name="geo.region" content="IN-AP">
+<meta name="geo.placename" content="Mangalagiri, Guntur District, Andhra Pradesh">
+<meta name="geo.position" content="16.4307;80.5525">
+<meta name="ICBM" content="16.4307, 80.5525">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="APIIC">
+<meta property="og:title" content="Why Andhra Pradesh — APIIC">
+<meta property="og:description" content="The investment case: ports, corridors, power, talent and cost of doing business.">
+<meta property="og:url" content="https://apiic.in/APIIC-Why-Invest.dc.html">
+<meta property="og:image" content="https://apiic.in/assets/img/apiic-dixon-tirupati.jpg">
+<meta property="og:image:alt" content="Manufacturing facility inside an APIIC industrial estate in Andhra Pradesh">
+<meta property="og:locale" content="en_IN">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@apiicofficial">
+<meta name="twitter:title" content="Why Andhra Pradesh — APIIC">
+<meta name="twitter:description" content="The investment case: ports, corridors, power, talent and cost of doing business.">
+<meta name="twitter:image" content="https://apiic.in/assets/img/apiic-dixon-tirupati.jpg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"GovernmentOrganization","name":"Andhra Pradesh Industrial Infrastructure Corporation Limited","alternateName":"APIIC","url":"https://apiic.in","logo":"https://apiic.in/assets/APIIC-logo-2x.png","slogan":"The Future is Here","foundingDate":"1973-09-26","description":"APIIC acquires, develops and allots industrial land, parks and estate infrastructure across all 26 districts of Andhra Pradesh.","address":{"@type":"PostalAddress","streetAddress":"APIIC Towers, Plot No. 1 (9th, 10th & 11th Floors), IT Park","addressLocality":"Mangalagiri","addressRegion":"Andhra Pradesh","postalCode":"522503","addressCountry":"IN"},"contactPoint":[{"@type":"ContactPoint","telephone":"+91-863-2381850","email":"invest@apiic.in","contactType":"investor relations","areaServed":"IN-AP","availableLanguage":["en","te","hi"]}],"sameAs":["https://www.facebook.com/apiicofficial","https://twitter.com/apiicofficial"],"parentOrganization":{"@type":"GovernmentOrganization","name":"Government of Andhra Pradesh"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Why Andhra Pradesh — APIIC","description":"The investment case: ports, corridors, power, talent and cost of doing business.","url":"https://apiic.in/APIIC-Why-Invest.dc.html","isPartOf":{"@type":"WebSite","name":"APIIC","url":"https://apiic.in"},"about":{"@type":"GovernmentOrganization","name":"Andhra Pradesh Industrial Infrastructure Corporation Limited"},"inLanguage":"en-IN"}</script>
+<!-- /APIIC-SEO -->
 </head>
 <body>
 <x-dc>
@@ -43,23 +78,68 @@ a:hover{color:var(--gold)}
     </div>
   </div>
 
-  <div style="background:rgba(246,247,245,0.94);border-bottom:1px solid var(--line)">
-    <div style="max-width:1320px;margin:0 auto;padding:0 40px;display:flex;align-items:center;gap:22px;height:60px;overflow-x:auto;font-size:14px;font-family:'IBM Plex Mono',monospace;letter-spacing:0.04em;white-space:nowrap">
-      <a href="#proposition" style="color:var(--muted)">01 PROPOSITION</a>
-      <a href="#economy" style="color:var(--muted)">02 ECONOMY</a>
-      <a href="#geography" style="color:var(--muted)">03 GEOGRAPHY</a>
-      <a href="#infra" style="color:var(--muted)">04 INFRASTRUCTURE</a>
-      <a href="#talent" style="color:var(--ink)">05 TALENT</a>
-      <a href="#cost" style="color:var(--muted)">06 COST</a>
-      <a href="#policy" style="color:var(--muted)">07 POLICY</a>
-      <a href="#sustainability" style="color:var(--muted)">08 SUSTAINABILITY</a>
-      <a href="#support" style="color:var(--muted)">09 SUPPORT</a>
-      <a href="#proof" style="color:var(--muted)">10 PROOF</a>
-      <a href="#sources" style="color:var(--muted)">11 SOURCES</a>
-      <div style="flex:1"></div>
-      <a href="APIIC-Shortlist.dc.html" style="background:linear-gradient(120deg,#0A2A6B,#14458F);color:#FFFFFF;padding:10px 16px;border-radius:999px;font-family:'Instrument Sans',sans-serif;font-size:15px;font-weight:600;box-shadow:var(--shadow)">Download the investor brief (PDF, dated)</a>
+  <!-- ============================================ SECTION NAVIGATOR =====
+       Replaces a flat row of 11 monospace links. Tracks the section you are
+       actually reading, shows how far through the case you are, and collapses
+       to a single "jump to" control on a handset instead of a cramped scroll. -->
+  <nav aria-label="Sections of the investment case"
+       style="position:sticky;top:112px;z-index:40;background:var(--surface);border-bottom:1px solid var(--line);box-shadow:0 8px 22px -20px rgba(8,33,79,0.55)">
+    <!-- reading progress -->
+    <div role="presentation" style="height:3px;background:var(--tint-sky)">
+      <div style="height:3px;width:{{ progress }};background:linear-gradient(90deg,var(--royal2),var(--cyan));transition:width .18s ease"></div>
     </div>
-  </div>
+
+    <div style="max-width:1320px;margin:0 auto;padding:0 40px;display:flex;align-items:center;gap:18px;min-height:64px">
+      <!-- wide: numbered pills -->
+      <sc-if value="{{ wide }}" hint-placeholder-val="{{ true }}">
+        <div style="display:flex;align-items:center;gap:7px;overflow-x:auto;flex:1;min-width:0;padding:11px 0;scrollbar-width:thin">
+          <sc-for list="{{ sections }}" as="s" hint-placeholder-count="11">
+            <a href="{{ s.href }}" aria-current="{{ s.current }}"
+               style="flex:none;display:inline-flex;align-items:center;gap:8px;padding:8px 13px;border-radius:999px;border:1px solid {{ s.border }};background:{{ s.bg }};color:{{ s.fg }};font-size:13.5px;font-weight:{{ s.weight }};white-space:nowrap;transition:background .15s ease,border-color .15s ease">
+              <span style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:{{ s.numColour }};letter-spacing:0.04em">{{ s.num }}</span>
+              <i class="ph {{ s.icon }}" style="font-size:14px;color:{{ s.iconColour }}"></i>
+              {{ s.label }}
+            </a>
+          </sc-for>
+        </div>
+        <a href="APIIC-Shortlist.dc.html" style="flex:none;background:linear-gradient(120deg,#0A2A6B,#14458F);color:#FFFFFF;padding:11px 18px;border-radius:999px;font-size:14px;font-weight:600;white-space:nowrap;display:inline-flex;align-items:center;gap:9px;box-shadow:var(--shadow)"><i class="ph ph-download-simple"></i>Investor brief</a>
+      </sc-if>
+
+      <!-- narrow: one control, current section + count, opens a sheet -->
+      <sc-if value="{{ narrow }}" hint-placeholder-val="{{ false }}">
+        <button onClick="{{ toggleJump }}" aria-expanded="{{ jumpOpenAttr }}"
+          style="flex:1;min-width:0;font:inherit;text-align:left;cursor:pointer;background:none;border:none;padding:12px 0;display:flex;align-items:center;gap:12px;color:var(--ink)">
+          <span style="width:38px;height:38px;flex:none;border-radius:10px;background:var(--tint-sky);display:grid;place-items:center">
+            <i class="ph {{ activeIcon }}" style="font-size:19px;color:var(--indigo)"></i>
+          </span>
+          <span style="flex:1;min-width:0">
+            <span style="display:block;font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:0.08em;color:var(--muted);text-transform:uppercase">Section {{ activeNum }} of 11 · {{ progress }} read</span>
+            <span style="display:block;font-weight:600;font-size:16px;line-height:1.25;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">{{ activeLabel }}</span>
+          </span>
+          <i class="ph {{ jumpChevron }}" style="font-size:18px;color:var(--muted);flex:none"></i>
+        </button>
+      </sc-if>
+    </div>
+
+    <sc-if value="{{ jumpOpen }}" hint-placeholder-val="{{ false }}">
+      <div style="border-top:1px solid var(--line);background:var(--paper);max-height:62vh;overflow-y:auto">
+        <div style="padding:10px 18px 16px">
+          <sc-for list="{{ sections }}" as="s" hint-placeholder-count="11">
+            <a href="{{ s.href }}" onClick="{{ closeJump }}"
+               style="display:flex;align-items:center;gap:13px;padding:13px 12px;border-radius:12px;background:{{ s.bg }};border:1px solid {{ s.border }};margin-top:7px;color:{{ s.fg }};font-weight:{{ s.weight }};font-size:16px">
+              <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:{{ s.numColour }};flex:none;width:20px">{{ s.num }}</span>
+              <i class="ph {{ s.icon }}" style="font-size:18px;color:{{ s.iconColour }};flex:none"></i>
+              <span style="flex:1;min-width:0">{{ s.label }}</span>
+              <sc-if value="{{ s.isCurrent }}" hint-placeholder-val="{{ false }}">
+                <span style="font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:0.06em;background:var(--cyan-soft);color:var(--cyan-deep);border-radius:4px;padding:3px 7px;flex:none">READING</span>
+              </sc-if>
+            </a>
+          </sc-for>
+          <a href="APIIC-Shortlist.dc.html" style="display:flex;align-items:center;justify-content:center;gap:9px;margin-top:14px;background:linear-gradient(120deg,#0A2A6B,#14458F);color:#FFFFFF;padding:14px;border-radius:999px;font-weight:600;font-size:16px"><i class="ph ph-download-simple"></i>Download the investor brief</a>
+        </div>
+      </div>
+    </sc-if>
+  </nav>
 
   <section id="proposition" style="max-width:1320px;margin:0 auto;padding:88px 40px 0">
     <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.1em;color:var(--muted);border-bottom:1px solid var(--line);padding-bottom:14px">01 · THE PROPOSITION</div>
@@ -303,5 +383,105 @@ a:hover{color:var(--gold)}
 </main>
 
 </x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { active: 'proposition', progress: 0, jump: false, w: typeof window !== 'undefined' ? window.innerWidth : 1440 };
+
+  /* One place defining the eleven sections, their order and their icon. */
+  sections() {
+    return [
+      { id: 'proposition',    label: 'Proposition',    icon: 'ph-target' },
+      { id: 'economy',        label: 'Economy',        icon: 'ph-chart-line-up' },
+      { id: 'geography',      label: 'Geography',      icon: 'ph-map-trifold' },
+      { id: 'infra',          label: 'Infrastructure', icon: 'ph-buildings' },
+      { id: 'talent',         label: 'Talent',         icon: 'ph-users-three' },
+      { id: 'cost',           label: 'Cost',           icon: 'ph-currency-inr' },
+      { id: 'policy',         label: 'Policy',         icon: 'ph-scroll' },
+      { id: 'sustainability', label: 'Sustainability', icon: 'ph-leaf' },
+      { id: 'support',        label: 'Support',        icon: 'ph-handshake' },
+      { id: 'proof',          label: 'Proof',          icon: 'ph-seal-check' },
+      { id: 'sources',        label: 'Sources',        icon: 'ph-list-magnifying-glass' }
+    ];
+  }
+
+  componentDidMount() {
+    this.onScroll = () => this.measure();
+    this.onResize = () => this.setState({ w: window.innerWidth });
+    window.addEventListener('scroll', this.onScroll, { passive: true });
+    window.addEventListener('resize', this.onResize);
+    this.measure();
+  }
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.onScroll);
+    window.removeEventListener('resize', this.onResize);
+  }
+
+  /* The section whose top has most recently passed under the sticky header is
+     the one being read. Progress is scroll position over scrollable height. */
+  measure() {
+    const marker = 210;
+    let active = this.state.active;
+    this.sections().forEach(s => {
+      const el = document.getElementById(s.id);
+      if (el && el.getBoundingClientRect().top <= marker) active = s.id;
+    });
+    const doc = document.documentElement;
+    const scrollable = doc.scrollHeight - window.innerHeight;
+    const progress = scrollable > 0 ? Math.min(100, Math.max(0, Math.round((window.scrollY / scrollable) * 100))) : 0;
+    if (active !== this.state.active || progress !== this.state.progress) {
+      const moved = active !== this.state.active;
+      this.setState({ active, progress });
+      /* With eleven pills the rail scrolls; keep the one you are reading in
+         view. block:'nearest' so the page itself never jumps. */
+      if (moved) {
+        requestAnimationFrame(() => {
+          const pill = document.querySelector('nav [aria-current="true"]');
+          if (pill && pill.scrollIntoView) {
+            pill.scrollIntoView({ inline: 'center', block: 'nearest', behavior: 'smooth' });
+          }
+        });
+      }
+    }
+  }
+
+  renderVals() {
+    const list = this.sections();
+    const active = this.state.active;
+    const wide = this.state.w >= 900;
+    const idx = Math.max(0, list.findIndex(s => s.id === active));
+    const cur = list[idx] || list[0];
+
+    return {
+      wide, narrow: !wide,
+      progress: this.state.progress + '%',
+      activeLabel: cur.label,
+      activeIcon: cur.icon,
+      activeNum: String(idx + 1).padStart(2, '0'),
+
+      jumpOpen: !wide && this.state.jump,
+      jumpOpenAttr: String(!wide && this.state.jump),
+      jumpChevron: this.state.jump ? 'ph-caret-up' : 'ph-caret-down',
+      toggleJump: () => this.setState(s => ({ jump: !s.jump })),
+      closeJump: () => this.setState({ jump: false }),
+
+      sections: list.map((s, i) => {
+        const on = s.id === active;
+        const done = i < idx;
+        return {
+          label: s.label, icon: s.icon, href: '#' + s.id,
+          num: String(i + 1).padStart(2, '0'),
+          isCurrent: on, current: on ? 'true' : 'false',
+          border: on ? 'var(--royal2)' : 'var(--line)',
+          bg: on ? 'var(--tint-sky)' : 'var(--surface)',
+          fg: on ? 'var(--on-tint)' : (done ? 'var(--muted)' : 'var(--ink)'),
+          weight: on ? '600' : '400',
+          numColour: on ? 'var(--cyan-deep)' : 'var(--muted)',
+          iconColour: on ? 'var(--royal2)' : 'var(--muted)'
+        };
+      })
+    };
+  }
+}
+</script>
 </body>
 </html>

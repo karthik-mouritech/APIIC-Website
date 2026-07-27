@@ -3,6 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./apiic-data.js"></script>
+<script src="./apiic-core.js"></script>
+<script src="./apiic-search.js"></script>
+<script src="./apiic-assist.js"></script>
+<script src="./apiic-carousel.js"></script>
 <script src="./support.js"></script>
 </head>
 <body>
@@ -28,20 +33,26 @@
       </div>
     </div>
 
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:40px;padding:44px 0 40px;border-bottom:1px solid rgba(255,255,255,0.12)">
+    <!-- Five columns: the brand block plus four link groups. The track minimum
+         is sized so all five sit on one row at 1320px rather than orphaning the
+         last group onto a second line. -->
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:28px 32px;padding:44px 0 40px;border-bottom:1px solid rgba(255,255,255,0.12)">
       <div style="display:flex;flex-direction:column;gap:16px;min-width:0">
-        <div style="display:flex;align-items:center;gap:12px;color:#FFFFFF">
-          <svg viewBox="0 0 48 48" aria-hidden="true" style="width:40px;height:40px"><defs><linearGradient id="fmark" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5B9BFF"></stop><stop offset="1" stop-color="#2FC7DE"></stop></linearGradient></defs><path d="M24 5 L43 42 H31 L24 27 L17 42 H5 Z" fill="url(#fmark)"></path></svg>
-          <span style="font-family:Sora,sans-serif;font-weight:700;font-size:24px;letter-spacing:-0.03em">APIIC</span>
+        <div style="display:flex;align-items:center;gap:13px;color:#FFFFFF">
+          <img src="assets/APIIC-logo-2x.png" width="58" height="50" alt="APIIC" style="width:58px;height:50px;object-fit:contain;background:#FFFFFF;border-radius:8px;padding:4px;flex:none">
+          <span style="display:flex;flex-direction:column;line-height:1.2">
+            <span style="font-family:Sora,sans-serif;font-weight:700;font-size:22px;letter-spacing:-0.03em">APIIC</span>
+            <span style="font-size:11px;color:#8CA6C8;font-family:'IBM Plex Mono',monospace;letter-spacing:0.05em">A GOVT. OF AP UNDERTAKING</span>
+          </span>
         </div>
-        <p style="margin:0;max-width:34ch;line-height:1.6">Andhra Pradesh Industrial Infrastructure Corporation — the state's owner and developer of industrial land, parks and estate infrastructure.</p>
-        <div style="min-width:0;overflow-wrap:anywhere;font-size:14.5px;line-height:1.8">APIIC Towers, Mangalagiri<br>Guntur District, Andhra Pradesh 522503<br><span style="color:#FFFFFF">0863 234 0000</span> · invest@apiic.in</div>
+        <p style="margin:0;max-width:34ch;line-height:1.6">Andhra Pradesh Industrial Infrastructure Corporation Limited — incorporated 26 September 1973 as the state's owner and developer of industrial land, parks and estate infrastructure.</p>
+        <div style="min-width:0;overflow-wrap:anywhere;font-size:14.5px;line-height:1.8">APIIC Towers, Plot No. 1 (9th–11th Floors)<br>IT Park, Mangalagiri, Guntur District<br>Andhra Pradesh 522503<br><a href="tel:+918632381850" style="color:#FFFFFF">+91-863-2381850</a> · <a href="mailto:invest@apiic.in" style="color:#FFFFFF">invest@apiic.in</a></div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#8CA6C8;letter-spacing:0.05em;line-height:1.8">GSTIN 37AABCA9029K1ZG<br>PAN AABCA9029K</div>
         <div style="display:flex;gap:10px;margin-top:2px">
-          <a href="APIIC-Help-Contact.dc.html" aria-label="LinkedIn" style="width:38px;height:38px;border-radius:50%;background:#0A66C2;display:grid;place-items:center;color:#FFFFFF;font-size:17px"><i class="ph ph-linkedin-logo"></i></a>
-          <a href="APIIC-Help-Contact.dc.html" aria-label="X" style="width:38px;height:38px;border-radius:50%;background:#1D9BF0;display:grid;place-items:center;color:#FFFFFF;font-size:17px"><i class="ph ph-twitter-logo"></i></a>
-          <a href="APIIC-Help-Contact.dc.html" aria-label="YouTube" style="width:38px;height:38px;border-radius:50%;background:#E02F2F;display:grid;place-items:center;color:#FFFFFF;font-size:17px"><i class="ph ph-youtube-logo"></i></a>
-          <a href="APIIC-Help-Contact.dc.html" aria-label="Facebook" style="width:38px;height:38px;border-radius:50%;background:#1877F2;display:grid;place-items:center;color:#FFFFFF;font-size:17px"><i class="ph ph-facebook-logo"></i></a>
-          <a href="APIIC-Help-Contact.dc.html" aria-label="Instagram" style="width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,#F58529,#DD2A7B,#8134AF);display:grid;place-items:center;color:#FFFFFF;font-size:17px"><i class="ph ph-instagram-logo"></i></a>
+          <a href="https://www.facebook.com/apiicofficial" target="_blank" rel="noopener" aria-label="APIIC on Facebook" style="width:38px;height:38px;border-radius:50%;background:#1877F2;display:grid;place-items:center;color:#FFFFFF;font-size:17px"><i class="ph ph-facebook-logo"></i></a>
+          <a href="https://twitter.com/apiicofficial" target="_blank" rel="noopener" aria-label="APIIC on X" style="width:38px;height:38px;border-radius:50%;background:#1D9BF0;display:grid;place-items:center;color:#FFFFFF;font-size:17px"><i class="ph ph-twitter-logo"></i></a>
+          <a href="https://apiic.in" target="_blank" rel="noopener" aria-label="YouTube" style="width:38px;height:38px;border-radius:50%;background:#E02F2F;display:grid;place-items:center;color:#FFFFFF;font-size:17px"><i class="ph ph-youtube-logo"></i></a>
+          <a href="https://apiic.in" target="_blank" rel="noopener" aria-label="LinkedIn" style="width:38px;height:38px;border-radius:50%;background:#0A66C2;display:grid;place-items:center;color:#FFFFFF;font-size:17px"><i class="ph ph-linkedin-logo"></i></a>
         </div>
       </div>
       <div style="display:flex;flex-direction:column;gap:11px;min-width:0">
@@ -58,27 +69,48 @@
         <div style="color:#FFFFFF;font-weight:600;font-size:16px;display:flex;align-items:center;gap:9px"><span style="width:16px;height:2px;background:var(--cyan);border-radius:999px"></span>Investor resources</div>
         <a href="APIIC-Investor-Guide.dc.html" style="color:#B9CBE4">Investor guide</a>
         <a href="APIIC-Incentive-Screener.dc.html" style="color:#B9CBE4">Incentive screener</a>
-        <a href="APIIC-Policies.dc.html" style="color:#B9CBE4">Policies library</a>
+        <a href="APIIC-Policies.dc.html" style="color:#B9CBE4">Policies &amp; Allotment Regulations 2023</a>
         <a href="APIIC-Official-Portals.dc.html" style="color:#B9CBE4">Official portals</a>
-        <a href="APIIC-Search.dc.html" style="color:#B9CBE4">Search the site</a>
         <a href="APIIC-Documents.dc.html" style="color:#B9CBE4">Documents &amp; forms</a>
-        <a href="APIIC-Documents.dc.html" style="color:#B9CBE4">Tenders</a>
+        <a href="APIIC-Link-Directory.dc.html#sec-tenders" style="color:#B9CBE4">Tenders &amp; empanelment</a>
+        <a href="APIIC-Link-Directory.dc.html" style="color:var(--cyan);display:flex;align-items:center;gap:7px">⌁ Complete link directory</a>
       </div>
       <div style="display:flex;flex-direction:column;gap:11px;min-width:0">
         <div style="color:#FFFFFF;font-weight:600;font-size:16px;display:flex;align-items:center;gap:9px"><span style="width:16px;height:2px;background:var(--cyan);border-radius:999px"></span>Help &amp; governance</div>
-        <a href="APIIC-Talk-To-Expert.dc.html" style="color:#B9CBE4">Talk to an expert</a>
-        <a href="APIIC-Help-Contact.dc.html" style="color:#B9CBE4">Help me choose</a>
-        <a href="APIIC-Help-Contact.dc.html" style="color:#B9CBE4">Zonal offices</a>
+        <a href="APIIC-Help-Desk.dc.html" style="color:#B9CBE4">Help desk</a>
+        <a href="APIIC-Help-Desk.dc.html#zones" style="color:#B9CBE4">14 zonal offices</a>
+        <a href="APIIC-Help-Desk.dc.html#grievance" style="color:#B9CBE4">Grievance &amp; escalation</a>
+        <a href="APIIC-Leadership.dc.html" style="color:#B9CBE4">Leadership &amp; Board of Directors</a>
         <a href="APIIC-Data-Freshness.dc.html" style="color:var(--cyan);display:flex;align-items:center;gap:7px">⌁ Data &amp; freshness</a>
-        <a href="APIIC-System-Pages.dc.html" style="color:#B9CBE4">Accessibility statement</a>
-        <a href="APIIC-System-Pages.dc.html" style="color:#B9CBE4">Privacy &amp; cookies</a>
-        <a href="APIIC-Documents.dc.html" style="color:#B9CBE4">RTI &amp; disclosures</a>
+        <a href="APIIC-System-Pages.dc.html" style="color:#B9CBE4">Accessibility &amp; privacy</a>
+        <a href="APIIC-Link-Directory.dc.html#sec-information-downloads" style="color:#B9CBE4">RTI &amp; disclosures</a>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:11px;min-width:0">
+        <div style="color:#FFFFFF;font-weight:600;font-size:16px;display:flex;align-items:center;gap:9px"><span style="width:16px;height:2px;background:var(--cyan);border-radius:999px"></span>Related links</div>
+        <a href="https://www.apindustries.gov.in/" target="_blank" rel="noopener" style="color:#B9CBE4">Department of Industries ↗</a>
+        <a href="https://apsfc.com/" target="_blank" rel="noopener" style="color:#B9CBE4">A.P. State Financial Corporation ↗</a>
+        <a href="https://dtcp.ap.gov.in/" target="_blank" rel="noopener" style="color:#B9CBE4">DTCP ↗</a>
+        <a href="https://www.nsws.gov.in/" target="_blank" rel="noopener" style="color:#B9CBE4">National Single Window System ↗</a>
+        <a href="https://iilb.investindia.gov.in/" target="_blank" rel="noopener" style="color:#B9CBE4">India Industrial Land Bank ↗</a>
+        <a href="https://pmgatishakti.nic.in/" target="_blank" rel="noopener" style="color:#B9CBE4">PM GatiShakti ↗</a>
+        <a href="https://apiic.in/careers/" target="_blank" rel="noopener" style="color:#B9CBE4">Careers ↗</a>
       </div>
     </div>
-    <div style="display:flex;flex-wrap:wrap;align-items:center;gap:20px;padding:22px 0 36px;font-size:13.5px;color:#8CA6C8">
+    <div style="display:flex;flex-wrap:wrap;align-items:center;gap:14px 20px;padding:22px 0 16px;font-size:13.5px;color:#8CA6C8;border-bottom:1px solid rgba(255,255,255,0.08)">
+      <a href="APIIC-System-Pages.dc.html" style="color:#8CA6C8">Terms of use</a>
+      <a href="APIIC-System-Pages.dc.html" style="color:#8CA6C8">Privacy policy</a>
+      <a href="APIIC-Link-Directory.dc.html" style="color:#8CA6C8">Sitemap</a>
+      <a href="APIIC-Help-Desk.dc.html#ticket" style="color:#8CA6C8">Feedback</a>
+      <a href="https://apiic.in" target="_blank" rel="noopener" style="color:#8CA6C8">apiic.in ↗</a>
+      <div style="flex:1"></div>
+      <button data-apiic-search style="font:inherit;font-size:13px;cursor:pointer;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.18);border-radius:999px;color:#FFFFFF;padding:7px 14px;display:inline-flex;align-items:center;gap:8px"><i class="ph ph-magnifying-glass" style="color:var(--cyan)"></i>Search <span style="font-family:'IBM Plex Mono',monospace;font-size:10px;opacity:0.7">CTRL K</span></button>
+      <button data-apiic-chat style="font:inherit;font-size:13px;cursor:pointer;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.18);border-radius:999px;color:#FFFFFF;padding:7px 14px;display:inline-flex;align-items:center;gap:8px"><i class="ph ph-robot" style="color:var(--cyan)"></i>Ask the assistant</button>
+      <button data-apiic-desk="new" style="font:inherit;font-size:13px;cursor:pointer;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.18);border-radius:999px;color:#FFFFFF;padding:7px 14px;display:inline-flex;align-items:center;gap:8px"><i class="ph ph-lifebuoy" style="color:var(--cyan)"></i>Help desk</button>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;align-items:center;gap:20px;padding:16px 0 36px;font-size:13.5px;color:#8CA6C8">
       <span>© 2026 APIIC · A Government of Andhra Pradesh undertaking</span>
       <div style="flex:1"></div>
-      <span style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;display:flex;align-items:center;gap:8px"><span style="color:var(--cyan)">⌁</span>PAGE LAST REVIEWED 21 JUL 2026 · OWNER: INVESTOR SERVICES</span>
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;display:flex;align-items:center;gap:8px"><span style="color:var(--cyan)">⌁</span>CONTENT SOURCED FROM APIIC.IN 26 JUL 2026 · OWNER: INVESTOR SERVICES</span>
     </div>
   </div>
 </footer>

@@ -3,7 +3,42 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./apiic-data.js"></script>
+<script src="./apiic-core.js"></script>
+<script src="./apiic-search.js"></script>
+<script src="./apiic-assist.js"></script>
+<script src="./apiic-carousel.js"></script>
 <script src="./support.js"></script>
+<!-- APIIC-SEO -->
+<title>Guided Park Finder — APIIC</title>
+<meta name="description" content="Five questions, then a ranked shortlist of parks that fit your project.">
+<meta name="keywords" content="park finder guided wizard recommend match shortlist questionnaire">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="author" content="Andhra Pradesh Industrial Infrastructure Corporation">
+<meta name="theme-color" content="#0A2A6B">
+<link rel="canonical" href="https://apiic.in/APIIC-Park-Finder.dc.html">
+<link rel="icon" type="image/png" href="assets/APIIC-logo.png">
+<link rel="apple-touch-icon" href="assets/APIIC-logo-2x.png">
+<meta name="geo.region" content="IN-AP">
+<meta name="geo.placename" content="Mangalagiri, Guntur District, Andhra Pradesh">
+<meta name="geo.position" content="16.4307;80.5525">
+<meta name="ICBM" content="16.4307, 80.5525">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="APIIC">
+<meta property="og:title" content="Guided Park Finder — APIIC">
+<meta property="og:description" content="Five questions, then a ranked shortlist of parks that fit your project.">
+<meta property="og:url" content="https://apiic.in/APIIC-Park-Finder.dc.html">
+<meta property="og:image" content="https://apiic.in/assets/img/apiic-dixon-tirupati.jpg">
+<meta property="og:image:alt" content="Manufacturing facility inside an APIIC industrial estate in Andhra Pradesh">
+<meta property="og:locale" content="en_IN">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@apiicofficial">
+<meta name="twitter:title" content="Guided Park Finder — APIIC">
+<meta name="twitter:description" content="Five questions, then a ranked shortlist of parks that fit your project.">
+<meta name="twitter:image" content="https://apiic.in/assets/img/apiic-dixon-tirupati.jpg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"GovernmentOrganization","name":"Andhra Pradesh Industrial Infrastructure Corporation Limited","alternateName":"APIIC","url":"https://apiic.in","logo":"https://apiic.in/assets/APIIC-logo-2x.png","slogan":"The Future is Here","foundingDate":"1973-09-26","description":"APIIC acquires, develops and allots industrial land, parks and estate infrastructure across all 26 districts of Andhra Pradesh.","address":{"@type":"PostalAddress","streetAddress":"APIIC Towers, Plot No. 1 (9th, 10th & 11th Floors), IT Park","addressLocality":"Mangalagiri","addressRegion":"Andhra Pradesh","postalCode":"522503","addressCountry":"IN"},"contactPoint":[{"@type":"ContactPoint","telephone":"+91-863-2381850","email":"invest@apiic.in","contactType":"investor relations","areaServed":"IN-AP","availableLanguage":["en","te","hi"]}],"sameAs":["https://www.facebook.com/apiicofficial","https://twitter.com/apiicofficial"],"parentOrganization":{"@type":"GovernmentOrganization","name":"Government of Andhra Pradesh"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Guided Park Finder — APIIC","description":"Five questions, then a ranked shortlist of parks that fit your project.","url":"https://apiic.in/APIIC-Park-Finder.dc.html","isPartOf":{"@type":"WebSite","name":"APIIC","url":"https://apiic.in"},"about":{"@type":"GovernmentOrganization","name":"Andhra Pradesh Industrial Infrastructure Corporation Limited"},"inLanguage":"en-IN"}</script>
+<!-- /APIIC-SEO -->
 </head>
 <body>
 <x-dc>
@@ -286,7 +321,7 @@ input[type=checkbox],input[type=radio]{accent-color:#163A5F;width:18px;height:18
       <p style="font-size:14px;color:var(--muted);margin-top:28px">This is a guide based on published park data. It does not reserve or allot land. Allotment is governed by the APIIC Industrial Parks Allotment Regulations. Figures are illustrative in this prototype.</p>
     </div>
     <sc-if value="{{ hasTwo }}" hint-placeholder-val="{{ false }}">
-      <div style="margin-top:40px;background:linear-gradient(120deg,#08214F,#123B86);color:#FFFFFF">
+      <div style="position:fixed;left:0;right:0;bottom:0;z-index:70;background:linear-gradient(120deg,#08214F,#123B86);color:#FFFFFF">
         <div style="max-width:1120px;margin:0 auto;padding:16px 40px;display:flex;align-items:center;gap:20px">
           <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--tide)">⌁ SHORTLIST</span>
           <span style="font-size:17px;font-weight:500">{{ count }} parks shortlisted</span>

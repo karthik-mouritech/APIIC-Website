@@ -3,7 +3,42 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./apiic-data.js"></script>
+<script src="./apiic-core.js"></script>
+<script src="./apiic-search.js"></script>
+<script src="./apiic-assist.js"></script>
+<script src="./apiic-carousel.js"></script>
 <script src="./support.js"></script>
+<!-- APIIC-SEO -->
+<title>Land & Parks hub — APIIC</title>
+<meta name="description" content="The single starting point for finding industrial land in Andhra Pradesh.">
+<meta name="keywords" content="land parks hub find plot acre availability">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="author" content="Andhra Pradesh Industrial Infrastructure Corporation">
+<meta name="theme-color" content="#0A2A6B">
+<link rel="canonical" href="https://apiic.in/APIIC-Land-Parks-Hub.dc.html">
+<link rel="icon" type="image/png" href="assets/APIIC-logo.png">
+<link rel="apple-touch-icon" href="assets/APIIC-logo-2x.png">
+<meta name="geo.region" content="IN-AP">
+<meta name="geo.placename" content="Mangalagiri, Guntur District, Andhra Pradesh">
+<meta name="geo.position" content="16.4307;80.5525">
+<meta name="ICBM" content="16.4307, 80.5525">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="APIIC">
+<meta property="og:title" content="Land & Parks hub — APIIC">
+<meta property="og:description" content="The single starting point for finding industrial land in Andhra Pradesh.">
+<meta property="og:url" content="https://apiic.in/APIIC-Land-Parks-Hub.dc.html">
+<meta property="og:image" content="https://apiic.in/assets/img/apiic-dixon-tirupati.jpg">
+<meta property="og:image:alt" content="Manufacturing facility inside an APIIC industrial estate in Andhra Pradesh">
+<meta property="og:locale" content="en_IN">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@apiicofficial">
+<meta name="twitter:title" content="Land & Parks hub — APIIC">
+<meta name="twitter:description" content="The single starting point for finding industrial land in Andhra Pradesh.">
+<meta name="twitter:image" content="https://apiic.in/assets/img/apiic-dixon-tirupati.jpg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"GovernmentOrganization","name":"Andhra Pradesh Industrial Infrastructure Corporation Limited","alternateName":"APIIC","url":"https://apiic.in","logo":"https://apiic.in/assets/APIIC-logo-2x.png","slogan":"The Future is Here","foundingDate":"1973-09-26","description":"APIIC acquires, develops and allots industrial land, parks and estate infrastructure across all 26 districts of Andhra Pradesh.","address":{"@type":"PostalAddress","streetAddress":"APIIC Towers, Plot No. 1 (9th, 10th & 11th Floors), IT Park","addressLocality":"Mangalagiri","addressRegion":"Andhra Pradesh","postalCode":"522503","addressCountry":"IN"},"contactPoint":[{"@type":"ContactPoint","telephone":"+91-863-2381850","email":"invest@apiic.in","contactType":"investor relations","areaServed":"IN-AP","availableLanguage":["en","te","hi"]}],"sameAs":["https://www.facebook.com/apiicofficial","https://twitter.com/apiicofficial"],"parentOrganization":{"@type":"GovernmentOrganization","name":"Government of Andhra Pradesh"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Land & Parks hub — APIIC","description":"The single starting point for finding industrial land in Andhra Pradesh.","url":"https://apiic.in/APIIC-Land-Parks-Hub.dc.html","isPartOf":{"@type":"WebSite","name":"APIIC","url":"https://apiic.in"},"about":{"@type":"GovernmentOrganization","name":"Andhra Pradesh Industrial Infrastructure Corporation Limited"},"inLanguage":"en-IN"}</script>
+<!-- /APIIC-SEO -->
 </head>
 <body>
 <x-dc>
@@ -63,6 +98,177 @@ a:hover{color:var(--gold)}
     </div>
   </section>
 
+  <!-- ==================================================== LIVE LAND BANK -->
+  <section id="landbank" style="max-width:1320px;margin:0 auto;padding:80px 40px 0;scroll-margin-top:170px">
+    <div style="display:flex;flex-wrap:wrap;gap:20px;align-items:flex-end;justify-content:space-between">
+      <div style="flex:1;min-width:300px">
+        <span style="display:inline-flex;align-items:center;gap:9px;background:var(--cyan-soft);border-radius:999px;padding:6px 14px;font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:0.09em;color:var(--cyan-deep);text-transform:uppercase">
+          <span style="width:7px;height:7px;border-radius:50%;background:var(--tide);display:inline-block"></span>Live from the APIIC LandBank portal
+        </span>
+        <h2 style="font-family:Sora,sans-serif;font-weight:700;font-size:40px;letter-spacing:-0.03em;margin:16px 0 0;line-height:1.1">The whole land bank, in numbers</h2>
+        <p style="font-size:17.5px;color:var(--muted);margin:12px 0 0;max-width:64ch;line-height:1.6">
+          Every plot APIIC holds is counted on the LandBank portal — the system of record. These are its figures as
+          read on {{ lb.asOf }}, alongside the zonal desk that owns each one.
+        </p>
+      </div>
+      <a href="{{ lb.portal }}" target="_blank" rel="noopener" style="background:linear-gradient(120deg,#0A2A6B,#14458F);color:#FFFFFF;padding:15px 24px;border-radius:999px;font-weight:600;white-space:nowrap;display:inline-flex;align-items:center;gap:10px;box-shadow:var(--shadow)">
+        <i class="ph ph-arrow-square-out"></i>Open the LandBank portal
+      </a>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:16px;margin-top:30px">
+      <sc-for list="{{ lbStats }}" as="s" hint-placeholder-count="5">
+        <div style="background:var(--surface);border:1px solid var(--line);border-top:3px solid var(--cyan);border-radius:var(--r);padding:21px">
+          <i class="ph-duotone {{ s.icon }}" style="font-size:24px;color:var(--indigo)"></i>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:31px;letter-spacing:-0.03em;margin-top:11px;line-height:1">{{ s.value }}<span style="font-size:14px;color:var(--muted);margin-left:5px">{{ s.unit }}</span></div>
+          <div style="font-weight:600;font-size:15px;margin-top:7px">{{ s.label }}</div>
+          <div style="font-size:13.5px;color:var(--muted);margin-top:4px;line-height:1.45">{{ s.note }}</div>
+        </div>
+      </sc-for>
+    </div>
+
+    <!-- zone table -->
+    <div style="display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between;margin-top:44px">
+      <h3 style="font-family:Sora,sans-serif;font-weight:600;font-size:26px;letter-spacing:-0.025em;margin:0">Availability by zone</h3>
+      <div style="display:flex;gap:8px;flex-wrap:wrap">
+        <sc-for list="{{ sorts }}" as="s" hint-placeholder-count="3">
+          <button onClick="{{ s.pick }}" aria-pressed="{{ s.on }}"
+            style="font:inherit;font-size:13.5px;cursor:pointer;border-radius:999px;padding:8px 15px;border:1px solid {{ s.border }};background:{{ s.bg }};color:{{ s.fg }};font-weight:{{ s.weight }};display:inline-flex;align-items:center;gap:7px">
+            <i class="ph {{ s.icon }}"></i>{{ s.label }}
+          </button>
+        </sc-for>
+      </div>
+    </div>
+
+    <div style="margin-top:18px;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);overflow-x:auto">
+      <table style="width:100%;border-collapse:collapse;min-width:720px;font-size:15px">
+        <thead>
+          <tr style="background:var(--tint-sky)">
+            <th style="text-align:left;padding:13px 18px;font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:0.07em;color:var(--muted);text-transform:uppercase;font-weight:500">Zone</th>
+            <th style="text-align:right;padding:13px 12px;font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:0.07em;color:var(--muted);text-transform:uppercase;font-weight:500">Parks</th>
+            <th style="text-align:right;padding:13px 12px;font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:0.07em;color:var(--muted);text-transform:uppercase;font-weight:500">Plots</th>
+            <th style="text-align:right;padding:13px 12px;font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:0.07em;color:var(--muted);text-transform:uppercase;font-weight:500">Available</th>
+            <th style="text-align:left;padding:13px 12px;font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:0.07em;color:var(--muted);text-transform:uppercase;font-weight:500;width:150px">Share vacant</th>
+            <th style="text-align:right;padding:13px 12px;font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:0.07em;color:var(--muted);text-transform:uppercase;font-weight:500">Vacant area</th>
+            <th style="text-align:right;padding:13px 18px;font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:0.07em;color:var(--muted);text-transform:uppercase;font-weight:500">Live apps</th>
+          </tr>
+        </thead>
+        <tbody>
+          <sc-for list="{{ lbZones }}" as="z" hint-placeholder-count="14">
+            <tr style="border-top:1px solid var(--line)">
+              <td style="padding:13px 18px;font-weight:600">{{ z.zone }}</td>
+              <td style="padding:13px 12px;text-align:right;font-family:'IBM Plex Mono',monospace;color:var(--muted)">{{ z.parks }}</td>
+              <td style="padding:13px 12px;text-align:right;font-family:'IBM Plex Mono',monospace;color:var(--muted)">{{ z.plots }}</td>
+              <td style="padding:13px 12px;text-align:right;font-family:'IBM Plex Mono',monospace;font-size:16px;color:var(--tide);font-weight:500">{{ z.available }}</td>
+              <td style="padding:13px 12px">
+                <span style="display:block;height:7px;border-radius:999px;background:var(--tint-sky);overflow:hidden">
+                  <span style="display:block;height:7px;width:{{ z.pct }};background:linear-gradient(90deg,var(--cyan-deep),var(--cyan));border-radius:999px"></span>
+                </span>
+                <span style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:var(--muted)">{{ z.pctLabel }}</span>
+              </td>
+              <td style="padding:13px 12px;text-align:right;font-family:'IBM Plex Mono',monospace;color:var(--muted)">{{ z.acres }} ac</td>
+              <td style="padding:13px 18px;text-align:right;font-family:'IBM Plex Mono',monospace;color:var(--muted)">{{ z.applications }}</td>
+            </tr>
+          </sc-for>
+        </tbody>
+      </table>
+    </div>
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:0.05em;margin-top:12px;line-height:1.7">
+      <span style="color:var(--tide)">⌁</span> SOURCE · DIGITAL.APIIC.IN/LANDBANK/AVAILABILITY · READ {{ lb.asOf }}<br>
+      {{ lb.caveat }}
+    </div>
+
+    <!-- districts -->
+    <h3 style="font-family:Sora,sans-serif;font-weight:600;font-size:26px;letter-spacing:-0.025em;margin:44px 0 0">Vacant plots by district</h3>
+    <p style="font-size:16px;color:var(--muted);margin:9px 0 0;max-width:62ch;line-height:1.55">
+      Twenty-five districts, ordered by what is actually free. Each one opens that district's plots on the LandBank portal.
+    </p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:12px;margin-top:22px">
+      <sc-for list="{{ lbDistricts }}" as="d" hint-placeholder-count="25">
+        <a href="{{ d.url }}" target="_blank" rel="noopener"
+           style="background:var(--surface);border:1px solid var(--line);border-left:3px solid {{ d.accent }};border-radius:var(--r-sm);padding:15px 17px;display:flex;align-items:center;gap:12px;color:var(--ink)">
+          <span style="flex:1;min-width:0">
+            <span style="display:block;font-weight:600;font-size:15px;line-height:1.3">{{ d.district }}</span>
+            <span style="display:block;font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);margin-top:3px">{{ d.available }} PLOTS VACANT</span>
+          </span>
+          <i class="ph ph-arrow-up-right" style="font-size:14px;color:var(--muted);flex:none"></i>
+        </a>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- ============================================== GIS — INVESTOR VIEW -->
+  <section id="gis" style="background:linear-gradient(160deg,#08214F 0%,#0A2A6B 60%,#123B86 100%);color:#FFFFFF;margin-top:80px;scroll-margin-top:170px;position:relative;overflow:hidden">
+    <svg viewBox="0 0 1440 520" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;opacity:0.28">
+      <g fill="none" stroke="#2FC7DE" stroke-width="1">
+        <path d="M-40 340 C 300 240, 520 420, 780 300 S 1200 190, 1500 280"></path>
+        <path d="M-40 400 C 320 300, 560 470, 820 360 S 1230 250, 1500 340"></path>
+      </g>
+      <g fill="#2FC7DE" opacity="0.5"><circle cx="300" cy="274" r="3"></circle><circle cx="780" cy="300" r="3"></circle><circle cx="1200" cy="226" r="3"></circle></g>
+    </svg>
+    <div style="position:relative;max-width:1320px;margin:0 auto;padding:64px 40px">
+      <div style="display:flex;flex-wrap:wrap;gap:36px;align-items:flex-end;justify-content:space-between">
+        <div style="flex:1;min-width:300px">
+          <span style="display:inline-flex;align-items:center;gap:9px;border:1px solid rgba(47,199,222,0.42);border-radius:999px;padding:6px 14px;font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:0.09em;color:#2FC7DE;text-transform:uppercase">
+            <i class="ph ph-globe-hemisphere-east"></i>AGILE 2.0 · Government of Andhra Pradesh
+          </span>
+          <h2 style="font-family:Sora,sans-serif;font-weight:700;font-size:40px;letter-spacing:-0.03em;margin:16px 0 0;line-height:1.1">
+            The GIS, read as an investor<br>would read it
+          </h2>
+          <p style="font-size:17.5px;color:#C3D6EF;margin:14px 0 0;max-width:62ch;line-height:1.6">
+            AGILE 2.0 carries every layer APIIC holds — parcels, boundaries, power, water, gas, connectivity.
+            Its layer tree is organised the way a GIS team thinks. Below it is reorganised around the five questions
+            that actually decide a site.
+          </p>
+        </div>
+        <a href="{{ gis.url }}" target="_blank" rel="noopener" style="background:linear-gradient(120deg,#2FC7DE,#0E9CB8);color:#06203F;padding:15px 24px;border-radius:999px;font-weight:600;white-space:nowrap;display:inline-flex;align-items:center;gap:10px">
+          <i class="ph ph-map-trifold"></i>Open AGILE 2.0
+        </a>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px;margin-top:36px">
+        <sc-for list="{{ gisGroups }}" as="g" hint-placeholder-count="5">
+          <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.15);border-radius:var(--r);padding:24px;display:flex;flex-direction:column;gap:13px">
+            <div style="display:flex;align-items:center;gap:12px">
+              <span style="width:40px;height:40px;flex:none;border-radius:var(--r-sm);background:rgba(47,199,222,0.16);display:grid;place-items:center">
+                <i class="ph-duotone {{ g.icon }}" style="font-size:21px;color:#2FC7DE"></i>
+              </span>
+              <div style="font-family:Sora,sans-serif;font-weight:600;font-size:19px;letter-spacing:-0.02em;line-height:1.25">{{ g.group }}</div>
+            </div>
+            <p style="margin:0;font-size:15.5px;color:#DCE8F8;line-height:1.55;font-style:italic">“{{ g.question }}”</p>
+            <div style="border-top:1px solid rgba(255,255,255,0.14);padding-top:12px;display:flex;flex-direction:column;gap:7px">
+              <sc-for list="{{ g.layers }}" as="l" hint-placeholder-count="4">
+                <div style="display:flex;align-items:flex-start;gap:9px;font-size:13.5px;color:#9FB8D8;line-height:1.45">
+                  <i class="ph ph-stack-simple" style="font-size:13px;color:#2FC7DE;flex:none;margin-top:3px"></i>{{ l.text }}
+                </div>
+              </sc-for>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+
+      <div style="margin-top:34px;padding-top:28px;border-top:1px solid rgba(255,255,255,0.14)">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:0.09em;color:#2FC7DE;text-transform:uppercase">Four ways to search the GIS</div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:16px;margin-top:18px">
+          <sc-for list="{{ gisTools }}" as="t" hint-placeholder-count="4">
+            <div style="display:flex;gap:13px;align-items:flex-start">
+              <span style="width:34px;height:34px;flex:none;border-radius:50%;background:rgba(255,255,255,0.1);display:grid;place-items:center"><i class="ph {{ t.icon }}" style="font-size:17px;color:#2FC7DE"></i></span>
+              <span style="flex:1;min-width:0">
+                <span style="display:block;font-weight:600;font-size:15.5px">{{ t.label }}</span>
+                <span style="display:block;font-size:14px;color:#9FB8D8;line-height:1.5;margin-top:3px">{{ t.detail }}</span>
+              </span>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:#7C93A6;letter-spacing:0.05em;margin-top:30px;line-height:1.8">
+        <span style="color:#2FC7DE">⌁</span> LAYER CATALOGUE READ FROM GISVIEWER.APIIC.IN ON {{ gis.asOf }} · OWNER: {{ gis.owner }}<br>
+        THE GIS IS AUTHORITATIVE FOR GEOMETRY. THIS PAGE ONLY EXPLAINS WHAT IT HOLDS.
+      </div>
+    </div>
+  </section>
+
   <section style="max-width:1320px;margin:0 auto;padding:88px 40px 0">
     <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.1em;color:var(--muted);border-bottom:1px solid var(--line);padding-bottom:14px">HOW APIIC LAND WORKS · FOUR PLAIN STEPS</div>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;margin-top:32px">
@@ -88,5 +294,83 @@ a:hover{color:var(--gold)}
 </main>
 
 </x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { sort: 'available' };
+
+  renderVals() {
+    const D = (typeof window !== 'undefined' && window.APIIC_DATA) || {};
+    const lb = D.landbank || {};
+    const gis = D.gis || {};
+    const zones = (lb.zones || []).slice();
+
+    const nf = (n) => Number(n).toLocaleString('en-IN');
+
+    const sortDefs = [
+      { key: 'available', label: 'Most available', icon: 'ph-sort-descending' },
+      { key: 'acres', label: 'Largest vacant area', icon: 'ph-ruler' },
+      { key: 'zone', label: 'A to Z', icon: 'ph-text-aa' }
+    ];
+
+    const sorted = zones.sort((a, b) => {
+      if (this.state.sort === 'zone') return a.zone.localeCompare(b.zone);
+      return b[this.state.sort] - a[this.state.sort];
+    });
+
+    /* Scale the vacancy bar against the busiest zone so the row reads at a glance. */
+    const maxPct = Math.max.apply(null, zones.map(z => z.available / z.plots)) || 1;
+
+    const districts = (lb.districts || []).slice().sort((a, b) => b.available - a.available);
+    const maxDistrict = districts.length ? districts[0].available : 1;
+
+    return {
+      lb: { asOf: lb.asOf || '', portal: lb.portal || '#', caveat: lb.caveat || '' },
+      gis: { url: gis.url || '#', asOf: gis.asOf || '', owner: gis.owner || '' },
+
+      lbStats: (lb.statewide || []).map(s => ({
+        label: s.label, value: s.value, unit: s.unit || '', note: s.note, icon: s.icon
+      })),
+
+      sorts: sortDefs.map(s => {
+        const on = this.state.sort === s.key;
+        return {
+          label: s.label, icon: s.icon, on: String(on),
+          border: on ? 'var(--royal2)' : 'var(--line)',
+          bg: on ? 'var(--tint-sky)' : 'var(--surface)',
+          fg: on ? 'var(--on-tint)' : 'var(--ink)',
+          weight: on ? '600' : '400',
+          pick: () => this.setState({ sort: s.key })
+        };
+      }),
+
+      lbZones: sorted.map(z => {
+        const share = z.available / z.plots;
+        return {
+          zone: z.zone,
+          parks: nf(z.parks), plots: nf(z.plots), available: nf(z.available),
+          acres: z.acres.toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 }),
+          applications: nf(z.applications),
+          pct: Math.round((share / maxPct) * 100) + '%',
+          pctLabel: Math.round(share * 100) + '% OF PLOTS'
+        };
+      }),
+
+      lbDistricts: districts.map(d => ({
+        district: d.district,
+        available: nf(d.available),
+        url: (lb.search || '#') + '?district=' + encodeURIComponent(d.district),
+        accent: d.available >= maxDistrict * 0.5 ? 'var(--tide)'
+              : d.available >= maxDistrict * 0.2 ? 'var(--cyan-deep)' : 'var(--line)'
+      })),
+
+      gisGroups: (gis.groups || []).map(g => ({
+        group: g.group, question: g.question, icon: g.icon,
+        layers: (g.layers || []).map(t => ({ text: t }))
+      })),
+      gisTools: gis.searchTools || []
+    };
+  }
+}
+</script>
 </body>
 </html>

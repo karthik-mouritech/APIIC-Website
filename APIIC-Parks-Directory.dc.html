@@ -3,7 +3,42 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./apiic-data.js"></script>
+<script src="./apiic-core.js"></script>
+<script src="./apiic-search.js"></script>
+<script src="./apiic-assist.js"></script>
+<script src="./apiic-carousel.js"></script>
 <script src="./support.js"></script>
+<!-- APIIC-SEO -->
+<title>Parks Directory — APIIC</title>
+<meta name="description" content="All 550+ parks and estates, filterable by district, sector and availability.">
+<meta name="keywords" content="parks directory list all estates filter district available acres rate">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="author" content="Andhra Pradesh Industrial Infrastructure Corporation">
+<meta name="theme-color" content="#0A2A6B">
+<link rel="canonical" href="https://apiic.in/APIIC-Parks-Directory.dc.html">
+<link rel="icon" type="image/png" href="assets/APIIC-logo.png">
+<link rel="apple-touch-icon" href="assets/APIIC-logo-2x.png">
+<meta name="geo.region" content="IN-AP">
+<meta name="geo.placename" content="Mangalagiri, Guntur District, Andhra Pradesh">
+<meta name="geo.position" content="16.4307;80.5525">
+<meta name="ICBM" content="16.4307, 80.5525">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="APIIC">
+<meta property="og:title" content="Parks Directory — APIIC">
+<meta property="og:description" content="All 550+ parks and estates, filterable by district, sector and availability.">
+<meta property="og:url" content="https://apiic.in/APIIC-Parks-Directory.dc.html">
+<meta property="og:image" content="https://apiic.in/assets/img/apiic-dixon-tirupati.jpg">
+<meta property="og:image:alt" content="Manufacturing facility inside an APIIC industrial estate in Andhra Pradesh">
+<meta property="og:locale" content="en_IN">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@apiicofficial">
+<meta name="twitter:title" content="Parks Directory — APIIC">
+<meta name="twitter:description" content="All 550+ parks and estates, filterable by district, sector and availability.">
+<meta name="twitter:image" content="https://apiic.in/assets/img/apiic-dixon-tirupati.jpg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"GovernmentOrganization","name":"Andhra Pradesh Industrial Infrastructure Corporation Limited","alternateName":"APIIC","url":"https://apiic.in","logo":"https://apiic.in/assets/APIIC-logo-2x.png","slogan":"The Future is Here","foundingDate":"1973-09-26","description":"APIIC acquires, develops and allots industrial land, parks and estate infrastructure across all 26 districts of Andhra Pradesh.","address":{"@type":"PostalAddress","streetAddress":"APIIC Towers, Plot No. 1 (9th, 10th & 11th Floors), IT Park","addressLocality":"Mangalagiri","addressRegion":"Andhra Pradesh","postalCode":"522503","addressCountry":"IN"},"contactPoint":[{"@type":"ContactPoint","telephone":"+91-863-2381850","email":"invest@apiic.in","contactType":"investor relations","areaServed":"IN-AP","availableLanguage":["en","te","hi"]}],"sameAs":["https://www.facebook.com/apiicofficial","https://twitter.com/apiicofficial"],"parentOrganization":{"@type":"GovernmentOrganization","name":"Government of Andhra Pradesh"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Parks Directory — APIIC","description":"All 550+ parks and estates, filterable by district, sector and availability.","url":"https://apiic.in/APIIC-Parks-Directory.dc.html","isPartOf":{"@type":"WebSite","name":"APIIC","url":"https://apiic.in"},"about":{"@type":"GovernmentOrganization","name":"Andhra Pradesh Industrial Infrastructure Corporation Limited"},"inLanguage":"en-IN"}</script>
+<!-- /APIIC-SEO -->
 </head>
 <body>
 <x-dc>
@@ -39,8 +74,8 @@ summary::-webkit-details-marker{display:none}
     </div>
   </div>
 
-  <div class="directory-layout" style="max-width:1320px;margin:0 auto;padding:32px 40px 120px;display:grid;grid-template-columns:280px 1fr;gap:32px;align-items:start">
-    <aside class="directory-filters" aria-label="Filters" style="background:var(--surface);border:1px solid var(--line);border-radius:var(--r-sm)">
+  <div style="max-width:1320px;margin:0 auto;padding:32px 40px 120px;display:grid;grid-template-columns:280px 1fr;gap:32px;align-items:start">
+    <aside aria-label="Filters" style="background:var(--surface);border:1px solid var(--line);border-radius:var(--r-sm);position:sticky;top:128px">
       <div style="padding:16px 18px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between">
         <div><div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.06em;color:var(--muted)">FILTERS</div><div style="font-family:'IBM Plex Mono',monospace;font-size:15px;margin-top:2px">{{ resultLine }}</div></div>
         <button onClick="{{ clearAll }}" style="background:none;border:none;color:var(--indigo);font-family:'Instrument Sans',sans-serif;font-size:14px;cursor:pointer;text-decoration:underline">Clear all</button>
@@ -195,7 +230,7 @@ summary::-webkit-details-marker{display:none}
   </div>
 
   <sc-if value="{{ hasTwo }}" hint-placeholder-val="{{ false }}">
-    <div style="margin-top:40px;background:linear-gradient(120deg,#08214F,#123B86);color:#FFFFFF">
+    <div style="position:fixed;left:0;right:0;bottom:0;z-index:70;background:linear-gradient(120deg,#08214F,#123B86);color:#FFFFFF">
       <div style="max-width:1320px;margin:0 auto;padding:16px 40px;display:flex;align-items:center;gap:20px">
         <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--tide)">⌁ SHORTLIST</span>
         <span style="font-size:17px;font-weight:500">{{ count }} parks selected</span>

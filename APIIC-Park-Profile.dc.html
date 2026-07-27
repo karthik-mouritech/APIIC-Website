@@ -3,7 +3,42 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./apiic-data.js"></script>
+<script src="./apiic-core.js"></script>
+<script src="./apiic-search.js"></script>
+<script src="./apiic-assist.js"></script>
+<script src="./apiic-carousel.js"></script>
 <script src="./support.js"></script>
+<!-- APIIC-SEO -->
+<title>Park Profile — APIIC</title>
+<meta name="description" content="A single park in full: plots, utilities, connectivity, rates and verification dates.">
+<meta name="keywords" content="park profile detail plot utilities water power road rail port rate">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="author" content="Andhra Pradesh Industrial Infrastructure Corporation">
+<meta name="theme-color" content="#0A2A6B">
+<link rel="canonical" href="https://apiic.in/APIIC-Park-Profile.dc.html">
+<link rel="icon" type="image/png" href="assets/APIIC-logo.png">
+<link rel="apple-touch-icon" href="assets/APIIC-logo-2x.png">
+<meta name="geo.region" content="IN-AP">
+<meta name="geo.placename" content="Mangalagiri, Guntur District, Andhra Pradesh">
+<meta name="geo.position" content="16.4307;80.5525">
+<meta name="ICBM" content="16.4307, 80.5525">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="APIIC">
+<meta property="og:title" content="Park Profile — APIIC">
+<meta property="og:description" content="A single park in full: plots, utilities, connectivity, rates and verification dates.">
+<meta property="og:url" content="https://apiic.in/APIIC-Park-Profile.dc.html">
+<meta property="og:image" content="https://apiic.in/assets/img/apiic-dixon-tirupati.jpg">
+<meta property="og:image:alt" content="Manufacturing facility inside an APIIC industrial estate in Andhra Pradesh">
+<meta property="og:locale" content="en_IN">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@apiicofficial">
+<meta name="twitter:title" content="Park Profile — APIIC">
+<meta name="twitter:description" content="A single park in full: plots, utilities, connectivity, rates and verification dates.">
+<meta name="twitter:image" content="https://apiic.in/assets/img/apiic-dixon-tirupati.jpg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"GovernmentOrganization","name":"Andhra Pradesh Industrial Infrastructure Corporation Limited","alternateName":"APIIC","url":"https://apiic.in","logo":"https://apiic.in/assets/APIIC-logo-2x.png","slogan":"The Future is Here","foundingDate":"1973-09-26","description":"APIIC acquires, develops and allots industrial land, parks and estate infrastructure across all 26 districts of Andhra Pradesh.","address":{"@type":"PostalAddress","streetAddress":"APIIC Towers, Plot No. 1 (9th, 10th & 11th Floors), IT Park","addressLocality":"Mangalagiri","addressRegion":"Andhra Pradesh","postalCode":"522503","addressCountry":"IN"},"contactPoint":[{"@type":"ContactPoint","telephone":"+91-863-2381850","email":"invest@apiic.in","contactType":"investor relations","areaServed":"IN-AP","availableLanguage":["en","te","hi"]}],"sameAs":["https://www.facebook.com/apiicofficial","https://twitter.com/apiicofficial"],"parentOrganization":{"@type":"GovernmentOrganization","name":"Government of Andhra Pradesh"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Park Profile — APIIC","description":"A single park in full: plots, utilities, connectivity, rates and verification dates.","url":"https://apiic.in/APIIC-Park-Profile.dc.html","isPartOf":{"@type":"WebSite","name":"APIIC","url":"https://apiic.in"},"about":{"@type":"GovernmentOrganization","name":"Andhra Pradesh Industrial Infrastructure Corporation Limited"},"inLanguage":"en-IN"}</script>
+<!-- /APIIC-SEO -->
 </head>
 <body>
 <x-dc>
@@ -22,7 +57,7 @@ a:hover{color:var(--gold)}
 <main style="min-height:100vh">
   <dc-import name="APIICNav" hint-size="100%,112px"></dc-import>
 
-  <div style="background:var(--surface);border-bottom:1px solid var(--line)">
+  <div style="position:sticky;top:112px;z-index:45;background:var(--surface);border-bottom:1px solid var(--line)">
     <div style="max-width:1320px;margin:0 auto;padding:16px 40px;display:flex;align-items:center;gap:24px">
       <div>
         <div style="display:flex;align-items:center;gap:12px">
@@ -295,7 +330,7 @@ a:hover{color:var(--gold)}
   <dc-import name="APIICFooter" hint-size="100%,420px"></dc-import>
 
   <sc-if value="{{ copilotClosed }}" hint-placeholder-val="{{ true }}">
-    <button onClick="{{ openCopilot }}" style="margin-top:32px;background:linear-gradient(120deg,#08214F,#123B86);color:#FFFFFF;border:1px solid rgba(127,178,255,0.28);border-radius:var(--r-sm);padding:14px 20px;display:flex;align-items:center;gap:10px;font-family:'Instrument Sans',sans-serif;font-size:16px;cursor:pointer;box-shadow:0 18px 32px -22px rgba(11,31,51,0.8)">
+    <button onClick="{{ openCopilot }}" style="position:fixed;right:24px;bottom:24px;z-index:80;background:linear-gradient(120deg,#08214F,#123B86);color:#FFFFFF;border:1px solid rgba(127,178,255,0.28);border-radius:var(--r-sm);padding:14px 20px;display:flex;align-items:center;gap:10px;font-family:'Instrument Sans',sans-serif;font-size:16px;cursor:pointer;box-shadow:0 18px 32px -22px rgba(11,31,51,0.8)">
       <i class="ph ph-chat-circle-text" style="font-size:20px;color:var(--tide)"></i>Ask about investing in AP
     </button>
   </sc-if>

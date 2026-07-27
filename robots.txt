@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /assets/thumbnails/
+
+# APIIC — Andhra Pradesh Industrial Infrastructure Corporation
+Sitemap: https://apiic.in/sitemap.xml
