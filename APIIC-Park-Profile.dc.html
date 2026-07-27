@@ -57,7 +57,7 @@ a:hover{color:var(--gold)}
 <main style="min-height:100vh">
   <dc-import name="APIICNav" hint-size="100%,112px"></dc-import>
 
-  <div style="background:var(--surface);border-bottom:1px solid var(--line)">
+  <div style="position:sticky;top:112px;z-index:45;background:var(--surface);border-bottom:1px solid var(--line)">
     <div style="max-width:1320px;margin:0 auto;padding:16px 40px;display:flex;align-items:center;gap:24px">
       <div>
         <div style="display:flex;align-items:center;gap:12px">
@@ -330,7 +330,7 @@ a:hover{color:var(--gold)}
   <dc-import name="APIICFooter" hint-size="100%,420px"></dc-import>
 
   <sc-if value="{{ copilotClosed }}" hint-placeholder-val="{{ true }}">
-    <button onClick="{{ openCopilot }}" style="margin-top:32px;background:linear-gradient(120deg,#08214F,#123B86);color:#FFFFFF;border:1px solid rgba(127,178,255,0.28);border-radius:var(--r-sm);padding:14px 20px;display:flex;align-items:center;gap:10px;font-family:'Instrument Sans',sans-serif;font-size:16px;cursor:pointer;box-shadow:0 18px 32px -22px rgba(11,31,51,0.8)">
+    <button onClick="{{ openCopilot }}" style="position:fixed;right:24px;bottom:24px;z-index:80;background:linear-gradient(120deg,#08214F,#123B86);color:#FFFFFF;border:1px solid rgba(127,178,255,0.28);border-radius:var(--r-sm);padding:14px 20px;display:flex;align-items:center;gap:10px;font-family:'Instrument Sans',sans-serif;font-size:16px;cursor:pointer;box-shadow:0 18px 32px -22px rgba(11,31,51,0.8)">
       <i class="ph ph-chat-circle-text" style="font-size:20px;color:var(--tide)"></i>Ask about investing in AP
     </button>
   </sc-if>
