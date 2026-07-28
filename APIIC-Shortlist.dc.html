@@ -15,7 +15,7 @@
 <meta name="keywords" content="shortlist saved favourites bookmark brief">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <meta name="author" content="Andhra Pradesh Industrial Infrastructure Corporation">
-<meta name="theme-color" content="#0A2A6B">
+<meta name="theme-color" content="#245484">
 <link rel="canonical" href="https://apiic.in/APIIC-Shortlist.dc.html">
 <link rel="icon" type="image/png" href="assets/APIIC-logo.png">
 <link rel="apple-touch-icon" href="assets/APIIC-logo-2x.png">
@@ -45,12 +45,13 @@
 <helmet>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/duotone/style.css">
 <style>
-:root{--ink:#08214F;--indigo:#123B86;--royal:#0A2A6B;--royal2:#14458F;--cyan:#2FC7DE;--cyan-deep:#0E9CB8;--cyan-soft:#E6F8FB;--tint-lav:#EEF0FF;--tint-mint:#E8F7F0;--tint-peach:#FDF1E7;--tint-sky:#E9F1FE;--tint-violet:#F2ECFE;--tint-rose:#FDECF2;--r:14px;--r-sm:10px;--shadow:0 14px 34px -20px rgba(8,33,79,0.30);--shadow-lg:0 26px 60px -28px rgba(8,33,79,0.42);--gold:#C9962C;--gold-soft:#F3E4C0;--tide:#0F8A80;--paper:#F6F7F5;--surface:#FFFFFF;--line:#D8DEE3;--muted:#5A6B7A}
+:root{--ink:#16385C;--indigo:#245484;--royal:#245484;--royal2:#2E6399;--cyan:#D8783C;--cyan-deep:#B75F28;--cyan-soft:#FBEEE4;--tint-lav:#EDF2F8;--tint-mint:#E6F5EE;--tint-peach:#FBEEE4;--tint-sky:#EDF2F8;--tint-violet:#EDF2F8;--tint-rose:#FBEEE4;--r:8px;--on-tint:#245484;--r-sm:6px;--shadow:0 10px 26px -18px rgba(22,56,92,0.24);--shadow-lg:0 30px 60px -40px rgba(22,56,92,0.38);--gold:#D8783C;--gold-soft:#F5DCC8;--tide:#009C54;--paper:#F7F9FB;--surface:#Ffffff;--line:#DDE4EC;--muted:#5A6B7A}
 *{box-sizing:border-box}
 body{margin:0;background:var(--paper);color:var(--ink);font-family:'Instrument Sans',system-ui,sans-serif;font-size:18px;line-height:1.6;-webkit-font-smoothing:antialiased}
 a{color:var(--indigo);text-decoration:none}
-a:hover{color:var(--gold)}
+a:hover{color:var(--cyan-deep)}
 :focus-visible{outline:2px solid var(--tide);outline-offset:2px}
 input[type=checkbox]{accent-color:#163A5F;width:16px;height:16px}
 </style>
@@ -58,41 +59,43 @@ input[type=checkbox]{accent-color:#163A5F;width:16px;height:16px}
 <main style="min-height:100vh">
   <dc-import name="APIICNav" hint-size="100%,112px"></dc-import>
 
-  <div style="background:linear-gradient(105deg,#08214F 0%,#0A2A6B 55%,#123B86 100%);color:#FFFFFF;position:relative;overflow:hidden">
-    <div style="max-width:1320px;margin:0 auto;padding:22px 40px 0;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.08em;color:#7C93A6"><a href="APIIC-Home.dc.html" style="color:#7C93A6">HOME</a> / <a href="APIIC-Land-Parks-Hub.dc.html" style="color:#7C93A6">FIND LAND &amp; PARKS</a> / MY SHORTLIST</div>
-    <div style="max-width:1320px;margin:0 auto;padding:28px 40px 44px;display:flex;align-items:flex-end;justify-content:space-between;gap:40px;flex-wrap:wrap">
+  <div style="background:#245484;color:#FFFFFF;position:relative;overflow:hidden">
+    <img src="assets/img/apiic-park-tenali.jpg" alt="Plotted industrial land in an APIIC park near Tenali" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 55%">
+    <div aria-hidden="true" style="position:absolute;inset:0;background:linear-gradient(96deg,rgba(8,26,58,0.96) 0%,rgba(9,32,70,0.92) 52%,rgba(22,56,92,0.6) 100%)"></div>
+    <div style="position:relative;max-width:1280px;margin:0 auto;padding:26px 40px 0;display:flex;align-items:center;gap:12px;flex-wrap:wrap;font-size:13px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#B9CBE4"><span style="width:34px;height:1px;background:#D8783C;flex:none"></span><a href="APIIC-Home.dc.html" style="color:#B9CBE4">HOME</a> / <a href="APIIC-Land-Parks-Hub.dc.html" style="color:#B9CBE4">Find land &amp; parks</a> / My shortlist</div>
+    <div style="position:relative;max-width:1280px;margin:0 auto;padding:30px 40px 64px;display:flex;align-items:flex-end;justify-content:space-between;gap:40px;flex-wrap:wrap">
       <div>
-        <h1 style="font-family:Sora,sans-serif;font-weight:700;font-size:44px;letter-spacing:-0.03em;margin:0">My shortlist</h1>
-        <p style="font-size:19px;color:#C6D2DC;margin:12px 0 0;max-width:60ch">Three parks, held in this browser only. No login, no account, no personal data — and it survives a refresh so you can come back to it.</p>
+        <h1 style="font-family:Sora,sans-serif;font-weight:700;font-size:52px;line-height:1.06;letter-spacing:-0.035em;margin:0">My shortlist</h1>
+        <p style="font-size:19px;color:#CBD9EC;margin:12px 0 0;max-width:60ch">Three parks, held in this browser only. No login, no account, no personal data — and it survives a refresh so you can come back to it.</p>
       </div>
       <sc-if value="{{ isBrief }}" hint-placeholder-val="{{ false }}"><button onClick="{{ toList }}" style="border:1px solid #7F94A6;background:transparent;color:#FFFFFF;padding:12px 18px;border-radius:var(--r-sm);font-family:'Instrument Sans',sans-serif;font-size:16px;cursor:pointer;white-space:nowrap">← Back to the shortlist</button></sc-if>
     </div>
   </div>
 
   <sc-if value="{{ isList }}" hint-placeholder-val="{{ true }}">
-    <div style="max-width:1320px;margin:0 auto;padding:36px 40px 120px">
+    <div style="max-width:1280px;margin:0 auto;padding:36px 40px 120px">
       <div style="display:flex;flex-wrap:wrap;align-items:center;gap:16px;padding-bottom:18px;border-bottom:1px solid var(--line)">
-        <span style="font-family:'IBM Plex Mono',monospace;font-size:13px">{{ summaryLine }}</span>
+        <span style="font-family:'Instrument Sans',sans-serif;font-size:13px">{{ summaryLine }}</span>
         <div style="flex:1"></div>
-        <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted)">STORED LOCALLY · CLEARED WHEN YOU CLEAR YOUR BROWSER</span>
+        <span style="font-family:'Instrument Sans',sans-serif;font-size:11px;color:var(--muted)">Stored locally · cleared when you clear your browser</span>
       </div>
 
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;margin-top:28px">
         <sc-for list="{{ parks }}" as="park" hint-placeholder-count="3">
-          <div style="background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:22px;box-shadow:0 6px 18px -14px rgba(8,33,79,0.3);display:flex;flex-direction:column;gap:13px">
+          <div style="background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:22px;box-shadow:0 6px 18px -14px rgba(22,56,92,0.3);display:flex;flex-direction:column;gap:13px">
             <div style="display:flex;justify-content:space-between;gap:10px;align-items:flex-start">
-              <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted)">⌁ {{ park.id }}</span>
+              <span style="font-family:'Instrument Sans',sans-serif;font-size:12px;color:var(--muted)">{{ park.id }}</span>
               <button onClick="{{ park.remove }}" aria-label="Remove from shortlist" style="background:none;border:none;color:var(--muted);font-size:18px;cursor:pointer;line-height:1;padding:0 2px" style-hover="color:#B3261E">×</button>
             </div>
             <a href="APIIC-Park-Profile.dc.html" style="font-family:Sora,sans-serif;font-weight:600;font-size:22px;letter-spacing:-0.02em;color:var(--ink);line-height:1.2">{{ park.name }}</a>
             <div style="font-size:14px;color:var(--muted)">{{ park.sub }}</div>
             <div style="display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
-              <div style="padding:11px 8px 11px 0;border-right:1px solid var(--line)"><div style="font-size:10px;text-transform:uppercase;color:var(--muted)">Avail</div><div style="font-family:'IBM Plex Mono',monospace;font-size:15px">{{ park.area }}</div></div>
-              <div style="padding:11px 8px;border-right:1px solid var(--line)"><div style="font-size:10px;text-transform:uppercase;color:var(--muted)">Rate</div><div style="font-family:'IBM Plex Mono',monospace;font-size:15px">{{ park.rate }}</div></div>
-              <div style="padding:11px 0 11px 8px"><div style="font-size:10px;text-transform:uppercase;color:var(--muted)">Port</div><div style="font-family:'IBM Plex Mono',monospace;font-size:15px">{{ park.port }}</div></div>
+              <div style="padding:11px 8px 11px 0;border-right:1px solid var(--line)"><div style="font-size:10px;text-transform:uppercase;color:var(--muted)">Avail</div><div style="font-family:'Instrument Sans',sans-serif;font-size:15px">{{ park.area }}</div></div>
+              <div style="padding:11px 8px;border-right:1px solid var(--line)"><div style="font-size:10px;text-transform:uppercase;color:var(--muted)">Rate</div><div style="font-family:'Instrument Sans',sans-serif;font-size:15px">{{ park.rate }}</div></div>
+              <div style="padding:11px 0 11px 8px"><div style="font-size:10px;text-transform:uppercase;color:var(--muted)">Port</div><div style="font-family:'Instrument Sans',sans-serif;font-size:15px">{{ park.port }}</div></div>
             </div>
             <div style="font-size:14px;color:var(--muted)">{{ park.provenance }}</div>
-            <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted)"><span style="color:var(--tide)">⌁</span> VERIFIED {{ park.verified }}</div>
+            <div style="font-family:'Instrument Sans',sans-serif;font-size:11px;color:var(--muted)">Verified {{ park.verified }}</div>
           </div>
         </sc-for>
         <sc-if value="{{ hasFreeSlot }}" hint-placeholder-val="{{ true }}">
@@ -109,8 +112,8 @@ input[type=checkbox]{accent-color:#163A5F;width:16px;height:16px}
           <div style="font-family:Sora,sans-serif;font-weight:600;font-size:26px;letter-spacing:-0.02em;margin-top:14px">Your shortlist is empty</div>
           <p style="font-size:17px;color:var(--muted);margin:8px auto 0;max-width:52ch">Add parks from the finder or the directory and they will collect here — no login, and they survive a refresh.</p>
           <div style="display:flex;justify-content:center;flex-wrap:wrap;gap:12px;margin-top:20px">
-            <a href="APIIC-Park-Finder.dc.html" style="background:linear-gradient(120deg,#0A2A6B,#14458F);color:#FFFFFF;padding:14px 22px;border-radius:999px;font-weight:600;box-shadow:var(--shadow)">Answer five questions</a>
-            <a href="APIIC-Parks-Directory.dc.html" style="border:1px solid var(--royal);color:var(--royal);padding:12px 20px;border-radius:999px;font-weight:500">Browse all 104 parks</a>
+            <a href="APIIC-Park-Finder.dc.html" style="background:#245484;color:#FFFFFF;padding:14px 22px;border-radius:6px;font-weight:600;box-shadow:var(--shadow)">Answer five questions</a>
+            <a href="APIIC-Parks-Directory.dc.html" style="border:1px solid var(--royal);color:var(--royal);padding:12px 20px;border-radius:6px;font-weight:500">Browse all 104 parks</a>
           </div>
         </div>
       </sc-if>
@@ -121,7 +124,7 @@ input[type=checkbox]{accent-color:#163A5F;width:16px;height:16px}
           <a href="APIIC-Compare-Parks.dc.html" style="border:1px solid var(--line);padding:20px;display:flex;flex-direction:column;gap:8px;color:var(--ink)" style-hover="background:var(--paper);color:var(--ink)"><i class="ph ph-columns" style="font-size:22px;color:var(--indigo)"></i><span style="font-weight:500;font-size:17px">Compare side by side</span><span style="font-size:15px;color:var(--muted)">21 fields, same order, three honest cell states.</span></a>
           <button onClick="{{ toBrief }}" style="border:1px solid var(--gold);background:var(--gold-soft);padding:20px;display:flex;flex-direction:column;gap:8px;text-align:left;cursor:pointer;font-family:'Instrument Sans',sans-serif;color:#3A2C08"><i class="ph ph-file-text" style="font-size:22px;color:#6B4E10"></i><span style="font-weight:600;font-size:17px">Generate the investment brief</span><span style="font-size:15px">A dated PDF of your shortlist, board-ready.</span></button>
           <a href="APIIC-Talk-To-Expert.dc.html" style="border:1px solid var(--line);padding:20px;display:flex;flex-direction:column;gap:8px;color:var(--ink)" style-hover="background:var(--paper);color:var(--ink)"><i class="ph ph-chat-circle-text" style="font-size:22px;color:var(--indigo)"></i><span style="font-weight:500;font-size:17px">Enquire about all three</span><span style="font-size:15px;color:var(--muted)">The enquiry carries the shortlist as context.</span></a>
-          <a href="APIIC-Prototype-Scope.dc.html#external" style="border:1px solid var(--line);padding:20px;display:flex;flex-direction:column;gap:8px;color:var(--ink)" style-hover="background:var(--paper);color:var(--ink)"><i class="ph ph-globe-hemisphere-east" style="font-size:22px;color:var(--indigo)"></i><span style="font-weight:500;font-size:17px">Open all three in GIS ↗</span><span style="font-size:15px;color:var(--muted)">Plot-level detail in AGILE 2.0.</span></a>
+          <a href="APIIC-Prototype-Scope.dc.html#external" style="border:1px solid var(--line);padding:20px;display:flex;flex-direction:column;gap:8px;color:var(--ink)" style-hover="background:var(--paper);color:var(--ink)"><i class="ph ph-globe-hemisphere-east" style="font-size:22px;color:var(--indigo)"></i><span style="font-weight:500;font-size:17px">Open all three in GIS ↗</span><span style="font-size:15px;color:var(--muted)">Plot-level detail in Agile 2.0.</span></a>
         </div>
       </div>
       <p style="font-size:14px;color:var(--muted);margin-top:24px">The shortlist reserves nothing. Allotment is governed by the APIIC Industrial Parks Allotment Regulations. Figures are illustrative in this prototype.</p>
@@ -131,46 +134,46 @@ input[type=checkbox]{accent-color:#163A5F;width:16px;height:16px}
   <sc-if value="{{ isBrief }}" hint-placeholder-val="{{ false }}">
     <div style="background:#E4E8EA;padding:44px 40px 120px">
       <div style="max-width:920px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px;padding-bottom:20px">
-        <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.08em;color:var(--muted)">INVESTMENT BRIEF · PREVIEW · GENERATED FROM GOVERNED CONTENT, NEVER MAINTAINED SEPARATELY</span>
-        <div style="display:flex;gap:12px"><button style="background:linear-gradient(120deg,#0A2A6B,#14458F);color:#FFFFFF;border:none;padding:13px 22px;border-radius:999px;box-shadow:var(--shadow);font-family:'Instrument Sans',sans-serif;font-size:16px;font-weight:600;cursor:pointer">Download PDF</button><button onClick="{{ toList }}" style="border:1px solid var(--indigo);background:var(--surface);color:var(--indigo);padding:11px 18px;border-radius:var(--r-sm);font-family:'Instrument Sans',sans-serif;font-size:16px;cursor:pointer">Back</button></div>
+        <span style="font-family:'Instrument Sans',sans-serif;font-size:11px;letter-spacing:0.08em;color:var(--muted)">Investment brief · preview · generated from governed content, never maintained separately</span>
+        <div style="display:flex;gap:12px"><button style="background:#245484;color:#FFFFFF;border:none;padding:13px 22px;border-radius:6px;box-shadow:var(--shadow);font-family:'Instrument Sans',sans-serif;font-size:16px;font-weight:600;cursor:pointer">Download PDF</button><button onClick="{{ toList }}" style="border:1px solid var(--indigo);background:var(--surface);color:var(--indigo);padding:11px 18px;border-radius:var(--r-sm);font-family:'Instrument Sans',sans-serif;font-size:16px;cursor:pointer">Back</button></div>
       </div>
       <div style="max-width:920px;margin:0 auto;background:#FFFFFF;box-shadow:0 30px 60px -30px rgba(11,31,51,0.5);padding:48px 52px">
         <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:24px;border-bottom:2px solid var(--ink);padding-bottom:18px">
           <div style="display:flex;align-items:center;gap:12px">
             <span style="width:38px;height:38px;border:1px solid var(--ink);display:grid;place-items:center;font-family:Sora,sans-serif;font-weight:700;font-size:15px">AP</span>
-            <div><div style="font-family:Sora,sans-serif;font-weight:700;font-size:19px;letter-spacing:-0.02em">Investment brief</div><div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--muted)">ANDHRA PRADESH INDUSTRIAL INFRASTRUCTURE CORPORATION</div></div>
+            <div><div style="font-family:Sora,sans-serif;font-weight:700;font-size:19px;letter-spacing:-0.02em">Investment brief</div><div style="font-family:'Instrument Sans',sans-serif;font-size:10px;color:var(--muted)">Andhra pradesh industrial infrastructure corporation</div></div>
           </div>
-          <div style="text-align:right;font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--muted);line-height:1.8">GENERATED 25 JUL 2026 09:58 IST<br>REF ⌁ BRF-2026-002741<br>PREPARED FOR: MERIDIAN FOODS PVT LTD<br>REQUIREMENT: 26 AC · FOOD PROCESSING · CETP</div>
+          <div style="text-align:right;font-family:'Instrument Sans',sans-serif;font-size:10px;color:var(--muted);line-height:1.8">Generated 25 Jul 2026 09:58 ist<br>Ref brf-2026-002741<br>Prepared for: Meridian foods pvt ltd<br>Requirement: 26 ac · Food processing · CETP</div>
         </div>
 
         <h2 style="font-family:Sora,sans-serif;font-weight:600;font-size:24px;letter-spacing:-0.02em;margin:24px 0 0">Three shortlisted parks in Andhra Pradesh</h2>
         <p style="font-size:13px;line-height:1.6;margin:8px 0 0;color:#3A4A57;max-width:88ch">Prepared from your shortlist on the APIIC website. Every figure below carries the date it was last verified and the function that owns it. Where APIIC does not publish a field, this brief says so rather than leaving it blank.</p>
 
         <table style="width:100%;border-collapse:collapse;font-size:11px;margin-top:20px">
-          <thead><tr><th style="text-align:left;padding:7px 8px;border-bottom:1px solid var(--ink);font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:0.06em;color:var(--muted);font-weight:400">ATTRIBUTE</th><th style="text-align:left;padding:7px 8px;border-bottom:1px solid var(--ink)">KRI-019 Mallavalli</th><th style="text-align:left;padding:7px 8px;border-bottom:1px solid var(--ink)">GNT-032 Thullur</th><th style="text-align:left;padding:7px 8px;border-bottom:1px solid var(--ink)">KRI-041 Gannavaram</th><th style="text-align:left;padding:7px 8px;border-bottom:1px solid var(--ink);font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:0.06em;color:var(--muted);font-weight:400">SOURCE · AS OF</th></tr></thead>
+          <thead><tr><th style="text-align:left;padding:7px 8px;border-bottom:1px solid var(--ink);font-family:'Instrument Sans',sans-serif;font-size:9px;letter-spacing:0.06em;color:var(--muted);font-weight:400">Attribute</th><th style="text-align:left;padding:7px 8px;border-bottom:1px solid var(--ink)">KRI-019 Mallavalli</th><th style="text-align:left;padding:7px 8px;border-bottom:1px solid var(--ink)">GNT-032 Thullur</th><th style="text-align:left;padding:7px 8px;border-bottom:1px solid var(--ink)">KRI-041 Gannavaram</th><th style="text-align:left;padding:7px 8px;border-bottom:1px solid var(--ink);font-family:'Instrument Sans',sans-serif;font-size:9px;letter-spacing:0.06em;color:var(--muted);font-weight:400">Source · as of</th></tr></thead>
           <tbody>
-            <tr><td style="padding:6px 8px;border-bottom:1px solid var(--line);color:var(--muted)">District · type</td><td style="padding:6px 8px;border-bottom:1px solid var(--line)">Krishna · Industrial</td><td style="padding:6px 8px;border-bottom:1px solid var(--line)">Guntur · Theme</td><td style="padding:6px 8px;border-bottom:1px solid var(--line)">Krishna · Theme</td><td style="padding:6px 8px;border-bottom:1px solid var(--line);font-family:'IBM Plex Mono',monospace;font-size:9px;color:var(--muted)">ESTATE REGISTER · 21 JUL 26</td></tr>
-            <tr><td style="padding:6px 8px;border-bottom:1px solid var(--line);color:var(--muted)">Available area</td><td style="padding:6px 8px;border-bottom:1px solid var(--line);font-family:'IBM Plex Mono',monospace">42.6 ac</td><td style="padding:6px 8px;border-bottom:1px solid var(--line);font-family:'IBM Plex Mono',monospace">31.4 ac</td><td style="padding:6px 8px;border-bottom:1px solid var(--line);font-family:'IBM Plex Mono',monospace">22.0 ac</td><td style="padding:6px 8px;border-bottom:1px solid var(--line);font-family:'IBM Plex Mono',monospace;font-size:9px;color:var(--muted)">ASSET MGMT · 24/23/19 JUL 26</td></tr>
-            <tr><td style="padding:6px 8px;border-bottom:1px solid var(--line);color:var(--muted)">Indicative rate</td><td style="padding:6px 8px;border-bottom:1px solid var(--line);font-family:'IBM Plex Mono',monospace">₹ 68.5 L/ac</td><td style="padding:6px 8px;border-bottom:1px solid var(--line);font-family:'IBM Plex Mono',monospace">₹ 74.0 L/ac</td><td style="padding:6px 8px;border-bottom:1px solid var(--line);font-family:'IBM Plex Mono',monospace">₹ 58.0 L/ac</td><td style="padding:6px 8px;border-bottom:1px solid var(--line);font-family:'IBM Plex Mono',monospace;font-size:9px;color:var(--muted)">RATE ORDER 214/2026 · 04 JUL 26</td></tr>
-            <tr><td style="padding:6px 8px;border-bottom:1px solid var(--line);color:var(--muted)">Indicative land cost, 26 ac</td><td style="padding:6px 8px;border-bottom:1px solid var(--line);font-family:'IBM Plex Mono',monospace">₹ 17.8 Cr</td><td style="padding:6px 8px;border-bottom:1px solid var(--line);font-family:'IBM Plex Mono',monospace">₹ 19.2 Cr</td><td style="padding:6px 8px;border-bottom:1px solid var(--line);font-family:'IBM Plex Mono',monospace">₹ 15.1 Cr</td><td style="padding:6px 8px;border-bottom:1px solid var(--line);font-family:'IBM Plex Mono',monospace;font-size:9px;color:var(--muted)">COMPUTED · BEFORE REBATES &amp; CHARGES</td></tr>
-            <tr><td style="padding:6px 8px;border-bottom:1px solid var(--line);color:var(--muted)">Power</td><td style="padding:6px 8px;border-bottom:1px solid var(--line)">33/11 kV · 2×8 MVA</td><td style="padding:6px 8px;border-bottom:1px solid var(--line)">33/11 kV · 1×8 MVA</td><td style="padding:6px 8px;border-bottom:1px solid var(--line);font-style:italic;color:var(--muted)">Not published</td><td style="padding:6px 8px;border-bottom:1px solid var(--line);font-family:'IBM Plex Mono',monospace;font-size:9px;color:var(--muted)">ENGINEERING · 18 JUL 26</td></tr>
-            <tr><td style="padding:6px 8px;border-bottom:1px solid var(--line);color:var(--muted)">CETP capacity / load</td><td style="padding:6px 8px;border-bottom:1px solid var(--line)">4.2 MLD · 61%</td><td style="padding:6px 8px;border-bottom:1px solid var(--line)">2.0 MLD · 86%</td><td style="padding:6px 8px;border-bottom:1px solid var(--line);font-style:italic;color:var(--muted)">Not published</td><td style="padding:6px 8px;border-bottom:1px solid var(--line);font-family:'IBM Plex Mono',monospace;font-size:9px;color:var(--muted)">ENVIRONMENT CELL · 21 JUL 26</td></tr>
-            <tr><td style="padding:6px 8px;border-bottom:1px solid var(--line);color:var(--muted)">Port / airport / rail</td><td style="padding:6px 8px;border-bottom:1px solid var(--line);font-family:'IBM Plex Mono',monospace">42 / 64 / 18 km</td><td style="padding:6px 8px;border-bottom:1px solid var(--line);font-family:'IBM Plex Mono',monospace">58 / 38 / 6 km</td><td style="padding:6px 8px;border-bottom:1px solid var(--line);font-family:'IBM Plex Mono',monospace">74 / 9 / 21 km</td><td style="padding:6px 8px;border-bottom:1px solid var(--line);font-family:'IBM Plex Mono',monospace;font-size:9px;color:var(--muted)">NHAI V2026.1 · 12 JUL 26</td></tr>
-            <tr><td style="padding:6px 8px;border-bottom:1px solid var(--line);color:var(--muted)">Green estate</td><td style="padding:6px 8px;border-bottom:1px solid var(--line)">38% RE · 42% reuse</td><td style="padding:6px 8px;border-bottom:1px solid var(--line)">26% RE · 31% reuse</td><td style="padding:6px 8px;border-bottom:1px solid var(--line);font-style:italic;color:var(--muted)">Not published</td><td style="padding:6px 8px;border-bottom:1px solid var(--line);font-family:'IBM Plex Mono',monospace;font-size:9px;color:var(--muted)">FEEDER / CETP LOGS · 30 JUN 26</td></tr>
-            <tr><td style="padding:6px 8px;border-bottom:1px solid var(--line);color:var(--muted)">Resilience bands</td><td style="padding:6px 8px;border-bottom:1px solid var(--line)">Flood B · cyclone C</td><td style="padding:6px 8px;border-bottom:1px solid var(--line)">Flood B · cyclone C</td><td style="padding:6px 8px;border-bottom:1px solid var(--line)">Flood A · cyclone B</td><td style="padding:6px 8px;border-bottom:1px solid var(--line);font-family:'IBM Plex Mono',monospace;font-size:9px;color:var(--muted)">APSDMA ATLAS 2025 · 04 JUL 26</td></tr>
-            <tr><td style="padding:6px 8px;color:var(--muted)">Responsible officer</td><td style="padding:6px 8px;font-family:'IBM Plex Mono',monospace;font-size:10px">zm.krishna@apiic.in</td><td style="padding:6px 8px;font-family:'IBM Plex Mono',monospace;font-size:10px">zm.guntur@apiic.in</td><td style="padding:6px 8px;font-family:'IBM Plex Mono',monospace;font-size:10px">zm.krishna@apiic.in</td><td style="padding:6px 8px;font-family:'IBM Plex Mono',monospace;font-size:9px;color:var(--muted)">CONTACT DIRECTORY · 18 JUL 26</td></tr>
+            <tr><td style="padding:6px 8px;border-bottom:1px solid var(--line);color:var(--muted)">District · type</td><td style="padding:6px 8px;border-bottom:1px solid var(--line)">Krishna · Industrial</td><td style="padding:6px 8px;border-bottom:1px solid var(--line)">Guntur · Theme</td><td style="padding:6px 8px;border-bottom:1px solid var(--line)">Krishna · Theme</td><td style="padding:6px 8px;border-bottom:1px solid var(--line);font-family:'Instrument Sans',sans-serif;font-size:9px;color:var(--muted)">Estate register · 21 jul 26</td></tr>
+            <tr><td style="padding:6px 8px;border-bottom:1px solid var(--line);color:var(--muted)">Available area</td><td style="padding:6px 8px;border-bottom:1px solid var(--line);font-family:'Instrument Sans',sans-serif">42.6 ac</td><td style="padding:6px 8px;border-bottom:1px solid var(--line);font-family:'Instrument Sans',sans-serif">31.4 ac</td><td style="padding:6px 8px;border-bottom:1px solid var(--line);font-family:'Instrument Sans',sans-serif">22.0 ac</td><td style="padding:6px 8px;border-bottom:1px solid var(--line);font-family:'Instrument Sans',sans-serif;font-size:9px;color:var(--muted)">Asset mgmt · 24/23/19 jul 26</td></tr>
+            <tr><td style="padding:6px 8px;border-bottom:1px solid var(--line);color:var(--muted)">Indicative rate</td><td style="padding:6px 8px;border-bottom:1px solid var(--line);font-family:'Instrument Sans',sans-serif">₹ 68.5 L/ac</td><td style="padding:6px 8px;border-bottom:1px solid var(--line);font-family:'Instrument Sans',sans-serif">₹ 74.0 L/ac</td><td style="padding:6px 8px;border-bottom:1px solid var(--line);font-family:'Instrument Sans',sans-serif">₹ 58.0 L/ac</td><td style="padding:6px 8px;border-bottom:1px solid var(--line);font-family:'Instrument Sans',sans-serif;font-size:9px;color:var(--muted)">Rate order 214/2026 · 04 jul 26</td></tr>
+            <tr><td style="padding:6px 8px;border-bottom:1px solid var(--line);color:var(--muted)">Indicative land cost, 26 ac</td><td style="padding:6px 8px;border-bottom:1px solid var(--line);font-family:'Instrument Sans',sans-serif">₹ 17.8 Cr</td><td style="padding:6px 8px;border-bottom:1px solid var(--line);font-family:'Instrument Sans',sans-serif">₹ 19.2 Cr</td><td style="padding:6px 8px;border-bottom:1px solid var(--line);font-family:'Instrument Sans',sans-serif">₹ 15.1 Cr</td><td style="padding:6px 8px;border-bottom:1px solid var(--line);font-family:'Instrument Sans',sans-serif;font-size:9px;color:var(--muted)">Computed · Before rebates &amp; charges</td></tr>
+            <tr><td style="padding:6px 8px;border-bottom:1px solid var(--line);color:var(--muted)">Power</td><td style="padding:6px 8px;border-bottom:1px solid var(--line)">33/11 kV · 2×8 MVA</td><td style="padding:6px 8px;border-bottom:1px solid var(--line)">33/11 kV · 1×8 MVA</td><td style="padding:6px 8px;border-bottom:1px solid var(--line);font-style:italic;color:var(--muted)">Not published</td><td style="padding:6px 8px;border-bottom:1px solid var(--line);font-family:'Instrument Sans',sans-serif;font-size:9px;color:var(--muted)">Engineering · 18 jul 26</td></tr>
+            <tr><td style="padding:6px 8px;border-bottom:1px solid var(--line);color:var(--muted)">CETP capacity / load</td><td style="padding:6px 8px;border-bottom:1px solid var(--line)">4.2 MLD · 61%</td><td style="padding:6px 8px;border-bottom:1px solid var(--line)">2.0 MLD · 86%</td><td style="padding:6px 8px;border-bottom:1px solid var(--line);font-style:italic;color:var(--muted)">Not published</td><td style="padding:6px 8px;border-bottom:1px solid var(--line);font-family:'Instrument Sans',sans-serif;font-size:9px;color:var(--muted)">Environment cell · 21 jul 26</td></tr>
+            <tr><td style="padding:6px 8px;border-bottom:1px solid var(--line);color:var(--muted)">Port / airport / rail</td><td style="padding:6px 8px;border-bottom:1px solid var(--line);font-family:'Instrument Sans',sans-serif">42 / 64 / 18 km</td><td style="padding:6px 8px;border-bottom:1px solid var(--line);font-family:'Instrument Sans',sans-serif">58 / 38 / 6 km</td><td style="padding:6px 8px;border-bottom:1px solid var(--line);font-family:'Instrument Sans',sans-serif">74 / 9 / 21 km</td><td style="padding:6px 8px;border-bottom:1px solid var(--line);font-family:'Instrument Sans',sans-serif;font-size:9px;color:var(--muted)">NHAI v2026.1 · 12 jul 26</td></tr>
+            <tr><td style="padding:6px 8px;border-bottom:1px solid var(--line);color:var(--muted)">Green estate</td><td style="padding:6px 8px;border-bottom:1px solid var(--line)">38% RE · 42% reuse</td><td style="padding:6px 8px;border-bottom:1px solid var(--line)">26% RE · 31% reuse</td><td style="padding:6px 8px;border-bottom:1px solid var(--line);font-style:italic;color:var(--muted)">Not published</td><td style="padding:6px 8px;border-bottom:1px solid var(--line);font-family:'Instrument Sans',sans-serif;font-size:9px;color:var(--muted)">Feeder / CETP logs · 30 Jun 26</td></tr>
+            <tr><td style="padding:6px 8px;border-bottom:1px solid var(--line);color:var(--muted)">Resilience bands</td><td style="padding:6px 8px;border-bottom:1px solid var(--line)">Flood B · cyclone C</td><td style="padding:6px 8px;border-bottom:1px solid var(--line)">Flood B · cyclone C</td><td style="padding:6px 8px;border-bottom:1px solid var(--line)">Flood A · cyclone B</td><td style="padding:6px 8px;border-bottom:1px solid var(--line);font-family:'Instrument Sans',sans-serif;font-size:9px;color:var(--muted)">Apsdma atlas 2025 · 04 jul 26</td></tr>
+            <tr><td style="padding:6px 8px;color:var(--muted)">Responsible officer</td><td style="padding:6px 8px;font-family:'Instrument Sans',sans-serif;font-size:10px">zm_vij@apiic.in</td><td style="padding:6px 8px;font-family:'Instrument Sans',sans-serif;font-size:10px">zm.guntur@apiic.in</td><td style="padding:6px 8px;font-family:'Instrument Sans',sans-serif;font-size:10px">zm_vij@apiic.in</td><td style="padding:6px 8px;font-family:'Instrument Sans',sans-serif;font-size:9px;color:var(--muted)">Contact directory · 18 jul 26</td></tr>
           </tbody>
         </table>
 
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;margin-top:24px">
-          <div><div style="font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:0.06em;color:var(--muted)">SUPPORT YOU MAY QUALIFY FOR</div><div style="font-size:11px;line-height:1.7;margin-top:6px;color:#3A4A57">AP Industrial Development Policy 4.0 · AP Food Processing Policy 2025–30 · Clean Energy &amp; Green Manufacturing Incentives. Indicative only — eligibility is determined by the competent authority.</div></div>
-          <div><div style="font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:0.06em;color:var(--muted)">WHAT HAPPENS NEXT</div><div style="font-size:11px;line-height:1.7;margin-top:6px;color:#3A4A57">Send an enquiry and the Krishna zonal desk responds within 1 working day. Site visits are arranged by the zonal office. Applications are submitted on the APIIC land application portal.</div></div>
-          <div><div style="font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:0.06em;color:var(--muted)">FIELDS NOT PUBLISHED</div><div style="font-size:11px;line-height:1.7;margin-top:6px;color:#3A4A57">Three fields for KRI-041 are not published at this date: sanctioned power, CETP status, green estate metrics. The zonal desk can confirm them in writing on request.</div></div>
+          <div><div style="font-family:'Instrument Sans',sans-serif;font-size:9px;letter-spacing:0.06em;color:var(--muted)">Support you may qualify for</div><div style="font-size:11px;line-height:1.7;margin-top:6px;color:#3A4A57">AP Industrial Development Policy 4.0 · AP Food Processing Policy 2025–30 · Clean Energy &amp; Green Manufacturing Incentives. Indicative only — eligibility is determined by the competent authority.</div></div>
+          <div><div style="font-family:'Instrument Sans',sans-serif;font-size:9px;letter-spacing:0.06em;color:var(--muted)">What happens next</div><div style="font-size:11px;line-height:1.7;margin-top:6px;color:#3A4A57">Send an enquiry and the Krishna zonal desk responds within 3 working days. Site visits are arranged by the zonal office. Applications are submitted on the APIIC land application portal.</div></div>
+          <div><div style="font-family:'Instrument Sans',sans-serif;font-size:9px;letter-spacing:0.06em;color:var(--muted)">Fields not published</div><div style="font-size:11px;line-height:1.7;margin-top:6px;color:#3A4A57">Three fields for KRI-041 are not published at this date: sanctioned power, CETP status, green estate metrics. The zonal desk can confirm them in writing on request.</div></div>
         </div>
 
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin-top:22px;border-top:1px solid var(--line);padding-top:14px">
           <div style="font-size:10px;color:var(--muted);line-height:1.7">Rates are indicative. The final allotment price is determined under the APIIC Industrial Parks Allotment Regulations and the rate order in force on the date of allotment. This brief is not an offer, a reservation or an entitlement. Distances are road distances on NHAI network v2026.1, shortest truck-legal route.</div>
-          <div style="font-family:'IBM Plex Mono',monospace;font-size:9px;color:var(--muted);line-height:1.9;text-align:right">PREPARED BY APIIC INVESTOR SERVICES<br>invest@apiic.in · 0863 234 0000<br>DATA GOVERNANCE: apiic.in/trust<br>PAGE 1 OF 1</div>
+          <div style="font-family:'Instrument Sans',sans-serif;font-size:9px;color:var(--muted);line-height:1.9;text-align:right">Prepared by apiic investor services<br>invest@apiic.in · 0863-2381850<br>Data governance: apiic.in/trust<br>PAGE 1 OF 1</div>
         </div>
       </div>
     </div>
@@ -184,9 +187,9 @@ class Component extends DCLogic {
   state = {
     view: 'list',
     parks: [
-      { id: 'KRI-019', name: 'Model Industrial Park, Mallavalli', sub: 'Krishna District · Industrial Park', district: 'Krishna', acres: 42.6, area: '42.6 ac', rate: '₹68.5L', port: '42 km', provenance: 'Added from the finder · matched 4 of your 5 requirements', verified: '24 JUL 2026' },
-      { id: 'GNT-032', name: 'Food Park, Thullur', sub: 'Guntur District · Theme Park', district: 'Guntur', acres: 31.4, area: '31.4 ac', rate: '₹74.0L', port: '58 km', provenance: 'Added from the finder · rail siding within your limit', verified: '23 JUL 2026' },
-      { id: 'KRI-041', name: 'Gannavaram Agro Park', sub: 'Krishna District · Theme Park', district: 'Krishna', acres: 22.0, area: '22.0 ac', rate: '₹58.0L', port: '74 km', provenance: 'Added from the directory · 2 fields not published', verified: '19 JUL 2026' }
+      { id: 'KRI-019', name: 'Model Industrial Park, Mallavalli', sub: 'Krishna District · Industrial Park', district: 'Krishna', acres: 42.6, area: '42.6 ac', rate: '₹68.5L', port: '42 km', provenance: 'Added from the finder · matched 4 of your 5 requirements', verified: '24 Jul 2026' },
+      { id: 'GNT-032', name: 'Food Park, Thullur', sub: 'Guntur District · Theme Park', district: 'Guntur', acres: 31.4, area: '31.4 ac', rate: '₹74.0L', port: '58 km', provenance: 'Added from the finder · rail siding within your limit', verified: '23 Jul 2026' },
+      { id: 'KRI-041', name: 'Gannavaram Agro Park', sub: 'Krishna District · Theme Park', district: 'Krishna', acres: 22.0, area: '22.0 ac', rate: '₹58.0L', port: '74 km', provenance: 'Added from the directory · 2 fields not published', verified: '19 Jul 2026' }
     ]
   };
   remove(id) { this.setState(s => ({ parks: s.parks.filter(p => p.id !== id) })); }
@@ -205,8 +208,8 @@ class Component extends DCLogic {
       hasFreeSlot: n > 0 && free > 0,
       slotLine: free === 1 ? 'A fourth slot is free. Comparison holds up to four parks.' : free + ' more slots are free. Comparison holds up to four parks.',
       summaryLine: n === 0
-        ? 'NO PARKS SHORTLISTED'
-        : n + (n === 1 ? ' PARK · ' : ' PARKS · ') + districts + (districts === 1 ? ' DISTRICT · ' : ' DISTRICTS · ') + acres + ' ACRES AVAILABLE BETWEEN THEM'
+        ? 'No parks shortlisted'
+        : n + (n === 1 ? ' PARK · ' : ' Parks · ') + districts + (districts === 1 ? ' District · ' : ' Districts · ') + acres + ' Acres available between them'
     };
   }
 }

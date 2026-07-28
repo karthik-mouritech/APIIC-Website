@@ -36,7 +36,7 @@
     '.apiic-car-dot{width:8px;height:8px;border-radius:50%;border:none;padding:0;cursor:pointer;',
     '  background:var(--line);transition:width .18s ease,background .18s ease}',
     '.apiic-car-dot[aria-current="true"]{width:26px;border-radius:999px;background:var(--cyan-deep)}',
-    '.apiic-car-count{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:10.5px;',
+    '.apiic-car-count{font-variant-numeric:tabular-nums;font-size:11px;',
     '  letter-spacing:0.06em;color:var(--muted);white-space:nowrap;margin-left:auto}',
     '@media(prefers-reduced-motion:reduce){.apiic-car-track{scroll-behavior:auto}}',
     'html[data-apiic-motion="off"] .apiic-car-track{scroll-behavior:auto}'

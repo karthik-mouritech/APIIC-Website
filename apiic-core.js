@@ -38,39 +38,39 @@
      picking a theme should not have to decode a design term.               */
   var THEMES = {
     daylight: {
-      label: 'Daylight', hint: 'The default. White surfaces, navy ink.', icon: 'ph-sun', swatch: ['#FFFFFF', '#123B86', '#2FC7DE'],
+      label: 'Daylight', hint: 'The default. White surfaces, navy ink.', icon: 'ph-sun', swatch: ['#FFFFFF', '#245484', '#009C54'],
       vars: {
-        '--ink': '#08214F', '--indigo': '#123B86', '--royal': '#0A2A6B', '--royal2': '#14458F',
-        '--cyan': '#2FC7DE', '--cyan-deep': '#0E9CB8', '--cyan-soft': '#E6F8FB',
-        '--tint-lav': '#EEF0FF', '--tint-mint': '#E8F7F0', '--tint-peach': '#FDF1E7',
-        '--tint-sky': '#E9F1FE', '--tint-violet': '#F2ECFE', '--tint-rose': '#FDECF2',
-        '--gold': '#C9962C', '--gold-soft': '#F3E4C0', '--tide': '#0F8A80', '--err': '#B3261E',
-        '--on-tint': '#0A2A6B', '--paper': '#F6F8FB', '--surface': '#FFFFFF', '--line': '#DCE3EC', '--muted': '#5A6B7A',
-        '--shadow': '0 14px 34px -20px rgba(8,33,79,0.30)', '--shadow-lg': '0 26px 60px -28px rgba(8,33,79,0.42)'
+        '--ink': '#16385C', '--indigo': '#245484', '--royal': '#245484', '--royal2': '#2E6399',
+        '--cyan': '#D8783C', '--cyan-deep': '#B75F28', '--cyan-soft': '#FBEEE4',
+        '--tint-lav': '#EDF2F8', '--tint-mint': '#E6F5EE', '--tint-peach': '#FBEEE4',
+        '--tint-sky': '#EDF2F8', '--tint-violet': '#EDF2F8', '--tint-rose': '#FBEEE4',
+        '--gold': '#D8783C', '--gold-soft': '#F5DCC8', '--tide': '#009C54', '--err': '#B3261E',
+        '--on-tint': '#245484', '--paper': '#F7F9FB', '--surface': '#FFFFFF', '--line': '#DDE4EC', '--muted': '#5A6B7A',
+        '--shadow': '0 10px 26px -18px rgba(22,56,92,0.24)', '--shadow-lg': '0 30px 60px -40px rgba(22,56,92,0.38)'
       }
     },
     midnight: {
-      label: 'Midnight', hint: 'Dark surfaces for low light and long sessions.', icon: 'ph-moon-stars', swatch: ['#0B1220', '#7FB2FF', '#3FDCF2'],
+      label: 'Midnight', hint: 'Dark surfaces for low light and long sessions.', icon: 'ph-moon-stars', swatch: ['#0B1220', '#8FB6E4', '#00C46A'],
       dark: true,
       vars: {
-        '--ink': '#E7EEF8', '--indigo': '#8FB6FF', '--royal': '#0E1B33', '--royal2': '#16294B',
-        '--cyan': '#3FDCF2', '--cyan-deep': '#59E4F7', '--cyan-soft': '#0E2B36',
+        '--ink': '#E7EEF8', '--indigo': '#8FB6E4', '--royal': '#12293F', '--royal2': '#1B3D5C',
+        '--cyan': '#E4915B', '--cyan-deep': '#EFA875', '--cyan-soft': '#33200F',
         '--tint-lav': '#171B33', '--tint-mint': '#0F2A22', '--tint-peach': '#2C1E12',
         '--tint-sky': '#132340', '--tint-violet': '#1F1936', '--tint-rose': '#2B1522',
-        '--gold': '#E7B84E', '--gold-soft': '#3A2C10', '--tide': '#35C8B8', '--err': '#FF8A80',
+        '--gold': '#E4915B', '--gold-soft': '#33200F', '--tide': '#00C46A', '--err': '#FF8A80',
         '--on-tint': '#CFE0FF', '--paper': '#080D17', '--surface': '#101A2C', '--line': '#26344C', '--muted': '#9DB0C7',
         '--shadow': '0 14px 34px -20px rgba(0,0,0,0.75)', '--shadow-lg': '0 26px 60px -28px rgba(0,0,0,0.85)'
       }
     },
     coastal: {
-      label: 'Coastal', hint: 'Warm paper and teal — easiest for long reading.', icon: 'ph-waves', swatch: ['#F4F1E8', '#0B5E58', '#0F8A80'],
+      label: 'Coastal', hint: 'Warm paper and teal — easiest for long reading.', icon: 'ph-waves', swatch: ['#F4F1E8', '#0B5E38', '#009C54'],
       vars: {
-        '--ink': '#102A2B', '--indigo': '#0B5E58', '--royal': '#083F3C', '--royal2': '#0C5A55',
-        '--cyan': '#17A398', '--cyan-deep': '#0B6F67', '--cyan-soft': '#DFF1EE',
+        '--ink': '#122A20', '--indigo': '#0B5E38', '--royal': '#083F28', '--royal2': '#0C5A38',
+        '--cyan': '#C06A34', '--cyan-deep': '#944F22', '--cyan-soft': '#F7E7DA',
         '--tint-lav': '#EDEEE4', '--tint-mint': '#E2F0E9', '--tint-peach': '#F8EEDF',
         '--tint-sky': '#E4EEEE', '--tint-violet': '#EFEAE2', '--tint-rose': '#F8E9E4',
-        '--gold': '#A9761C', '--gold-soft': '#F0E2C4', '--tide': '#0F8A80', '--err': '#9E2B1F',
-        '--on-tint': '#083F3C', '--paper': '#F4F1E8', '--surface': '#FDFBF5', '--line': '#DCD6C6', '--muted': '#5C6A63',
+        '--gold': '#C06A34', '--gold-soft': '#F0DCC4', '--tide': '#009C54', '--err': '#9E2B1F',
+        '--on-tint': '#083F28', '--paper': '#F4F1E8', '--surface': '#FDFBF5', '--line': '#DCD6C6', '--muted': '#5C6A63',
         '--shadow': '0 14px 34px -20px rgba(16,42,43,0.28)', '--shadow-lg': '0 26px 60px -28px rgba(16,42,43,0.38)'
       }
     },
@@ -82,7 +82,7 @@
         '--cyan': '#FFD400', '--cyan-deep': '#FFE666', '--cyan-soft': '#1A1A00',
         '--tint-lav': '#101010', '--tint-mint': '#0A140A', '--tint-peach': '#141005',
         '--tint-sky': '#0A1014', '--tint-violet': '#100A14', '--tint-rose': '#140A0F',
-        '--gold': '#FFD400', '--gold-soft': '#1A1A00', '--tide': '#5BE7A9', '--err': '#FF9A8A',
+        '--gold': '#FFD400', '--gold-soft': '#1A1A00', '--tide': '#5BE79A', '--err': '#FF9A8A',
         '--on-tint': '#FFFFFF', '--paper': '#000000', '--surface': '#0B0B0B', '--line': '#6E6E6E', '--muted': '#D6D6D6',
         '--shadow': 'none', '--shadow-lg': '0 0 0 1px #6E6E6E'
       }
@@ -257,7 +257,7 @@
     'html[data-apiic-theme="midnight"] .apiic-btn-primary{background:linear-gradient(120deg,#1B4FA8,#2E6ED6);color:#FFFFFF}',
     '.apiic-field{width:100%;font:inherit;font-size:15px;padding:12px 14px;border-radius:10px;border:1px solid var(--line);background:var(--paper);color:var(--ink);outline:none}',
     '.apiic-field:focus{border-color:var(--cyan-deep);box-shadow:0 0 0 3px var(--cyan-soft)}',
-    '.apiic-mono{font-family:"IBM Plex Mono",ui-monospace,monospace}',
+    '.apiic-mono{font-variant-numeric:tabular-nums}',
     '.apiic-toasts{position:fixed;right:18px;bottom:18px;z-index:2400;display:flex;flex-direction:column;gap:10px;pointer-events:none}',
     '.apiic-toast{pointer-events:auto;background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--cyan-deep);border-radius:12px;box-shadow:var(--shadow-lg);padding:13px 16px;max-width:340px;font-size:14.5px;line-height:1.45;transform:translateY(8px);opacity:0;transition:all .2s ease}',
     '.apiic-toast[data-in="1"]{transform:none;opacity:1}',

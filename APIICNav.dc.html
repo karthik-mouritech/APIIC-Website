@@ -17,16 +17,16 @@
 <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
 <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/duotone/style.css">
 <style>
-:root{--ink:#08214F;--indigo:#123B86;--royal:#0A2A6B;--royal2:#14458F;--cyan:#2FC7DE;--cyan-deep:#0E9CB8;--cyan-soft:#E6F8FB;--tint-lav:#EEF0FF;--tint-mint:#E8F7F0;--tint-peach:#FDF1E7;--tint-sky:#E9F1FE;--tint-violet:#F2ECFE;--tint-rose:#FDECF2;--r:14px;--r-sm:10px;--shadow:0 14px 34px -20px rgba(8,33,79,0.30);--shadow-lg:0 26px 60px -28px rgba(8,33,79,0.42);--gold:#C9962C;--gold-soft:#F3E4C0;--tide:#0F8A80;--paper:#F6F8FB;--surface:#FFFFFF;--line:#DCE3EC;--muted:#5A6B7A}
+:root{--ink:#16385C;--indigo:#245484;--royal:#245484;--royal2:#2E6399;--cyan:#D8783C;--cyan-deep:#B75F28;--cyan-soft:#FBEEE4;--on-tint:#245484;--tint-lav:#EDF2F8;--tint-mint:#E6F5EE;--tint-peach:#FBEEE4;--tint-sky:#EDF2F8;--tint-violet:#EDF2F8;--tint-rose:#FBEEE4;--r:8px;--r-sm:6px;--shadow:0 10px 26px -18px rgba(22,56,92,0.24);--shadow-lg:0 30px 60px -40px rgba(22,56,92,0.38);--gold:#D8783C;--gold-soft:#F5DCC8;--tide:#009C54;--paper:#F7F9FB;--surface:#Ffffff;--line:#DDE4EC;--muted:#5A6B7A}
 a{color:var(--indigo);text-decoration:none}
 a:hover{color:var(--cyan-deep)}
-@keyframes pulseRing{0%{box-shadow:0 0 0 0 rgba(47,199,222,0.45)}70%{box-shadow:0 0 0 12px rgba(47,199,222,0)}100%{box-shadow:0 0 0 0 rgba(47,199,222,0)}}
+@keyframes pulseRing{0%{box-shadow:0 0 0 0 rgba(216,120,60,0.45)}70%{box-shadow:0 0 0 12px rgba(216,120,60,0)}100%{box-shadow:0 0 0 0 rgba(216,120,60,0)}}
 </style>
 </helmet>
 <header style="position:sticky;top:0;z-index:60;font-family:'Instrument Sans',system-ui,sans-serif" onMouseLeave="{{ close }}">
   <sc-if value="{{ wide }}" hint-placeholder-val="{{ true }}">
-    <div style="background:linear-gradient(90deg,#08214F 0%,#0A2A6B 55%,#123B86 100%);color:#CBD9EC;font-size:13px">
-      <div style="max-width:1320px;margin:0 auto;padding:0 40px;min-height:42px;display:flex;flex-wrap:wrap;align-items:center;gap:14px 22px">
+    <div style="background:#245484;color:#CBD9EC;font-size:13px">
+      <div style="max-width:1280px;margin:0 auto;padding:0 40px;min-height:42px;display:flex;flex-wrap:wrap;align-items:center;gap:14px 22px">
         <span style="display:flex;align-items:center;gap:8px;white-space:nowrap"><span style="width:20px;height:20px;border-radius:50%;background:var(--cyan);display:grid;place-items:center;color:#06203F;font-size:11px;font-weight:600">AP</span>Welcome to APIIC — your partner in progress</span>
         <div style="flex:1;min-width:0"></div>
         <a href="tel:+918632381850" style="color:#CBD9EC;display:flex;align-items:center;gap:7px;white-space:nowrap"><i class="ph ph-phone" style="color:var(--cyan)"></i>+91-863-2381850</a>
@@ -34,32 +34,32 @@ a:hover{color:var(--cyan-deep)}
         <a href="APIIC-Official-Portals.dc.html" style="color:#CBD9EC;display:flex;align-items:center;gap:7px;white-space:nowrap"><i class="ph ph-arrow-square-out" style="color:var(--cyan)"></i>Official portals</a>
         <button onClick="{{ openDesk }}" style="font:inherit;font-size:13px;cursor:pointer;background:none;border:none;color:#CBD9EC;display:flex;align-items:center;gap:7px;white-space:nowrap;padding:0"><i class="ph ph-lifebuoy" style="color:var(--cyan)"></i>Help desk</button>
         <span style="display:flex;align-items:center;gap:8px;white-space:nowrap"><i class="ph ph-globe" style="color:var(--cyan)"></i><a href="#" style="color:#FFFFFF;font-weight:500">English</a><span style="color:#48699B">·</span><a href="#" style="color:#CBD9EC;font-family:'Noto Sans Telugu','Instrument Sans',sans-serif">తెలుగు</a><span style="color:#48699B">·</span><a href="#" style="color:#CBD9EC">हिंदी</a></span>
-        <span style="display:flex;align-items:center;gap:9px;white-space:nowrap;font-family:'IBM Plex Mono',monospace">
+        <span style="display:flex;align-items:center;gap:9px;white-space:nowrap;font-family:'Instrument Sans',sans-serif">
           <button onClick="{{ textSmaller }}" aria-label="Decrease text size" style="font:inherit;background:none;border:none;cursor:pointer;color:#CBD9EC;font-size:11px;padding:0">A-</button>
           <button onClick="{{ textReset }}" aria-label="Reset text size" style="font:inherit;background:none;border:none;cursor:pointer;color:#FFFFFF;font-size:13px;padding:0">A</button>
           <button onClick="{{ textLarger }}" aria-label="Increase text size" style="font:inherit;background:none;border:none;cursor:pointer;color:#CBD9EC;font-size:15px;padding:0">A+</button>
         </span>
-        <button onClick="{{ openTheme }}" aria-label="Change theme and appearance" style="font:inherit;font-size:13px;cursor:pointer;background:rgba(47,199,222,0.14);border:1px solid rgba(47,199,222,0.32);border-radius:999px;color:#FFFFFF;display:flex;align-items:center;gap:7px;white-space:nowrap;padding:4px 12px"><i class="ph ph-palette" style="color:var(--cyan)"></i>{{ themeLabel }}</button>
+        <button onClick="{{ openTheme }}" aria-label="Change theme and appearance" style="font:inherit;font-size:13px;cursor:pointer;background:rgba(216,120,60,0.14);border:1px solid rgba(216,120,60,0.32);border-radius:999px;color:#FFFFFF;display:flex;align-items:center;gap:7px;white-space:nowrap;padding:4px 12px"><i class="ph ph-palette" style="color:var(--cyan)"></i>{{ themeLabel }}</button>
       </div>
     </div>
   </sc-if>
   <sc-if value="{{ narrow }}" hint-placeholder-val="{{ false }}">
-    <div style="background:linear-gradient(90deg,#08214F 0%,#0A2A6B 55%,#123B86 100%);color:#CBD9EC;font-size:13px">
-      <div style="max-width:1320px;margin:0 auto;padding:9px 20px;display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px">
+    <div style="background:#245484;color:#CBD9EC;font-size:13px">
+      <div style="max-width:1280px;margin:0 auto;padding:9px 20px;display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px">
         <a href="tel:+918632381850" style="color:#CBD9EC;display:flex;align-items:center;gap:7px;white-space:nowrap"><i class="ph ph-phone" style="color:var(--cyan)"></i>0863-2381850</a>
         <div style="flex:1;min-width:0"></div>
         <span style="display:flex;align-items:center;gap:7px;white-space:nowrap"><i class="ph ph-globe" style="color:var(--cyan)"></i><a href="#" style="color:#FFFFFF;font-weight:500">EN</a><span style="color:#48699B">·</span><a href="#" style="color:#CBD9EC;font-family:'Noto Sans Telugu','Instrument Sans',sans-serif">తెలుగు</a><span style="color:#48699B">·</span><a href="#" style="color:#CBD9EC">हिंदी</a></span>
-        <button onClick="{{ openTheme }}" aria-label="Change theme and appearance" style="font:inherit;font-size:13px;cursor:pointer;background:rgba(47,199,222,0.14);border:1px solid rgba(47,199,222,0.32);border-radius:999px;color:#FFFFFF;display:flex;align-items:center;gap:6px;white-space:nowrap;padding:4px 11px"><i class="ph ph-palette" style="color:var(--cyan)"></i>{{ themeLabel }}</button>
+        <button onClick="{{ openTheme }}" aria-label="Change theme and appearance" style="font:inherit;font-size:13px;cursor:pointer;background:rgba(216,120,60,0.14);border:1px solid rgba(216,120,60,0.32);border-radius:999px;color:#FFFFFF;display:flex;align-items:center;gap:6px;white-space:nowrap;padding:4px 11px"><i class="ph ph-palette" style="color:var(--cyan)"></i>{{ themeLabel }}</button>
       </div>
     </div>
   </sc-if>
-  <div style="background:var(--surface);box-shadow:0 2px 14px -8px rgba(8,33,79,0.28)">
-    <div style="max-width:1320px;margin:0 auto;padding:0 40px;height:84px;display:flex;align-items:center;gap:18px">
+  <div style="background:var(--surface);box-shadow:0 2px 14px -8px rgba(22,56,92,0.28)">
+    <div style="max-width:1280px;margin:0 auto;padding:0 40px;height:84px;display:flex;align-items:center;gap:18px">
       <a href="APIIC-Home.dc.html" style="display:flex;align-items:center;gap:13px;color:var(--ink);flex:none">
         <img class="apiic-logo-img" src="assets/APIIC-logo-2x.png" width="50" height="43" alt="APIIC — Andhra Pradesh Industrial Infrastructure Corporation" style="width:50px;height:43px;object-fit:contain;flex:none">
         <span style="display:flex;flex-direction:column;line-height:1.1;white-space:nowrap">
           <span style="font-family:Sora,sans-serif;font-weight:700;font-size:23px;letter-spacing:-0.03em;color:var(--royal)">APIIC</span>
-          <span style="font-size:9.5px;color:var(--muted);font-family:'IBM Plex Mono',monospace;letter-spacing:0.05em">A GOVT. OF AP UNDERTAKING</span>
+          <span style="font-size:9.5px;color:var(--muted);font-family:'Instrument Sans',sans-serif;letter-spacing:0.05em">A Government of Andhra Pradesh undertaking</span>
         </span>
       </a>
       <sc-if value="{{ wide }}" hint-placeholder-val="{{ true }}">
@@ -71,8 +71,8 @@ a:hover{color:var(--cyan-deep)}
           <div onMouseEnter="{{ openInsights }}" style="height:100%;display:flex;align-items:center;cursor:pointer;gap:5px;color:var(--ink);white-space:nowrap;flex:none">Knowledge Centre<i class="ph ph-caret-down" style="font-size:11px;color:var(--muted)"></i></div>
           <div onMouseEnter="{{ openAbout }}" style="height:100%;display:flex;align-items:center;cursor:pointer;gap:5px;color:var(--ink);white-space:nowrap;flex:none">About APIIC<i class="ph ph-caret-down" style="font-size:11px;color:var(--muted)"></i></div>
         </nav>
-        <button onClick="{{ openSearch }}" aria-label="Search the site — Ctrl K" title="Search (Ctrl K)" style="font:inherit;cursor:pointer;border:1px solid var(--line);height:42px;border-radius:999px;background:var(--tint-sky);color:var(--on-tint);display:flex;align-items:center;gap:9px;padding:0 14px;font-size:14px;flex:none" style-hover="background:var(--cyan-soft);color:var(--cyan-deep)"><i class="ph ph-magnifying-glass" style="font-size:18px"></i><span style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:var(--muted);letter-spacing:0.06em">CTRL K</span></button>
-        <a href="APIIC-Talk-To-Expert.dc.html" style="background:linear-gradient(120deg,#0A2A6B,#14458F);color:#FFFFFF;padding:12px 19px;border-radius:999px;font-size:14px;font-weight:600;white-space:nowrap;flex:none;display:flex;align-items:center;gap:8px;box-shadow:var(--shadow)" style-hover="background:linear-gradient(120deg,#123B86,#1E5AB5);color:#FFFFFF"><i class="ph ph-user-circle" style="font-size:17px"></i>Talk to an expert</a>
+        <button onClick="{{ openSearch }}" aria-label="Search the site — Ctrl K" title="Search (Ctrl K)" style="font:inherit;cursor:pointer;border:1px solid var(--line);height:42px;border-radius:999px;background:var(--tint-sky);color:var(--on-tint);display:flex;align-items:center;gap:9px;padding:0 14px;font-size:14px;flex:none" style-hover="background:var(--cyan-soft);color:var(--cyan-deep)"><i class="ph ph-magnifying-glass" style="font-size:18px"></i><span style="font-family:'Instrument Sans',sans-serif;font-size:10.5px;color:var(--muted);letter-spacing:0.06em">Ctrl K</span></button>
+        <a href="APIIC-Talk-To-Expert.dc.html" style="background:#245484;color:#FFFFFF;padding:12px 19px;border-radius:6px;font-size:14px;font-weight:600;white-space:nowrap;flex:none;display:flex;align-items:center;gap:8px;box-shadow:var(--shadow)" style-hover="background:#2E6399;color:#FFFFFF"><i class="ph ph-user-circle" style="font-size:17px"></i>Talk to an expert</a>
       </sc-if>
       <sc-if value="{{ narrow }}" hint-placeholder-val="{{ false }}">
         <!-- Help desk is reachable from the floating launcher on narrow widths,
@@ -84,8 +84,8 @@ a:hover{color:var(--cyan-deep)}
       </sc-if>
     </div>
     <sc-if value="{{ anyOpen }}" hint-placeholder-val="{{ false }}">
-      <div style="border-top:1px solid var(--line);background:var(--surface);box-shadow:0 26px 48px -30px rgba(8,33,79,0.5)">
-        <div style="max-width:1320px;margin:0 auto;padding:28px 40px 32px;display:flex;gap:56px">
+      <div style="border-top:1px solid var(--line);background:var(--surface);box-shadow:0 26px 48px -30px rgba(22,56,92,0.5)">
+        <div style="max-width:1280px;margin:0 auto;padding:28px 40px 32px;display:flex;gap:56px">
           <div style="width:250px">
             <div style="font-family:Sora,sans-serif;font-weight:600;font-size:20px;letter-spacing:-0.02em;color:var(--royal)">{{ openLabel }}</div>
             <div style="width:36px;height:3px;background:var(--cyan);border-radius:999px;margin-top:10px"></div>
@@ -95,7 +95,7 @@ a:hover{color:var(--cyan-deep)}
               <a href="APIIC-Why-Invest.dc.html">Why Andhra Pradesh</a><a href="APIIC-Sectors.dc.html">Priority Sectors</a><a href="APIIC-Locations.dc.html">Locations</a><a href="APIIC-Locations.dc.html">Growth Corridors</a><a href="APIIC-Incentive-Screener.dc.html">Incentives</a><a href="APIIC-Knowledge.dc.html">Success Stories</a>
             </sc-if>
             <sc-if value="{{ isLand }}" hint-placeholder-val="{{ false }}">
-              <a href="APIIC-Land-Parks-Hub.dc.html">Find Land &amp; Parks hub</a><a href="APIIC-Park-Finder.dc.html">Park Finder ★</a><a href="APIIC-Parks-Directory.dc.html">Parks Directory</a><a href="APIIC-Compare-Parks.dc.html">Compare Parks ★</a><a href="APIIC-Shortlist.dc.html">My Shortlist</a><a href="APIIC-Prototype-Scope.dc.html#external">Open GIS (AGILE 2.0) ↗</a>
+              <a href="APIIC-Land-Parks-Hub.dc.html">Find Land &amp; Parks hub</a><a href="APIIC-Park-Finder.dc.html">Park Finder ★</a><a href="APIIC-Parks-Directory.dc.html">Parks Directory</a><a href="APIIC-Compare-Parks.dc.html">Compare Parks ★</a><a href="APIIC-Shortlist.dc.html">My Shortlist</a><a href="APIIC-Prototype-Scope.dc.html#external">Open GIS (Agile 2.0) ↗</a>
             </sc-if>
             <sc-if value="{{ isSetup }}" hint-placeholder-val="{{ false }}">
               <a href="APIIC-Investor-Guide.dc.html">Investor Guide</a><a href="APIIC-Investor-Guide.dc.html">Services Catalogue</a><a href="APIIC-Investor-Guide.dc.html">Approvals Overview</a><a href="APIIC-Incentive-Screener.dc.html">Incentive Check ★</a><a href="APIIC-Official-Portals.dc.html">Official Portals</a><a href="APIIC-Investor-Guide.dc.html">Investor FAQs</a>
@@ -114,13 +114,13 @@ a:hover{color:var(--cyan-deep)}
       </div>
     </sc-if>
     <sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
-      <div style="border-top:1px solid var(--line);background:var(--surface);padding:20px 24px 24px;display:flex;flex-direction:column;gap:2px;box-shadow:0 22px 40px -28px rgba(8,33,79,0.45)">
-        <details style="border-top:1px solid var(--line)"><summary style="padding:15px 0;font-size:17px;font-weight:500;cursor:pointer">Invest in AP</summary><div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:0 0 16px"><a href="APIIC-Why-Invest.dc.html">Why Andhra Pradesh</a><a href="APIIC-Sectors.dc.html">Priority sectors</a><a href="APIIC-Locations.dc.html">Locations &amp; corridors</a><a href="APIIC-Incentive-Screener.dc.html">Incentives</a></div></details>
-        <details style="border-top:1px solid var(--line)"><summary style="padding:15px 0;font-size:17px;font-weight:500;cursor:pointer">Land &amp; Parks</summary><div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:0 0 16px"><a href="APIIC-Land-Parks-Hub.dc.html">Find land &amp; parks</a><a href="APIIC-Park-Finder.dc.html">Park finder</a><a href="APIIC-Parks-Directory.dc.html">Parks directory</a><a href="APIIC-Compare-Parks.dc.html">Compare parks</a><a href="APIIC-Shortlist.dc.html">My shortlist</a></div></details>
-        <details style="border-top:1px solid var(--line)"><summary style="padding:15px 0;font-size:17px;font-weight:500;cursor:pointer">Investor Services</summary><div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:0 0 16px"><a href="APIIC-Investor-Guide.dc.html">Investor guide</a><a href="APIIC-Services.dc.html">Services catalogue</a><a href="APIIC-Incentive-Screener.dc.html">Incentive check</a><a href="APIIC-Official-Portals.dc.html">Official portals</a></div></details>
-        <details style="border-top:1px solid var(--line)"><summary style="padding:15px 0;font-size:17px;font-weight:500;cursor:pointer">Policies &amp; Documents</summary><div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:0 0 16px"><a href="APIIC-Policies.dc.html">Policies library</a><a href="APIIC-Documents.dc.html">Documents &amp; forms</a><a href="APIIC-Link-Directory.dc.html#sec-policies-procedures">Formats &amp; circulars</a></div></details>
-        <details style="border-top:1px solid var(--line)"><summary style="padding:15px 0;font-size:17px;font-weight:500;cursor:pointer">Knowledge Centre</summary><div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:0 0 16px"><a href="APIIC-Knowledge.dc.html">News &amp; insights</a><a href="APIIC-Data-Freshness.dc.html">Data &amp; freshness</a><a href="APIIC-Link-Directory.dc.html">Complete link directory</a></div></details>
-        <details style="border-top:1px solid var(--line);border-bottom:1px solid var(--line)"><summary style="padding:15px 0;font-size:17px;font-weight:500;cursor:pointer">About APIIC</summary><div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:0 0 16px"><a href="APIIC-About.dc.html">About APIIC</a><a href="APIIC-Leadership.dc.html">Leadership &amp; board</a><a href="APIIC-Help-Desk.dc.html">Help desk &amp; contacts</a></div></details>
+      <div style="border-top:1px solid var(--line);background:var(--surface);padding:20px 24px 24px;display:flex;flex-direction:column;gap:2px;box-shadow:0 22px 40px -28px rgba(22,56,92,0.45)">
+        <details style="border-top:1px solid var(--line)"><summary style="padding:15px 0;font-size:17px;font-weight:500;cursor:pointer">Invest in AP</summary><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(420px,1fr));gap:10px;padding:0 0 16px"><a href="APIIC-Why-Invest.dc.html">Why Andhra Pradesh</a><a href="APIIC-Sectors.dc.html">Priority sectors</a><a href="APIIC-Locations.dc.html">Locations &amp; corridors</a><a href="APIIC-Incentive-Screener.dc.html">Incentives</a></div></details>
+        <details style="border-top:1px solid var(--line)"><summary style="padding:15px 0;font-size:17px;font-weight:500;cursor:pointer">Land &amp; Parks</summary><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(420px,1fr));gap:10px;padding:0 0 16px"><a href="APIIC-Land-Parks-Hub.dc.html">Find land &amp; parks</a><a href="APIIC-Park-Finder.dc.html">Park finder</a><a href="APIIC-Parks-Directory.dc.html">Parks directory</a><a href="APIIC-Compare-Parks.dc.html">Compare parks</a><a href="APIIC-Shortlist.dc.html">My shortlist</a></div></details>
+        <details style="border-top:1px solid var(--line)"><summary style="padding:15px 0;font-size:17px;font-weight:500;cursor:pointer">Investor Services</summary><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(420px,1fr));gap:10px;padding:0 0 16px"><a href="APIIC-Investor-Guide.dc.html">Investor guide</a><a href="APIIC-Services.dc.html">Services catalogue</a><a href="APIIC-Incentive-Screener.dc.html">Incentive check</a><a href="APIIC-Official-Portals.dc.html">Official portals</a></div></details>
+        <details style="border-top:1px solid var(--line)"><summary style="padding:15px 0;font-size:17px;font-weight:500;cursor:pointer">Policies &amp; Documents</summary><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(420px,1fr));gap:10px;padding:0 0 16px"><a href="APIIC-Policies.dc.html">Policies library</a><a href="APIIC-Documents.dc.html">Documents &amp; forms</a><a href="APIIC-Link-Directory.dc.html#sec-policies-procedures">Formats &amp; circulars</a></div></details>
+        <details style="border-top:1px solid var(--line)"><summary style="padding:15px 0;font-size:17px;font-weight:500;cursor:pointer">Knowledge Centre</summary><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(420px,1fr));gap:10px;padding:0 0 16px"><a href="APIIC-Knowledge.dc.html">News &amp; insights</a><a href="APIIC-Data-Freshness.dc.html">Data &amp; freshness</a><a href="APIIC-Link-Directory.dc.html">Complete link directory</a></div></details>
+        <details style="border-top:1px solid var(--line);border-bottom:1px solid var(--line)"><summary style="padding:15px 0;font-size:17px;font-weight:500;cursor:pointer">About APIIC</summary><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(420px,1fr));gap:10px;padding:0 0 16px"><a href="APIIC-About.dc.html">About APIIC</a><a href="APIIC-Leadership.dc.html">Leadership &amp; board</a><a href="APIIC-Help-Desk.dc.html">Help desk &amp; contacts</a></div></details>
         <div style="display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin-top:18px;padding-top:16px;border-top:1px solid var(--line)">
           <span style="font-size:14px;color:var(--muted)">Language</span>
           <a href="#" style="font-weight:600">English</a><a href="#" style="font-family:'Noto Sans Telugu','Instrument Sans',sans-serif">తెలుగు</a><a href="#">हिंदी</a>
@@ -128,8 +128,8 @@ a:hover{color:var(--cyan-deep)}
           <button onClick="{{ openTheme }}" style="font:inherit;font-size:14px;cursor:pointer;display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:var(--paper);color:var(--ink);border-radius:999px;padding:9px 15px"><i class="ph ph-palette" style="color:var(--cyan-deep)"></i>{{ themeLabel }} theme</button>
         </div>
         <div style="display:flex;gap:10px;margin-top:16px">
-          <a href="APIIC-Parks-Directory.dc.html" style="flex:1;text-align:center;border:1px solid var(--royal);color:var(--royal);padding:14px 10px;border-radius:999px;font-weight:500">Find land</a>
-          <a href="APIIC-Talk-To-Expert.dc.html" style="flex:1;text-align:center;background:linear-gradient(120deg,#0A2A6B,#14458F);color:#FFFFFF;padding:14px 10px;border-radius:999px;font-weight:600">Talk to an expert</a>
+          <a href="APIIC-Parks-Directory.dc.html" style="flex:1;text-align:center;border:1px solid var(--royal);color:var(--royal);padding:14px 10px;border-radius:6px;font-weight:500">Find land</a>
+          <a href="APIIC-Talk-To-Expert.dc.html" style="flex:1;text-align:center;background:#245484;color:#FFFFFF;padding:14px 10px;border-radius:6px;font-weight:600">Talk to an expert</a>
         </div>
       </div>
     </sc-if>
@@ -138,12 +138,12 @@ a:hover{color:var(--cyan-deep)}
 
 <sc-if value="{{ wide }}" hint-placeholder-val="{{ true }}">
   <div aria-label="Quick actions" style="position:fixed;right:0;top:186px;z-index:55;display:flex;flex-direction:column;gap:1px;border-radius:var(--r) 0 0 var(--r);overflow:hidden;box-shadow:var(--shadow-lg);font-family:'Instrument Sans',system-ui,sans-serif">
-    <button onClick="{{ openChat }}" style="background:linear-gradient(150deg,#123B86,#0A2A6B);border:none;color:#FFFFFF;width:82px;padding:14px 6px;display:flex;flex-direction:column;align-items:center;gap:6px;cursor:pointer;font-family:'Instrument Sans',sans-serif"><span style="width:34px;height:34px;border-radius:50%;background:rgba(47,199,222,0.18);display:grid;place-items:center;animation:pulseRing 2.6s infinite"><i class="ph-duotone ph-robot" style="font-size:20px;color:var(--cyan)"></i></span><span style="font-size:10.5px;line-height:1.2;text-align:center">AI Assistant</span></button>
-    <button onClick="{{ openDesk }}" style="background:linear-gradient(150deg,#123B86,#0A2A6B);border:none;color:#FFFFFF;width:82px;padding:14px 6px;display:flex;flex-direction:column;align-items:center;gap:6px;cursor:pointer;font-family:'Instrument Sans',sans-serif"><i class="ph ph-lifebuoy" style="font-size:20px;color:var(--cyan)"></i><span style="font-size:10.5px;line-height:1.2;text-align:center">Help Desk</span></button>
-    <a href="APIIC-Park-Finder.dc.html" style="background:linear-gradient(150deg,#123B86,#0A2A6B);color:#FFFFFF;width:82px;padding:14px 6px;display:flex;flex-direction:column;align-items:center;gap:6px" style-hover="background:linear-gradient(150deg,#1B4FA8,#123B86);color:#FFFFFF"><i class="ph ph-map-pin" style="font-size:20px;color:var(--cyan)"></i><span style="font-size:10.5px;line-height:1.2;text-align:center">Find Land</span></a>
-    <a href="APIIC-Official-Portals.dc.html" style="background:linear-gradient(150deg,#123B86,#0A2A6B);color:#FFFFFF;width:82px;padding:14px 6px;display:flex;flex-direction:column;align-items:center;gap:6px" style-hover="background:linear-gradient(150deg,#1B4FA8,#123B86);color:#FFFFFF"><i class="ph ph-note-pencil" style="font-size:20px;color:var(--cyan)"></i><span style="font-size:10.5px;line-height:1.2;text-align:center">Apply Online</span></a>
-    <button onClick="{{ openTheme }}" style="background:linear-gradient(150deg,#123B86,#0A2A6B);border:none;color:#FFFFFF;width:82px;padding:14px 6px;display:flex;flex-direction:column;align-items:center;gap:6px;cursor:pointer;font-family:'Instrument Sans',sans-serif"><i class="ph ph-palette" style="font-size:20px;color:var(--cyan)"></i><span style="font-size:10.5px;line-height:1.2;text-align:center">Theme</span></button>
-    <a href="#top" style="background:linear-gradient(150deg,#123B86,#0A2A6B);color:#FFFFFF;width:82px;padding:14px 6px;display:flex;flex-direction:column;align-items:center;gap:6px" style-hover="background:linear-gradient(150deg,#1B4FA8,#123B86);color:#FFFFFF"><i class="ph ph-arrow-up" style="font-size:20px;color:var(--cyan)"></i><span style="font-size:10.5px;line-height:1.2;text-align:center">Top</span></a>
+    <button onClick="{{ openChat }}" style="background:linear-gradient(150deg,#2E6399,#245484);border:none;color:#FFFFFF;width:82px;padding:14px 6px;display:flex;flex-direction:column;align-items:center;gap:6px;cursor:pointer;font-family:'Instrument Sans',sans-serif"><span style="width:34px;height:34px;border-radius:50%;background:rgba(216,120,60,0.18);display:grid;place-items:center;animation:pulseRing 2.6s infinite"><i class="ph-duotone ph-robot" style="font-size:20px;color:var(--cyan)"></i></span><span style="font-size:10.5px;line-height:1.2;text-align:center">AI Assistant</span></button>
+    <button onClick="{{ openDesk }}" style="background:linear-gradient(150deg,#2E6399,#245484);border:none;color:#FFFFFF;width:82px;padding:14px 6px;display:flex;flex-direction:column;align-items:center;gap:6px;cursor:pointer;font-family:'Instrument Sans',sans-serif"><i class="ph ph-lifebuoy" style="font-size:20px;color:var(--cyan)"></i><span style="font-size:10.5px;line-height:1.2;text-align:center">Help Desk</span></button>
+    <a href="APIIC-Park-Finder.dc.html" style="background:linear-gradient(150deg,#2E6399,#245484);color:#FFFFFF;width:82px;padding:14px 6px;display:flex;flex-direction:column;align-items:center;gap:6px" style-hover="background:linear-gradient(150deg,#1B4FA8,#2E6399);color:#FFFFFF"><i class="ph ph-map-pin" style="font-size:20px;color:var(--cyan)"></i><span style="font-size:10.5px;line-height:1.2;text-align:center">Find Land</span></a>
+    <a href="APIIC-Official-Portals.dc.html" style="background:linear-gradient(150deg,#2E6399,#245484);color:#FFFFFF;width:82px;padding:14px 6px;display:flex;flex-direction:column;align-items:center;gap:6px" style-hover="background:linear-gradient(150deg,#1B4FA8,#2E6399);color:#FFFFFF"><i class="ph ph-note-pencil" style="font-size:20px;color:var(--cyan)"></i><span style="font-size:10.5px;line-height:1.2;text-align:center">Apply Online</span></a>
+    <button onClick="{{ openTheme }}" style="background:linear-gradient(150deg,#2E6399,#245484);border:none;color:#FFFFFF;width:82px;padding:14px 6px;display:flex;flex-direction:column;align-items:center;gap:6px;cursor:pointer;font-family:'Instrument Sans',sans-serif"><i class="ph ph-palette" style="font-size:20px;color:var(--cyan)"></i><span style="font-size:10.5px;line-height:1.2;text-align:center">Theme</span></button>
+    <a href="#top" style="background:linear-gradient(150deg,#2E6399,#245484);color:#FFFFFF;width:82px;padding:14px 6px;display:flex;flex-direction:column;align-items:center;gap:6px" style-hover="background:linear-gradient(150deg,#1B4FA8,#2E6399);color:#FFFFFF"><i class="ph ph-arrow-up" style="font-size:20px;color:var(--cyan)"></i><span style="font-size:10.5px;line-height:1.2;text-align:center">Top</span></a>
   </div>
 </sc-if>
 

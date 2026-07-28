@@ -15,7 +15,7 @@
 <meta name="keywords" content="links directory sitemap all links index everything apiic.in navigation">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <meta name="author" content="Andhra Pradesh Industrial Infrastructure Corporation">
-<meta name="theme-color" content="#0A2A6B">
+<meta name="theme-color" content="#245484">
 <link rel="canonical" href="https://apiic.in/APIIC-Link-Directory.dc.html">
 <link rel="icon" type="image/png" href="assets/APIIC-logo.png">
 <link rel="apple-touch-icon" href="assets/APIIC-logo-2x.png">
@@ -47,7 +47,7 @@
 <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
 <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/duotone/style.css">
 <style>
-:root{--ink:#08214F;--indigo:#123B86;--royal:#0A2A6B;--royal2:#14458F;--cyan:#2FC7DE;--cyan-deep:#0E9CB8;--cyan-soft:#E6F8FB;--tint-lav:#EEF0FF;--tint-mint:#E8F7F0;--tint-peach:#FDF1E7;--tint-sky:#E9F1FE;--tint-violet:#F2ECFE;--tint-rose:#FDECF2;--r:14px;--r-sm:10px;--shadow:0 14px 34px -20px rgba(8,33,79,0.30);--shadow-lg:0 26px 60px -28px rgba(8,33,79,0.42);--gold:#C9962C;--gold-soft:#F3E4C0;--tide:#0F8A80;--paper:#F6F8FB;--surface:#FFFFFF;--line:#DCE3EC;--muted:#5A6B7A}
+:root{--ink:#16385C;--indigo:#245484;--royal:#245484;--royal2:#2E6399;--cyan:#D8783C;--cyan-deep:#B75F28;--cyan-soft:#FBEEE4;--on-tint:#245484;--tint-lav:#EDF2F8;--tint-mint:#E6F5EE;--tint-peach:#FBEEE4;--tint-sky:#EDF2F8;--tint-violet:#EDF2F8;--tint-rose:#FBEEE4;--r:8px;--r-sm:6px;--shadow:0 10px 26px -18px rgba(22,56,92,0.24);--shadow-lg:0 30px 60px -40px rgba(22,56,92,0.38);--gold:#D8783C;--gold-soft:#F5DCC8;--tide:#009C54;--paper:#F7F9FB;--surface:#Ffffff;--line:#DDE4EC;--muted:#5A6B7A}
 *{box-sizing:border-box}
 body{margin:0;background:var(--paper);color:var(--ink);font-family:'Instrument Sans',system-ui,sans-serif;font-size:18px;line-height:1.6;-webkit-font-smoothing:antialiased}
 a{color:var(--indigo);text-decoration:none}
@@ -59,60 +59,59 @@ a:hover{color:var(--cyan-deep)}
   <dc-import name="APIICNav" hint-size="100%,112px"></dc-import>
 
   <!-- ============================================================ HERO -->
-  <section style="background:linear-gradient(105deg,#08214F 0%,#0A2A6B 55%,#123B86 100%);color:#FFFFFF">
-    <div style="max-width:1320px;margin:0 auto;padding:48px 40px 52px">
-      <div style="display:flex;align-items:center;gap:10px;font-size:14px;color:#9FB8D8;margin-bottom:18px">
-        <a href="APIIC-Home.dc.html" style="color:#9FB8D8">Home</a><span>/</span>
-        <span style="color:#FFFFFF">Complete link directory</span>
-      </div>
-      <h1 style="font-family:Sora,sans-serif;font-weight:700;font-size:48px;line-height:1.08;letter-spacing:-0.035em;margin:0">
+  <section style="background:#245484;color:#FFFFFF;position:relative;overflow:hidden">
+    <img src="assets/img/sri-city-infrastructure.jpg" alt="Industrial infrastructure at Sri City, Andhra Pradesh" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 55%">
+    <div aria-hidden="true" style="position:absolute;inset:0;background:linear-gradient(96deg,rgba(8,26,58,0.96) 0%,rgba(9,32,70,0.92) 52%,rgba(22,56,92,0.6) 100%)"></div>
+    <div style="position:relative;max-width:1280px;margin:0 auto;padding:52px 40px 66px">
+      <div style="display:flex;align-items:center;gap:12px;font-size:13px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#B9CBE4;margin-bottom:20px"><span style="width:34px;height:1px;background:#D8783C;flex:none"></span><a href="APIIC-Home.dc.html" style="color:#B9CBE4">Home</a><span>/</span> <span style="color:#FFFFFF">Complete link directory</span></div>
+      <h1 style="font-family:Sora,sans-serif;font-weight:700;font-size:52px;line-height:1.08;letter-spacing:-0.035em;margin:0">
         Every link APIIC publishes,<br>in one place
       </h1>
-      <p style="font-size:19px;color:#C3D6EF;max-width:66ch;margin:16px 0 0;line-height:1.6">
+      <p style="font-size:19px;color:#CBD9EC;max-width:66ch;margin:16px 0 0;line-height:1.6">
         The full information architecture of apiic.in — {{ totalLinks }} links across {{ totalGroups }} sections.
-        Links marked <span style="color:#2FC7DE">external</span> open the live corporate site or a government portal;
+        Links marked <span style="color:#D8783C">external</span> open the live corporate site or a government portal;
         the rest resolve inside this prototype.
       </p>
       <div style="display:flex;gap:11px;margin-top:26px;flex-wrap:wrap;align-items:center">
         <input value="{{ query }}" onInput="{{ onQuery }}" aria-label="Filter every link" placeholder="Filter {{ totalLinks }} links — try “tender”, “MSME”, “RTI”, “sale deed”"
-          style="flex:1;min-width:280px;font:inherit;font-size:16px;padding:15px 20px;border:1px solid rgba(255,255,255,0.24);border-radius:999px;background:rgba(255,255,255,0.09);color:#FFFFFF;outline:none">
-        <button data-apiic-search style="font:inherit;font-size:15px;cursor:pointer;display:inline-flex;align-items:center;gap:9px;border:1px solid rgba(47,199,222,0.45);background:rgba(47,199,222,0.14);color:#FFFFFF;border-radius:999px;padding:15px 22px">
-          <i class="ph ph-magnifying-glass"></i>Search everything <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;border:1px solid rgba(255,255,255,0.3);border-radius:4px;padding:2px 6px">CTRL K</span>
+          style="flex:1;min-width:280px;font:inherit;font-size:16px;padding:15px 20px;border:1px solid rgba(255,255,255,0.24);border-radius:6px;background:rgba(255,255,255,0.09);color:#FFFFFF;outline:none">
+        <button data-apiic-search style="font:inherit;font-size:15px;cursor:pointer;display:inline-flex;align-items:center;gap:9px;border:1px solid rgba(216,120,60,0.45);background:rgba(216,120,60,0.14);color:#FFFFFF;border-radius:6px;padding:15px 22px">
+          <i class="ph ph-magnifying-glass"></i>Search everything <span style="font-family:'Instrument Sans',sans-serif;font-size:11px;border:1px solid rgba(255,255,255,0.3);border-radius:4px;padding:2px 6px">Ctrl K</span>
         </button>
       </div>
     </div>
   </section>
 
   <!-- ================================================== SECTION JUMP NAV -->
-  <nav aria-label="Jump to a section" style="position:sticky;top:126px;z-index:20;background:var(--surface);border-bottom:1px solid var(--line);box-shadow:0 6px 18px -16px rgba(8,33,79,0.4)">
-    <div style="max-width:1320px;margin:0 auto;padding:12px 40px;display:flex;gap:8px;overflow-x:auto">
+  <nav aria-label="Jump to a section" style="position:sticky;top:126px;z-index:20;background:var(--surface);border-bottom:1px solid var(--line);box-shadow:0 6px 18px -16px rgba(22,56,92,0.4)">
+    <div style="max-width:1280px;margin:0 auto;padding:12px 40px;display:flex;gap:8px;overflow-x:auto">
       <sc-for list="{{ jumps }}" as="j" hint-placeholder-count="8">
         <a href="{{ j.href }}" style="flex:none;font-size:13px;border:1px solid var(--line);border-radius:999px;padding:7px 14px;color:var(--ink);white-space:nowrap;display:inline-flex;align-items:center;gap:7px">
           <i class="ph {{ j.icon }}" style="color:var(--indigo)"></i>{{ j.label }}
-          <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted)">{{ j.n }}</span>
+          <span style="font-family:'Instrument Sans',sans-serif;font-size:11px;color:var(--muted)">{{ j.n }}</span>
         </a>
       </sc-for>
     </div>
   </nav>
 
   <!-- ============================================================ RESULTS -->
-  <section style="max-width:1320px;margin:0 auto;padding:30px 40px 20px">
+  <section style="max-width:1280px;margin:0 auto;padding:30px 40px 20px">
     <div style="display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between">
-      <div style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:var(--muted);letter-spacing:0.06em">
-        <span style="color:var(--tide)">⌁</span> {{ resultLine }}
+      <div style="font-family:'Instrument Sans',sans-serif;font-size:11.5px;color:var(--muted);letter-spacing:0.06em">
+        {{ resultLine }}
       </div>
       <div style="display:flex;gap:8px;flex-wrap:wrap">
         <sc-for list="{{ filters }}" as="f" hint-placeholder-count="3">
           <button onClick="{{ f.pick }}" aria-pressed="{{ f.on }}"
             style="font:inherit;font-size:13.5px;cursor:pointer;border-radius:999px;padding:8px 15px;border:1px solid {{ f.border }};background:{{ f.bg }};color:{{ f.fg }};font-weight:{{ f.weight }};display:inline-flex;align-items:center;gap:7px">
-            <i class="ph {{ f.icon }}"></i>{{ f.label }} <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;opacity:0.72">{{ f.n }}</span>
+            <i class="ph {{ f.icon }}"></i>{{ f.label }} <span style="font-family:'Instrument Sans',sans-serif;font-size:11px;opacity:0.72">{{ f.n }}</span>
           </button>
         </sc-for>
       </div>
     </div>
   </section>
 
-  <section style="max-width:1320px;margin:0 auto;padding:0 40px 60px">
+  <section style="max-width:1280px;margin:0 auto;padding:0 40px 60px">
     <sc-for list="{{ groups }}" as="g" hint-placeholder-count="6">
       <div id="{{ g.slug }}" style="scroll-margin-top:200px;margin-bottom:26px;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow)">
         <div style="display:flex;align-items:flex-start;gap:15px;padding:22px 26px;background:linear-gradient(120deg,var(--tint-sky),var(--surface));border-bottom:1px solid var(--line)">
@@ -123,7 +122,7 @@ a:hover{color:var(--cyan-deep)}
             <h2 style="font-family:Sora,sans-serif;font-weight:600;font-size:23px;letter-spacing:-0.025em;margin:0;line-height:1.25">{{ g.group }}</h2>
             <p style="font-size:14.5px;color:var(--muted);margin:5px 0 0;line-height:1.5">{{ g.blurb }}</p>
           </div>
-          <span style="flex:none;font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:0.06em;background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:5px 11px;white-space:nowrap">{{ g.count }} LINKS</span>
+          <span style="flex:none;font-family:'Instrument Sans',sans-serif;font-size:11px;color:var(--muted);letter-spacing:0.06em;background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:5px 11px;white-space:nowrap">{{ g.count }} Links</span>
         </div>
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr))">
           <sc-for list="{{ g.items }}" as="i" hint-placeholder-count="6">
@@ -132,15 +131,15 @@ a:hover{color:var(--cyan-deep)}
               <a href="{{ i.url }}" target="{{ i.target }}" rel="noopener" style="flex:1;min-width:0;color:var(--ink)">
                 {{ i.label }}
                 <sc-if value="{{ i.star }}" hint-placeholder-val="{{ false }}">
-                  <span style="font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:0.06em;background:var(--gold-soft);color:#8A6410;border-radius:4px;padding:2px 6px;margin-left:7px;white-space:nowrap">MOST USED</span>
+                  <span style="font-family:'Instrument Sans',sans-serif;font-size:9px;letter-spacing:0.06em;background:var(--gold-soft);color:#9C5324;border-radius:4px;padding:2px 6px;margin-left:7px;white-space:nowrap">Most used</span>
                 </sc-if>
-                <span style="display:block;font-family:'IBM Plex Mono',monospace;font-size:9.5px;color:var(--muted);letter-spacing:0.04em;margin-top:4px;overflow-wrap:anywhere">{{ i.hostLabel }}</span>
+                <span style="display:block;font-family:'Instrument Sans',sans-serif;font-size:9.5px;color:var(--muted);letter-spacing:0.04em;margin-top:4px;overflow-wrap:anywhere">{{ i.hostLabel }}</span>
               </a>
               <!-- An item mapped onto a prototype page still links out to the
                    page APIIC actually publishes, so nothing is hidden. -->
               <sc-if value="{{ i.local }}" hint-placeholder-val="{{ false }}">
                 <a href="{{ i.live }}" target="_blank" rel="noopener" title="Open the official page on apiic.in"
-                   style="flex:none;font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:0.05em;border:1px solid var(--line);border-radius:4px;padding:3px 6px;color:var(--muted);margin-top:2px;white-space:nowrap">OFFICIAL &#8599;</a>
+                   style="flex:none;font-family:'Instrument Sans',sans-serif;font-size:9px;letter-spacing:0.05em;border:1px solid var(--line);border-radius:4px;padding:3px 6px;color:var(--muted);margin-top:2px;white-space:nowrap">Official &#8599;</a>
               </sc-if>
             </div>
           </sc-for>
@@ -157,8 +156,8 @@ a:hover{color:var(--cyan-deep)}
           the help desk will route the question to the wing that owns it.
         </div>
         <div style="display:flex;gap:10px;justify-content:center;margin-top:20px;flex-wrap:wrap">
-          <button onClick="{{ clear }}" style="font:inherit;cursor:pointer;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:12px 22px;font-size:15px">Clear the filter</button>
-          <button data-apiic-desk="new" style="font:inherit;cursor:pointer;border:none;background:linear-gradient(120deg,var(--royal),var(--royal2));color:#FFFFFF;border-radius:999px;padding:12px 22px;font-weight:600;font-size:15px">Ask the help desk</button>
+          <button onClick="{{ clear }}" style="font:inherit;cursor:pointer;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:6px;padding:12px 22px;font-size:15px">Clear the filter</button>
+          <button data-apiic-desk="new" style="font:inherit;cursor:pointer;border:none;background:linear-gradient(120deg,var(--royal),var(--royal2));color:#FFFFFF;border-radius:6px;padding:12px 22px;font-weight:600;font-size:15px">Ask the help desk</button>
         </div>
       </div>
     </sc-if>
@@ -170,7 +169,7 @@ a:hover{color:var(--cyan-deep)}
         as harvested on 26 July 2026. Deep links into transactional portals resolve to the portal entry point, since those
         systems require a login and their internal URLs are not stable.
       </div>
-      <span style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:var(--muted);letter-spacing:0.06em;white-space:nowrap">SOURCED 26 JUL 2026 · OWNER: DIGITAL TEAM</span>
+      <span style="font-family:'Instrument Sans',sans-serif;font-size:10.5px;color:var(--muted);letter-spacing:0.06em;white-space:nowrap">Sourced 26 Jul 2026 · Owner: Digital team</span>
     </div>
   </section>
 

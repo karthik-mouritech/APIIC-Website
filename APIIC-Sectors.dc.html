@@ -15,7 +15,7 @@
 <meta name="keywords" content="sectors food processing electronics semiconductor pharma textiles aerospace defence green energy ev">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <meta name="author" content="Andhra Pradesh Industrial Infrastructure Corporation">
-<meta name="theme-color" content="#0A2A6B">
+<meta name="theme-color" content="#245484">
 <link rel="canonical" href="https://apiic.in/APIIC-Sectors.dc.html">
 <link rel="icon" type="image/png" href="assets/APIIC-logo.png">
 <link rel="apple-touch-icon" href="assets/APIIC-logo-2x.png">
@@ -47,26 +47,28 @@
 <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
 <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/duotone/style.css">
 <style>
-:root{--ink:#08214F;--indigo:#123B86;--royal:#0A2A6B;--royal2:#14458F;--cyan:#2FC7DE;--cyan-deep:#0E9CB8;--cyan-soft:#E6F8FB;--tint-lav:#EEF0FF;--tint-mint:#E8F7F0;--tint-peach:#FDF1E7;--tint-sky:#E9F1FE;--tint-violet:#F2ECFE;--tint-rose:#FDECF2;--r:14px;--r-sm:10px;--shadow:0 14px 34px -20px rgba(8,33,79,0.30);--shadow-lg:0 26px 60px -28px rgba(8,33,79,0.42);--gold:#C9962C;--gold-soft:#F3E4C0;--tide:#0F8A80;--paper:#F6F7F5;--surface:#FFFFFF;--line:#D8DEE3;--muted:#5A6B7A}
+:root{--ink:#16385C;--indigo:#245484;--royal:#245484;--royal2:#2E6399;--cyan:#D8783C;--cyan-deep:#B75F28;--cyan-soft:#FBEEE4;--tint-lav:#EDF2F8;--tint-mint:#E6F5EE;--tint-peach:#FBEEE4;--tint-sky:#EDF2F8;--tint-violet:#EDF2F8;--tint-rose:#FBEEE4;--r:8px;--on-tint:#245484;--r-sm:6px;--shadow:0 10px 26px -18px rgba(22,56,92,0.24);--shadow-lg:0 30px 60px -40px rgba(22,56,92,0.38);--gold:#D8783C;--gold-soft:#F5DCC8;--tide:#009C54;--paper:#F7F9FB;--surface:#Ffffff;--line:#DDE4EC;--muted:#5A6B7A}
 *{box-sizing:border-box}
 body{margin:0;background:var(--paper);color:var(--ink);font-family:'Instrument Sans',system-ui,sans-serif;font-size:18px;line-height:1.6;-webkit-font-smoothing:antialiased}
 a{color:var(--indigo);text-decoration:none}
-a:hover{color:var(--gold)}
+a:hover{color:var(--cyan-deep)}
 :focus-visible{outline:2px solid var(--tide);outline-offset:2px}
 </style>
 </helmet>
 <main style="min-height:100vh">
   <dc-import name="APIICNav" hint-size="100%,112px"></dc-import>
 
-  <div style="background:linear-gradient(105deg,#08214F 0%,#0A2A6B 55%,#123B86 100%);color:#FFFFFF;position:relative;overflow:hidden">
-    <div style="max-width:1320px;margin:0 auto;padding:22px 40px 0;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.08em;color:#7C93A6"><a href="APIIC-Home.dc.html" style="color:#7C93A6">HOME</a> / INVEST IN AP / PRIORITY SECTORS</div>
-    <div style="max-width:1320px;margin:0 auto;padding:28px 40px 48px">
-      <h1 style="font-family:Sora,sans-serif;font-weight:700;font-size:44px;letter-spacing:-0.03em;margin:0">Priority sectors</h1>
-      <p style="font-size:19px;color:#C6D2DC;margin:12px 0 0;max-width:64ch">Six sectors where Andhra Pradesh already has the land, the utilities and the ecosystem in place. Each follows one structure, so you learn it once and read the rest quickly.</p>
+  <div style="background:#245484;color:#FFFFFF;position:relative;overflow:hidden">
+    <img src="assets/img/apiic-foxlink-tirupati.jpg" alt="Foxlink manufacturing unit in an APIIC park, Tirupati" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 55%">
+    <div aria-hidden="true" style="position:absolute;inset:0;background:linear-gradient(96deg,rgba(8,26,58,0.96) 0%,rgba(9,32,70,0.92) 52%,rgba(22,56,92,0.6) 100%)"></div>
+    <div style="position:relative;max-width:1280px;margin:0 auto;padding:26px 40px 0;display:flex;align-items:center;gap:12px;flex-wrap:wrap;font-size:13px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#B9CBE4"><span style="width:34px;height:1px;background:#D8783C;flex:none"></span><a href="APIIC-Home.dc.html" style="color:#B9CBE4">Home</a> / Invest in ap / Priority sectors</div>
+    <div style="position:relative;max-width:1280px;margin:0 auto;padding:30px 40px 64px">
+      <h1 style="font-family:Sora,sans-serif;font-weight:700;font-size:52px;line-height:1.06;letter-spacing:-0.035em;margin:0">Priority sectors</h1>
+      <p style="font-size:19px;color:#CBD9EC;margin:12px 0 0;max-width:64ch">Six sectors where Andhra Pradesh already has the land, the utilities and the ecosystem in place. Each follows one structure, so you learn it once and read the rest quickly.</p>
     </div>
   </div>
 
-  <div style="max-width:1320px;margin:0 auto;padding:36px 40px 0">
+  <div style="max-width:1280px;margin:0 auto;padding:36px 40px 0">
     <div style="display:flex;gap:10px;overflow-x:auto;padding-bottom:20px;border-bottom:1px solid var(--line)">
       <sc-if value="{{ onElectronics }}" hint-placeholder-val="{{ true }}"><button onClick="{{ pickElectronics }}" style="background:var(--indigo);color:#FFFFFF;border:1px solid var(--indigo);padding:10px 16px;border-radius:999px;font-family:'Instrument Sans',sans-serif;font-size:15px;white-space:nowrap;cursor:pointer">Electronics &amp; Semiconductors</button></sc-if>
       <sc-if value="{{ offElectronics }}" hint-placeholder-val="{{ false }}"><button onClick="{{ pickElectronics }}" style="background:var(--surface);color:var(--indigo);border:1px solid var(--line);padding:10px 16px;border-radius:999px;font-family:'Instrument Sans',sans-serif;font-size:15px;white-space:nowrap;cursor:pointer">Electronics &amp; Semiconductors</button></sc-if>
@@ -79,7 +81,7 @@ a:hover{color:var(--gold)}
     </div>
   </div>
 
-  <section style="max-width:1320px;margin:0 auto;padding:44px 40px 0">
+  <section style="max-width:1280px;margin:0 auto;padding:44px 40px 0">
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:48px;align-items:start">
       <div>
         <sc-if value="{{ onElectronics }}" hint-placeholder-val="{{ true }}">
@@ -87,7 +89,7 @@ a:hover{color:var(--gold)}
             <i class="ph-duotone ph-cpu" style="font-size:40px;color:var(--indigo)"></i>
             <h2 style="font-family:Sora,sans-serif;font-weight:600;font-size:36px;letter-spacing:-0.02em;margin:14px 0 0">Electronics &amp; Semiconductors</h2>
             <p style="font-size:20px;line-height:1.55;margin:14px 0 0;max-width:52ch">Assembly, components and display manufacturing on the Chennai–Bengaluru corridor, with notified clusters, 220 kV feeds and plug-and-play sheds that let a line start before a building does.</p>
-            <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted);margin-top:16px;border-left:2px solid var(--line);padding-left:14px;line-height:1.8">3 NOTIFIED CLUSTERS · 14 SECTOR-READY PARKS<br><span style="color:var(--tide)">⌁</span> SECTOR RECORD VERIFIED 21 JUL 2026 · INVESTOR SERVICES</div>
+            <div style="font-family:'Instrument Sans',sans-serif;font-size:12px;color:var(--muted);margin-top:16px;border-left:2px solid var(--line);padding-left:14px;line-height:1.8">3 notified clusters · 14 sector-ready parks<br>Sector record Verified 21 Jul 2026 · Investor services</div>
           </div>
         </sc-if>
         <sc-if value="{{ onFood }}" hint-placeholder-val="{{ false }}">
@@ -95,26 +97,26 @@ a:hover{color:var(--gold)}
             <i class="ph-duotone ph-grains" style="font-size:40px;color:var(--indigo)"></i>
             <h2 style="font-family:Sora,sans-serif;font-weight:600;font-size:36px;letter-spacing:-0.02em;margin:14px 0 0">Food Processing</h2>
             <p style="font-size:20px;line-height:1.55;margin:14px 0 0;max-width:52ch">974 km of coast, four operational ports and delta-district theme parks built for cold chain, marine products and primary processing — with CETP capacity published park by park.</p>
-            <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted);margin-top:16px;border-left:2px solid var(--line);padding-left:14px;line-height:1.8">6 THEME PARKS · 31 PARKS PERMITTING FOOD PROCESSING<br><span style="color:var(--tide)">⌁</span> SECTOR RECORD VERIFIED 21 JUL 2026 · INVESTOR SERVICES</div>
+            <div style="font-family:'Instrument Sans',sans-serif;font-size:12px;color:var(--muted);margin-top:16px;border-left:2px solid var(--line);padding-left:14px;line-height:1.8">6 theme parks · 31 parks permitting food processing<br>Sector record Verified 21 Jul 2026 · Investor services</div>
           </div>
         </sc-if>
       </div>
-      <div style="background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:26px;box-shadow:0 6px 18px -14px rgba(8,33,79,0.3)">
-        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.06em;color:var(--muted)">WHY AP FOR THIS SECTOR</div>
+      <div style="background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:26px;box-shadow:0 6px 18px -14px rgba(22,56,92,0.3)">
+        <div style="font-family:'Instrument Sans',sans-serif;font-size:11px;letter-spacing:0.06em;color:var(--muted)">Why ap for this sector</div>
         <div style="display:flex;flex-direction:column;gap:14px;margin-top:16px">
-          <div style="display:flex;justify-content:space-between;gap:16px;padding-bottom:12px;border-bottom:1px solid var(--line)"><span style="font-size:16px">Sector-ready parks with land available</span><span style="font-family:'IBM Plex Mono',monospace;font-size:17px">14</span></div>
-          <div style="display:flex;justify-content:space-between;gap:16px;padding-bottom:12px;border-bottom:1px solid var(--line)"><span style="font-size:16px">Operating units in sector</span><span style="font-family:'IBM Plex Mono',monospace;font-size:17px">280+</span></div>
-          <div style="display:flex;justify-content:space-between;gap:16px;padding-bottom:12px;border-bottom:1px solid var(--line)"><span style="font-size:16px">Graduate output, relevant disciplines</span><span style="font-family:'IBM Plex Mono',monospace;font-size:17px">1.64 lakh / yr</span></div>
-          <div style="display:flex;justify-content:space-between;gap:16px;padding-bottom:12px;border-bottom:1px solid var(--line)"><span style="font-size:16px">Sector-specific policy in force</span><span style="font-family:'IBM Plex Mono',monospace;font-size:17px">Yes</span></div>
-          <div style="display:flex;justify-content:space-between;gap:16px"><span style="font-size:16px">Sector export value</span><span style="font-family:'IBM Plex Mono',monospace;font-size:15px;color:var(--muted);font-style:italic">Not published</span></div>
+          <div style="display:flex;justify-content:space-between;gap:16px;padding-bottom:12px;border-bottom:1px solid var(--line)"><span style="font-size:16px">Sector-ready parks with land available</span><span style="font-family:'Instrument Sans',sans-serif;font-size:17px">14</span></div>
+          <div style="display:flex;justify-content:space-between;gap:16px;padding-bottom:12px;border-bottom:1px solid var(--line)"><span style="font-size:16px">Operating units in sector</span><span style="font-family:'Instrument Sans',sans-serif;font-size:17px">280+</span></div>
+          <div style="display:flex;justify-content:space-between;gap:16px;padding-bottom:12px;border-bottom:1px solid var(--line)"><span style="font-size:16px">Graduate output, relevant disciplines</span><span style="font-family:'Instrument Sans',sans-serif;font-size:17px">1.64 lakh / yr</span></div>
+          <div style="display:flex;justify-content:space-between;gap:16px;padding-bottom:12px;border-bottom:1px solid var(--line)"><span style="font-size:16px">Sector-specific policy in force</span><span style="font-family:'Instrument Sans',sans-serif;font-size:17px">Yes</span></div>
+          <div style="display:flex;justify-content:space-between;gap:16px"><span style="font-size:16px">Sector export value</span><span style="font-family:'Instrument Sans',sans-serif;font-size:15px;color:var(--muted);font-style:italic">Not published</span></div>
         </div>
-        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);margin-top:16px"><span style="color:var(--tide)">⌁</span> VERIFIED 21 JUL 2026 · SECTOR STATISTICS DATASET</div>
+        <div style="font-family:'Instrument Sans',sans-serif;font-size:11px;color:var(--muted);margin-top:16px">Verified 21 Jul 2026 · Sector statistics dataset</div>
       </div>
     </div>
   </section>
 
-  <section style="max-width:1320px;margin:0 auto;padding:72px 40px 0">
-    <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.1em;color:var(--muted);border-bottom:1px solid var(--line);padding-bottom:14px">THE ECOSYSTEM HERE</div>
+  <section style="max-width:1280px;margin:0 auto;padding:72px 40px 0">
+    <div style="font-family:'Instrument Sans',sans-serif;font-size:11px;letter-spacing:0.1em;color:var(--muted);border-bottom:1px solid var(--line);padding-bottom:14px">The ecosystem here</div>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-top:none;margin-top:28px">
       <div style="background:var(--surface);padding:24px"><i class="ph ph-buildings" style="font-size:24px;color:var(--indigo)"></i><div style="font-family:Sora,sans-serif;font-weight:600;font-size:20px;margin-top:10px">Anchor units</div><p style="font-size:16px;color:var(--muted);margin:8px 0 0">Mobile assembly, EMS, PCB and display units operating in the Chittoor and Tirupati clusters, with published consent for their names on request.</p></div>
       <div style="background:var(--surface);padding:24px"><i class="ph ph-graph" style="font-size:24px;color:var(--indigo)"></i><div style="font-family:Sora,sans-serif;font-weight:600;font-size:20px;margin-top:10px">Suppliers &amp; components</div><p style="font-size:16px;color:var(--muted);margin:8px 0 0">Plastics, moulding, packaging and precision-machining tenants already inside the same estates, so first-tier supply doesn't need importing.</p></div>
@@ -123,22 +125,22 @@ a:hover{color:var(--gold)}
     </div>
   </section>
 
-  <section style="max-width:1320px;margin:0 auto;padding:72px 40px 0">
+  <section style="max-width:1280px;margin:0 auto;padding:72px 40px 0">
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:48px;align-items:start">
       <div>
-        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.1em;color:var(--muted);border-bottom:1px solid var(--line);padding-bottom:14px">TALENT FOR THIS SECTOR</div>
+        <div style="font-family:'Instrument Sans',sans-serif;font-size:11px;letter-spacing:0.1em;color:var(--muted);border-bottom:1px solid var(--line);padding-bottom:14px">Talent for this sector</div>
         <table style="width:100%;border-collapse:collapse;font-size:16px;background:var(--surface);border:1px solid var(--line);border-top:none;margin-top:20px">
           <tbody>
-            <tr style="border-bottom:1px solid var(--line)"><td style="padding:12px 16px;color:var(--muted)">Electronics / ECE graduates</td><td style="padding:12px 16px;text-align:right;font-family:'IBM Plex Mono',monospace">48,000 / yr</td></tr>
-            <tr style="border-bottom:1px solid var(--line)"><td style="padding:12px 16px;color:var(--muted)">ITI electronics &amp; instrumentation</td><td style="padding:12px 16px;text-align:right;font-family:'IBM Plex Mono',monospace">18,400 seats</td></tr>
-            <tr style="border-bottom:1px solid var(--line)"><td style="padding:12px 16px;color:var(--muted)">Assembly operator wage band</td><td style="padding:12px 16px;text-align:right;font-family:'IBM Plex Mono',monospace">₹17.2–22.4 K / mo</td></tr>
-            <tr><td style="padding:12px 16px;color:var(--muted)">Sector attrition rate</td><td style="padding:12px 16px;text-align:right;font-family:'IBM Plex Mono',monospace;color:var(--muted);font-style:italic">Not published</td></tr>
+            <tr style="border-bottom:1px solid var(--line)"><td style="padding:12px 16px;color:var(--muted)">Electronics / ECE graduates</td><td style="padding:12px 16px;text-align:right;font-family:'Instrument Sans',sans-serif">48,000 / yr</td></tr>
+            <tr style="border-bottom:1px solid var(--line)"><td style="padding:12px 16px;color:var(--muted)">ITI electronics &amp; instrumentation</td><td style="padding:12px 16px;text-align:right;font-family:'Instrument Sans',sans-serif">18,400 seats</td></tr>
+            <tr style="border-bottom:1px solid var(--line)"><td style="padding:12px 16px;color:var(--muted)">Assembly operator wage band</td><td style="padding:12px 16px;text-align:right;font-family:'Instrument Sans',sans-serif">₹17.2–22.4 K / mo</td></tr>
+            <tr><td style="padding:12px 16px;color:var(--muted)">Sector attrition rate</td><td style="padding:12px 16px;text-align:right;font-family:'Instrument Sans',sans-serif;color:var(--muted);font-style:italic">Not published</td></tr>
           </tbody>
         </table>
-        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);margin-top:12px">SOURCE: AICTE; APSSDC; 214-EMPLOYER WAGE SAMPLE · REVIEWED 21 JUL 2026</div>
+        <div style="font-family:'Instrument Sans',sans-serif;font-size:11px;color:var(--muted);margin-top:12px">Source: AICTE; APSSDC; 214-employer wage sample · Reviewed 21 Jul 2026</div>
       </div>
       <div>
-        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.1em;color:var(--muted);border-bottom:1px solid var(--line);padding-bottom:14px">INFRASTRUCTURE THIS SECTOR NEEDS</div>
+        <div style="font-family:'Instrument Sans',sans-serif;font-size:11px;letter-spacing:0.1em;color:var(--muted);border-bottom:1px solid var(--line);padding-bottom:14px">Infrastructure this sector needs</div>
         <div style="display:flex;flex-direction:column;gap:0;margin-top:20px;background:var(--surface);border:1px solid var(--line)">
           <div style="display:flex;gap:12px;padding:14px 16px;border-bottom:1px solid var(--line);font-size:16px"><span style="color:var(--tide)">✓</span><span>220 kV / 132 kV supply with dual feeder — available in 3 cluster parks</span></div>
           <div style="display:flex;gap:12px;padding:14px 16px;border-bottom:1px solid var(--line);font-size:16px"><span style="color:var(--tide)">✓</span><span>Plug-and-play sheds, 2,000–8,000 sq m — 4 parks</span></div>
@@ -150,60 +152,60 @@ a:hover{color:var(--gold)}
     </div>
   </section>
 
-  <section style="max-width:1320px;margin:0 auto;padding:72px 40px 0">
+  <section style="max-width:1280px;margin:0 auto;padding:72px 40px 0">
     <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:24px;border-bottom:1px solid var(--line);padding-bottom:14px">
-      <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.1em;color:var(--muted)">SECTOR-READY PARKS · LIVE FROM THE PARK DIRECTORY</div>
+      <div style="font-family:'Instrument Sans',sans-serif;font-size:11px;letter-spacing:0.1em;color:var(--muted)">Sector-ready parks · live from the park directory</div>
       <a href="APIIC-Parks-Directory.dc.html" style="font-weight:500;white-space:nowrap">See all sector-ready parks →</a>
     </div>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;margin-top:28px">
-      <div style="background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:22px;box-shadow:0 6px 18px -14px rgba(8,33,79,0.3);display:flex;flex-direction:column;gap:13px">
-        <div style="display:flex;justify-content:space-between;gap:10px"><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted)">⌁ CTR-021</span><span style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#0A7F76;border:1px solid rgba(15,138,128,0.45);background:rgba(15,138,128,0.10);padding:4px 7px;border-radius:3px">AVAILABLE</span></div>
+      <div style="background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:22px;box-shadow:0 6px 18px -14px rgba(22,56,92,0.3);display:flex;flex-direction:column;gap:13px">
+        <div style="display:flex;justify-content:space-between;gap:10px"><span style="font-family:'Instrument Sans',sans-serif;font-size:12px;color:var(--muted)">CTR-021</span><span style="font-family:'Instrument Sans',sans-serif;font-size:10px;color:#007A42;border:1px solid rgba(0,156,84,0.45);background:rgba(0,156,84,0.10);padding:4px 7px;border-radius:3px">Available</span></div>
         <a href="APIIC-Park-Profile.dc.html" style="font-family:Sora,sans-serif;font-weight:600;font-size:21px;letter-spacing:-0.02em;color:var(--ink);line-height:1.2">Electronics Manufacturing Cluster, Chittoor</a>
         <div style="font-size:14px;color:var(--muted)">Chittoor District · Theme Park</div>
-        <div style="display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)"><div style="padding:11px 8px 11px 0;border-right:1px solid var(--line)"><div style="font-size:10px;text-transform:uppercase;color:var(--muted)">Avail</div><div style="font-family:'IBM Plex Mono',monospace;font-size:15px">58.9 ac</div></div><div style="padding:11px 8px;border-right:1px solid var(--line)"><div style="font-size:10px;text-transform:uppercase;color:var(--muted)">Rate</div><div style="font-family:'IBM Plex Mono',monospace;font-size:15px">₹61.0L</div></div><div style="padding:11px 0 11px 8px"><div style="font-size:10px;text-transform:uppercase;color:var(--muted)">Port</div><div style="font-family:'IBM Plex Mono',monospace;font-size:15px">124 km</div></div></div>
-        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted)"><span style="color:var(--tide)">⌁</span> VERIFIED 22 JUL 2026</div>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)"><div style="padding:11px 8px 11px 0;border-right:1px solid var(--line)"><div style="font-size:10px;text-transform:uppercase;color:var(--muted)">Avail</div><div style="font-family:'Instrument Sans',sans-serif;font-size:15px">58.9 ac</div></div><div style="padding:11px 8px;border-right:1px solid var(--line)"><div style="font-size:10px;text-transform:uppercase;color:var(--muted)">Rate</div><div style="font-family:'Instrument Sans',sans-serif;font-size:15px">₹61.0L</div></div><div style="padding:11px 0 11px 8px"><div style="font-size:10px;text-transform:uppercase;color:var(--muted)">Port</div><div style="font-family:'Instrument Sans',sans-serif;font-size:15px">124 km</div></div></div>
+        <div style="font-family:'Instrument Sans',sans-serif;font-size:11px;color:var(--muted)">Verified 22 Jul 2026</div>
       </div>
-      <div style="background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:22px;box-shadow:0 6px 18px -14px rgba(8,33,79,0.3);display:flex;flex-direction:column;gap:13px">
-        <div style="display:flex;justify-content:space-between;gap:10px"><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted)">⌁ TPT-014</span><span style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#8A6410;border:1px solid #C9962C;background:rgba(201,150,44,0.12);padding:4px 7px;border-radius:3px">LIMITED</span></div>
+      <div style="background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:22px;box-shadow:0 6px 18px -14px rgba(22,56,92,0.3);display:flex;flex-direction:column;gap:13px">
+        <div style="display:flex;justify-content:space-between;gap:10px"><span style="font-family:'Instrument Sans',sans-serif;font-size:12px;color:var(--muted)">TPT-014</span><span style="font-family:'Instrument Sans',sans-serif;font-size:10px;color:#9C5324;border:1px solid #D8783C;background:rgba(216,120,60,0.12);padding:4px 7px;border-radius:3px">Limited</span></div>
         <a href="APIIC-Park-Profile.dc.html" style="font-family:Sora,sans-serif;font-weight:600;font-size:21px;letter-spacing:-0.02em;color:var(--ink);line-height:1.2">Sri City Adjoining Estate</a>
         <div style="font-size:14px;color:var(--muted)">Tirupati District · Industrial Park</div>
-        <div style="display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)"><div style="padding:11px 8px 11px 0;border-right:1px solid var(--line)"><div style="font-size:10px;text-transform:uppercase;color:var(--muted)">Avail</div><div style="font-family:'IBM Plex Mono',monospace;font-size:15px">9.4 ac</div></div><div style="padding:11px 8px;border-right:1px solid var(--line)"><div style="font-size:10px;text-transform:uppercase;color:var(--muted)">Rate</div><div style="font-family:'IBM Plex Mono',monospace;font-size:15px">₹92.0L</div></div><div style="padding:11px 0 11px 8px"><div style="font-size:10px;text-transform:uppercase;color:var(--muted)">Port</div><div style="font-family:'IBM Plex Mono',monospace;font-size:15px">58 km</div></div></div>
-        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted)"><span style="color:var(--tide)">⌁</span> VERIFIED 20 JUL 2026</div>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)"><div style="padding:11px 8px 11px 0;border-right:1px solid var(--line)"><div style="font-size:10px;text-transform:uppercase;color:var(--muted)">Avail</div><div style="font-family:'Instrument Sans',sans-serif;font-size:15px">9.4 ac</div></div><div style="padding:11px 8px;border-right:1px solid var(--line)"><div style="font-size:10px;text-transform:uppercase;color:var(--muted)">Rate</div><div style="font-family:'Instrument Sans',sans-serif;font-size:15px">₹92.0L</div></div><div style="padding:11px 0 11px 8px"><div style="font-size:10px;text-transform:uppercase;color:var(--muted)">Port</div><div style="font-family:'Instrument Sans',sans-serif;font-size:15px">58 km</div></div></div>
+        <div style="font-family:'Instrument Sans',sans-serif;font-size:11px;color:var(--muted)">Verified 20 Jul 2026</div>
       </div>
-      <div style="background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:22px;box-shadow:0 6px 18px -14px rgba(8,33,79,0.3);display:flex;flex-direction:column;gap:13px">
-        <div style="display:flex;justify-content:space-between;gap:10px"><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted)">⌁ KDP-007</span><span style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#163A5F;border:1px solid #163A5F;padding:4px 7px;border-radius:3px">COMING SOON</span></div>
+      <div style="background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:22px;box-shadow:0 6px 18px -14px rgba(22,56,92,0.3);display:flex;flex-direction:column;gap:13px">
+        <div style="display:flex;justify-content:space-between;gap:10px"><span style="font-family:'Instrument Sans',sans-serif;font-size:12px;color:var(--muted)">KDP-007</span><span style="font-family:'Instrument Sans',sans-serif;font-size:10px;color:#163A5F;border:1px solid #163A5F;padding:4px 7px;border-radius:3px">Coming soon</span></div>
         <a href="APIIC-Park-Profile.dc.html" style="font-family:Sora,sans-serif;font-weight:600;font-size:21px;letter-spacing:-0.02em;color:var(--ink);line-height:1.2">Kopparthy Node, YSR Kadapa</a>
         <div style="font-size:14px;color:var(--muted)">YSR Kadapa District · Theme Park</div>
-        <div style="display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)"><div style="padding:11px 8px 11px 0;border-right:1px solid var(--line)"><div style="font-size:10px;text-transform:uppercase;color:var(--muted)">Avail</div><div style="font-family:'IBM Plex Mono',monospace;font-size:15px">Q1 2027</div></div><div style="padding:11px 8px;border-right:1px solid var(--line)"><div style="font-size:10px;text-transform:uppercase;color:var(--muted)">Rate</div><div style="font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--muted);font-style:italic">Not published</div></div><div style="padding:11px 0 11px 8px"><div style="font-size:10px;text-transform:uppercase;color:var(--muted)">Port</div><div style="font-family:'IBM Plex Mono',monospace;font-size:15px">180 km</div></div></div>
-        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted)"><span style="color:var(--tide)">⌁</span> VERIFIED 21 JUL 2026</div>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)"><div style="padding:11px 8px 11px 0;border-right:1px solid var(--line)"><div style="font-size:10px;text-transform:uppercase;color:var(--muted)">Avail</div><div style="font-family:'Instrument Sans',sans-serif;font-size:15px">Q1 2027</div></div><div style="padding:11px 8px;border-right:1px solid var(--line)"><div style="font-size:10px;text-transform:uppercase;color:var(--muted)">Rate</div><div style="font-family:'Instrument Sans',sans-serif;font-size:13px;color:var(--muted);font-style:italic">Not published</div></div><div style="padding:11px 0 11px 8px"><div style="font-size:10px;text-transform:uppercase;color:var(--muted)">Port</div><div style="font-family:'Instrument Sans',sans-serif;font-size:15px">180 km</div></div></div>
+        <div style="font-family:'Instrument Sans',sans-serif;font-size:11px;color:var(--muted)">Verified 21 Jul 2026</div>
       </div>
     </div>
   </section>
 
-  <section style="max-width:1320px;margin:0 auto;padding:72px 40px 0">
-    <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.1em;color:var(--muted);border-bottom:1px solid var(--line);padding-bottom:14px">POLICIES &amp; INCENTIVES FOR THIS SECTOR</div>
+  <section style="max-width:1280px;margin:0 auto;padding:72px 40px 0">
+    <div style="font-family:'Instrument Sans',sans-serif;font-size:11px;letter-spacing:0.1em;color:var(--muted);border-bottom:1px solid var(--line);padding-bottom:14px">Policies &amp; incentives for this sector</div>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;margin-top:28px">
-      <div style="background:var(--surface);border:1px solid var(--line);padding:24px;display:flex;flex-direction:column;gap:10px"><div style="display:flex;justify-content:space-between"><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted)">GO MS 31 / 2024</span><span style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--tide);border:1px solid var(--tide);padding:3px 7px">IN FORCE</span></div><div style="font-family:Sora,sans-serif;font-weight:600;font-size:21px;letter-spacing:-0.02em">AP Electronics &amp; Semiconductor Policy</div><p style="font-size:16px;color:var(--muted);margin:0">Capital support, power cost reimbursement, built-space rental support inside notified clusters.</p><div style="display:flex;gap:14px;margin-top:auto;font-size:15px"><a href="APIIC-Policies.dc.html">Read summary</a><a href="APIIC-Prototype-Scope.dc.html#external">Official PDF ↗</a></div></div>
-      <div style="background:var(--surface);border:1px solid var(--line);padding:24px;display:flex;flex-direction:column;gap:10px"><div style="display:flex;justify-content:space-between"><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted)">GO MS 12 / 2024</span><span style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--tide);border:1px solid var(--tide);padding:3px 7px">IN FORCE</span></div><div style="font-family:Sora,sans-serif;font-weight:600;font-size:21px;letter-spacing:-0.02em">AP Industrial Development Policy 4.0</div><p style="font-size:16px;color:var(--muted);margin:0">Umbrella support by enterprise category and district, including land rebate bands.</p><div style="display:flex;gap:14px;margin-top:auto;font-size:15px"><a href="APIIC-Policies.dc.html">Read summary</a><a href="APIIC-Prototype-Scope.dc.html#external">Official PDF ↗</a></div></div>
-      <div style="background:var(--gold-soft);border:1px solid var(--gold);padding:24px;display:flex;flex-direction:column;gap:10px"><div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#6B4E10;letter-spacing:0.06em">CHECK BEFORE YOU COMMIT</div><div style="font-family:Sora,sans-serif;font-weight:600;font-size:21px;letter-spacing:-0.02em;color:#3A2C08">What might your project qualify for?</div><p style="font-size:16px;color:#3A2C08;margin:0">Seven questions, indicative matches, every match explained.</p><a href="APIIC-Incentive-Screener.dc.html" style="margin-top:auto;background:linear-gradient(120deg,#08214F,#123B86);color:#FFFFFF;padding:12px 18px;border-radius:var(--r-sm);font-weight:600;font-size:16px;text-align:center">Open the screener</a></div>
+      <div style="background:var(--surface);border:1px solid var(--line);padding:24px;display:flex;flex-direction:column;gap:10px"><div style="display:flex;justify-content:space-between"><span style="font-family:'Instrument Sans',sans-serif;font-size:11px;color:var(--muted)">GO ms 31 / 2024</span><span style="font-family:'Instrument Sans',sans-serif;font-size:10px;color:var(--tide);border:1px solid var(--tide);padding:3px 7px">In force</span></div><div style="font-family:Sora,sans-serif;font-weight:600;font-size:21px;letter-spacing:-0.02em">AP Electronics &amp; Semiconductor Policy</div><p style="font-size:16px;color:var(--muted);margin:0">Capital support, power cost reimbursement, built-space rental support inside notified clusters.</p><div style="display:flex;gap:14px;margin-top:auto;font-size:15px"><a href="APIIC-Policies.dc.html">Read summary</a><a href="APIIC-Prototype-Scope.dc.html#external">Official PDF ↗</a></div></div>
+      <div style="background:var(--surface);border:1px solid var(--line);padding:24px;display:flex;flex-direction:column;gap:10px"><div style="display:flex;justify-content:space-between"><span style="font-family:'Instrument Sans',sans-serif;font-size:11px;color:var(--muted)">GO ms 12 / 2024</span><span style="font-family:'Instrument Sans',sans-serif;font-size:10px;color:var(--tide);border:1px solid var(--tide);padding:3px 7px">In force</span></div><div style="font-family:Sora,sans-serif;font-weight:600;font-size:21px;letter-spacing:-0.02em">AP Industrial Development Policy 4.0</div><p style="font-size:16px;color:var(--muted);margin:0">Umbrella support by enterprise category and district, including land rebate bands.</p><div style="display:flex;gap:14px;margin-top:auto;font-size:15px"><a href="APIIC-Policies.dc.html">Read summary</a><a href="APIIC-Prototype-Scope.dc.html#external">Official PDF ↗</a></div></div>
+      <div style="background:var(--gold-soft);border:1px solid var(--gold);padding:24px;display:flex;flex-direction:column;gap:10px"><div style="font-family:'Instrument Sans',sans-serif;font-size:11px;color:#6B4E10;letter-spacing:0.06em">Check before you commit</div><div style="font-family:Sora,sans-serif;font-weight:600;font-size:21px;letter-spacing:-0.02em;color:#3A2C08">What might your project qualify for?</div><p style="font-size:16px;color:#3A2C08;margin:0">Seven questions, indicative matches, every match explained.</p><a href="APIIC-Incentive-Screener.dc.html" style="margin-top:auto;background:linear-gradient(120deg,#245484,#2E6399);color:#FFFFFF;padding:12px 18px;border-radius:var(--r-sm);font-weight:600;font-size:16px;text-align:center">Open the screener</a></div>
     </div>
   </section>
 
-  <section style="max-width:1320px;margin:0 auto;padding:72px 40px 112px">
-    <div style="background:linear-gradient(120deg,#08214F,#123B86);color:#C3D6EF;border-radius:var(--r-sm);padding:32px 36px;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:32px;align-items:center">
-      <div><div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.08em;color:var(--gold)">SECTOR DESK</div><div style="font-family:Sora,sans-serif;font-weight:600;font-size:24px;color:#FFFFFF;margin-top:8px">Electronics &amp; IT Desk, APIIC</div><div style="font-size:15px;margin-top:4px">Role-based mailbox, monitored by the sector team</div></div>
-      <div style="min-width:0;overflow-wrap:anywhere;font-family:'IBM Plex Mono',monospace;font-size:15px;color:#FFFFFF;line-height:1.9">sector.electronics@apiic.in<br>0863 234 0000 ext 214</div>
-      <div style="display:flex;flex-direction:column;gap:10px;align-items:flex-start"><a href="APIIC-Talk-To-Expert.dc.html" style="background:linear-gradient(120deg,#0A2A6B,#14458F);color:#FFFFFF;padding:14px 22px;border-radius:999px;font-weight:600;box-shadow:var(--shadow)">Contact the sector desk</a><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#7C93A6"><span style="color:var(--tide)">⌁</span> CONTACT VERIFIED 18 JUL 2026</span></div>
+  <section style="max-width:1280px;margin:0 auto;padding:72px 40px 112px">
+    <div style="background:linear-gradient(120deg,#245484,#2E6399);color:#CBD9EC;border-radius:var(--r-sm);padding:32px 36px;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:32px;align-items:center">
+      <div><div style="font-family:'Instrument Sans',sans-serif;font-size:11px;letter-spacing:0.08em;color:var(--gold)">Sector desk</div><div style="font-family:Sora,sans-serif;font-weight:600;font-size:24px;color:#FFFFFF;margin-top:8px">Electronics &amp; IT Desk, APIIC</div><div style="font-size:15px;margin-top:4px">Role-based mailbox, monitored by the sector team</div></div>
+      <div style="min-width:0;overflow-wrap:anywhere;font-family:'Instrument Sans',sans-serif;font-size:15px;color:#FFFFFF;line-height:1.9">aju.antony@apedb.co.in<br>0863-2381850</div>
+      <div style="display:flex;flex-direction:column;gap:10px;align-items:flex-start"><a href="APIIC-Talk-To-Expert.dc.html" style="background:#245484;color:#FFFFFF;padding:14px 22px;border-radius:6px;font-weight:600;box-shadow:var(--shadow)">Contact the sector desk</a><span style="font-family:'Instrument Sans',sans-serif;font-size:11px;color:#7C93A6">Contact Verified 18 Jul 2026</span></div>
     </div>
     <p style="font-size:14px;color:var(--muted);margin:24px 0 0">Sector figures in this prototype are illustrative placeholders shown with verification dates. They are not published APIIC data. Four further sector pages follow this same template.</p>
   </section>
 
   <!-- ================================== APEDB THRIVING SECTORS (13) ===== -->
   <section id="thriving" style="background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line);scroll-margin-top:170px">
-    <div style="max-width:1320px;margin:0 auto;padding:64px 40px">
+    <div style="max-width:1280px;margin:0 auto;padding:64px 40px">
       <div style="display:flex;flex-wrap:wrap;gap:24px;align-items:flex-end;justify-content:space-between">
         <div style="flex:1;min-width:300px">
-          <span style="display:inline-flex;align-items:center;gap:9px;background:var(--cyan-soft);border-radius:999px;padding:6px 14px;font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:0.09em;color:var(--cyan-deep);text-transform:uppercase">
+          <span style="display:inline-flex;align-items:center;gap:9px;background:var(--cyan-soft);border-radius:999px;padding:6px 14px;font-family:'Instrument Sans',sans-serif;font-size:10.5px;letter-spacing:0.09em;color:var(--cyan-deep);text-transform:uppercase">
             <i class="ph ph-trend-up"></i>Thriving sectors · APEDB
           </span>
           <h2 style="font-family:Sora,sans-serif;font-weight:700;font-size:38px;letter-spacing:-0.03em;margin:16px 0 0;line-height:1.12">The thirteen sectors the state is actively courting</h2>
@@ -216,7 +218,7 @@ a:hover{color:var(--gold)}
         <div style="display:grid;gap:12px;min-width:250px">
           <sc-for list="{{ apedbInvestment }}" as="i" hint-placeholder-count="2">
             <div style="background:var(--tint-sky);border:1px solid var(--line);border-radius:var(--r);padding:17px 20px">
-              <div style="font-family:'IBM Plex Mono',monospace;font-size:27px;letter-spacing:-0.03em;line-height:1">{{ i.value }}<span style="font-size:13px;color:var(--muted);margin-left:5px">{{ i.unit }}</span></div>
+              <div style="font-family:'Instrument Sans',sans-serif;font-size:27px;letter-spacing:-0.03em;line-height:1">{{ i.value }}<span style="font-size:13px;color:var(--muted);margin-left:5px">{{ i.unit }}</span></div>
               <div style="font-weight:600;font-size:14.5px;margin-top:6px">{{ i.label }}</div>
               <div style="font-size:12.5px;color:var(--muted);margin-top:2px;line-height:1.4">{{ i.note }}</div>
             </div>
@@ -238,7 +240,7 @@ a:hover{color:var(--gold)}
             </div>
             <div style="border-top:1px solid var(--line);padding-top:12px;display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:space-between">
               <span style="min-width:0">
-                <span style="display:block;font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:0.07em;color:var(--muted);text-transform:uppercase">APEDB sector lead</span>
+                <span style="display:block;font-family:'Instrument Sans',sans-serif;font-size:9.5px;letter-spacing:0.07em;color:var(--muted);text-transform:uppercase">APEDB sector lead</span>
                 <span style="display:block;font-weight:600;font-size:14.5px;margin-top:2px">{{ s.poc }}</span>
               </span>
               <a href="{{ s.mailto }}" style="display:inline-flex;align-items:center;gap:7px;font-size:13px;border:1px solid var(--line);border-radius:999px;padding:7px 12px;color:var(--ink);white-space:nowrap"><i class="ph ph-envelope-simple" style="color:var(--cyan-deep)"></i>Email</a>
@@ -247,15 +249,15 @@ a:hover{color:var(--gold)}
         </sc-for>
       </div>
 
-      <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:0.05em;margin-top:20px;line-height:1.7">
-        <span style="color:var(--tide)">⌁</span> SECTOR LIST AND CONTACTS FROM APEDB.AP.GOV.IN · READ {{ apedbAsOf }} · OWNER: {{ apedbName }}<br>
-        APIIC PARK MAPPINGS ARE INDICATIVE — CONFIRM AVAILABILITY WITH THE ZONAL OFFICE.
+      <div style="font-family:'Instrument Sans',sans-serif;font-size:11px;color:var(--muted);letter-spacing:0.05em;margin-top:20px;line-height:1.7">
+        Sector list and contacts from APEDB.AP.GOV.IN · READ {{ apedbAsOf }} · Owner: {{ apedbName }}<br>
+        apiic park mappings are indicative — Confirm availability with the zonal office.
       </div>
     </div>
   </section>
 
   <!-- ====================================== WHY ANDHRA PRADESH · FIGURES -->
-  <section style="max-width:1320px;margin:0 auto;padding:64px 40px">
+  <section style="max-width:1280px;margin:0 auto;padding:64px 40px">
     <h2 style="font-family:Sora,sans-serif;font-weight:700;font-size:34px;letter-spacing:-0.03em;margin:0;line-height:1.15">Why the state, in figures</h2>
     <p style="font-size:16.5px;color:var(--muted);margin:11px 0 0;max-width:62ch;line-height:1.55">
       The salient features Andhra Pradesh publishes about itself, grouped by what an investor is weighing.
@@ -265,16 +267,16 @@ a:hover{color:var(--gold)}
         <div style="background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--cyan);border-radius:var(--r-sm);padding:19px">
           <div style="display:flex;align-items:center;justify-content:space-between;gap:10px">
             <i class="ph-duotone {{ f.icon }}" style="font-size:22px;color:var(--indigo)"></i>
-            <span style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:0.07em;color:var(--muted);text-transform:uppercase">{{ f.group }}</span>
+            <span style="font-family:'Instrument Sans',sans-serif;font-size:9.5px;letter-spacing:0.07em;color:var(--muted);text-transform:uppercase">{{ f.group }}</span>
           </div>
-          <div style="font-family:'IBM Plex Mono',monospace;font-size:26px;letter-spacing:-0.03em;margin-top:12px;line-height:1">{{ f.value }}<span style="font-size:12.5px;color:var(--muted);margin-left:5px">{{ f.unit }}</span></div>
+          <div style="font-family:'Instrument Sans',sans-serif;font-size:26px;letter-spacing:-0.03em;margin-top:12px;line-height:1">{{ f.value }}<span style="font-size:12.5px;color:var(--muted);margin-left:5px">{{ f.unit }}</span></div>
           <div style="font-weight:600;font-size:14.5px;margin-top:7px;line-height:1.3">{{ f.label }}</div>
           <div style="font-size:13px;color:var(--muted);margin-top:4px;line-height:1.45">{{ f.note }}</div>
         </div>
       </sc-for>
     </div>
-    <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:0.05em;margin-top:18px">
-      <span style="color:var(--tide)">⌁</span> SOURCE · APEDB "SALIENT FEATURES OF ANDHRA PRADESH" · READ {{ apedbAsOf }}
+    <div style="font-family:'Instrument Sans',sans-serif;font-size:11px;color:var(--muted);letter-spacing:0.05em;margin-top:18px">
+      source · APEDB "salient features of andhra pradesh" · Read {{ apedbasof }}
     </div>
   </section>
 
