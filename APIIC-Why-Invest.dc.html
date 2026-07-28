@@ -55,7 +55,7 @@ a:hover{color:var(--cyan-deep)}
 :focus-visible{outline:2px solid var(--tide);outline-offset:2px}
 </style>
 </helmet>
-<main style="min-height:100vh;padding-bottom:{{ navPadding }}">
+<main style="min-height:100vh">
   <dc-import name="APIICNav" hint-size="100%,112px"></dc-import>
 
   <div style="background:#245484;color:#FFFFFF;position:relative;overflow:hidden">
@@ -460,9 +460,8 @@ class Component extends DCLogic {
 
     return {
       wide, narrow: !wide,
-      navPadding: this.state.docked ? '76px' : '0',
       navPosition: this.state.docked ? 'fixed' : 'static',
-      navTop: 'auto', navBottom: this.state.docked ? '0' : 'auto', navSide: this.state.docked ? '0' : 'auto',
+      navTop: this.state.docked ? '112px' : 'auto', navBottom: 'auto', navSide: this.state.docked ? '0' : 'auto',
       progress: this.state.progress + '%',
       activeLabel: cur.label,
       activeIcon: cur.icon,
