@@ -55,7 +55,7 @@ a:hover{color:var(--cyan-deep)}
 :focus-visible{outline:2px solid var(--tide);outline-offset:2px}
 </style>
 </helmet>
-<main style="min-height:100vh">
+<main style="min-height:100vh;padding-bottom:{{ navPadding }}">
   <dc-import name="APIICNav" hint-size="100%,112px"></dc-import>
 
   <div style="background:#245484;color:#FFFFFF;position:relative;overflow:hidden">
@@ -84,7 +84,7 @@ a:hover{color:var(--cyan-deep)}
        actually reading, shows how far through the case you are, and collapses
        to a single "jump to" control on a handset instead of a cramped scroll. -->
   <nav aria-label="Sections of the investment case"
-       style="position:sticky;top:112px;z-index:40;background:var(--surface);border-bottom:1px solid var(--line);box-shadow:0 8px 22px -20px rgba(22,56,92,0.55)">
+       style="position:{{ navPosition }};top:{{ navTop }};bottom:{{ navBottom }};left:{{ navSide }};right:{{ navSide }};z-index:40;background:var(--surface);border-bottom:1px solid var(--line);box-shadow:0 8px 22px -20px rgba(22,56,92,0.55)">
     <!-- reading progress -->
     <div role="presentation" style="height:3px;background:var(--tint-sky)">
       <div style="height:3px;width:{{ progress }};background:linear-gradient(90deg,var(--royal2),var(--cyan));transition:width .18s ease"></div>
@@ -386,7 +386,7 @@ a:hover{color:var(--cyan-deep)}
 </x-dc>
 <script type="text/x-dc" data-dc-script>
 class Component extends DCLogic {
-  state = { active: 'proposition', progress: 0, jump: false, w: typeof window !== 'undefined' ? window.innerWidth : 1440 };
+  state = { active: 'proposition', progress: 0, jump: false, docked: false, w: typeof window !== 'undefined' ? window.innerWidth : 1440 };
 
   /* One place defining the eleven sections, their order and their icon. */
   sections() {
@@ -406,11 +406,16 @@ class Component extends DCLogic {
   }
 
   componentDidMount() {
+    this.navStart = null;
     this.onScroll = () => this.measure();
     this.onResize = () => this.setState({ w: window.innerWidth });
     window.addEventListener('scroll', this.onScroll, { passive: true });
     window.addEventListener('resize', this.onResize);
-    this.measure();
+    requestAnimationFrame(() => {
+      const nav = document.querySelector('nav[aria-label="Sections of the investment case"]');
+      this.navStart = nav ? nav.getBoundingClientRect().top + window.scrollY : 0;
+      this.measure();
+    });
   }
   componentWillUnmount() {
     window.removeEventListener('scroll', this.onScroll);
@@ -429,9 +434,10 @@ class Component extends DCLogic {
     const doc = document.documentElement;
     const scrollable = doc.scrollHeight - window.innerHeight;
     const progress = scrollable > 0 ? Math.min(100, Math.max(0, Math.round((window.scrollY / scrollable) * 100))) : 0;
-    if (active !== this.state.active || progress !== this.state.progress) {
+    const docked = this.navStart !== null && window.scrollY >= this.navStart - 112;
+    if (active !== this.state.active || progress !== this.state.progress || docked !== this.state.docked) {
       const moved = active !== this.state.active;
-      this.setState({ active, progress });
+      this.setState({ active, progress, docked });
       /* With eleven pills the rail scrolls; keep the one you are reading in
          view. block:'nearest' so the page itself never jumps. */
       if (moved) {
@@ -454,6 +460,9 @@ class Component extends DCLogic {
 
     return {
       wide, narrow: !wide,
+      navPadding: this.state.docked ? '76px' : '0',
+      navPosition: this.state.docked ? 'fixed' : 'static',
+      navTop: 'auto', navBottom: this.state.docked ? '0' : 'auto', navSide: this.state.docked ? '0' : 'auto',
       progress: this.state.progress + '%',
       activeLabel: cur.label,
       activeIcon: cur.icon,
