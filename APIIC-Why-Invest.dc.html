@@ -461,7 +461,7 @@ class Component extends DCLogic {
     return {
       wide, narrow: !wide,
       navPosition: this.state.docked ? 'fixed' : 'static',
-      navTop: this.state.docked ? '112px' : 'auto', navBottom: 'auto', navSide: this.state.docked ? '0' : 'auto',
+      navTop: this.state.docked ? '0' : 'auto', navBottom: 'auto', navSide: this.state.docked ? '0' : 'auto',
       progress: this.state.progress + '%',
       activeLabel: cur.label,
       activeIcon: cur.icon,
